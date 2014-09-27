@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Growthbakery</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="fr">
+	<head>
 
-<%= yield %>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-</body>
+	  <title>The Growth Bakery - Agence et Newsletter sur le marketing en startup</title>
+
+		<%= csrf_meta_tags %>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+	</head>
+
+	<body>
+		<%= yield %>
+	</body>
+
 </html>
