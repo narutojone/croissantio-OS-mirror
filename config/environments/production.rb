@@ -2,7 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
 
-YOURAPPLICATION::Application.configure do
+Growthbakery::Application.configure do
     
    # your config settings
  
