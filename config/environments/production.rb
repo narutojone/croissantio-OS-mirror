@@ -1,6 +1,16 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+
+YOURAPPLICATION::Application.configure do
+    
+   # your config settings
+ 
+   config.assets.compile = true
+ 
+   # your other config settings
+end
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
