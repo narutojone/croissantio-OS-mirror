@@ -55,3 +55,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Mailchimp API wrapper
+gem 'mailchimp-api', require: 'mailchimp'
+
