@@ -24,6 +24,7 @@ body {
 {
 	background-image: image-url("background-home.png");
 	text-align: center;
+	height: 100%;
 }
 
 .home-header {
@@ -31,12 +32,16 @@ body {
 	text-align: left;
 }
 
+.logo-home {
+	text-align: center;
+}
+
 .home-header h1 {
 	font-style: italic;
 	font-size: 30px;
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
-	padding-top: 70px;
+	padding-top: 160px;
 }
 
 .home-header h1>span {
@@ -56,7 +61,7 @@ body {
 }
 
 .subscribe {
-	padding-top: 120px;
+	padding-top: 80px;
 }
 
 .subscribe p {
@@ -124,6 +129,11 @@ body {
 
 .team-member p {
     margin-top: 0;
+}
+
+.email-example, a {
+	color: #fff;
+	text-decoration: underline;
 }
 
 /* Forms & Buttons */
@@ -274,11 +284,13 @@ body {
 	background-color:#199cd8;
 	border-color:#199cd8
 }
+
 .btn-primary .badge
 {
 	color:#199cd8;
 	background-color:#fff
 }
+
 
 
 /* Fonts & Text */
@@ -357,9 +369,26 @@ h1,h2,h3
 	font-weight:600
 }
 
+@media(max-width:767px){
 
+.navbar-brand{
+    float: none;
+    text-align: center;
+}
 
+.home-header h1 {
+	padding-top: 60px;
+}
 
+.subscribe {
+	padding-top: 40px;
+}
+
+}
+
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
 
 
 
