@@ -7,7 +7,8 @@ html {
 }
 
 body {
-	margin: 0
+	margin: 0;
+	height: 100%;
 }
 
 #bodyWrap
@@ -64,6 +65,10 @@ body {
 	padding: 0 20px 0 20px;
 }
 
+.home-header {
+	height: 692px;
+}
+
 .merci h1 {
 	text-align: left;
 	color: #fff;
@@ -74,6 +79,51 @@ body {
 	text-align: right;
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
+}
+
+#team {
+	padding-top: 13px;
+	padding-bottom: 100px;
+}
+
+#team h1 {
+	color: #fff;
+}
+
+#team h2 {
+	color: #fff;
+}
+
+#team h3 {
+	color: #fff;
+}
+
+#team h4 {
+	color: #fff;
+}
+
+#team p {
+	color: #fff;
+}
+
+.team-member {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-member img {
+    margin: 0 auto;
+    border: 7px solid #fff;
+}
+
+.team-member h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+}
+
+.team-member p {
+    margin-top: 0;
 }
 
 /* Forms & Buttons */
