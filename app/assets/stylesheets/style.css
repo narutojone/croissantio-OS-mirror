@@ -19,8 +19,8 @@ body {
 
 .hero
 {
-	background-image: url("http://maximesalomon.com/wp-content/uploads/2015/02/background.png");
-	text-align:center;
+	background-image: image-url("background-home.png")
+	text-align: center;
 }
 
 .home-header {
