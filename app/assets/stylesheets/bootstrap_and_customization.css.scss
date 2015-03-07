@@ -16,7 +16,7 @@ body {
     margin: 0;
 	height: 100%;
     padding: 0;
-    background-color: #f2f3f5;
+    background-color: #bfbdc0;
 	margin: 0;
 	height: 100%;
 }
@@ -34,26 +34,29 @@ section {
 }
 
 .home {
-	height: 692px;
+	height: 500px;
 }
 
 .intro {
 	padding-top: 60px;
-	height: 692px;
 }
 
 .hero {
 	text-align: center;
-	margin-top: 180px;
+	margin-top: 80px;
 }
 
 .hero h1 {
 	color: white;
 }
 
+.hero h4 {
+	color: white;
+}
+
 .newsletter{
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 60px;
 }
 
 .newsletter .mailchimp{
@@ -86,8 +89,40 @@ section {
   opacity: 1;
 }
 
+.consulting{
+	background: #2a608e;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.consulting h2{
+	color: white;
+}
+
+.consulting h4 {
+	color: white;
+}
+
+.consulting p {
+	color: white;
+}
+
+.consulting-box {
+	padding: 10px 10px 50px 10px;
+}
+
+.consulting-box h4 {
+	font-weight: 700;
+}
+
+.recrutement{
+	background: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 .team {
-	background: #fafafa;
+	background: #2a608e;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -97,25 +132,27 @@ section {
 	max-width: 200px;
 }
 
-.footer {
-	background: #2f4050;
-	padding-top: 50px;
-	padding-bottom: 10px;
+.team h2{
+	color: white;
 }
 
-.footer .message input {
- height: 200px;
- }
+.team h4 {
+	color: white;
+}
 
- .footer .send {
- 	text-align: right;
- }
+.team p {
+	color: white;
+}
 
- .footer .contact {
- 	color: white;
- 	text-align: center;
- 	padding-top: 50px;
- }
+.back-nl{
+	background: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.back-nl h3 {
+	text-align: center;
+}
 
 @-webkit-viewport { 
 	width: device-width; 
