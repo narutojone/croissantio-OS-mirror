@@ -1,40 +1,186 @@
-<section id="bodyWrap">
-    <div class="">
-        <section class="hero">
-            <header class="navbar" role="navigation">
-              <div class="container">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="/"><img src="http://maximesalomon.com/wp-content/uploads/2015/02/logo.png", height="80", width="200"></a>
-                </div><!-- /navbar-header -->
-              </div>
-            </header>
-            <div class="container-fluid home-header">
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div>
-                            <h1>Un <em>collectif</em> de marketeur à votre disposition pour </br><span>scaler le <em>marketing</em> de </br>votre startup</span></h1>
-                            <!-- Begin MailChimp Signup Form -->
-                            <div id="mc_embed_signup">
-                                <%= form_tag(subscribe_path, role: "form", method: "post", id: "mc-embedded-subscribe-form", name: "mc-embedded-subscribe-form", class: "validate form-horizontal") do -%>
-                                    
-                                    <div id="mc_embed_signup_scroll", class="subscribe form-group row">
-                                        <p>Nous envoyons une newsletter de curation d'articles sur le marketing en startup tous les samedis :</p>
-                                        <div class="col-sm-8">
-                                            <%= email_field(:email, :address, {id: "email", placeholder: "Indiquez votre email", required: true, autocomplete: "off", class: "col-md-1 form-control"}) %>
-                                           <div class="email-example">
-                                                <p><small><a href="http://us7.campaign-archive1.com/?u=f56d762a2a30021438035f33b&id=37bf0399f3", target="_blank">Voici un exemple de newsletter que nous envoyons</a></small></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <%= submit_tag("Recevez la newsletter", {id: "mc-embedded-subscribe", class: "col-md-1 btn btn-lg btn-primary form-control"}) %>
-                                        </div>
-                                    </div>
-                                <% end %>
-                            </div>
+<div class="main-wrapper">
+	<section class="home">
+		<header>
+			<nav class="navbar">
+			  <div class="container">
+			  	<div class="navbar-header">
+			  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+			       <span class="sr-only">Toggle navigation</span>
+			       <span class="icon-bar"></span>
+			       <span class="icon-bar"></span>
+			       <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">The Growth Bakery</a>
+			    </div>
+				<div class="collapse navbar-collapse" id="nav-collapse">
+				  <ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Consulting</a></li>
+						<li><a href="#">Recrutement</a></li>
+						<li><a href="#">L'équipe</a></li>
+						<li><a href="#">Contact</a></li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+		</header>
+			<div class="container" id="startchange">
+	    	<div class="row">
+	    		<div class="col-md-12 text-center">
+	    			<div class="hero">
+
+	    				<h1>Optimisez le marketing de votre startup</h1>
+
+	    				<div class="newsletter">
+	    					<p>Nous envoyons une newsletter de curation d'articles sur le marketing en startup tous les samedis :</p>
+
+	    					<!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                  <%= form_tag(subscribe_path, role: "form", method: "post", id: "mc-embedded-subscribe-form", name: "mc-embedded-subscribe-form", class: "validate form-horizontal") do -%>
+                      
+                      <div id="mc_embed_signup_scroll", class="subscribe form-group row">
+                          <div class="col-md-2"></div>
+                          <div class="col-md-5 mailchimp">
+                              <%= email_field(:email, :address, {id: "email", placeholder: "Indiquez votre adresse email", required: true, autocomplete: "off", class: "form-control"}) %>
+                          </div>
+                          <div class="col-md-3">
+                              <%= submit_tag("Recevez la newsletter", {id: "mc-embedded-subscribe", class: "col-md-1 btn btn-lg btn-success form-control"}) %>
+                          </div>
+                          <div class="col-md-2"></div>
                         </div>
-                    </div>
-                </div><!-- /row -->
+                      </div>
+                  	<% end %>
+                  </div>
+							</div>
+	    			</div><!-- /End hero-section -->
+	        </div><!-- /End col -->
+	      </div><!-- /End row -->
+	</section>
+	<section class="references">
+    <div class="container">
+    	<div class="row grid-md text-center">
+    		</br>
+    		<p>Nous avons travaillé pour des startups soutenues par les incubateurs suivants:</p>
+    	</div>
+      <div class="row grid-md text-center">
+          <div class="col-md-3 col-sm-3">
+              <a href="https://www.ycombinator.com/"><img alt="" src="http://old.ycombinator.com/images/yc500.gif"></a>
+          </div>
+          <div class="col-md-3 col-sm-3">
+              <a href="https://www.500.co"><img alt="" src="https://500startups.files.wordpress.com/2010/09/cropped-500startups-blogheader1.jpg"></a>
+          </div>
+          <div class="col-md-3 col-sm-3">
+              <a href="http://www.techstars.com/"><img alt="" src="https://d2h3sltx127pvt.cloudfront.net/assets/multi_company_funds/techstars_austin_2013-7aa5846cd02f59109e3455e3759ed1f6.png"></a>
+          </div>
+          <div class="col-md-3 col-sm-3">
+              <a href="http://accelerate.numa.paris"><img alt="" src="https://s3-eu-west-1.amazonaws.com/static.adoptezlea.com/img/logo/LeCamping.png"></a>
+          </div>
+      </div>
+    </div><!-- /End Container -->
+	</section>
+	<section class="team" id="team">
+    <div class="container">
+        <div class="wrapper-lg">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="text-align: center">L'équipe</h2>
+                    <p class="large" style="text-align: center">Nous sommes un collectif de growth marketer passionnés par les startup et l'entrepreneuriat</p>
+                </div>
             </div>
-        </section><!-- /hero -->
-    </div>
-</section><!-- /bodyWrap -->
+            <div class="row">
+                <!-- Maxime Salomon -->
+                <div class="col-sm-4">
+                    <div class="team-img">
+                        <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/005/07f/04d/0421717.jpg" class="img-responsive" alt="Maxime Salomon">
+                    </div>
+                    <h4 style="text-align: center">Maxime Salomon</h4>
+                    <p class="team-bio"><span class="text-color">Co-fondateur de The Growth Bakery, Maxime est notre expert SaaS. Il a par le passé travaillé pour Algolia et participé avec eux à Y-Combinator. Il est aujourd'hui basé à Dublin.</span></p>
+                </div>
+                <!-- Adrien Montcoudiol -->
+                <div class="col-sm-4">
+                    <div class="team-img">
+                        <img src="https://pbs.twimg.com/profile_images/458680497573359616/v9SriwcQ.jpeg" class="img-responsive" alt="Adrien Montcoudiol">
+                    </div>
+                    <h4 style="text-align: center">Adrien Montcoudiol</h4>
+                    <p class="team-bio"><span class="text-color">Co-fondateur de The Growth Bakery, Adrien est notre expert Mobile. Il a par le passé travaillé pour NextUser et Good.co à San Francisco. Il est aujourd'hui basé à Tel-Aviv.</p>
+                </div>
+                <!-- Bruno Correia-->
+                <div class="col-sm-4">
+                    <div class="team-img">
+                        <img src="https://media.licdn.com/media/p/2/005/0b5/3d9/19f7756.jpg" class="img-responsive" alt="Bruno Correia">
+                    </div>
+                    <h4 style="text-align: center">Bruno Correia</h4>
+                    <p class="team-bio"><span class="text-color">Co-fondateur de The Growth Bakery, Bruno est notre expert Produit. Il a par le passé travaillé pour Producteev à New York et Palo Alto. Il travaille aujourd'hui chez Infinit à Paris.</p>
+                </div>
+            </div><!-- /End Row -->
+        </div><!-- End Wrapper -->
+    </div><!--/End Container -->
+	</section>
+	<footer class="footer">
+    <div class="container">
+	      <div class="wrapper-lg">
+	          <div class="row">
+	              <div class="col-md-8">
+	                  
+	                  <form id="contact" role="form">
+	                      
+	                  
+	                      <!-- Input Fields -->
+	                      <div class="form-group">
+	                          <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Votre Prénom et Nom" required="">
+	                      </div>
+
+	                      <div class="form-group">
+	                          <input type="email" class="form-control input-lg" name="email" id="email" placeholder="Votre adresse email" required="">
+	                      </div>
+	                      
+	                      <!-- Message Textarea -->
+	                      <div class="form-group message">
+	                         <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Votre message" required="">
+	                      </div>
+
+	                      <div class="send">
+	                      	<button class="btn btn-primary align-right">Envoyer votre message</button>
+	                      </div>
+
+	                  </form>                          
+
+	              </div>
+	              
+
+	              <div class="col-md-4 footer-right contact">
+	                  
+	                  <h5 class="contact">Nous contacter:</h5>
+	                  <div class="contact-item">
+	                      <div class="contact-icon">
+	                          <i class="icon icon_mail"></i>
+	                      </div>
+	                      <div class="contact-content">
+	                          <a href="mailto:hello@growthbakery.com">hello@growthbakery.com</a>
+	                      </div>
+	                  </div>
+	                  <div class="contact-item">
+	                      <div class="contact-icon">
+	                          <i class="icon icon_pin"></i>
+	                      </div>
+	                      <div class="contact-content">
+	                          3 Allée Paul Claudel<br>
+	                          78400 Chatou
+	                      </div>
+	                  </div>
+	                  <div class="contact-item">
+	                      <div class="contact-icon">
+	                          <i class="icon icon_phone"></i>
+	                      </div>
+	                      <div class="contact-content">
+	                          1-234-567-89
+	                      </div>
+	                  </div>
+	                  
+	              </div>
+
+	            </div><!-- End Row -->
+	        </div><!-- /End Wrapper -->
+	    </div><!-- /End Container -->
+	</footer>
+    
+</div>
