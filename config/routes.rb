@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root "pages#home"
 
   post 'subscribe' => "pages#subscribe_to_list"
+  get 'newsletter' => "pages#newsletter"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
