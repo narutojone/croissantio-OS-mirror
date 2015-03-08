@@ -251,7 +251,7 @@ p {
 
 .navbar {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 .navbar{
@@ -439,6 +439,10 @@ p {
         text-align: left;
     }
 
+    .hero {
+    margin-top: 40px;
+}
+
 }
 
 @media (max-width: 599px) {
@@ -458,15 +462,18 @@ p {
         line-height: 32px;
     }
 
-    
+    .hero {
+    margin-top: 0px;
+}
+   
        	
 }
 
 @media (max-width: 479px) {
 
     h1{
-        font-size: 34px;
-        line-height: 38px;
+        font-size: 20px;
+        line-height: 24px;
     }
 
     h2{
@@ -504,4 +511,7 @@ p {
         display: none;
     }
     
+    .team-box {
+        margin-bottom: 20px;
+    }
 }
