@@ -92,6 +92,8 @@ section {
     background: #2e597c;
     padding-top: 40px;
     padding-bottom: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .manifesto h3 {
@@ -463,8 +465,8 @@ p {
 @media (max-width: 479px) {
 
     h1{
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 34px;
+        line-height: 38px;
     }
 
     h2{
@@ -481,10 +483,9 @@ p {
     height: 700px;
 }
 
-	.hero {
-	margin-top: 40px;
-
-	}
+    .hero {
+    margin-top: 0px;
+}
 
     .hero .btn{
         font-size: 10px;
