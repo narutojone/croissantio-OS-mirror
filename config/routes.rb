@@ -2,8 +2,12 @@ Rails.application.routes.draw do
 
   root "pages#home"
 
-  post 'subscribe' => "pages#subscribe_to_list"
   get 'newsletter' => "pages#newsletter"
+  get 'consulting' => "pages#consulting"
+  get 'recrutement' => "pages#recrutement"
+  get 'team' => "pages#team"
+
+  post 'subscribe' => "pages#subscribe_to_list"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

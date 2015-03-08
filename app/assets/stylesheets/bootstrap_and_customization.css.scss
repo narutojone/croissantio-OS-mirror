@@ -33,6 +33,9 @@ section {
 	background-image: url(http://maximesalomon.com/wp-content/uploads/2015/02/background.png);
 }
 
+.main-wrapper .consulting-page {
+    background-image: none;
+}
 .home {
 	height: 500px;
 }
@@ -90,21 +93,9 @@ section {
 }
 
 .consulting{
-	background: #2a608e;
+	background: #fff;
 	padding-top: 50px;
 	padding-bottom: 50px;
-}
-
-.consulting h2{
-	color: white;
-}
-
-.consulting h4 {
-	color: white;
-}
-
-.consulting p {
-	color: white;
 }
 
 .consulting-box {
@@ -122,7 +113,7 @@ section {
 }
 
 .team {
-	background: #2a608e;
+	background: #fff;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -130,18 +121,6 @@ section {
 .team-img {
 	max-height: 200px;
 	max-width: 200px;
-}
-
-.team h2{
-	color: white;
-}
-
-.team h4 {
-	color: white;
-}
-
-.team p {
-	color: white;
 }
 
 .back-nl{
