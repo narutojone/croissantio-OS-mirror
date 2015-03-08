@@ -88,6 +88,20 @@ section {
   opacity: 1;
 }
 
+.manifesto{
+    background: #2e597c;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.manifesto h3 {
+    color: white;
+}
+
+.manifesto p {
+    color: white;
+}
+
 .consulting{
 	background: #fff;
 	padding-top: 40px;
@@ -233,6 +247,10 @@ p {
     line-height: 20px;
 }
 
+.navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 .navbar{
     -webkit-transition: all 300ms ease-in-out;
@@ -241,12 +259,6 @@ p {
     -ms-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
 }
-
-.navbar {
-    padding-top: 25px;
-    padding-bottom: 5px;
-}
-
 
 .navbar-right{
     position: relative;
