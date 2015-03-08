@@ -468,6 +468,10 @@ p {
 		height: 48px;
 	}
 
+    .home {
+    height: 700px;
+}
+
 	.hero {
 	margin-top: 80px;
 
@@ -480,7 +484,14 @@ p {
 
     .newsletter {
 	margin-top: 40px;
-
 	}
+
+    .references {
+        display: none;
+    }
+
+    .back-nl {
+        display: none;
+    }
     
 }
