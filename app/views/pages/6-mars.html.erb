@@ -27,14 +27,27 @@
 				       <span class="icon-bar"></span>
 				       <span class="icon-bar"></span>
 				      </button>
-				      <a class="navbar-brand" href="" style="padding-top: 34px;">De la croissance dans votre boîte mail</a>
+				      <a class="navbar-brand" href="../" style="padding-top: 30px;">The Growth Bakery</a>
 				    </div>
-				    <form class="navbar-form navbar-right" role="search">
-				        <div class="form-group">
-				          <input type="text" class="form-control" style="width: 400px; height: 50px; padding: 0 0 0 10px; margin: 0 0 0 0;" placeholder="Indiquez votre adresse email">
-				        </div>
-				        <button type="submit" class="btn btn-success" style="height: 52px; padding: 0 10px 0 10px; margin: 0 0 0 0;">Recevez la newsletter</button>
-				      </form>
+				    <form class="navbar-form navbar-right">
+				        
+		        	<div id="mc_embed_signup">
+                  <%= form_tag(subscribe_path, role: "form", method: "post", id: "mc-embedded-subscribe-form", name: "mc-embedded-subscribe-form", class: "validate form-horizontal") do -%>
+                      
+                    <div id="mc_embed_signup_scroll", class="subscribe form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 mailchimp">
+                            <%= email_field(:email, :address, {id: "email", placeholder: "De la croissance dans votre boîte mail", required: true, autocomplete: "off", class: "form-control", style: "width: 320px;"}) %>
+                        </div>
+                        <div class="col-md-3">
+                            <%= submit_tag("Recevez la newsletter", {id: "mc-embedded-subscribe", class: "col-md-1 btn btn-lg btn-success form-control"}) %>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                	<% end %>
+            		</div>
+
+				     </form>
 				  </div>
 				</nav>
 			</header>
