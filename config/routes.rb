@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'recrutement' => "pages#recrutement"
   get 'team' => "pages#team"
 
+  get 'newsletter/6-mars' => "pages#6-mars"
+
   post 'subscribe' => "pages#subscribe_to_list"
 
 
