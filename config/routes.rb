@@ -3,9 +3,6 @@ Rails.application.routes.draw do
   root "pages#home"
 
   get 'newsletter' => "pages#newsletter"
-  get 'consulting' => "pages#consulting"
-  get 'recrutement' => "pages#recrutement"
-  get 'team' => "pages#team"
 
   get 'newsletter/apprenez-hubspot-new-relic-tinder' => "pages#apprenez-hubspot-new-relic-tinder"
 
