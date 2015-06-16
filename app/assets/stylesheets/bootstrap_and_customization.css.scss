@@ -47,6 +47,8 @@ section {
 
 .hero h1 {
 	color: white;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .hero h4 {
@@ -416,6 +418,12 @@ p {
     .btn{
         margin-bottom: 10px;
     }
+
+    .hero h1 {
+    color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+}
     	
 }
 
