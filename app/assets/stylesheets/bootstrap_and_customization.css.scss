@@ -30,14 +30,23 @@ section {
 	max-width: 1290px;
 	min-height: 100%;
 	padding: 0;
-	background-image: url(background-blue.png);
+	background-color: #fff;
 }
 
 .main-wrapper .consulting-page {
     background-image: none;
 }
+
+.footer {
+    padding-top: 50px;
+    background-image: url(background-blue.png);
+    text-align: center;
+    color: white;
+    height: 120px;
+}
 .home {
 	height: 500px;
+    background-image: url(background-blue.png);
 }
 
 .hero {
@@ -76,7 +85,6 @@ section {
 }
 
 .references .col-md-3 {
-  height: 80px;
   line-height: 80px;
 }
 
