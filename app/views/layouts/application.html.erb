@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<%= yield %>
+	<div class="main-wrapper">
+	<div id="notification_container"></div>
+	<% flash.each do |name, msg| %>
+	     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+	<% end %>
+
+		<%= yield %>
+	</div>
+
 
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<script>
