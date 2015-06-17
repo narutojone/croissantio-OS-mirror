@@ -10,15 +10,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta http-equiv="X-FRAME-OPTIONS" content="SAMEORIGIN">
     <meta name="robots" content="index,follow">
-
-   <%= csrf_meta_tags %>
-   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </head>
 
 <body>
-	<div class="main-wrapper">
-		<div id="notification_container"></div>
 
 		<%= render "layouts/home" %>
 
@@ -27,7 +21,7 @@
 		<%= render "layouts/newsletter" %>
 		
 		<%= render "layouts/footer" %>
-	</div>
+
 	<script type="text/javascript">
 	/** http://stackoverflow.com/a/15120409/477958 **/
 	$(function () {

@@ -19,7 +19,7 @@ gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
-
+gem 'devise', '~> 3.5.1'
 
 # Use bootstrap
 gem 'bootstrap-sass'
