@@ -4,9 +4,7 @@ Rails.application.routes.draw do
 
   get 'newsletter' => "pages#newsletter"
 
-  get 'newsletter/apprenez-hubspot-new-relic-tinder' => "pages#apprenez-hubspot-new-relic-tinder"
-
-  post 'subscribe' => "pages#subscribe_to_list"
+  get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
