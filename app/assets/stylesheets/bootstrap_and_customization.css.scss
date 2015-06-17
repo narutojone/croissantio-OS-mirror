@@ -78,6 +78,39 @@ section {
 	margin-bottom: 10px;
 }
 
+#notification_container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#notification_container .success {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid green;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: green;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+#notification_container .alert {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid red;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: red;
+  font-weight: bold;
+  font-size: 0.9em;
+}
 
 .references {
 	padding: 20px 20px 20px 20px;
