@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
 
+  get 'experience-developpeur-mailjet' => "pages#experience-developpeur-mailjet"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

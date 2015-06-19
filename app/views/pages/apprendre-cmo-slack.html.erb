@@ -14,6 +14,7 @@
 
 </head>
 <body>
+	<%= render "layouts/header" %>
 	<section class="newsletter-page">
 		<div class="container">
 	    	<div class="row">
@@ -91,7 +92,7 @@
 									<p>Yoast est une suite d’outils d’optimisation de votre site internet (principalement wordpress). Avec des plugins Analytics et SEO vous permettant de prendre des actions sur vos articles avant leur publication.</p>
 								</div>
 								<div class="image">
-									<a href="https://yoast.com/"><%= image_tag("newsletters/yoast.png", :alt => "yoast", :width => 600) %></a>
+									<a href="https://yoast.com/"><%= image_tag("newsletters/yoast.png", :alt => "Yoast", :width => 600) %></a>
 								</div>
 							</div>
 							<div class="products">
@@ -102,7 +103,7 @@
 									<p>Yoast est une suite d’outils d’optimisation de votre site internet (principalement wordpress). Avec des plugins Analytics et SEO vous permettant de prendre des actions sur vos articles avant leur publication.</p>
 								</div>
 								<div class="image">
-									<a href="http://spinnakr.com/"><%= image_tag("newsletters/spinnakr.png", :alt => "yoast", :width => 600) %></a>
+									<a href="http://spinnakr.com/"><%= image_tag("newsletters/spinnakr.png", :alt => "Spinnakr", :width => 600) %></a>
 								</div>
 							</div>
 							<hr>
@@ -135,4 +136,5 @@
 			</div>
 		</div>
 	</section>
+	<%= render "layouts/footer" %>
 </body>

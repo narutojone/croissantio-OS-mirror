@@ -49,6 +49,19 @@ section {
     background-image: url(background-blue.png);
 }
 
+/** HEADER **/
+
+.header {
+    height: 90px;
+    background-image: url(background-blue.png);
+}
+
+.header .nl-header {
+    display: block;
+}
+
+
+
 .hero {
 	text-align: center;
 	margin-top: 100px;
@@ -134,9 +147,16 @@ section {
 /** NEWSLETTE PAGE **/
 
 .newsletter-page{
-    background-color: #fefefe;
+    background-color: #e3eef9;
     padding-top: 60px;
 }
+
+.newsletter-page hr{
+    width: 240px;
+    border-color: grey;
+}
+
+
 
 .newsletter-page h1 {
     text-align: center;
@@ -154,6 +174,10 @@ section {
     font-size: 1.2em;
 }
 
+.newsletter-page .newsletter-title {
+    text-align: center;
+}
+
 .newsletter-page .newsletter-date {
     text-align: center;
 }
@@ -166,6 +190,15 @@ section {
 
 .newsletter-page .introduction  {
     margin-top: 50px;
+}
+
+.newsletter-page .article {
+    margin-top: 50px;
+}
+
+.newsletter-page .article .image-article {
+    margin-top: 20px;
+    text-align: center;
 }
 
 
@@ -189,11 +222,11 @@ section {
 
 .newsletter-page .products-discover {
     margin-top: 30px;
-    margin-bottom: 50px;
 }
 
 .newsletter-page .products-discover .products {
     margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 .newsletter-page .products-discover .products .title {
