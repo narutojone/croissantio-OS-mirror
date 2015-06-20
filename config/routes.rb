@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'experience-developpeur-mailjet' => "pages#experience-developpeur-mailjet"
 
+  get 'chiffres-retention-applications-mobiles' => "pages#chiffres-retention-applications-mobiles"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
