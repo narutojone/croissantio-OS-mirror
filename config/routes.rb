@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'chiffres-retention-applications-mobiles' => "pages#chiffres-retention-applications-mobiles"
 
+   get 'croissance-etsy-analyse' => "pages#croissance-etsy-analyse"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
