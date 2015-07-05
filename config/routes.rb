@@ -11,8 +11,9 @@ Rails.application.routes.draw do
 
   get 'chiffres-retention-applications-mobiles' => "pages#chiffres-retention-applications-mobiles"
 
-   get 'croissance-etsy-analyse' => "pages#croissance-etsy-analyse"
+  get 'croissance-etsy-analyse' => "pages#croissance-etsy-analyse"
 
+  get 'alex-schultz-vp-growth-facebook' => "pages#alex-schultz-vp-growth-facebook"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
