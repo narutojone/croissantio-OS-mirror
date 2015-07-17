@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get 'culture-data-zynga' => "pages#culture-data-zynga"
 
+  get 'non-growth-hacking' => "pages#non-growth-hacking"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
