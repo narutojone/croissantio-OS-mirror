@@ -1,3 +1,7 @@
+<div id="notification_container"></div>
+		<% flash.each do |name, msg| %>
+		     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+		<% end %>
 <section class="home">
 	<header>
 		<nav class="navbar">
