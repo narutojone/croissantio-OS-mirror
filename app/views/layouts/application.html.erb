@@ -7,7 +7,14 @@
 		<script src="//load.sumome.com/" data-sumo-site-id="05c7c1fa06e0605735d7e11bee46ba6b94e324de4d17683792d8c35b3e058b1c" async="async"></script>
 	</head>
 	
+
+		<div id="notification_container"></div>
+		<% flash.each do |name, msg| %>
+		     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+		<% end %>
+
 		<%= yield %>
+
 
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<script>
