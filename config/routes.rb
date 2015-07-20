@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'merci' => "pages#merci"
 
+  get 'team' => "pages#team"
+
   get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
 
   get 'experience-developpeur-mailjet' => "pages#experience-developpeur-mailjet"
