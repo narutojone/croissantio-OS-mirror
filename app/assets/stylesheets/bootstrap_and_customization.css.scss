@@ -60,6 +60,39 @@ section {
     background-image: url(background-blue.png);
 }
 
+.team h1 {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    line-height: 100%;
+}
+
+.team .hero {
+    margin-top: 20px;
+}
+
+.team .name {
+    margin-top: 60px;
+}
+
+.team .pic {
+    padding: 0 100px 0 100px;
+}
+
+.team .pic h3 {
+    text-align: center;
+    color: white;
+    padding: 10px 0 10px 0;
+    font-size: 2em;
+}
+
+.team .pic p a {
+    text-align: center;
+    color: white;
+    padding: 4px 0 4px 0;
+    font-size: 1em;
+}
+
 /** HEADER **/
 
 .header {
