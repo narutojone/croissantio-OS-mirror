@@ -36,10 +36,10 @@
 	$(function () {
 	  var $form = $('#mc-embedded-subscribe-form');
 
-	  $('#mc-embedded-subscribe').on('click', function(event) {
+	  $('#subscribe').on('click', function(event) {
 	    if(event) event.preventDefault();
 	    register($form);
-	    mixpanel.track("#mc-embedded-subscribe", "Subscribe");
+	    mixpanel.track("#subscribe", "Subscribe");
 	  });
 	});
 
