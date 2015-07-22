@@ -39,7 +39,7 @@
 	  $('#mc-embedded-subscribe').on('click', function(event) {
 	    if(event) event.preventDefault();
 	    register($form);
-	    mixpanel.track_forms("mc-embedded-subscribe", "Subscribe");
+	    mixpanel.track_forms("#mc-embedded-subscribe", "Subscribe");
 	  });
 	});
 
