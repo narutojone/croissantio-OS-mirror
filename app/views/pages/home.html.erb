@@ -39,7 +39,10 @@
 	  $('#subscribe').on('click', function(event) {
 	    if(event) event.preventDefault();
 	    register($form);
-	    mixpanel.track('#subscribe', "Subscribe");
+	    mixpanel.track('#subscribe');
+	    mixpanel.register({
+			'Email': '#mce-EMAIL',
+			});
 	  });
 	});
 
