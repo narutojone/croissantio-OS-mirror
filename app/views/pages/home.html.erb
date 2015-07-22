@@ -33,13 +33,13 @@
 		<%= render "layouts/footer" %>
 
 	<script type="text/javascript">
-	/** http://stackoverflow.com/a/15120409/477958 **/
 	$(function () {
 	  var $form = $('#mc-embedded-subscribe-form');
 
 	  $('#mc-embedded-subscribe').on('click', function(event) {
 	    if(event) event.preventDefault();
 	    register($form);
+	    mixpanel.track('#mc-embedded-subscribe');
 	  });
 	});
 
