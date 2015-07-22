@@ -56,12 +56,12 @@
 	      if (data.result != "success") {
 	        var message = data.msg.substring(4);
 	        $('#notification_container').html('<span class="alert">'+message+'</span>');
-	        mixpanel.track('#subscribe');
 	      } 
 
 	      else {
 	        var message = data.msg;
 	        $('#notification_container').html('<span class="success">'+message+'</span>');
+	        mixpanel.track('#subscribe');
 	      }
 	    }
 	  });
