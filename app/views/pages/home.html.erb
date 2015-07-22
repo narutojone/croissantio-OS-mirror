@@ -39,7 +39,8 @@
 	  $('#subscribe').on('click', function(event) {
 	    if(event) event.preventDefault();
 	    register($form);
-	    mixpanel.track('Subscribe' : '#subscribe');
+	    mixpanel.track('#subscribe');
+	    mixpanel.identify('#mce-EMAIL');
 	  });
 	});
 
