@@ -61,7 +61,7 @@
 	      else {
 	        var message = data.msg;
 	        $('#notification_container').html('<span class="success">'+message+'</span>');
-	        mixpanel.track('#subscribe');
+	        mixpanel.track('#subscribe', "Subscribe");
 	      }
 	    }
 	  });
