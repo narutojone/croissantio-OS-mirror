@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   get 'non-growth-hacking' => "pages#non-growth-hacking"
 
+  get 'mauvaise-retention' => "pages#mauvaise-retention"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
