@@ -61,7 +61,7 @@
 	        var message = data.msg;
 	        $('#notification_container').html('<span class="success">'+message+'</span>');
 	        mixpanel.track('#subscribed');
-	        window.optimizely.push(["#subscribed", "Subscribed"]);
+	        window.optimizely.push(["trackEvent", "#subscribed"]);
 	      }
 	    }
 	  });
