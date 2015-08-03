@@ -61,7 +61,6 @@
 	        var message = data.msg;
 	        $('#notification_container').html('<span class="success">'+message+'</span>');
 	        analytics.track('#subscribed');
-	        analytics.identify(email: '#mce-EMAIL');
 	        window.optimizely.push(["trackEvent", "#subscribed"]);
 	      }
 	    }
