@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'from-zero-to-one-point-two' => "pages#from-zero-to-one-point-two"
 
+  get 'produit-levier-croissance' => "pages#produit-levier-croissance"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
