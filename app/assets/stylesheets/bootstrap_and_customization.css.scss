@@ -247,7 +247,7 @@ section {
 }
 
 
-    /** Meilleures Ressources **/
+    /** Meilleures Ressources OLD **/
 
 .newsletter-page .best-resources {
     margin-top: 30px;
@@ -264,6 +264,47 @@ section {
 }
 
 .newsletter-page .best-resources .resources .description li {
+    margin-left: 50px;
+}
+
+
+/** Marketing Ressources **/
+
+.newsletter-page .marketing-resources {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.newsletter-page .marketing-resources .resources {
+    margin-top: 40px;
+}
+
+.newsletter-page .marketing-resources .resources .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-page .marketing-resources .resources .description li {
+    margin-left: 50px;
+}
+
+/** Growth Ressources **/
+
+.newsletter-page .growth-resources {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.newsletter-page .growth-resources .resources {
+    margin-top: 40px;
+}
+
+.newsletter-page .growth-resources .resources .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-page .growth-resources .resources .description li {
     margin-left: 50px;
 }
 
