@@ -58,9 +58,12 @@
       </div><!-- /End row -->
     <script type="text/javascript">
     	function subscribed() {
+    		alert("hello");
+			
 			analytics.track('Subscribed', {
-			email: 'ck_emailField' });
-		window.optimizely.push(["trackEvent", "Subscribed"]);
+				email: 'ck_emailField' });
+			
+			window.optimizely.push(["trackEvent", "Subscribed"]);
 		}
 	</script>
 
