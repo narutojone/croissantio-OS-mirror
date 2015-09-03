@@ -4,7 +4,7 @@
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -18,7 +18,6 @@ body {
     padding: 0;
     background-color: #f1f1f1;
 	margin: 0;
-	height: 100%;
 }
 
 section {
@@ -44,6 +43,7 @@ section {
     color: white;
     height: 120px;
 }
+
 
 .home {
 	height: 560px;
@@ -118,8 +118,6 @@ section {
     display: block;
 }
 
-
-
 .hero {
 	text-align: center;
 	margin-top: 100px;
@@ -140,52 +138,16 @@ section {
 	margin-top: 60px;
 }
 
-.newsletter .mailchimp{
-	margin-bottom: 16px;
-}
-
 .newsletter p {
 	color: white;
 	margin-bottom: 10px;
 }
 
-#notification_container {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#notification_container .success {
-  display: block;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 1px solid green;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  color: green;
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-#notification_container .alert {
-  display: block;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 1px solid red;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  color: red;
-  font-weight: bold;
-  font-size: 0.9em;
-}
 
 .references {
 	padding: 20px 20px 20px 20px;
 	background: #fff;
+    height: 360px;
 }
 
 .references .col-md-3 {
