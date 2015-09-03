@@ -44,7 +44,7 @@
           					
 					      </div>
 					      <div class="col-md-3">
-                              <input type="submit" value="Je m'abonne à la newsletter" name="subscribed" id="ck_subscribe_button" onsubmit="return subscribed();" class="col-md-12 btn btn-lg btn-success subscribe_button ck_subscribe_button">
+                              <input type="submit" value="Je m'abonne à la newsletter" name="subscribed" id="ck_subscribe_button" action="javascript:subscribed()" class="col-md-12 btn btn-lg btn-success subscribe_button ck_subscribe_button">
                           </div>
                           <div class="col-md-2"></div>
 					    </form>
@@ -57,7 +57,6 @@
         </div><!-- /End col -->
       </div><!-- /End row -->
     <script type="text/javascript">
-
     	function subscribed() {
 			analytics.track('Subscribed', {
 			email: 'ck_emailField' });
