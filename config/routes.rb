@@ -32,6 +32,9 @@ Rails.application.routes.draw do
   get 'dette-analytics' => "pages#dette-analytics"
 
   get '16-metriques-startups' => "pages#16-metriques-startups"
+
+  get 'vraie-strategie-croissance' => "pages#vraie-strategie-croissance"
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
