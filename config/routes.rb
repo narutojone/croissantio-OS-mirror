@@ -37,6 +37,8 @@ Rails.application.routes.draw do
 
   get 'utilisation-feedbacks-slack' => "pages#utilisation-feedbacks-slack"
 
+  get 'brian-balfour-discute-growth-marketing' => "pages#brian-balfour-discute-growth-marketing"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
