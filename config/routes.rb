@@ -39,6 +39,8 @@ Rails.application.routes.draw do
 
   get 'brian-balfour-discute-growth-marketing' => "pages#brian-balfour-discute-growth-marketing"
 
+  get 'premiere-campagne-acquisition-payante' => "pages#premiere-campagne-acquisition-payante"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
