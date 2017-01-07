@@ -2,10 +2,9 @@
 @import "bootstrap";
 
 html {
-	font-family: sans-serif;
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
 }
+
+
 
 body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -13,11 +12,7 @@ body {
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
-    margin: 0;
-	height: 100%;
-    padding: 0;
-    background-color: #f1f1f1;
-	margin: 0;
+    background-color: #2C96FB;
 }
 
 section {
@@ -25,35 +20,13 @@ section {
 }
 
 .main-wrapper {
-	margin: 0 auto;
-	max-width: 1490px;
-	min-height: 100%;
-	padding: 0;
-	background-color: #fff;
+
 }
 
 .main-wrapper .consulting-page {
     background-image: none;
 }
 
-.footer {
-    padding-top: 50px;
-    background-image: url(background-blue.png);
-    text-align: center;
-    color: white;
-    height: 120px;
-}
-
-
-.home {
-	height: 560px;
-    background-image: url(background-blue.png);
-}
-
-.merci {
-    height:100vh;
-    background-image: url(background-blue.png);
-}
 
 .merci h1{
     text-align: center;
@@ -69,43 +42,7 @@ section {
     line-height: 100%;
 }
 
-.team {
-    height:100vh;
-    background-image: url(background-blue.png);
-}
 
-.team h1 {
-    text-align: center;
-    color: white;
-    font-size: 3em;
-    line-height: 100%;
-}
-
-.team .hero {
-    margin-top: 20px;
-}
-
-.team .name {
-    margin-top: 60px;
-}
-
-.team .pic {
-    padding: 0 100px 0 100px;
-}
-
-.team .pic h3 {
-    text-align: center;
-    color: white;
-    padding: 10px 0 10px 0;
-    font-size: 2em;
-}
-
-.team .pic p a {
-    text-align: center;
-    color: white;
-    padding: 4px 0 4px 0;
-    font-size: 1em;
-}
 
 /** HEADER **/
 
