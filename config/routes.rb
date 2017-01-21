@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  
   root "pages#home"
 
-  get 'newsletter' => "pages#newsletter"
-
-  get 'merci' => "pages#merci"
-
-  get 'team' => "pages#team"
+  get 'thanks' => "pages#thanks"
 
   get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
 
