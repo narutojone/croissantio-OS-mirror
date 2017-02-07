@@ -444,7 +444,12 @@ p {
         margin-bottom: 10px;
     }
 
-    .hero .about h1 {
+    .home h1 {
+         margin-right: 0px;
+         margin-left: 0px;
+    }
+
+    .about h1 {
     font-size: 40px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -453,7 +458,6 @@ p {
 }
 
 @media (min-width: 992px) {
-
  
     .container .grid-md{
         margin: 0 auto;
