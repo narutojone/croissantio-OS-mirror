@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   
   root "pages#home"
 
+  get 'services' => "pages#services"
+
+  get 'newsletter' => "pages#newsletter"
+
+  get 'about' => "pages#about"
+
   get 'thanks' => "pages#thanks"
 
   get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"

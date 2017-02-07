@@ -7,12 +7,29 @@ html {
 
 
 body {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height:100%;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
-    background-color: #2C96FB;
+    background-color: #fff;
+}
+
+.home {
+    background-color: #2c96fb;
+    min-height:100%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1; /* Remove this line if it's not going to be a background! */
+}
+
+.home .tagline {
+    margin-bottom: 30px;
 }
 
 section {
@@ -21,10 +38,6 @@ section {
 
 .main-wrapper {
 
-}
-
-.main-wrapper .consulting-page {
-    background-image: none;
 }
 
 
@@ -42,216 +55,115 @@ section {
     line-height: 100%;
 }
 
+/** ABOUT **/
 
+.about .hero {
+    margin-top: 60px;
+}
+
+.about h1 {
+    color: #2c96fb;
+    text-align: left;
+    font-weight: bold;
+}
+
+.about h2 {
+    color: #2c96fb;
+    text-align: left;
+}
+
+.description-about {
+    text-align: left;
+}
+
+.description-about img {
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+}
+
+/** SERVICES **/
+
+.panel {
+    border-color: #2c96fb;
+    border-width: 1px;
+    height: 270px;
+    margin: 20px 20px 20px 20px;
+}
+
+.text-panel {
+    margin: 20px 40px 20px 40px;
+    text-align: left;
+}
+
+.text-panel h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.input-panel {
+    display: block;
+}
 
 /** HEADER **/
 
-.header {
-    height: 90px;
-    background-image: url(background-blue.png);
-}
 
 .header .nl-header {
     display: block;
 }
 
-.hero {
+/** HOME **/
+
+.home .hero {
 	text-align: center;
 	margin-top: 100px;
 }
 
-.hero h1 {
+.home h1 {
 	color: white;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
-.hero h4 {
+.home h4 {
 	color: white;
+}
+
+/** NEWSLETTER **/
+
+.newsletter .hero {
+    margin-top: 100px;
+}
+
+.newsletter .hero h1 {
+    color: #2c96fb;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+
+.newsletter .hero .form-control {
+    border-color: #2c96fb;
 }
 
 .newsletter{
 	text-align: center;
-	margin-top: 60px;
+	
 }
 
 .newsletter p {
 	color: white;
 	margin-bottom: 10px;
+    font-weight: 12px;
 }
 
-
-.references {
-	padding: 20px 20px 20px 20px;
-	background: #fff;
-    height: 360px;
+.newsletter .last-newsletter {
+    margin-top: 100px;
 }
 
-.references .col-md-3 {
-  line-height: 80px;
+.newsletter .last-newsletter p {
+    color: black;
 }
 
-.references img {
-  max-height: 70px;
-  max-width: 160px;
-  opacity: 0.4;
-}
-
-.references img:hover {
-  opacity: 1;
-}
-
-/** NEWSLETTE PAGE **/
-
-.newsletter-page{
-    background-color: #e3eef9;
-    padding-top: 60px;
-}
-
-.newsletter-page hr{
-    width: 240px;
-    border-color: grey;
-}
-
-
-
-.newsletter-page h1 {
-    text-align: center;
-    font-size: 2.4em;
-    font-weight: bold;
-    line-height: 120%;
-}
-
-.newsletter-page h2 {
-    text-align: center;
-    font-size: 1.8em;
-    font-weight: bold;
-}
-
-.newsletter-page p  {
-    font-size: 1.2em;
-}
-
-.newsletter-page .newsletter-title {
-    text-align: center;
-}
-
-.newsletter-page .newsletter-date {
-    text-align: center;
-}
-
-.newsletter-page .newsletter-date p  {
-    font-size: 1em;
-}
-
-    /** Introduction **/
-
-.newsletter-page .introduction  {
-    margin-top: 50px;
-}
-
-.newsletter-page .article {
-    margin-top: 50px;
-}
-
-.newsletter-page .article .image-article {
-    margin-top: 20px;
-    text-align: center;
-}
-
-
-    /** Meilleures Ressources OLD **/
-
-.newsletter-page .best-resources {
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.newsletter-page .best-resources .resources {
-    margin-top: 40px;
-}
-
-.newsletter-page .best-resources .resources .title {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.newsletter-page .best-resources .resources .description li {
-    margin-left: 50px;
-}
-
-
-/** Marketing Ressources **/
-
-.newsletter-page .marketing-resources {
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.newsletter-page .marketing-resources .resources {
-    margin-top: 40px;
-}
-
-.newsletter-page .marketing-resources .resources .title {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.newsletter-page .marketing-resources .resources .description li {
-    margin-left: 50px;
-}
-
-/** Growth Ressources **/
-
-.newsletter-page .growth-resources {
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.newsletter-page .growth-resources .resources {
-    margin-top: 40px;
-}
-
-.newsletter-page .growth-resources .resources .title {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.newsletter-page .growth-resources .resources .description li {
-    margin-left: 50px;
-}
-
-    /** Produits à découvrir **/
-
-.newsletter-page .products-discover {
-    margin-top: 30px;
-}
-
-.newsletter-page .products-discover .products {
-    margin-top: 40px;
-    margin-bottom: 50px;
-}
-
-.newsletter-page .products-discover .products .title {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.newsletter-page .products-discover .products .image {
-    text-align: center;
-    padding-top: 20px;
-}
-
-    /** Les jobs **/
-
-.newsletter-page .jobs-week {
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.newsletter-page .jobs-week .jobs {
-    margin-top: 20px;
-}
 
 /** VIEWPORT **/
 
@@ -296,7 +208,7 @@ ul {
 
 h1, h2, h3, h4 {
  	font-family: "Raleway", 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
- 	margin: 0 0 20px;
+ 	margin: 0 0 0px;
     color: #3e3e3e;
     letter-spacing: -1px;
 }
@@ -359,8 +271,9 @@ p {
 }
 
 .navbar {
-    padding-top: 20px;
-    padding-bottom: 5px;
+    background-color: #2c96fb;
+    padding-top: 10px;
+    padding-bottom: 7px;
 }
 
 .navbar{
@@ -522,6 +435,11 @@ p {
 
 @media (max-width: 1199px) {
 
+
+    .panel {
+        height: 320px;
+    }
+
     .btn{
         margin-bottom: 10px;
     }
@@ -545,11 +463,25 @@ p {
 }
 
 @media (max-width: 991px) {
+
+    .input-panel {
+        text-align: center;
+}
+
+    .input-panel .ck_subscribe_button {
+        margin-top: 20px;
+    }
+
+    .home .ck_subscribe_button {
+        margin-top: 20px;
+    }
+
        
 }
 
 @media (max-width: 767px) {
     
+
     h2 {
         text-align: left;
     }
@@ -607,14 +539,13 @@ p {
         line-height: 39px;
     }
 
+    .panel {
+        height: 400px;
+    }
 
 	.form-control {
 		height: 48px;
 	}
-
-    .home {
-    height: 700px;
-}
 
     .hero {
     margin-top: 0px;
