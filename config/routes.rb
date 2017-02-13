@@ -1,101 +1,59 @@
 Rails.application.routes.draw do
+  get 'articles/index'
 
-  devise_for :users
-  
+  get 'articles/create'
+
+  get 'articles/new'
+
+  get 'articles/destroy'
+
+  get 'articles/show'
+
+  devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
   root "pages#home"
 
-  get 'services' => "pages#services"
+  get "/admin" => "pages#admin"
 
-  get 'newsletter' => "pages#newsletter"
+  resources :pages, :articles
 
-  get 'about' => "pages#about"
 
-  get 'thanks' => "pages#thanks"
-
-  get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
-
-  get 'experience-developpeur-mailjet' => "pages#experience-developpeur-mailjet"
-
-  get 'chiffres-retention-applications-mobiles' => "pages#chiffres-retention-applications-mobiles"
-
-  get 'croissance-etsy-analyse' => "pages#croissance-etsy-analyse"
-
-  get 'alex-schultz-vp-growth-facebook' => "pages#alex-schultz-vp-growth-facebook"
-
-  get 'culture-data-zynga' => "pages#culture-data-zynga"
-
-  get 'non-growth-hacking' => "pages#non-growth-hacking"
-
-  get 'mauvaise-retention' => "pages#mauvaise-retention"
-
-  get 'from-zero-to-one-point-two' => "pages#from-zero-to-one-point-two"
-
-  get 'produit-levier-croissance' => "pages#produit-levier-croissance"
-
-  get 'dette-analytics' => "pages#dette-analytics"
-
-  get '16-metriques-startups' => "pages#16-metriques-startups"
-
-  get 'vraie-strategie-croissance' => "pages#vraie-strategie-croissance"
-
-  get 'utilisation-feedbacks-slack' => "pages#utilisation-feedbacks-slack"
-
-  get 'brian-balfour-discute-growth-marketing' => "pages#brian-balfour-discute-growth-marketing"
-
-  get 'premiere-campagne-acquisition-payante' => "pages#premiere-campagne-acquisition-payante"
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
+  # get 'services' => "pages#services"
   #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  # get 'newsletter' => "pages#newsletter"
+  #
+  # get 'about' => "pages#about"
+  #
+  # get 'thanks' => "pages#thanks"
+  #
+  # get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
+  #
+  # get 'experience-developpeur-mailjet' => "pages#experience-developpeur-mailjet"
+  #
+  # get 'chiffres-retention-applications-mobiles' => "pages#chiffres-retention-applications-mobiles"
+  #
+  # get 'croissance-etsy-analyse' => "pages#croissance-etsy-analyse"
+  #
+  # get 'alex-schultz-vp-growth-facebook' => "pages#alex-schultz-vp-growth-facebook"
+  #
+  # get 'culture-data-zynga' => "pages#culture-data-zynga"
+  #
+  # get 'non-growth-hacking' => "pages#non-growth-hacking"
+  #
+  # get 'mauvaise-retention' => "pages#mauvaise-retention"
+  #
+  # get 'from-zero-to-one-point-two' => "pages#from-zero-to-one-point-two"
+  #
+  # get 'produit-levier-croissance' => "pages#produit-levier-croissance"
+  #
+  # get 'dette-analytics' => "pages#dette-analytics"
+  #
+  # get '16-metriques-startups' => "pages#16-metriques-startups"
+  #
+  # get 'vraie-strategie-croissance' => "pages#vraie-strategie-croissance"
+  #
+  # get 'utilisation-feedbacks-slack' => "pages#utilisation-feedbacks-slack"
+  #
+  # get 'brian-balfour-discute-growth-marketing' => "pages#brian-balfour-discute-growth-marketing"
+  #
+  # get 'premiere-campagne-acquisition-payante' => "pages#premiere-campagne-acquisition-payante"
 end

@@ -4,6 +4,8 @@
 html {
 }
 
+
+
 body {
 	height:100%;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -145,7 +147,7 @@ section {
 
 .newsletter{
 	text-align: center;
-
+	
 }
 
 .newsletter p {
@@ -165,24 +167,24 @@ section {
 
 /** VIEWPORT **/
 
-@-webkit-viewport {
-	width: device-width;
+@-webkit-viewport { 
+	width: device-width; 
 }
 
-@-moz-viewport {
-	width: device-width;
+@-moz-viewport { 
+	width: device-width; 
 }
 
-@-ms-viewport {
-	width: device-width;
+@-ms-viewport { 
+	width: device-width; 
 }
 
-@-o-viewport {
-	width: device-width;
+@-o-viewport { 
+	width: device-width; 
 }
 
-@viewport {
-	width: device-width;
+@viewport { 
+	width: device-width; 
 }
 
 a {
@@ -333,7 +335,7 @@ p {
 
 .navbar-toggle {
     color: #ffffff;
-    padding: 0;
+    padding: 0; 
     margin-top: 13px;
     margin-bottom: 0;
     font-size:26px;
@@ -452,11 +454,11 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
 }
-
+    	
 }
 
 @media (min-width: 992px) {
-
+ 
     .container .grid-md{
         margin: 0 auto;
         width: 970px;
@@ -478,11 +480,11 @@ p {
         margin-top: 20px;
     }
 
-
+       
 }
 
 @media (max-width: 767px) {
-
+    
 
     h2 {
         text-align: left;
@@ -526,7 +528,7 @@ p {
     .subscribe-header {
         display: none;
     }
-
+       	
 }
 
 @media (max-width: 479px) {
@@ -569,7 +571,7 @@ p {
     .back-nl {
         display: none;
     }
-
+    
     .team-box {
         margin-bottom: 20px;
     }

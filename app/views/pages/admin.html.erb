@@ -1,0 +1,30 @@
+<% content_for :title, "Articles"  %>
+<% content_for :description, "This is the meta description for the article-admin menu" %>
+<% content_for :css do %>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+<%= stylesheet_link_tag "admin", "magnific-popup", "font-icons", "trumbowyg.min", "style"  %>
+<% end %>
+
+<body class="nav-md">
+    <div class="container body admin-body">
+        <div class="main_container admin-body">
+            <%= render "shared/admin_menu" %>
+            <div class="right_col cf" role="main">
+                <div class="col-md-12 col-sm-12 col-xs-12 table-fade">
+                  <p>no content</p>
+                </div>
+                  </div>
+        </div>
+    </div>
+    <% content_for :js do %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <%= javascript_include_tag "jquery_ujs", "admin", "trumbowyg.min", "script" %>
+    <script>
+        $('#editor').trumbowyg();
+        // getText();
+        // loadArticle()
+    </script>
+    <% end %>
+</body>
