@@ -41,6 +41,21 @@
 			        	</div>
 			        </div>
         </div><!-- /End col -->
+				<div class="col-md-12">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						<% @newsletters.each do |newsletter| %>
+						<div class="last-newsletter">
+							<h2><%= link_to newsletter.title, articles_show_path(newsletter) %></h2>
+							<p><%= raw newsletter.body[0..250] %>... </p>
+							<p>
+								<%= link_to "Read more!", articles_show_path(newsletter) %>
+							</p>
+						</div>
+						<% end %>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
       </div><!-- /End row -->
     <script type="text/javascript">
     	function Subscribed() {

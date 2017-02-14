@@ -1,12 +1,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-html {
-}
+// STYLESHEET CONTAINING ALL STYLING
+// SPECIFICATION FOR PAGES
 
+// Table of contents
+// - GENERAL
+// - ABOUT
+// - SERVICES
+// - HOME
+// - NEWSLETTER
+
+// -------------- GENERAL -----------------------------
 body:not(.articles) {
 	height:100%;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica","Arial", "sans-serif";
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
     line-height: 28px;
@@ -53,7 +61,11 @@ section {
     line-height: 100%;
 }
 
-/** ABOUT **/
+
+.header .nl-header {
+    display: block;
+}
+// -------------- ABOUT -----------------------------
 
 .about .hero {
     margin-top: 60px;
@@ -79,8 +91,7 @@ section {
     margin: 20px 20px 20px 20px;
 }
 
-/** SERVICES **/
-
+// -------------- SERVICES -----------------------------
 .panel {
     border-color: #2c96fb;
     border-width: 1px;
@@ -102,14 +113,9 @@ section {
     display: block;
 }
 
-/** HEADER **/
 
+// -------------- HOME -----------------------------
 
-.header .nl-header {
-    display: block;
-}
-
-/** HOME **/
 
 .home .hero {
 	text-align: center;
@@ -126,8 +132,7 @@ section {
 	color: white;
 }
 
-/** NEWSLETTER **/
-
+// -------------- NEWSLETTER -----------------------------
 .newsletter .hero {
     margin-top: 100px;
 }
@@ -162,8 +167,12 @@ section {
     color: black;
 }
 
+.last-newsletter{
+  margin-top: 25px;
+}
 
-/** VIEWPORT **/
+
+// -------------- VIEWPORT -----------------------------
 
 @-webkit-viewport {
 	width: device-width;

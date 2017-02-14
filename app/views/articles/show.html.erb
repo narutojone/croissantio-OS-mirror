@@ -1,6 +1,6 @@
 <!-- OPEN GRAPH TAGS & STYLING -->
 <%= content_for :css do %>
-<%= stylesheet_link_tag "articles", "bootstrap_and_customization" %>
+<%= stylesheet_link_tag "models/articles", "bootstrap_and_customization" %>
 <% end %>
 <% content_for :title, @article.title  %>
 <% content_for :description, @article.description %>
@@ -15,11 +15,11 @@
     <div class="js__article article__main" data-title="Finding your way from maker to manager" data-url="https://blog.intercom.com/maker-to-manager/">
         <div class="container">
             <div class="article__hero">
-                <a href="https://blog.intercom.com/category/startups/" class="f__up f__no-und categories__link js__category-name">Startups</a>
+                <a href="https://blog.intercom.com/category/startups/" class="f__up f__no-und categories__link js__category-name"><%= @article.category.capitalize %></a>
                 <span class="categories__separator">|</span>
                 <span class="f__up categories__text">
                     <span class="js__read-time">
-                        8 min</span>
+                        <%= @article.body.reading_time :format => :approx %></span>
                     read</span>
                 <h1 class="article__hero-title js__article-hero-title"><%= @article.title %></h1>
             </div>
@@ -31,29 +31,25 @@
         </div>
         <div class="container">
             <div class="article__wrap ">
-                <div class="article__author">
-                    <div class="author__medium">
-                        <a href="https://blog.intercom.com/author/brian_scanlan/" class="f__no-und author__image-medium author__image-no-round">
-                            <img src="<%= image_path("maxime-salomon.jpg") %>" alt="">
-                        </a>
-                        <div>
-                            <a href="/blog" class="f__no-und f__up">
-                                <span class="js__author-name">Maxime Salomon</span></span>
-                                <span class="author__medium-comma">,</span>Author, Growth Hacker
-                            </a>
-                        </div>
-                        <a href="http://twitter.com/brian_scanlan" class="f__no-und c__blue c__blue-hover f__up">@brian_scanlan</a>
-                    </div>
-                    <div class="article__credit">
-                        Main illustration:
-                        <a href="http://halliebateman.com/">Hallie Bateman</a>
-                    </div>
-                </div>
                 <article class="article">
                     <div class="article__inner article__shift">
                       <%= raw @article.body %>
                     </div>
                 </article>
+                <div class="article__author">
+                  <div class="author__medium">
+                    <a href="https://blog.intercom.com/author/brian_scanlan/" class="f__no-und author__image-medium author__image-no-round">
+                      <img src="<%= image_path("maxime-salomon.jpg") %>" alt="">
+                    </a>
+                    <div>
+                      <a href="/blog" class="f__no-und f__up">
+                        <span class="js__author-name">Maxime Salomon</span></span>
+                        <span class="author__medium-comma">,</span>Author, Growth Hacker
+                      </a>
+                    </div>
+                    <a href="http://twitter.com/brian_scanlan" class="f__no-und c__blue c__blue-hover f__up">@MaximeSalomon</a>
+                  </div>
+                </div>
             </div>
         </div>
     </div>

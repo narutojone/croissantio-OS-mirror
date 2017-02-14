@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_filter :is_admin?, only: [:admin], if: "User.any?"
 
    def home
-
+     @newsletters = Article.where(posted: true, category: "newsletter").order("created_at DESC")
    end
 
    def admin
@@ -23,6 +23,6 @@ class PagesController < ApplicationController
    end
 
    def blog
-     @articles = Article.where(posted: true).order("created_at DESC")
+     @articles = Article.where(posted: true).where.not(category: "newsletter").order("created_at DESC")
    end
 end

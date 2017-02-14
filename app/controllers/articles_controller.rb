@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     @article = Article.new(article_params)
     @article.update_attribute(:user_id, current_user.id)
-    # set_slug_for_article # Sets slug_en & slug_nl for article
+    set_slug_for_article(@article)
     if @article.save
       if @article.posted?
         flash[:success] = "Article succesfully posted!"
@@ -40,7 +40,8 @@ class ArticlesController < ApplicationController
   def update
     @action = "Edit"
     @articles = Article.all
-    if @article.update(article_params)
+    new_article_params = update_slug_for_article(article_params)
+    if @article.update(new_article_params)
       flash[:success] = "Article succesfully updated!"
       render :index
     else
@@ -65,14 +66,13 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :description, :body, :image, :user_id, :category, :posted, :slug)
   end
 
-  def set_slug_for_article # Set & Update slugs for articles
-    @article.set_friendly_id(article_params[:title], :nl)
-    @article.set_friendly_id(article_params[:en_title], :en)
+  def set_slug_for_article(article) # Set & Update slugs for articles
+    article.slug = article_params[:title].gsub("\'", "").parameterize
+    article.save!
   end
 
   def update_slug_for_article(article_params) # Add updated slugs to params (not passed through form)
-    article_params.merge! slug_nl: article_params[:title].gsub("\'", "").parameterize
-    article_params.merge! slug_en: article_params[:en_title].gsub("\'", "").parameterize
+    article_params.merge! slug: article_params[:title].gsub("\'", "").parameterize
     article_params
   end
 

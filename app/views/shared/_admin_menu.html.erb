@@ -1,17 +1,13 @@
 <% content_for :body_class, "nav-md" %>
 <div class="col-md-3 left_col">
   <div class="left_col scroll-view">
-    <div class="navbar nav_title"> <%=link_to(root_path , class: "site_title") do %> <i class="fa fa-diamond"></i> <span>GrowthBakery</span></a> <% end %> </div>
+    <div class="navbar nav_title"> <%=link_to(root_path , class: "site_title") do %> <i class="fa fa-diamond"></i> <span>Growth Bakery</span></a> <% end %> </div>
   <div class="cf"></div>
   <div class="profile cf">
     <div class="profile_pic"><%=image_tag("maxime-salomon.png", class: "img-circle profile_img") %> </div>
     <div class="profile_info">
-      <span>Welcome,</span> <% if user_signed_in? %>
-        <h2>Simon</h2>
-      <% else %>
-        <h2>Anonymous</h2>
-      <% end %>
-
+      <span>Welcome,</span>
+        <h2>Maxime</h2>
     </div>
   </div>
   <br/>

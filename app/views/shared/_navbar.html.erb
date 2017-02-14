@@ -1,5 +1,5 @@
 <% content_for :css do %>
-<%= stylesheet_link_tag "bootstrap_and_customization"  %>
+<%= stylesheet_link_tag "models/pages"  %>
 <% end %>
 
 <div>
@@ -16,8 +16,9 @@
       </div>
     <div class="collapse navbar-collapse" id="nav-collapse">
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="/about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
+        <li><a href="<%= root_path %>">Newsletter</a></li>
+          <li><a href="<%= about_path %>">About</a></li>
+          <li><a href="<%= blog_path %>">Blog</a></li>
           <li><a href="mailto:maxime@growthbakery.com">Contact</a></li>
       </ul>
     </div>
