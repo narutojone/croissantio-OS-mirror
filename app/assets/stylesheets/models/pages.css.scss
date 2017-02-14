@@ -10,6 +10,7 @@
 // - SERVICES
 // - HOME
 // - NEWSLETTER
+// - BLOG
 
 // -------------- GENERAL -----------------------------
 body:not(.articles) {
@@ -64,6 +65,11 @@ section {
 
 .header .nl-header {
     display: block;
+}
+
+.col-center{
+	float: none;
+	margin: 0 auto;
 }
 // -------------- ABOUT -----------------------------
 
@@ -583,3 +589,5 @@ p {
         margin-bottom: 20px;
     }
 }
+
+// -------------- BLOG -----------------------------
