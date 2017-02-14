@@ -1,29 +1,13 @@
-<head>
-	<title>Thanks - The Growth Bakery</title>
-	<meta charset="utf-8">
-	<meta name="apple-mobile-web-app-capable" content="yes"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<meta name="description" content="The Growth bakery est un collectif de marketeurs français composé de Maxime Salomon, Adrien Montcoudiol et Bruno Correia qui partagent leurs découvertes sur le marketing & Growth pour startups.">
-    <meta name="author" content="The Growth Bakery">
+<% content_for :title, "Thanks"  %>
+<% content_for :description, "Description for thanks" %>
+<% content_for :ogtitle, "Thanks" %>
+<% content_for :ogdescription, "Description for thanks" %>
+<% content_for :ogtype, "page" %>
+<% content_for :ogimage, image_path('maxime-salomon.jpg') %>
 
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta http-equiv="X-FRAME-OPTIONS" content="SAMEORIGIN">
-    <meta name="robots" content="noindex, nofollow">
 
-</head>
-
-<body>
 <section class="thanks">
-	<header>
-		<nav class="navbar">
-		  <div class="container">
-		  	<div class="navbar-header">
-		      <a class="navbar-brand" href="/">The Growth Bakery</a>
-		    </div>
-		  </div>
-		</nav>
-	</header>
+	<%= render "shared/navbar" %>
 		<div class="container">
 	    	<div class="row">
 	    		<div class="col-md-12 text-center">
@@ -54,5 +38,3 @@ window._fbq.push(['track', '6025811720422', {'value':'0.00','currency':'EUR'}]);
 analytics.page('Merci');
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6025811720422&amp;cd[value]=0.00&amp;cd[currency]=EUR&amp;noscript=1" /></noscript>
-
-</body>

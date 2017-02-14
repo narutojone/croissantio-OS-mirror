@@ -1,33 +1,12 @@
-<% content_for :css do %>
-<%= stylesheet_link_tag "bootstrap_and_customization"  %>
-<% end %>
-<% content_for :body_class, "home" %>
-<%= render "shared/navbar" %>
-<head>
-	<title>The Growth Bakery - B2B SaaS Marketing & Growth</title>
-	<meta charset="utf-8">
-	<meta name="apple-mobile-web-app-capable" content="yes"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<meta name="description" content="The Growth bakery is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition.">
-    <meta name="author" content="The Growth Bakery">
-
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="The Growth Bakery" />
-    <meta property="og:site_name" content="The Growth Bakery" />
-    <meta property="og:url" content="http://growthbakery.com" />
-    <meta property="og:description" content="The Growth bakery is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition." />
-	<meta property="og:type" content="article" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="article:publisher" content="https://www.facebook.com/growthbakery" />
-
-</head>
-
-<body>
+<% content_for :title, "B2B SaaS Marketing & Growth"  %>
+<% content_for :description, "The Growth bakery is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition." %>
+<% content_for :ogtitle, "B2B SaaS Marketing & Growth" %>
+<% content_for :ogdescription, "The Growth bakery is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition." %>
+<% content_for :ogtype, "page" %>
+<% content_for :ogimage, image_path('maxime-salomon.jpg') %>
 
 <section class="home">
+	<%= render "shared/navbar" %>
 		<div class="container">
     	<div class="row">
     		<div class="col-md-12 text-center">
@@ -75,4 +54,3 @@
 	<script type="text/javascript">
 		analytics.page('Home');
 	</script>
-</body>

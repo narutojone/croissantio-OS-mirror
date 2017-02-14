@@ -1,22 +1,21 @@
 Rails.application.routes.draw do
-  devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
-  root "pages#home"
-
+  # ------------------ Static Pages -----------------------
+  # Private
   get "/admin" => "pages#admin"
+  # Public
+  root "pages#home"
+  get 'blog' => "pages#blog"
+  get 'services' => "pages#services"
+  get 'newsletter' => "pages#newsletter"
+  get 'about' => "pages#about"
+  get 'thanks' => "pages#thanks"
 
+  # ------------------ Model Routing -----------------------
+  devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
   resources :pages
   resources :articles, except: [:show]
   resources :articles, :only => [:show], :path => '', as: "articles_show"
 
-
-  # get 'services' => "pages#services"
-  #
-  # get 'newsletter' => "pages#newsletter"
-  #
-  # get 'about' => "pages#about"
-  #
-  # get 'thanks' => "pages#thanks"
-  #
   # get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
   #
   # get 'experience-developpeur-mailjet' => "pages#experience-developpeur-mailjet"
