@@ -1,20 +1,12 @@
 Rails.application.routes.draw do
-  get 'articles/index'
-
-  get 'articles/create'
-
-  get 'articles/new'
-
-  get 'articles/destroy'
-
-  get 'articles/show'
-
   devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
   root "pages#home"
 
   get "/admin" => "pages#admin"
 
-  resources :pages, :articles
+  resources :pages
+  resources :articles, except: [:show]
+  resources :articles, :only => [:show], :path => '', as: "articles_show"
 
 
   # get 'services' => "pages#services"

@@ -17,29 +17,27 @@
     });
 })(jQuery);
 
-
-// Switching between index view & create/edit view
-function createForm() {
+  // Switching between index view & create/edit view
+  function createForm() {
     $(".table-fade").slideUp()
     $(".create-form").fadeIn()
-}
+  }
 
-function closeForm() {
+  function closeForm() {
     $(".create-form").slideUp()
     $(".table-fade").slideDown()
-}
+  }
 
-// Update hidden field
-function getText() {
-  $(".locale-nl").find(".trumbowyg-editor").on("input", function() {
-    value = $(".locale-nl").find(".trumbowyg-editor").html();
-    $(".form-nl #article_body").val(value);
-  })
-  $(".trumbowyg-editor").height(500)
-}
+  // Update hidden field
+  function getText() {
+    $(".trumbowyg-editor").on("input", function() {
+      value = $(".trumbowyg-editor").html();
+      $("#article_body").val(value);
+    })
+    $(".trumbowyg-editor").height(500)
+  }
 
-// Load article in wysiwyg editor from database
-function loadArticle() {
-  var text_en = $(".form-en #article_en_body").val()
-  $(".locale-en").find(".trumbowyg-editor").html(text_en)
-}
+  // Load article in wysiwyg editor from database
+  function loadArticle() {
+    $(".trumbowyg-editor").html($("#article_body").val())
+  }

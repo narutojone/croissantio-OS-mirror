@@ -16,6 +16,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mailchimp-api', require: 'mailchimp'
+gem "carrierwave"
+gem "fog-aws"
+gem "mini_magick"
+gem "friendly_id"
 
 group :development do
   gem "better_errors"

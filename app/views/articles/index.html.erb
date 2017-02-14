@@ -44,8 +44,9 @@
                                     <tr>
                                         <td scope="row" class="hidden-xs"><%= article.id %></td>
                                         <td>
-                                            <%= link_to article_show_path(article)  do %>
-                                            <i class="fa fa-cogs"></i>
+                                            <%= link_to articles_show_path(article)  do %>
+                                            <i class="fa fa-search"></i>
+                                            <%= article.title %>
                                             <% end %>
                                         </td>
                                         <td class="hidden-xs"><%= article.description %></td>
@@ -59,7 +60,7 @@
                                             </span>
                                             <% end %>
                                         </td>
-                                        <td class="hidden-xs">author</td>
+                                        <td class="hidden-xs"><%= current_user.email %></td>
                                         <td class="hidden-xs">
                                             <% if article.posted? %>
                                             <%= "Posted" %>
@@ -112,7 +113,7 @@
                         </div>
                         <div class="x_content">
                             <br>
-                            <%= form_for(@article, :html => {:class => "form-horizontal form-label-left", :id => "demo-form2", :multipart => true }) do |f| %>
+                            <%= form_for(@article, :html => { multipart: true, :class => "form-horizontal form-label-left", :id => "demo-form2", :multipart => true }) do |f| %>
                             <%= render "shared/error_messages", object: f.object %>
                             <div class="form-group locale-field">
                                 <%= f.label :title, "Title", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
@@ -132,7 +133,7 @@
                               </div>
                             </div>
                             <div class="form-group form-en">
-                                <%= f.hidden_field :body, html: {:class => "form-control col-md-7 col-xs-12", :id => "editorcontent"} %>
+                                <%= f.hidden_field :body %>
                             </div>
                             <div class="form-group">
                                 <%= f.label :category, "Category", class: "control-label col-md-3 col-sm-3 col-xs-12" %>

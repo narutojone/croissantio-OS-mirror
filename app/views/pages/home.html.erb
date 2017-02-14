@@ -1,3 +1,8 @@
+<% content_for :css do %>
+<%= stylesheet_link_tag "bootstrap_and_customization"  %>
+<% end %>
+<% content_for :body_class, "home" %>
+<%= render "shared/navbar" %>
 <head>
 	<title>The Growth Bakery - B2B SaaS Marketing & Growth</title>
 	<meta charset="utf-8">
@@ -9,7 +14,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:title" content="The Growth Bakery" />
     <meta property="og:site_name" content="The Growth Bakery" />
     <meta property="og:url" content="http://growthbakery.com" />
@@ -23,27 +28,6 @@
 <body>
 
 <section class="home">
-	<header>
-		<nav class="navbar">
-		  <div class="container">
-		  	<div class="navbar-header">
-		  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
-		       <span class="sr-only">Toggle navigation</span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="/">The Growth Bakery</a>
-		    </div>
-			<div class="collapse navbar-collapse" id="nav-collapse">
-			  <ul class="nav navbar-nav navbar-right">
-			  		<li><a href="/about">About</a></li>
-					<li><a href="mailto:maxime@growthbakery.com">Contact</a></li>
-			  </ul>
-			</div>
-		  </div>
-		</nav>
-	</header>
 		<div class="container">
     	<div class="row">
     		<div class="col-md-12 text-center">
@@ -64,7 +48,7 @@
 					      <div class="col-md-2"></div>
           					<div class="ck_control_group ck_email_field_group col-md-5">
           						<input type="email" class="form-control" name="email" class="ck_email_address" id="ck_emailField" autocomplete="on" placeholder="Please fill in your email address to subscribe" required>
-          					
+
 					      </div>
 					      <div class="col-md-3">
                               <input type="submit" value="Subscribe" name="subscribed" id="ck_subscribe_button" class="col-md-12 btn btn-lg btn-success subscribe_button ck_subscribe_button">
@@ -80,9 +64,9 @@
         </div><!-- /End col -->
       </div><!-- /End row -->
     <script type="text/javascript">
-    	function Subscribed() {			
+    	function Subscribed() {
 			analytics.track('Subscribed');
-			
+
 			window.optimizely.push(["trackEvent", "Subscribed"]);
 		}
 	</script>
