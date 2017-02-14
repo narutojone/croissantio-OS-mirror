@@ -54,7 +54,7 @@
 				<div class="col-md-8">
 					<% @newsletters.each do |newsletter| %>
 					<div class="last-newsletter">
-						<h2><%= newsletter.title %></h2>
+						<h2><%= link_to newsletter.title, articles_show_path(newsletter) %></h2>
 						<p><%= raw newsletter.body[0..250] %></p>
 					</div>
 					<% end %>
