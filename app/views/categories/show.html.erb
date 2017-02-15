@@ -1,0 +1,45 @@
+<% content_for :title, "Category #{@category.name.capitalize}"  %>
+<% content_for :description, "Description for category #{@category.name.capitalize}" %>
+<% content_for :ogtitle, "Category #{@category.name.capitalize}" %>
+<% content_for :ogdescription, "Description for category #{@category.name.capitalize}" %>
+<% content_for :ogtype, "page" %>
+<% content_for :ogimage, image_path('maxime-salomon.jpg') %>
+<% content_for :css do %>
+<%= stylesheet_link_tag "blog" %>
+<% end  %>
+
+<%= render "shared/navbar" %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-center">
+            <% @articles.each do |article| %>
+            <article>
+                <h2>
+                    <%= article.title %>
+                </h2>
+                <hr>
+                <div class="article-img">
+                    <%= link_to articles_show_path(article)  do  %>
+                    <%= image_tag article.image.url, style: "max-width: 100%; max-height: 250px:" %>
+                    <% end %>
+                </div>
+                <hr>
+                <p><%= article.description %></p>
+                <%= link_to "Read more", articles_show_path(article), class: "btn btn-primary" %>
+                <hr>
+            </article>
+            <% end %>
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <!-- <div class="col-md-4"> -->
+        <!-- Side Widget Well -->
+        <!-- <div class="well">
+                    <h4>Side Widget Well</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                </div>
+
+            </div> -->
+
+    </div>
+</div>

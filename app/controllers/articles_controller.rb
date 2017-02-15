@@ -1,6 +1,9 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
   before_action :setup, only: [:show, :edit, :update, :destroy]
+  before_filter :logged_in_user?, except: [:show]
+  before_filter :is_admin?, except: [:show]
+
 
   def index
     @action = "New"
@@ -32,14 +35,12 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @articles = Article.all
     @action = "Edit"
     render :index
   end
 
   def update
     @action = "Edit"
-    @articles = Article.all
     new_article_params = update_slug_for_article(article_params)
     if @article.update(new_article_params)
       flash[:success] = "Article succesfully updated!"
@@ -63,7 +64,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description, :body, :image, :user_id, :category, :posted, :slug)
+    params.require(:article).permit(:title, :description, :body, :image, :user_id, :category_id, :posted, :slug)
   end
 
   def set_slug_for_article(article) # Set & Update slugs for articles
@@ -78,5 +79,6 @@ class ArticlesController < ApplicationController
 
   def setup
     @article = Article.friendly.find(params[:id])
+    @articles = Article.all
   end
 end

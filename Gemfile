@@ -21,6 +21,7 @@ gem "fog-aws"
 gem "mini_magick"
 gem "friendly_id"
 gem "readingtime"
+gem "pry"
 
 group :development do
   gem "better_errors"

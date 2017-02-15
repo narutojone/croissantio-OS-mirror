@@ -50,7 +50,7 @@
                                             <% end %>
                                         </td>
                                         <td class="hidden-xs"><%= article.description %></td>
-                                        <td class="hidden-xs"><%= article.category %></td>
+                                        <td class="hidden-xs"><%= article.category.name %></td>
                                         <td class="hidden-xs">
                                             <% if !article.image.url.nil? %>
                                             <span data-lightbox="gallery">
@@ -74,7 +74,7 @@
                                             edit
                                             <% end %>
                                             |
-                                            <%= link_to article_path(article), :method => "delete", :data => {:confirm => 'Are you sure?'} do %>
+                                            <%= link_to articles_show_path(article), :method => "delete", :data => {:confirm => 'Are you sure?'} do %>
                                             <i class="fa fa-trash"></i>
                                             delete
                                             <% end %>
@@ -113,7 +113,7 @@
                         </div>
                         <div class="x_content">
                             <br>
-                            <%= form_for(@article, :html => { multipart: true, :class => "form-horizontal form-label-left", :id => "demo-form2", :multipart => true }) do |f| %>
+                            <%= form_for(@article, :html => { multipart: true, :class => "form-horizontal form-label-left", :id => "demo-form2" }) do |f| %>
                             <%= render "shared/error_messages", object: f.object %>
                             <div class="form-group locale-field">
                                 <%= f.label :title, "Title", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
@@ -136,9 +136,9 @@
                                 <%= f.hidden_field :body %>
                             </div>
                             <div class="form-group">
-                                <%= f.label :category, "Category", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <%= f.label :category_id, "Category", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.text_field :category, :class => "form-control col-md-7 col-xs-12" %>
+                                    <%= f.select :category_id, options_from_collection_for_select(Category.all, "id", "name"), {}, {class: "form-control col-md-7 col-xs-12"} %>
                                 </div>
                             </div>
                             <div class="form-group">

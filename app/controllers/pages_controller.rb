@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_filter :logged_in_user?, only: [:admin], if: "User.any?"
-  before_filter :is_admin?, only: [:admin], if: "User.any?"
+  before_filter :logged_in_user?, only: [:admin]
+  before_filter :is_admin?, only: [:admin]
 
    def home
    end
@@ -22,10 +22,11 @@ class PagesController < ApplicationController
    end
 
    def blog
-     @articles = Article.where(posted: true).where.not(category: "newsletter").order("created_at DESC")
+     @category = (Category.where.not(name: "newsletter").first) || (return @articles = [])
+     @articles = @category.articles.where(posted: true).order("created_at DESC")
    end
 
    def newsletter
-     @newsletters = Article.where(posted: true, category: "newsletter").order("created_at DESC")
+     @newsletters = Category.find_by(name: "newsletter").articles.where(posted: true).order("created_at DESC")
 end
 end

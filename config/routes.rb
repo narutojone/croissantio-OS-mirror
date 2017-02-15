@@ -1,20 +1,21 @@
 Rails.application.routes.draw do
   # ------------------ Static Pages -----------------------
   # Private
-  get "/admin" => "pages#admin"
+  get '/admin' => 'pages#admin'
   # Public
-  root "pages#home"
-  get 'blog' => "pages#blog"
-  get 'services' => "pages#services"
-  get 'newsletter' => "pages#newsletter"
-  get 'about' => "pages#about"
-  get 'thanks' => "pages#thanks"
+  root 'pages#home'
+  get 'blog' => 'pages#blog'
+  get 'services' => 'pages#services'
+  get 'newsletter' => 'pages#newsletter'
+  get 'about' => 'pages#about'
+  get 'thanks' => 'pages#thanks'
 
   # ------------------ Model Routing -----------------------
-  devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
-  resources :pages
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'register' }
+  resources :pages, :categories
   resources :articles, except: [:show]
-  resources :articles, :only => [:show], :path => '', as: "articles_show"
+
+  resources :articles, only: [:show], path: "", as: "articles_show"
 
   # get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
   #
