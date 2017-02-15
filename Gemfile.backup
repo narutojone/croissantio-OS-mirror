@@ -23,7 +23,7 @@ gem "friendly_id", "~> 5.2"
 gem "readingtime", "~> 0.4"
 gem "pry", "~> 0.10"
 gem "algoliasearch-rails", "~> 1.17"
-gem "faker", "~> 1.7"
+gem "faker"
 
 group :development do
   gem "better_errors", "~> 2.1"

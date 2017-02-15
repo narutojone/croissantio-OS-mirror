@@ -219,7 +219,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   coffee-rails (~> 4.0)
   devise (~> 3.5)
-  faker (~> 1.7)
+  faker
   fog-aws (~> 0.9)
   friendly_id (~> 5.2)
   jbuilder (~> 2.3)

@@ -3,5 +3,20 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+25.times do
+name = Faker::Name.name
+link = Faker::Internet.url
+title = Faker::Book.title
+description = Faker::Lorem.paragraph(2)
+Resource.create!(
+title: title,
+description: description,
+link: link,
+website: link,
+author: name,
+resource_type: ["Article", "Presentation", "Link", "Other"].sample,
+grade: (1..5).to_a.sample,
+date: Time.now
+)
+end

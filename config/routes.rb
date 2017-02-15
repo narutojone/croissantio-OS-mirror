@@ -9,13 +9,46 @@ Rails.application.routes.draw do
   get 'newsletter' => 'pages#newsletter'
   get 'about' => 'pages#about'
   get 'thanks' => 'pages#thanks'
+  get '/search' => 'pages#search'
 
   # ------------------ Model Routing -----------------------
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'register' }
-  resources :pages, :categories
-  resources :articles, except: [:show]
+  resources :pages, :categories,:articles, :resources
 
-  resources :articles, only: [:show], path: "", as: "articles_show"
+=begin
+This routes articles and resources. First it searches for a matching article by slug (friendly id), then
+falls down to resources. Ex;
+www.mysite.com/this-is-the-title-of-the-article  (articles#show)
+www.mysite.com/cool-new-resource (resources#show)
+=end
+    class ArticleUrlConstrainer
+      def matches?(request)
+        id = request.path[1..-1]
+        Article.find_by_slug(id)
+      end
+    end
+
+    constraints(ArticleUrlConstrainer.new) do
+      match '/:id', :via => [:get], to: "articles#show",  as: "articles_show"
+    end
+
+    class ResourceUrlConstrainer
+      def matches?(request)
+        id = request.path[1..-1]
+        Resource.find_by_slug(id)
+      end
+    end
+
+    constraints(ResourceUrlConstrainer.new) do
+      match '/:id', :via => [:get], to: "resources#show", as: "resources_show"
+    end
+
+    resources :articles, :only => [:show], :path => '', as: "articles_show"
+    resources :resources, :only => [:show], :path => '', as: "resources_show"
+
+    match "*path",  :via => [:get], to: "locale#not_found"
+
+# Maxime routing (old)
 
   # get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
   #
