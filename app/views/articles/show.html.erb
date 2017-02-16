@@ -1,16 +1,80 @@
-<!-- OPEN GRAPH TAGS & STYLING -->
+<!-- CONTENT -->
 <%= content_for :css do %>
-<%= stylesheet_link_tag "models/articles", "bootstrap_and_customization" %>
+<%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme"  %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
 <% end %>
+
+<!-- OPEN GRAPH TAGS & STYLING -->
 <% content_for :title, @article.title  %>
 <% content_for :description, @article.description %>
 <% content_for :ogtitle, @article.title %>
 <% content_for :ogdescription, @article.description %>
 <% content_for :ogtype, "article" %>
 <% content_for :ogimage, image_url(@article.image) %>
-<%= render "shared/navbar" %>
 
-<!-- CONTENT -->
+<div class="nav-container">
+    <div class="bar bar--sm visible-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 col-sm-2">
+                    <a href="index.html">
+                        <%= image_tag "logo.png", class: "logo logo-dark", style: "min-width: 230px;" %>
+                        <!-- <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"/> -->
+                        <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png"/> -->
+                    </a>
+                </div>
+                <div class="col-xs-9 col-sm-10 text-right">
+                    <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+                        <i class="icon icon--sm stack-interface stack-menu"></i>
+                    </a>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </div>
+    <!--end bar-->
+    <nav id="menu1" class="bar bar--sm bar-1 hidden-xs hiddem-sm ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 col-sm-2 hidden-xs">
+                    <div class="bar__module">
+                        <a href="index.html">
+                            <%= image_tag "logo.png", class: "logo logo-dark", style: "min-width: 230px;" %>
+                            <!-- <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"/> -->
+                            <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png"/> -->
+                        </a>
+                    </div>
+                    <!--end module-->
+                </div>
+                <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm">
+                    <div class="bar__module">
+                        <ul class="menu-horizontal text-left">
+                            <li>
+                                <span class="dropdown__trigger">Newsletter</span>
+                            </li>
+                            <li>
+                                <span class="dropdown__trigger">Blog</span>
+                            </li>
+                            <li >
+                                <span class="dropdown__trigger">About</span>
+                            </li>
+                            <li>
+                                <span class="dropdown__trigger">Search</span>
+                            </li>
+                            <li>
+                                <span class="dropdown__trigger">Contact</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </nav>
+    <!--end bar-->
+</div>
 <main role="main" class="main clearfix">
     <div class="js__article article__main" data-title="Finding your way from maker to manager">
         <div class="container">
@@ -24,6 +88,7 @@
                 <h1 class="article__hero-title js__article-hero-title"><%= @article.title %></h1>
             </div>
         </div>
+
         <div class="hero">
             <div class="hero__image">
                 <%= image_tag(@article.image.url) %>
@@ -31,26 +96,65 @@
         </div>
         <div class="container">
             <div class="article__wrap ">
-                <article class="article">
-                    <div class="article__inner article__shift">
-                      <%= raw @article.body %>
+                <article>
+
+                    <div class="article__body article__title">
+                        <p>
+                            Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado
+                            affordances.
+                        </p>
+                        <h5>An additional point</h5>
+                        <p>
+                            Co-working paradigm piverate innovate affordances user centered design personas pair programming Steve Jobs iterate earned media. Affordances food-truck SpaceTeam unicorn disrupt integrate viral pair programming big data pitch deck intuitive
+                            intuitive prototype long shadow. Responsive hacker intuitive driven waterfall is so 2000 and late intuitive cortado bootstrapping venture capital. Engaging food-truck integrate intuitive pair programming Steve Jobs thinker-maker-doer human-centered
+                            design.
+                        </p>
+                        <blockquote>
+                            “ We want everyone to have a great experience building their website — and with Stack they get just that”
+                        </blockquote>
+                        <p>
+                            Prototype intuitive intuitive thought leader personas parallax paradigm long shadow engaging unicorn SpaceTeam fund ideate paradigm. Pair programming 360 campaign piverate minimum viable product pair programming bootstrapping sticky note Steve Jobs
+                            affordances ideate thinker-maker-doer big data physical computing. Workflow driven innovate long shadow SpaceTeam grok pivot.
+                        </p>
+                        <ul class="bullets">
+                            <li>Something to say</li>
+                            <li>Listing things in a list</li>
+                            <li>Pay close attention to number 4</li>
+                            <li>What happens next will shock you</li>
+                        </ul>
+                    </div>
+                    <div class="article__share text-center">
+                        <a class="btn bg--facebook btn--icon" href="#">
+                            <span class="btn__text">
+                                <i class="socicon socicon-facebook"></i>
+                                Share on Facebook
+                            </span>
+                        </a>
+                        <a class="btn bg--twitter btn--icon" href="#">
+                            <span class="btn__text">
+                                <i class="socicon socicon-twitter"></i>
+                                Share on Twitter
+                            </span>
+                        </a>
                     </div>
                 </article>
-                <div class="article__author">
-                  <div class="author__medium">
-                    <a href="" class="f__no-und author__image-medium author__image-no-round">
-                      <img src="<%= image_path("maxime-salomon.jpg") %>" alt="">
-                    </a>
-                    <div>
-                      <a href="/blog" class="f__no-und f__up">
-                        <span class="js__author-name">Maxime Salomon</span></span>
-                        <span class="author__medium-comma">,</span>Author, Growth Hacker
-                      </a>
-                    </div>
-                    <a href="http://twitter.com/brian_scanlan" class="f__no-und c__blue c__blue-hover f__up">@MaximeSalomon</a>
-                  </div>
-                </div>
             </div>
         </div>
     </div>
 </main>
+
+<% content_for :js do %>
+<%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+<% end %>
+
+<style>
+    .main .article__hero {
+      position: absolute;
+        z-index: 10;
+        top: 50% !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+        transform: translateY(-50%);
+    }
+</style>

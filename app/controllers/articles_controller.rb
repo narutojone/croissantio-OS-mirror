@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     @article = Article.new(article_params)
     @article.update_attribute(:user_id, current_user.id)
+    @article.category_name = Category.find(article_params[:category_id]).name
     set_slug_for_article(@article)
     if @article.save
       if @article.posted?
@@ -42,6 +43,7 @@ class ArticlesController < ApplicationController
   def update
     @action = "Edit"
     new_article_params = update_slug_for_article(article_params)
+    @article.category_name = Category.find(article_params[:category_id]).name
     if @article.update(new_article_params)
       flash[:success] = "Article succesfully updated!"
       render :index
