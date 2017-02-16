@@ -3,6 +3,9 @@ class Resource < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  # Save type as downcase
+  before_save { self.resource_type = resource_type.downcase }
+
   # Adding algoliasearch
   include AlgoliaSearch
   algoliasearch do
