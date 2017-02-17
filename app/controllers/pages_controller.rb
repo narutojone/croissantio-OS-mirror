@@ -15,33 +15,25 @@ class PagesController < ApplicationController
   def services; end
 
   def blog
-    @articles = Article.where.not(category_name: "newsletter").where(posted: true)
+    @articles = Article.where.not(category_name: 'newsletter').where(posted: true)
   end
 
   def newsletter
     @newsletters = Article.where(category_name: 'newsletter', posted: true)
   end
 
-  def blog_test
-
-  end
+  def blog_test; end
 
   def search
-    # binding.pry
-    @selected_option = { resource_type: '', order: '', range: '' , upper: "", lower: ""}
-    @selected_option = { upper: params['/resources'][4], lower: params['/resources'][3], resource_type: params['/resources'][0], order: params['/resources'][1], range: params['/resources'][2] } if params['/resources'].present?
+    @selected_option = { resource_type: '', order: '', range: '', upper: '', lower: '' }
     @resources = []
-    if params[:query].present?
-      redirect_to resources_show_path(params[:query].delete("\'").parameterize)
-    elsif params['/resources']
+    if params['/resources']
       type = params['/resources'][0]
       order = params['/resources'][1]
-      if params['/resources'][2] == 'Custom'
-        range = ((params['/resources'][3].to_datetime)..(params['/resources'][4].to_datetime.end_of_day))
-      else
-        range = eval(params['/resources'][2])
-      end
-      # binding.pry
+      range = params['/resources'][2]
+      range = range.split('-').collect(&:to_datetime)
+      @selected_option = { upper: range[0].to_f * 1000, lower: range[1].to_f * 1000, resource_type: params['/resources'][0], order: params['/resources'][1], range: params['/resources'][2] } if params['/resources'].present?
+      range = range[0]..range[1]
       @resources = Resource.where(resource_type: type.downcase, date: range).order(order)
       render :search
     else

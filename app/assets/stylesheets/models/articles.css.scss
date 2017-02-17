@@ -2951,7 +2951,7 @@ input[type=range]:focus+.rangeslider .rangeslider__handle {
     max-width: 95%;
     margin: 0 auto;
     margin-top: 35px;
-    min-height: 200px;
+    max-height:  450px;;
     text-align: center;
     position: relative;
 }

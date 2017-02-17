@@ -1470,13 +1470,32 @@ input[type], textarea, select {
     border: 1px solid #ececec;
 }
 
+.ranges {
+    display: none;
+}
+
 input#aa-search-input, .algolia-autocomplete {
     margin: 25px auto 5px auto;
     width: 100%;
 }
 
+#ck_emailField{
+  border: 1.5px solid #2c96fb !important;
+
+}
+
+.aa-input-search.aa-hint {
+    border: 1.5px solid #2c96fb !important;
+    left: -1px !important;
+}
+
 .col-hidden.range-field {
     padding-left: 0;
+}
+
+.range-field {
+    float: right;
+    clear: both;
 }
 
 .search-results {
@@ -1488,7 +1507,14 @@ input#aa-search-input, .algolia-autocomplete {
 }
 
 .inline {
+    float: left;
     display: inline;
+    margin-right: 6px;
+    margin-top: 3px;
+}
+
+.select-search {
+    padding: 0;
 }
 
 input[type]:focus, textarea:focus, select:focus {
@@ -7606,12 +7632,12 @@ input[type], select, textarea {
     padding-left: 0.92857143em;
 }
 
-.title-home, .description-home{
-  color: white;
+.title-home, .description-home {
+    color: white;
 }
 
-.margin-top{
-  margin-top: 35px;
+.margin-top {
+    margin-top: 35px;
 }
 
 input[type]:focus, select:focus, textarea:focus {
@@ -9082,16 +9108,30 @@ footer.footer-7 {
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    display: none !important;
 }
 
-.aa-input-search.aa-hint{
-  top: 24px !important;
+.aa-input-search.aa-hint {
+    top: 24px !important;
 }
 
-.aa-suggestions .aa-suggestion.aa-cursor{
-  text-decoration: underline;
+.aa-suggestions .aa-suggestion.aa-cursor {
+    text-decoration: underline;
 }
 
-body.blue{
-  background-color: #2c96fb;
+body.blue {
+    background-color: #2c96fb;
+}
+
+.form-inline {
+    width: 70%;
+}
+
+.resource-title, .resource-description {
+    margin-bottom: 0em;
+}
+
+.resource_card {
+    border: 1px solid #ccc;
+    padding: 10px;
 }

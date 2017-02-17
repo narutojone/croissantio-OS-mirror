@@ -6,6 +6,7 @@
 <% content_for :ogimage, image_path('maxime-salomon.jpg') %>
 <% content_for :css do %>
 <%= stylesheet_link_tag "bootstrap", "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme" %>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
 <% end %>
 <div class="about">
@@ -14,29 +15,27 @@
 		<div class="row">
 			<div class="col-md-12">
 				<%= form_for resources_path, method: :get, html: {id: "search-form"} do |f| %>
-				<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-10 col-md-offset-1">
 					<input type="search" id="aa-search-input" class="aa-input-search" name="query" placeholder="Search by title" autocomplete="on">
 					<div class="aa-input-container" id="aa-input-container"></div>
 				</div>
-				<div class="col-md-4">
-					<p class="inline">Search</p>
-					<%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12" }%>
-				</div>
-				<div class="col-md-4">
-					<p class="inline">By</p>
-					<%= f.select params[:order], options_for_select([["Date - Oldest first", "date ASC"],["Date - Newest first", "date DESC"], ["Grade", "grade DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12"
-					}%>
-				</div>
-				<div class="col-md-4">
-
-					<p class="inline">From</p>
-					<%= f.select params[:daterange], options_for_select([["Today", "Time.zone.now.beginning_of_day..Time.zone.now.end_of_day"], ["This Week", "Time.zone.now.beginning_of_week..Time.zone.now.end_of_week"], ["This month",
-					"Time.zone.now.beginning_of_month..Time.zone.now.end_of_month"], ["This year", "Time.zone.now.beginning_of_year..Time.zone.now.end_of_year"], ["Range", "Custom"]], selected: @selected_option[:range]),{}, {:class => "range-filter form-control col-md-7
-					col-xs-12" }%>
-					<div>
-
-						<%= f.date_field params[:lower_range], class: "col-hidden range-field", value: @selected_option[:lower] %>
-						<%= f.date_field params[:upper_range], class: "col-hidden range-field range-field-lower", value: @selected_option[:upper] %>
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-md-3 select-search">
+						<p class="inline">Search</p>
+						<%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
+					</div>
+					<div class="col-md-3 select-search">
+						<p class="inline">By</p>
+						<%= f.select params[:order], options_for_select([["Oldest first", "date ASC"],["Newest first", "date DESC"], ["Grade", "grade DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
+					</div>
+					<div class="col-md-6 select-search">
+						<p class="inline">From</p>
+						<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 80%;">
+							<i class="fa fa-calendar"></i>&nbsp;
+							<span class="date-range"></span>
+							<b class="caret"></b>
+						</div>
+						<%= f.text_field params[:daterange], class: "col-hidden", id: "daterange" %>
 					</div>
 				</div>
 				<%= f.submit "Submit", class: "col-hidden" %>
@@ -45,34 +44,35 @@
 		</div>
 	</div>
 </div>
-<div class="space--sm search-results">
+<div >
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+			<div class="col-md-8 col-md-offset-2">
 				<div class="masonry masonry-blog-list">
 
 					<hr>
 					<div id="article-list" class="masonry__container masonry--active">
 						<% @resources.each do |resource|  %>
-						<article class="masonry__item filter-web-design">
-							<div class="article__title text-center">
-								<h2><%= resource.title %></h2>
-								<span><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
+						<div class="masonry__item resource_card">
+							<h4 class="resource-title">
+								<%= link_to resource.title, resource.link %>
+							</h4>
+							<span>
+								<strong><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
 									|
 									<%= resource.resource_type.capitalize %>
 									|
 									<%= resource.grade %>
 									stars
-								</span>
-							</div>
+								</strong>
+							</span>
 							<!--end article title-->
-							<div class="article__body">
-								<p>
+							<div>
+								<p class="resource-description">
 									<%= resource.description %>
 								</p>
-								<%= link_to "Check out the resource »", resources_show_path(resource) %>
 							</div>
-						</article>
+						</div>
 						<% end %>
 					</div>
 				</div>
@@ -123,19 +123,20 @@ $('#aa-search-input').autocomplete({
 ]);
 </script>
 <% content_for :js do %>
+<%= javascript_include_tag "moment" %>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <script>
-$(".manual-filter, .range-field-lower").on("change", function () {
+$(".manual-filter").on("change", function () {
 	$("#search-form").submit()
 })
 
-$(".range-filter").on("change", function () {
-	if ($(this).val() == "Custom") {
-		$(".range-field").show()
-	} else {
+window.onload = function () {
+	$(".date-range").on("DOMSubtreeModified", function () {
+		val = $(".date-range").text()
+		$("#daterange").val(val)
 		$("#search-form").submit()
-		$(".range-field").hide()
-	}
-})
+	})
+}
 
 $("#aa-search-input").on("input", function () {
 	$("#article-list").empty()
@@ -148,29 +149,81 @@ $("#aa-search-input").on("input", function () {
 			date = array[i].date
 			resource_type = array[i].resource_type
 			slug = array[i].slug
+			link = array[i].link
 			var html = "";
-			html += "<article class=\"masonry__item filter-web-design\">";
-			html += "							<div class=\"article__title text-center\">";
-			html += "								<h2>" + title + "<\/h2>";
-			html += "								<span>" + date + "";
+			html += "<div class=\"masonry__item filter-web-design\">";
+			html += "							<h4 class=\"resource-title\">";
+			html += "							<a href=\"\/" + link + "\">" + title + "<\/a>";
+			html += "					<\/h4>";
+			html += "							<span>";
+			html += "								<strong>" + moment(date).format('MMMM Do YYYY') + "";
 			html += "									|";
-			html += "									" + resource_type + "";
+			html += "									" + capitalizeFirstLetter(resource_type) + "";
 			html += "									|";
 			html += "									" + grade + "";
 			html += "									stars";
-			html += "								<\/span>";
-			html += "							<\/div>";
-			html += "							<!--end article title-->";
-			html += "							<div class=\"article__body\">";
-			html += "								<p>";
+			html += "								<\/strong>";
+			html += "							<\/span>";
+			html += "							<div>";
+			html += "								<p class=\"resource-description\">";
 			html += "									" + description + "";
 			html += "								<\/p>";
-			html += "								<a href=\"" + slug + "\">Check out the resource »<\/a>";
 			html += "							<\/div>";
-			html += "						<\/article>";
+			html += "						<\/div>";
 			$("#article-list").append(html)
 		}
 	});
 })
+
+$(function () {
+
+
+	var start = moment(<%= @selected_option[:upper] %>)
+	var end = moment(<%= @selected_option[:lower] %>);
+
+	function cb(start, end) {
+		$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+	}
+
+	$('#reportrange').daterangepicker({
+		startDate: start,
+		endDate: end,
+		ranges: {
+			'Today': [
+				moment(), moment()
+			],
+			'Yesterday': [
+				moment().subtract(1, 'days'),
+				moment().subtract(1, 'days')
+			],
+			'Last 7 Days': [
+				moment().subtract(6, 'days'),
+				moment()
+			],
+			'Last 30 Days': [
+				moment().subtract(29, 'days'),
+				moment()
+			],
+			'This Month': [
+				moment().startOf('month'), moment().endOf('month')
+			],
+			'Last Month': [
+				moment().subtract(1, 'month').startOf('month'),
+				moment().subtract(1, 'month').endOf('month')
+			]
+		}
+	}, cb);
+
+	cb(start, end);
+
+});
+
+$("#reportrange").on("click", function () {
+	$(".ranges").show()
+})
+
+function capitalizeFirstLetter(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+}
 </script>
 <% end %>
