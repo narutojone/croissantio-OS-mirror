@@ -4,92 +4,173 @@
 <% content_for :ogdescription, "Maxime Salomon is the founder of The Growth Bakery." %>
 <% content_for :ogtype, "page" %>
 <% content_for :ogimage, image_path('maxime-salomon.jpg') %>
-
-<section class="about">
-	<%= render "shared/navbar" %>
+<% content_for :css do %>
+<%= stylesheet_link_tag "bootstrap", "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme" %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<% end %>
+<div class="about">
+	<%= render "shared/stack_navbar" %>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<!-- HTML Markup -->
 				<%= form_for resources_path, method: :get, html: {id: "search-form"} do |f| %>
-				<%= text_field_tag :search, params[:search],  id: "aa-search-input", class:"aa-input-search", placeholder:"Search for title, grade or type", name:"search", autocomplete:"on" %>
-				<div class="aa-input-container" id="aa-input-container">
-					<svg class="aa-input-icon" viewBox="654 -372 1664 1664">
-						<path
-							d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z"/>
-					</svg>
-					<p>Find</p>
-									<%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12" }%>
-					<p>By</p>
-									<%= f.select params[:order], options_for_select([["Date - Oldest first", "date ASC"],["Date - Newest first", "date DESC"], ["Grade", "grade DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12" }%>
-					<p>From</p>
-									<%= f.select params[:daterange], options_for_select([["Today", "Time.zone.now.beginning_of_day..Time.zone.now.end_of_day"], ["This Week", "Time.zone.now.beginning_of_week..Time.zone.now.end_of_week"], ["This month", "Time.zone.now.beginning_of_month..Time.zone.now.end_of_month"], ["This year", "Time.zone.now.beginning_of_year..Time.zone.now.end_of_year"], ["Range", "Custom"]], selected: @selected_option[:range]),{}, {:class => "range-filter form-control col-md-7 col-xs-12" }%>
-									<%= f.date_field params[:lower_range], class: "btn-hidden range-field", value: @selected_option[:lower] %>
-									<%= f.date_field params[:upper_range], class: "btn-hidden range-field range-field-lower", value: @selected_option[:upper] %>
-				<%= f.submit "Submit", class: "btn-hidden" %>
+				<div class="col-md-8 col-md-offset-2">
+					<input type="search" id="aa-search-input" class="aa-input-search" name="query" placeholder="Search by title" autocomplete="on">
+					<div class="aa-input-container" id="aa-input-container"></div>
 				</div>
+				<div class="col-md-4">
+					<p class="inline">Search</p>
+					<%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12" }%>
+				</div>
+				<div class="col-md-4">
+					<p class="inline">By</p>
+					<%= f.select params[:order], options_for_select([["Date - Oldest first", "date ASC"],["Date - Newest first", "date DESC"], ["Grade", "grade DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12"
+					}%>
+				</div>
+				<div class="col-md-4">
+
+					<p class="inline">From</p>
+					<%= f.select params[:daterange], options_for_select([["Today", "Time.zone.now.beginning_of_day..Time.zone.now.end_of_day"], ["This Week", "Time.zone.now.beginning_of_week..Time.zone.now.end_of_week"], ["This month",
+					"Time.zone.now.beginning_of_month..Time.zone.now.end_of_month"], ["This year", "Time.zone.now.beginning_of_year..Time.zone.now.end_of_year"], ["Range", "Custom"]], selected: @selected_option[:range]),{}, {:class => "range-filter form-control col-md-7
+					col-xs-12" }%>
+					<div>
+
+						<%= f.date_field params[:lower_range], class: "col-hidden range-field", value: @selected_option[:lower] %>
+						<%= f.date_field params[:upper_range], class: "col-hidden range-field range-field-lower", value: @selected_option[:upper] %>
+					</div>
+				</div>
+				<%= f.submit "Submit", class: "col-hidden" %>
 				<% end %>
 			</div>
-				<div class="col-lg-12">
-					<% @resources.each do |resource|  %>
-					<%= resource.title %><br/>
-					<%= resource.resource_type %><br/>
-				<%= resource.grade %>		</br/>
-			<%= resource.date.strftime("%d/%m/%Y") %>		</br/>		</br/>
-					<% end %>
-				</div>
-				<!-- Include AlgoliaSearch JS Client and autocomplete.js jQuery plugin after the jQuery dependency -->
-				<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-				<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-				<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
-				<!-- Initialize autocomplete menu -->
-				<script>
-					var client = algoliasearch("J97XEMUI7C", "ec96a3adcb4bf3ef61b276cc5a3790d7");
-					var index = client.initIndex('Resource');
-					$('#aa-search-input').autocomplete({
-						hint: true
-					}, [
-						{
-							source: $.fn.autocomplete.sources.hits(index, {hitsPerPage: 10}),
-							//value to be displayed in input control after user's suggestion selection
-							displayKey: 'title',
-							//hash of templates used when rendering dataset
-							templates: {
-								//'suggestion' templating function used to render a single suggestion
-								suggestion: function (suggestion) {
-									grade = (suggestion.grade.toString())
-									title = (suggestion._highlightResult.title.value)
-									console.log(suggestion)
-									resource_type = (suggestion.resource_type)
-									if (grade != null && title != null) {
-										return '<span>' + title + '</span><span>' + grade + '</span><span>' + resource_type + '</span>';
-									} else {
-										return '<span> Nothing found </span>';
-									}
-								}
-							}
-						}
-					]);
-				</script>
-			</div>
-			<!-- /End col -->
 		</div>
-		<!-- /End row -->
 	</div>
-</section>
+</div>
+<div class="space--sm search-results">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+				<div class="masonry masonry-blog-list">
+
+					<hr>
+					<div id="article-list" class="masonry__container masonry--active">
+						<% @resources.each do |resource|  %>
+						<article class="masonry__item filter-web-design">
+							<div class="article__title text-center">
+								<h2><%= resource.title %></h2>
+								<span><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
+									|
+									<%= resource.resource_type.capitalize %>
+									|
+									<%= resource.grade %>
+									stars
+								</span>
+							</div>
+							<!--end article title-->
+							<div class="article__body">
+								<p>
+									<%= resource.description %>
+								</p>
+								<%= link_to "Check out the resource »", resources_show_path(resource) %>
+							</div>
+						</article>
+						<% end %>
+					</div>
+				</div>
+				<!--end masonry-->
+			</div>
+		</div>
+		<!--end of row-->
+	</div>
+	<!--end of container-->
+</div>
+</div>
+</div>
+<!-- Include AlgoliaSearch JS Client and autocomplete.js jQuery plugin after the jQuery dependency -->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+<!-- Initialize autocomplete menu -->
+<script>
+var client = algoliasearch("J97XEMUI7C", "ec96a3adcb4bf3ef61b276cc5a3790d7");
+var index = client.initIndex('Resource');
+window.index = index
+$('#aa-search-input').autocomplete({
+	hint: true
+}, [
+	{
+		source: $.fn.autocomplete.sources.hits(index, {hitsPerPage: 10}),
+		//value to be displayed in input control after user's suggestion selection
+		displayKey: 'title',
+		//hash of templates used when rendering dataset
+		templates: {
+			//'suggestion' templating function used to render a single suggestion
+			suggestion: function (suggestion) {
+				// console.log(suggestion)
+				title = (suggestion.title)
+				window.grade = (suggestion.grade.toString())
+				window.date = (suggestion.date)
+				window.description = (suggestion.description)
+				window.slug = (suggestion.slug)
+				window.resource_type = (suggestion.resource_type)
+				if (grade != null && title != null) {
+					return '<span>' + title + '</span>';
+				} else {
+					return '<span> Nothing found </span>';
+				}
+			}
+		}
+	}
+]);
+</script>
 <% content_for :js do %>
 <script>
-$(".manual-filter, .range-field-lower").on("change", function(){
+$(".manual-filter, .range-field-lower").on("change", function () {
 	$("#search-form").submit()
 })
 
-$(".range-filter").on("change", function(){
-	if($(this).val() == "Custom"){
-	$(".range-field").show()
-} else {
-	$("#search-form").submit()
-	$(".range-field").hide()
-}
+$(".range-filter").on("change", function () {
+	if ($(this).val() == "Custom") {
+		$(".range-field").show()
+	} else {
+		$("#search-form").submit()
+		$(".range-field").hide()
+	}
+})
+
+$("#aa-search-input").on("input", function () {
+	$("#article-list").empty()
+	index.search($('#aa-search-input').val(), function (err, content) {
+		array = content.hits.slice(0, 10)
+		for (var i = 0; i < array.length; i++) {
+			title = array[i].title
+			grade = array[i].grade
+			description = array[i].description
+			date = array[i].date
+			resource_type = array[i].resource_type
+			slug = array[i].slug
+			var html = "";
+			html += "<article class=\"masonry__item filter-web-design\">";
+			html += "							<div class=\"article__title text-center\">";
+			html += "								<h2>" + title + "<\/h2>";
+			html += "								<span>" + date + "";
+			html += "									|";
+			html += "									" + resource_type + "";
+			html += "									|";
+			html += "									" + grade + "";
+			html += "									stars";
+			html += "								<\/span>";
+			html += "							<\/div>";
+			html += "							<!--end article title-->";
+			html += "							<div class=\"article__body\">";
+			html += "								<p>";
+			html += "									" + description + "";
+			html += "								<\/p>";
+			html += "								<a href=\"" + slug + "\">Check out the resource »<\/a>";
+			html += "							<\/div>";
+			html += "						<\/article>";
+			$("#article-list").append(html)
+		}
+	});
 })
 </script>
 <% end %>

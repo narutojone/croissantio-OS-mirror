@@ -12,75 +12,13 @@
 <% content_for :ogtype, "article" %>
 <% content_for :ogimage, image_url(@article.image) %>
 
-<div class="nav-container">
-    <div class="bar bar--sm visible-xs">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-3 col-sm-2">
-                    <a href="index.html">
-                        <%= image_tag "logo.png", class: "logo logo-dark", style: "min-width: 230px;" %>
-                        <!-- <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"/> -->
-                        <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png"/> -->
-                    </a>
-                </div>
-                <div class="col-xs-9 col-sm-10 text-right">
-                    <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
-                        <i class="icon icon--sm stack-interface stack-menu"></i>
-                    </a>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </div>
-    <!--end bar-->
-    <nav id="menu1" class="bar bar--sm bar-1 hidden-xs hiddem-sm ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1 col-sm-2 hidden-xs">
-                    <div class="bar__module">
-                        <a href="index.html">
-                            <%= image_tag "logo.png", class: "logo logo-dark", style: "min-width: 230px;" %>
-                            <!-- <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"/> -->
-                            <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png"/> -->
-                        </a>
-                    </div>
-                    <!--end module-->
-                </div>
-                <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm">
-                    <div class="bar__module">
-                        <ul class="menu-horizontal text-left">
-                            <li>
-                                <span class="dropdown__trigger">Newsletter</span>
-                            </li>
-                            <li>
-                                <span class="dropdown__trigger">Blog</span>
-                            </li>
-                            <li >
-                                <span class="dropdown__trigger">About</span>
-                            </li>
-                            <li>
-                                <span class="dropdown__trigger">Search</span>
-                            </li>
-                            <li>
-                                <span class="dropdown__trigger">Contact</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </nav>
-    <!--end bar-->
-</div>
+<%= render "shared/stack_navbar" %>
 <main role="main" class="main clearfix">
     <div class="js__article article__main" data-title="Finding your way from maker to manager">
         <div class="container">
             <div class="article__hero">
                 <a href="#" class="f__up f__no-und categories__link js__category-name"><%= @article.category.name.capitalize %></a>
-                <span class="categories__separator">|</span>
+                <span class="categories__separator-white">|</span>
                 <span class="f__up categories__text">
                     <span class="js__read-time">
                         <%= @article.body.reading_time :format => :approx %></span>
@@ -91,7 +29,7 @@
 
         <div class="hero">
             <div class="hero__image">
-                <%= image_tag(@article.image.url) %>
+                <%= image_tag("background-blue.png") %>
             </div>
         </div>
         <div class="container">
@@ -99,29 +37,7 @@
                 <article>
 
                     <div class="article__body article__title">
-                        <p>
-                            Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado
-                            affordances.
-                        </p>
-                        <h5>An additional point</h5>
-                        <p>
-                            Co-working paradigm piverate innovate affordances user centered design personas pair programming Steve Jobs iterate earned media. Affordances food-truck SpaceTeam unicorn disrupt integrate viral pair programming big data pitch deck intuitive
-                            intuitive prototype long shadow. Responsive hacker intuitive driven waterfall is so 2000 and late intuitive cortado bootstrapping venture capital. Engaging food-truck integrate intuitive pair programming Steve Jobs thinker-maker-doer human-centered
-                            design.
-                        </p>
-                        <blockquote>
-                            “ We want everyone to have a great experience building their website — and with Stack they get just that”
-                        </blockquote>
-                        <p>
-                            Prototype intuitive intuitive thought leader personas parallax paradigm long shadow engaging unicorn SpaceTeam fund ideate paradigm. Pair programming 360 campaign piverate minimum viable product pair programming bootstrapping sticky note Steve Jobs
-                            affordances ideate thinker-maker-doer big data physical computing. Workflow driven innovate long shadow SpaceTeam grok pivot.
-                        </p>
-                        <ul class="bullets">
-                            <li>Something to say</li>
-                            <li>Listing things in a list</li>
-                            <li>Pay close attention to number 4</li>
-                            <li>What happens next will shock you</li>
-                        </ul>
+                        <%= @article.body %>
                     </div>
                     <div class="article__share text-center">
                         <a class="btn bg--facebook btn--icon" href="#">
@@ -142,6 +58,35 @@
         </div>
     </div>
 </main>
+<section class="bg--secondary">
+    <div class="container">
+        <div class="row text-block">
+            <div class="col-sm-12">
+                <h3>More recent stories</h3>
+            </div>
+        </div>
+        <!--end of row-->
+        <div class="row">
+          <% @relatedarticles.each do |article| %>
+            <div class="col-sm-4">
+                <article class="feature feature-1">
+                  <%= link_to articles_show_path(article) do %>
+                    <%= image_tag article.image.url %>
+                    <% end %>
+                    <div class="feature__body boxed boxed--border">
+                        <span><%= article.created_at.strftime("%B #{article.created_at.day.ordinalize} %Y") %></span>
+                        <h5><%= article.title %></h5>
+                        <%= link_to "Read more", articles_show_path  %>
+                    </div>
+                </article>
+            </div>
+            <% end %>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<%= render "shared/stack_footer" %>
 
 <% content_for :js do %>
 <%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
@@ -149,7 +94,7 @@
 
 <style>
     .main .article__hero {
-      position: absolute;
+        position: absolute;
         z-index: 10;
         top: 50% !important;
         left: 0 !important;
@@ -157,4 +102,5 @@
         margin: 0 auto !important;
         transform: translateY(-50%);
     }
+
 </style>

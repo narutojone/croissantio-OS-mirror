@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-
+    @relatedarticles = (Article.where(category_name: @article.category_name).where.not(id: @article.id)).limit(3)
   end
 
   def create

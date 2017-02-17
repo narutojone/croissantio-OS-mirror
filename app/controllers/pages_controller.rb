@@ -27,11 +27,12 @@ class PagesController < ApplicationController
   end
 
   def search
+    # binding.pry
     @selected_option = { resource_type: '', order: '', range: '' , upper: "", lower: ""}
     @selected_option = { upper: params['/resources'][4], lower: params['/resources'][3], resource_type: params['/resources'][0], order: params['/resources'][1], range: params['/resources'][2] } if params['/resources'].present?
     @resources = []
-    if params[:search].present?
-      redirect_to resources_show_path(params[:search].delete("\'").parameterize) if params[:search]
+    if params[:query].present?
+      redirect_to resources_show_path(params[:query].delete("\'").parameterize)
     elsif params['/resources']
       type = params['/resources'][0]
       order = params['/resources'][1]

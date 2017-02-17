@@ -2950,6 +2950,7 @@ input[type=range]:focus+.rangeslider .rangeslider__handle {
 .hero__image {
     max-width: 95%;
     margin: 0 auto;
+    margin-top: 35px;
     min-height: 200px;
     text-align: center;
     position: relative;
@@ -3057,7 +3058,7 @@ input[type=range]:focus+.rangeslider .rangeslider__handle {
 
 .categories__link,
 .categories__text {
-    color: #313030;
+    color: white;
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
@@ -4080,6 +4081,7 @@ div.author {
 }
 
 .article__hero-title {
+    color: white;
     font-size: 48px;
     margin: 0 auto;
     max-width: 1024px;

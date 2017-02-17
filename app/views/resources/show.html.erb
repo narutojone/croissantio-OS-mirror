@@ -1,23 +1,77 @@
+<!-- CONTENT -->
+<%= content_for :css do %>
+<%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme"  %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<% end %>
 
+<!-- OPEN GRAPH TAGS & STYLING -->
+<% content_for :title, @resource.title  %>
+<% content_for :description, @resource.description %>
+<% content_for :ogtitle, @resource.title %>
+<% content_for :ogdescription, @resource.description %>
+<% content_for :ogtype, "article" %>
 
-<%= render "shared/navbar" %>
-<div class="container">
-    <div class="row">
-        <div class="col-md-9 col-center">
-          <h2>  <%= @resource.title  %> </h2>
+<%= render "shared/stack_navbar" %>
+<main role="main" class="main clearfix">
+    <div class="js__article article__main" data-title="Finding your way from maker to manager">
+        <div class="container">
+            <div class="article__hero">
+                <a href="#" class="f__up f__no-und categories__link js__category-name"><%= @resource.resource_type.capitalize %></a>
+                <span class="categories__separator-white">|</span>
+                <span class="f__up categories__text">
+                    <span class="js__read-time">
+                        <%= @resource.description.reading_time :format => :approx %></span>
+                    read</span>
+                <h1 class="article__hero-title js__article-hero-title"><%= @resource.title %></h1>
+            </div>
+        </div>
 
-
-        <!-- Blog Sidebar Widgets Column -->
-        <!-- <div class="col-md-4"> -->
-        <!-- Side Widget Well -->
-        <!-- <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
-
-            </div> -->
-
+        <div class="hero">
+            <div class="hero__image">
+                <%= image_tag("background-blue.png") %>
+            </div>
+        </div>
+        <div class="container">
+            <div class="article__wrap ">
+                <article>
+                    <div class="article__body article__title">
+                        <%= @resource.description %>
+                    </div>
+                    <div class="article__share text-center">
+                        <a class="btn bg--facebook btn--icon" href="#">
+                            <span class="btn__text">
+                                <i class="socicon socicon-facebook"></i>
+                                Share on Facebook
+                            </span>
+                        </a>
+                        <a class="btn bg--twitter btn--icon" href="#">
+                            <span class="btn__text">
+                                <i class="socicon socicon-twitter"></i>
+                                Share on Twitter
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
     </div>
-</div>
+</main>
+</section>
+<%= render "shared/stack_footer" %>
 
-</div>
+<% content_for :js do %>
+<%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+<% end %>
+
+<style>
+.main .article__hero {
+    position: absolute;
+    z-index: 10;
+    top: 50% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    transform: translateY(-50%);
+}
+
+</style>

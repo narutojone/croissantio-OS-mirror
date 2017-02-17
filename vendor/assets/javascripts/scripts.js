@@ -10,7 +10,7 @@ var mr = (function ($, window, document){
     $(window).on("load", windowLoad);
 
     function documentReady(context){
-        
+
         context = typeof context === typeof undefined ? $ : context;
         components.documentReady.concat(components.documentReadyDeferred).forEach(function(component){
             component(context);
@@ -18,7 +18,7 @@ var mr = (function ($, window, document){
     }
 
     function windowLoad(context){
-        
+
         context = typeof context === "object" ? $ : context;
         components.windowLoad.concat(components.windowLoadDeferred).forEach(function(component){
            component(context);
@@ -48,8 +48,8 @@ mr = (function (mr, $, window, document){
     "use strict";
     mr.util = {};
 
-    mr.util.requestAnimationFrame    = window.requestAnimationFrame || 
-                                       window.mozRequestAnimationFrame || 
+    mr.util.requestAnimationFrame    = window.requestAnimationFrame ||
+                                       window.mozRequestAnimationFrame ||
                                        window.webkitRequestAnimationFrame ||
                                        window.msRequestAnimationFrame;
 
@@ -94,17 +94,17 @@ mr = (function (mr, $, window, document){
           if (keyA > keyB) return order2;
           return 0;
         });
-        
+
         // Append back into place
         $parentElement.empty();
         $(items).each(function(i, itm){
           $parentElement.append(itm);
         });
     };
-    
+
     // Set data-src attribute of element from src to be restored later
     mr.util.idleSrc = function(context, selector){
-        
+
             selector  = (typeof selector !== typeof undefined) ? selector : '';
             var elems = context.is(selector+'[src]') ? context : context.find(selector+'[src]');
 
@@ -119,14 +119,14 @@ mr = (function (mr, $, window, document){
             }
 
             // Clear the src attribute
-            elem.attr('src', '');    
-            
+            elem.attr('src', '');
+
         });
     };
 
     // Set src attribute of element from its data-src where it was temporarily stored earlier
     mr.util.activateIdleSrc = function(context, selector){
-        
+
         selector     = (typeof selector !== typeof undefined) ? selector : '';
         var elems    = context.is(selector+'[src]') ? context : context.find(selector+'[src]');
 
@@ -153,7 +153,7 @@ mr = (function (mr, $, window, document){
     // Take a text value in either px (eg. 150px) or vh (eg. 65vh) and return a number in pixels.
     mr.util.parsePixels = function(text){
         var windowHeight = $(window).height(), value;
-        
+
         // Text text against regular expression for px value.
         if(/^[1-9]{1}[0-9]*[p][x]$/.test(text)){
             return parseInt(text.replace('px', ''),10);
@@ -185,21 +185,21 @@ mr = (function (mr, $, window, document){
     mr.scroll.x         = 0;
 
      var documentReady = function($){
-        
+
         // Check if scroll-assist is on
         if($('body').hasClass('scroll-assist')){
             mr.scroll.assisted = true;
         }
 
         //////////////// Capture Scroll Event and fire scroll function
-        
-        addEventListener('scroll', function(evt) {        
+
+        addEventListener('scroll', function(evt) {
                 //if(!mr.scroll.assisted){
                     window.mr.scroll.y = window.pageYOffset;
                 //}
                 window.mr.scroll.update(evt);
         }, false);
-        
+
     };
 
     mr.scroll.update = function(event){
@@ -254,9 +254,9 @@ mr = (function (mr, $, window, document){
                     //console.log('Error - Scrollpoint not found.');
                     return false;
                 }
-            }   
+            }
         });
-        
+
         if(mr.scroll.classModifiers.rules.length){
             return true;
         }else{
@@ -269,12 +269,12 @@ mr = (function (mr, $, window, document){
             scrollRules   = mr.scroll.classModifiers.rules,
             l             = scrollRules.length,
             currentRule;
-        
-        // Given the current scrollPoint, check for necessary changes 
+
+        // Given the current scrollPoint, check for necessary changes
         while(l--) {
-            
+
             currentRule = scrollRules[l];
-            
+
             if(currentScroll > currentRule.scrollPoint && !currentRule.hasClass){
                 // Set local copy and glogal copy at the same time;
                 currentRule.element.classList.add(currentRule.toggleClass);
@@ -301,7 +301,7 @@ mr = (function (mr, $, window, document){
         // Each element has data-scroll-class with a formatted value to represent class to add/remove at a particular scroll point.
         $('[data-scroll-class]').each(function(){
             var element  = $(this);
-                
+
             // Test the rules to be added to an array of rules.
             if(!mr.scroll.classModifiers.parseScrollRules(element)){
                 console.log('Error parsing scroll rules on: '+element);
@@ -311,7 +311,7 @@ mr = (function (mr, $, window, document){
         // For 'position fixed' elements, give them a max-width for correct fixing behaviour
         fixedElementSizes();
         $(window).on('resize', fixedElementSizes);
-        
+
         // If there are valid scroll rules add classModifiers update function to the scroll event processing queue.
         if(mr.scroll.classModifiers.rules.length){
             mr.scroll.listeners.push(mr.scroll.classModifiers.update);
@@ -319,9 +319,9 @@ mr = (function (mr, $, window, document){
     };
 
     mr.components.documentReady.push(documentReady);
-    mr.scroll.classModifiers.documentReady = documentReady;    
+    mr.scroll.classModifiers.documentReady = documentReady;
 
-    
+
 
     return mr;
 
@@ -331,13 +331,13 @@ mr = (function (mr, $, window, document){
 //////////////// Accordions
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
         $('.accordion__title').on('click', function(){
             var accordion = $(this).closest('.accordion');
             var li = $(this).closest('li');
             if(li.hasClass('active')){
-                li.removeClass('active');      
+                li.removeClass('active');
             }else{
                 if(accordion.hasClass('accordion--oneopen')){
                     var wasActive = accordion.find('li.active');
@@ -357,7 +357,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.accordions = {
-        documentReady : documentReady        
+        documentReady : documentReady
     };
 
     mr.components.documentReady.push(documentReady);
@@ -369,9 +369,9 @@ mr = (function (mr, $, window, document){
 //////////////// Backgrounds
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
-        
+
         //////////////// Append .background-image-holder <img>'s as CSS backgrounds
 
 	    $('.background-image-holder').each(function() {
@@ -381,7 +381,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.backgrounds = {
-        documentReady : documentReady        
+        documentReady : documentReady
     };
 
     mr.components.documentReady.push(documentReady);
@@ -392,7 +392,7 @@ mr = (function (mr, $, window, document){
 //////////////// Bars
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
         $('.nav-container .bar[data-scroll-class*="fixed"]:not(.bar--absolute)').each(function(){
             var bar = $(this),
@@ -402,7 +402,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.bars = {
-        documentReady : documentReady        
+        documentReady : documentReady
     };
 
     mr.components.documentReady.push(documentReady);
@@ -413,7 +413,7 @@ mr = (function (mr, $, window, document){
 //////////////// Cookies
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     mr.cookies = {
 
         getItem: function (sKey) {
@@ -462,7 +462,7 @@ mr = (function (mr, $, window, document){
 //////////////// Countdown
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
 
         $('.countdown[data-date]').each(function(){
@@ -489,11 +489,11 @@ mr = (function (mr, $, window, document){
                 }
             });
         });
-        
+
     };
 
     mr.countdown = {
-      documentReady : documentReady        
+      documentReady : documentReady
     };
 
     mr.components.documentReadyDeferred.push(documentReady);
@@ -506,7 +506,7 @@ mr = (function (mr, $, window, document){
     "use strict";
     mr.dropdowns = {};
     mr.dropdowns.done = false;
-    
+
     var documentReady = function($){
 
         var rtl = false;
@@ -545,7 +545,7 @@ mr = (function (mr, $, window, document){
         }else{
             repositionDropdownsRtl($);
         }
-        
+
         jQuery(window).resize(function(){
             //repositionDropdowns($);
         });
@@ -559,14 +559,14 @@ mr = (function (mr, $, window, document){
                 masterOffset    = jQuery('.containerMeasure').offset().left,
                 menuItem        = container.closest('.dropdown').offset().left,
                 content         = '';
-                
+
                 container.css('left',((-containerOffset)+(masterOffset)));
 
                 if(container.find('.dropdown__content:not([class*="-12"])').length){
                     content = container.find('.dropdown__content');
                     content.css('left', ((menuItem)-(masterOffset)));
                 }
-                
+
         });
         $('.dropdown__content').each(function(){
             var dropdown    = jQuery(this),
@@ -593,7 +593,7 @@ mr = (function (mr, $, window, document){
                 masterOffset    = jQuery('.containerMeasure').offset().left,
                 menuItem        = windowWidth - (container.closest('.dropdown').offset().left + container.closest('.dropdown').outerWidth(true)),
                 content         = '';
-                
+
                 container.css('right',((-containerOffset)+(masterOffset)));
 
                 if(container.find('.dropdown__content:not([class*="-12"])').length){
@@ -617,7 +617,7 @@ mr = (function (mr, $, window, document){
     }
 
     mr.dropdowns.documentReady = documentReady;
-    
+
 
     mr.components.documentReady.push(documentReady);
     return mr;
@@ -627,17 +627,17 @@ mr = (function (mr, $, window, document){
 //////////////// Forms
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     mr.forms = {};
 
     var documentReady = function($){
-        
+
         //////////////// Checkbox Inputs
 
         $('.input-checkbox').on('click', function() {
             var checkbox = $(this);
             checkbox.toggleClass('checked');
-            
+
             var input = checkbox.find('input');
             if (input.prop('checked') === false) {
                 input.prop('checked', true);
@@ -662,7 +662,7 @@ mr = (function (mr, $, window, document){
             $(this).siblings('input').trigger('click');
             return false;
         });
-        
+
         //////////////// Handle Form Submit
 
         $('form.form-email, form[action*="list-manage.com"], form[action*="createsend.com"]').attr('novalidate', true).off('submit').on('submit', mr.forms.submit);
@@ -675,7 +675,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.forms.documentReady = documentReady;
-    
+
     mr.forms.submit = function(e){
         // return false so form submits through jQuery rather than reloading page.
         if (e.preventDefault) e.preventDefault();
@@ -706,17 +706,17 @@ mr = (function (mr, $, window, document){
             if (typeof originalError !== typeof undefined && originalError !== false) {
                 formError.html(originalError);
             }
-            
+
             // validateFields returns 1 on error;
             if (mr.forms.validateFields(thisForm) !== 1) {
-               
+
                 thisForm.removeClass('attempted-submit');
 
                 // Hide the error if one was shown
                 formError.fadeOut(200);
                 // Create a new loading spinner in the submit button.
                 submitButton.addClass('btn--loading');
-                
+
                 try{
                     $.ajax({
                         url: thisForm.attr('action'),
@@ -730,7 +730,7 @@ mr = (function (mr, $, window, document){
                             // Request was a success, what was the response?
 
                             if (data.result !== "success" && data.Status !== 200) {
-                                
+
                                 // Got an error from Mail Chimp or Campaign Monitor
 
                                 // Keep the current error text in a data attribute on the form
@@ -741,9 +741,9 @@ mr = (function (mr, $, window, document){
 
                                 submitButton.removeClass('btn--loading');
                             } else {
-                                
+
                                 // Got success from Mail Chimp or Campaign Monitor
-                                
+
                                 submitButton.removeClass('btn--loading');
 
                                 successRedirect = thisForm.attr('data-success-redirect');
@@ -767,9 +767,9 @@ mr = (function (mr, $, window, document){
 
                     submitButton.removeClass('btn--loading');
                 }
-            
 
-                
+
+
             } else {
                 // There was a validation error - show the default form error message
                 mr.forms.showFormError(formSuccess, formError, 1000, 5000, 500);
@@ -790,7 +790,7 @@ mr = (function (mr, $, window, document){
 
                 // Hide the error if one was shown
                 formError.fadeOut(200);
-                
+
                 // Create a new loading spinner in the submit button.
                 submitButton.addClass('btn--loading');
 
@@ -839,7 +839,7 @@ mr = (function (mr, $, window, document){
         }
         return false;
     };
-    
+
     mr.forms.validateFields = function(form) {
         var body = $(body),
             error = false,
@@ -881,9 +881,9 @@ mr = (function (mr, $, window, document){
         if (!form.find('.field-error').length) {
             body.find('.form-error').fadeOut(1000);
         }else{
-            
+
             var firstError = $(form).find('.field-error:first');
-            
+
             if(firstError.length){
                 $('html, body').stop(true).animate({
                     scrollTop: (firstError.offset().top - 100)
@@ -895,7 +895,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.forms.showFormSuccess = function(formSuccess, formError, fadeOutError, wait, fadeOutSuccess){
-        
+
         formSuccess.stop(true).fadeIn(fadeOutError);
 
         formError.stop(true).fadeOut(fadeOutError);
@@ -905,7 +905,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.forms.showFormError = function(formSuccess, formError, fadeOutSuccess, wait, fadeOutError){
-        
+
         formError.stop(true).fadeIn(fadeOutSuccess);
 
         formSuccess.stop(true).fadeOut(fadeOutSuccess);
@@ -930,7 +930,7 @@ mr = (function (mr, $, window, document){
 //////////////// Granim
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
     	$('[data-gradient-bg]').each(function(index,element){
     		var granimParent = $(this),
@@ -977,11 +977,11 @@ mr = (function (mr, $, window, document){
 			        }
 			    }
 			});
-    	});        
+    	});
     };
 
     mr.granim = {
-      documentReady : documentReady        
+      documentReady : documentReady
     };
 
     mr.components.documentReadyDeferred.push(documentReady);
@@ -992,9 +992,9 @@ mr = (function (mr, $, window, document){
 //////////////// Instagram
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
-        
+
         if($('.instafeed').length){
 
             // Replace with your own Access Token and Client ID
@@ -1013,7 +1013,7 @@ mr = (function (mr, $, window, document){
             jQuery.fn.spectragram.accessData = {
                 accessToken: token,
                 clientID: client
-            };  
+            };
         }
 
         $('.instafeed').each(function(){
@@ -1032,7 +1032,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.instagram = {
-        documentReady : documentReady        
+        documentReady : documentReady
     };
 
     mr.components.documentReadyDeferred.push(documentReady);
@@ -1043,7 +1043,7 @@ mr = (function (mr, $, window, document){
 //////////////// Maps
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     mr.maps = {};
 
     var documentReady = function($){
@@ -1052,14 +1052,14 @@ mr = (function (mr, $, window, document){
         $('.map-holder').on('click', function() {
             $(this).addClass('interact');
         }).removeClass('interact');
-        
+
         var mapsOnPage = $('.map-container[data-maps-api-key]');
         if(mapsOnPage.length){
             mapsOnPage.addClass('gmaps-active');
             mr.maps.initAPI($);
             mr.maps.init();
         }
-        
+
     };
     mr.maps.documentReady = documentReady;
 
@@ -1069,21 +1069,21 @@ mr = (function (mr, $, window, document){
             if($('[data-maps-api-key]').length){
                 var script = document.createElement('script');
                 var apiKey = $('[data-maps-api-key]:first').attr('data-maps-api-key');
-                apiKey = typeof apiKey !== typeof undefined ? apiKey : ''; 
+                apiKey = typeof apiKey !== typeof undefined ? apiKey : '';
                 if(apiKey !== ''){
                     script.type = 'text/javascript';
                     script.src = 'https://maps.googleapis.com/maps/api/js?key='+apiKey+'&callback=mr.maps.init';
                     script.className = 'gMapsAPI';
-                    document.body.appendChild(script);  
+                    document.body.appendChild(script);
                 }
-            } 
+            }
         }
     };
 
     mr.maps.init = function(){
         if(typeof window.google !== "undefined"){
             if(typeof window.google.maps !== "undefined"){
-                
+
                 jQuery('.gmaps-active').each(function(){
                     var mapElement    = this,
                         mapInstance   = jQuery(this),
@@ -1115,12 +1115,12 @@ mr = (function (mr, $, window, document){
                     if(address !== undefined && address[0] !== ""){
                             geocoder.geocode( { 'address': address[0].replace('[nomarker]','')}, function(results, status) {
                                 if (status === google.maps.GeocoderStatus.OK) {
-                                var map = new google.maps.Map(mapElement, mapOptions); 
+                                var map = new google.maps.Map(mapElement, mapOptions);
                                 map.setCenter(results[0].geometry.location);
-                                
+
                                 address.forEach(function(address){
                                     var markerGeoCoder;
-                                    
+
                                     markerImage = {url: typeof window.mr_variant === typeof undefined ? markerImage : '../img/mapmarker.png', scaledSize: new google.maps.Size(50,50)};
                                     if(/(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)/.test(address) ){
                                         var latlong = address.split(','),
@@ -1158,7 +1158,7 @@ mr = (function (mr, $, window, document){
                     }
                     else if(typeof latitude !== typeof undefined && latitude !== "" && latitude !== false && typeof longitude !== typeof undefined && longitude !== "" && longitude !== false ){
                         mapOptions.center   = { lat: latitude, lng: longitude};
-                        map                 = new google.maps.Map(mapInstance, mapOptions); 
+                        map                 = new google.maps.Map(mapInstance, mapOptions);
                         marker              = new google.maps.Marker({
                                                     position: { lat: latitude, lng: longitude },
                                                     map: map,
@@ -1168,7 +1168,7 @@ mr = (function (mr, $, window, document){
 
                     }
 
-                }); 
+                });
             }
         }
     };
@@ -1182,7 +1182,7 @@ mr = (function (mr, $, window, document){
 //////////////// Masonry
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
 
         $('.masonry').each(function(){
@@ -1192,10 +1192,10 @@ mr = (function (mr, $, window, document){
                 // data-filter-all-text can be used to set the word for "all"
                 filterAllText    = typeof filters.attr('data-filter-all-text') !== typeof undefined ? filters.attr('data-filter-all-text') : "All",
                 filtersList;
-            
+
             // If a filterable masonry item exists
             if(masonryContainer.find('.masonry__item[data-masonry-filter]').length){
-                
+
                 // Create empty ul for filters
                 filters.append('<ul></ul>');
                 filtersList = filters.find('> ul');
@@ -1209,7 +1209,7 @@ mr = (function (mr, $, window, document){
 
                     // If not undefined or empty
                     if(typeof filterString !== typeof undefined && filterString !== ""){
-                        // Split tags from string into array 
+                        // Split tags from string into array
                         filtersArray = filterString.split(',');
                     }
                     jQuery(filtersArray).each(function(index, tag){
@@ -1225,9 +1225,9 @@ mr = (function (mr, $, window, document){
                         // If this tag does not appear in the list already, add it
                         if(!filtersList.find('[data-masonry-filter="'+slug+'"]').length){
                             filtersList.append('<li data-masonry-filter="'+slug+'">'+tag+'</li>');
-                            
+
                         }
-                    }); 
+                    });
                 });
 
                 mr.util.sortChildrenByText($(this).find('.masonry__filters ul'));
@@ -1237,7 +1237,7 @@ mr = (function (mr, $, window, document){
             }
             //End of "if filterable masonry item exists"
         });
-        
+
     };
 
     var windowLoad = function(){
@@ -1274,7 +1274,7 @@ mr = (function (mr, $, window, document){
 
     mr.masonry = {
         documentReady : documentReady,
-        windowLoad : windowLoad        
+        windowLoad : windowLoad
     };
 
     mr.components.documentReady.push(documentReady);
@@ -1286,7 +1286,7 @@ mr = (function (mr, $, window, document){
 //////////////// Modals
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     mr.modals = {};
 
     var documentReady = function($){
@@ -1309,14 +1309,14 @@ mr = (function (mr, $, window, document){
             var modal        = $(this),
                 $window      = $(window),
                 modalContent = modal.find('.modal-content');
-                
-            
+
+
             if(!modal.find('.modal-close').length){
                 modal.find('.modal-content').append('<div class="modal-close modal-close-cross"></div>');
             }
 
             // Set modal height
-            
+
             if(modalContent.attr('data-width') !== undefined){
                 var modalWidth = modalContent.attr('data-width').substr(0,modalContent.attr('data-width').indexOf('%')) * 1;
                 modalContent.css('width',modalWidth + '%');
@@ -1337,39 +1337,39 @@ mr = (function (mr, $, window, document){
             var modal = modalInstance.find('.modal-container');
             var modalContent = modalInstance.find('.modal-content');
             var trigger = modalInstance.find('.modal-trigger');
-            
+
             // Link modal with modal-id attribute
-            
+
             trigger.attr('data-modal-index',index);
             modal.attr('data-modal-index',index);
-            
+
             // Set unique id for multiple triggers
-            
+
             if(typeof modal.attr('data-modal-id') !== typeof undefined){
                 trigger.attr('data-modal-id', modal.attr('data-modal-id'));
             }
-            
 
-            // Attach the modal to the body            
+
+            // Attach the modal to the body
             modal = modal.detach();
             mr.modals.allModalsContainer.append(modal);
         });
-        
+
 
         $('.modal-trigger').on('click', function(){
 
             var modalTrigger = $(this);
             var uniqueID, targetModal;
             // Determine if the modal id is set by user or is set programatically
-   
+
             if(typeof modalTrigger.attr('data-modal-id') !== typeof undefined){
                 uniqueID = modalTrigger.attr('data-modal-id');
-                targetModal = mr.modals.allModalsContainer.find('.modal-container[data-modal-id="'+uniqueID+'"]');    
+                targetModal = mr.modals.allModalsContainer.find('.modal-container[data-modal-id="'+uniqueID+'"]');
             }else{
                 uniqueID = $(this).attr('data-modal-index');
                 targetModal = mr.modals.allModalsContainer.find('.modal-container[data-modal-index="'+uniqueID+'"]');
             }
-            
+
             mr.util.activateIdleSrc(targetModal, 'iframe');
             mr.modals.autoplayVideo(targetModal);
 
@@ -1386,7 +1386,7 @@ mr = (function (mr, $, window, document){
             }
         });
 
-        $('.modal-container').on('click', function(e) { 
+        $('.modal-container').on('click', function(e) {
             if( e.target !== this ) return;
             mr.modals.closeActiveModal();
         });
@@ -1416,8 +1416,8 @@ mr = (function (mr, $, window, document){
                 delay = 0;
 
             if(modal.attr('data-delay')){
-                delay = parseInt(modal.attr('data-delay'), 10) || 0;  
-            } 
+                delay = parseInt(modal.attr('data-delay'), 10) || 0;
+            }
 
             // If a valid selector is found, attach leave event to show modal.
             if($(exitSelector).length){
@@ -1443,14 +1443,14 @@ mr = (function (mr, $, window, document){
             if($('[data-modal-id="'+modalID+'"]').length){
                 mr.modals.closeActiveModal();
                 mr.modals.showModal($('[data-modal-id="'+modalID+'"]'));
-            }  
+            }
         }
 
         // Make modal scrollable
         $(document).on('wheel mousewheel scroll','.modal-content, .modal-content .scrollable', function(evt){
             if(evt.preventDefault){evt.preventDefault();}
             if(evt.stopPropagation){evt.stopPropagation();}
-            this.scrollTop += (evt.originalEvent.deltaY); 
+            this.scrollTop += (evt.originalEvent.deltaY);
         });
     };
     ////////////////
@@ -1460,9 +1460,9 @@ mr = (function (mr, $, window, document){
     mr.modals.documentReady = documentReady;
 
     mr.modals.showModal = function(modal, millisecondsDelay){
-        
+
         var delay = (typeof millisecondsDelay !== typeof undefined) ? (1*millisecondsDelay) : 0;
-        
+
         setTimeout(function(){
             modal.addClass('modal-active');
         },delay);
@@ -1497,13 +1497,13 @@ mr = (function (mr, $, window, document){
 //////////////// Newsletter Providers
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     mr.newsletters = {};
 
     var documentReady = function($){
-  
+
   	var form,checkbox,label,id,parent,radio;
-    
+
     // Treat Campaign Monitor forms
     $('form[action*="createsend.com"]').each(function(){
     	form = $(this);
@@ -1520,13 +1520,13 @@ mr = (function (mr, $, window, document){
                     if($input.attr('placeholder') === ""){
                         if($input.siblings('label').length){
                             $input.attr('placeholder', $input.siblings('label').first().text());
-                            if(form.is('.form--no-labels')){   
+                            if(form.is('.form--no-labels')){
                                 $input.siblings('label').first().remove();
                             }
                         }
                     }
                 }else if($input.siblings('label').length){
-                    $input.attr('placeholder', $input.siblings('label').first().text()); 
+                    $input.attr('placeholder', $input.siblings('label').first().text());
                     if(form.is('.form--no-labels')){
                         $input.siblings('label').first().remove();
                     }
@@ -1554,7 +1554,7 @@ mr = (function (mr, $, window, document){
     		checkbox = $(this);
     		id = checkbox.attr('id');
     		label = form.find('label[for='+id+']');
-    		
+
     		checkbox.before('<div class="input-checkbox" data-id="'+id+'"></div>');
     		$('.input-checkbox[data-id="'+id+'"]').prepend(checkbox);
     		$('.input-checkbox[data-id="'+id+'"]').prepend(label);
@@ -1568,7 +1568,7 @@ mr = (function (mr, $, window, document){
                 button.unwrap();
             }
         });
-        
+
         form.find('[required]').attr('required', 'required').addClass('validate-required');
 
         form.addClass('form--active');
@@ -1592,13 +1592,13 @@ mr = (function (mr, $, window, document){
                     if($input.attr('placeholder') === ""){
                         if($input.siblings('label').length){
                             $input.attr('placeholder', $input.siblings('label').first().text());
-                            if(form.is('.form--no-labels')){   
+                            if(form.is('.form--no-labels')){
                                 $input.siblings('label').first().remove();
                             }
                         }
                     }
                 }else if($input.siblings('label').length){
-                    $input.attr('placeholder', $input.siblings('label').first().text()); 
+                    $input.attr('placeholder', $input.siblings('label').first().text());
                     if(form.is('.form--no-labels')){
                         $input.siblings('label').first().remove();
                     }
@@ -1647,9 +1647,9 @@ mr = (function (mr, $, window, document){
 
         form.find('input[type="submit"]').each(function(){
             var submit = $(this);
-            
+
             var newButton = jQuery('<button/>').attr('type','submit').attr('class', submit.attr('class')).addClass('btn').text(submit.attr('value'));
-            
+
             if(submit.parent().is('div.clear')){
                 submit.unwrap();
             }
@@ -1678,15 +1678,15 @@ mr = (function (mr, $, window, document){
         form.addClass('form--active');
 
         mr.newsletters.prepareAjaxAction(form);
-     
-    
 
-    }); 
+
+
+    });
 
 	// Reinitialize the forms so interactions work as they should
 
 	mr.forms.documentReady(mr.setContext('form.form--active'));
-		
+
   };
 
   mr.newsletters.documentReady = documentReady;
@@ -1722,18 +1722,18 @@ mr = (function (mr, $, window, document){
 //////////////// Notifications
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     mr.notifications = {};
 
     var documentReady = function($){
-        
+
         $('.notification').each(function(){
             var notification = $(this);
             if(!notification.find('.notification-close').length){
                 notification.append('<div class="notification-close-cross notification-close"></div>');
             }
         });
-    
+
 
         $('.notification[data-autoshow]').each(function(){
             var notification = $(this);
@@ -1771,9 +1771,9 @@ mr = (function (mr, $, window, document){
             var notificationLink = jQuery(this).closest('.notification').attr('data-notification-link');
             mr.notifications.closeNotification(notificationLink);
         });
-    
+
     };
-    
+
     mr.notifications.documentReady = documentReady;
 
     mr.notifications.showNotification = function(notification, millisecondsDelay){
@@ -1790,9 +1790,9 @@ mr = (function (mr, $, window, document){
     mr.notifications.closeNotification = function(notification){
 
         var $notification = jQuery(notification);
-        
-        notification = $notification.is('.notification-close') ? 
-                       $notification.closest('.notification') : 
+
+        notification = $notification.is('.notification-close') ?
+                       $notification.closest('.notification') :
                        $('.notification[data-notification-link="'+notification+'"]');
 
         notification.addClass('notification--dismissed');
@@ -1812,10 +1812,10 @@ mr = (function (mr, $, window, document){
 //////////////// Parallax
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
-        
-        var $window      = $(window); 
+
+        var $window      = $(window);
         var windowWidth  = $window.width();
         var windowHeight = $window.height();
         var navHeight    = $('nav').outerHeight(true);
@@ -1838,7 +1838,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.parallax = {
-        documentReady : documentReady        
+        documentReady : documentReady
     };
 
     mr.components.documentReady.push(documentReady);
@@ -1849,14 +1849,14 @@ mr = (function (mr, $, window, document){
 //////////////// Flickity
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     mr.sliders = {};
     mr.sliders.draggable = true;
 
     var documentReady = function($){
 
         $('.slider').each(function(index){
-            
+
             var slider = $(this);
             var sliderInitializer = slider.find('ul.slides');
             sliderInitializer.find('>li').addClass('slide');
@@ -1906,11 +1906,11 @@ mr = (function (mr, $, window, document){
               if(slider.find('.is-selected').hasClass('controls--dark')){
                 slider.addClass('controls--dark');
               }else{
-                slider.removeClass('controls--dark'); 
+                slider.removeClass('controls--dark');
               }
             });
         });
-        
+
     };
 
     mr.sliders.documentReady = documentReady;
@@ -1923,10 +1923,10 @@ mr = (function (mr, $, window, document){
 //////////////// Smoothscroll
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     mr.smoothscroll = {};
     mr.smoothscroll.sections = [];
-    
+
     mr.smoothscroll.init = function(){
         mr.smoothscroll.sections = [];
 
@@ -1934,7 +1934,7 @@ mr = (function (mr, $, window, document){
             var sectionObject = {},
                 link          = $(this),
                 href          = link.attr('href');
-            
+
             if(href !== '#'){
                 if($('section'+href).length){
                     sectionObject.id     = href;
@@ -1988,7 +1988,7 @@ mr = (function (mr, $, window, document){
                 offset = $('body').attr('data-smooth-scroll-offset');
                 offset = offset*1;
             }
-            
+
             smoothScroll.init({
                 selector: '.inner-link',
                 selectorHeader: null,
@@ -2010,7 +2010,7 @@ mr = (function (mr, $, window, document){
 //////////////// Tabs
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
         $('.tabs').each(function(){
             var tabs = $(this);
@@ -2023,7 +2023,7 @@ mr = (function (mr, $, window, document){
                 currentTab.closest('.tabs-container').find('.tabs-content').append(tabContentClone);
             });
         });
-        
+
         $('.tabs li').on('click', function(){
             var clickedTab    = $(this),
                 tabContainer  = clickedTab.closest('.tabs-container'),
@@ -2033,10 +2033,10 @@ mr = (function (mr, $, window, document){
 
             tabContainer.find('> .tabs > li').removeClass('active');
             tabContainer.find('> .tabs-content > li').removeClass('active');
-            
+
             clickedTab.addClass('active');
             activeContent.addClass('active');
-            
+
 
             // If there is an <iframe> element in the tab, reload its content when the tab is made active.
             iframe = activeContent.find('iframe');
@@ -2044,12 +2044,12 @@ mr = (function (mr, $, window, document){
                 iframe.attr('src', iframe.attr('src'));
             }
         });
-        
+
         $('.tabs li.active').trigger('click');
     };
 
     mr.tabs = {
-        documentReady : documentReady        
+        documentReady : documentReady
     };
 
     mr.components.documentReady.push(documentReady);
@@ -2060,7 +2060,7 @@ mr = (function (mr, $, window, document){
 //////////////// Toggle Class
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
         $('[data-toggle-class]').each(function(){
         	var candidate     = $(this),
@@ -2085,7 +2085,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.toggleClass = {
-        documentReady : documentReady        
+        documentReady : documentReady
     };
 
     mr.components.documentReady.push(documentReady);
@@ -2096,7 +2096,7 @@ mr = (function (mr, $, window, document){
 //////////////// Typed Headline Effect
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
         $('.typed-text').each(function(){
             var text = $(this);
@@ -2111,7 +2111,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.typed = {
-        documentReady : documentReady        
+        documentReady : documentReady
     };
 
     mr.components.documentReady.push(documentReady);
@@ -2122,7 +2122,7 @@ mr = (function (mr, $, window, document){
 //////////////// Twitter Feeds
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
     var documentReady = function($){
         $('.tweets-feed').each(function(index) {
             $(this).attr('id', 'tweets-' + index);
@@ -2161,11 +2161,11 @@ mr = (function (mr, $, window, document){
                 }
                 html += '</ul>';
                 element.html(html);
-                
+
                 // Initialize twitter feed slider
                 if(element.closest('.slider').length){
                     mr.sliders.documentReady(mr.setContext());
-                     
+
                     return html;
                 }
             }
@@ -2186,9 +2186,9 @@ mr = (function (mr, $, window, document){
 //////////////// Video
 mr = (function (mr, $, window, document){
     "use strict";
-    
+
 	  var documentReady = function($){
-	      
+
 			//////////////// Youtube Background
 
 			if($('.youtube-background').length){
@@ -2201,13 +2201,13 @@ mr = (function (mr, $, window, document){
 					player.YTPlayer();
 					player.on("YTPStart",function(){
 				  		player.closest('.videobg').addClass('video-active');
-					});	
+					});
 				});
 			}
 
 			if($('.videobg').find('video').length){
 				$('.videobg').find('video').closest('.videobg').addClass('video-active');
-			} 
+			}
 
 			//////////////// Video Cover Play Icons
 
@@ -2237,10 +2237,17 @@ mr = (function (mr, $, window, document){
 	  };
 
 	  mr.video = {
-	      documentReady : documentReady        
+	      documentReady : documentReady
 	  };
 
 	  mr.components.documentReady.push(documentReady);
 	  return mr;
 
 }(mr, jQuery, window, document));
+
+//  Back to top scrolling
+$(".back-to-top").click(function(e) {
+    e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});

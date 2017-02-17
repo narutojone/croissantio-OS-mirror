@@ -4,7 +4,7 @@
 # Examples:
 #
 
-100.times do
+20.times do
 name = Faker::Name.name
 link = Faker::Internet.url
 title = Faker::Book.title
