@@ -27,8 +27,8 @@
         </div>
 
         <div class="hero">
-            <div class="hero__image">
-                <%= image_tag("background-blue.png") %>
+            <div class="hero__image clearfix">
+                <%= image_tag "default.png" %>
             </div>
         </div>
         <div class="container">
@@ -36,20 +36,6 @@
                 <article>
                     <div class="article__body article__title">
                         <%= @resource.description %>
-                    </div>
-                    <div class="article__share text-center">
-                        <a class="btn bg--facebook btn--icon" href="#">
-                            <span class="btn__text">
-                                <i class="socicon socicon-facebook"></i>
-                                Share on Facebook
-                            </span>
-                        </a>
-                        <a class="btn bg--twitter btn--icon" href="#">
-                            <span class="btn__text">
-                                <i class="socicon socicon-twitter"></i>
-                                Share on Twitter
-                            </span>
-                        </a>
                     </div>
                 </article>
             </div>
