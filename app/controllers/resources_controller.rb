@@ -16,7 +16,7 @@ class ResourcesController < ApplicationController
   def create
     @resources = Resource.all
     @resource = Resource.new(resource_params)
-    set_slug_for_resource(@resource)
+    # set_slug_for_resource(@resource)
     if @resource.save
       redirect_to resources_path
     else
@@ -32,8 +32,8 @@ class ResourcesController < ApplicationController
 
   def update
     @action = 'Edit'
-    new_resource_params = update_slug_for_resource(resource_params)
-    if @resource.update(new_resource_params)
+    # new_resource_params = update_slug_for_resource(resource_params)
+    if @resource.update(resource_params)
       flash[:success] = 'Resource succesfully updated!'
       render :index
     else
@@ -57,16 +57,16 @@ class ResourcesController < ApplicationController
   def resource_params
     params.require(:resource).permit(:title, :website, :link, :grade, :slug, :description, :author, :date, :resource_type)
   end
-
-  def set_slug_for_resource(resource) # Set & Update slugs for resources
-    resource.slug = resource_params[:title].delete("\'").parameterize
-    resource.save!
-  end
-
-  def update_slug_for_resource(resource_params) # Add updated slugs to params (not passed through form)
-    resource_params[:slug] = resource_params[:title].delete("\'").parameterize
-    resource_params
-  end
+  #
+  # def set_slug_for_resource(resource) # Set & Update slugs for resources
+  #   resource.slug = resource_params[:title].delete("\'").parameterize
+  #   resource.save!
+  # end
+  #
+  # def update_slug_for_resource(resource_params) # Add updated slugs to params (not passed through form)
+  #   resource_params[:slug] = resource_params[:title].delete("\'").parameterize
+  #   resource_params
+  # end
 
   def setup
     @resource = Resource.friendly.find(params[:id])

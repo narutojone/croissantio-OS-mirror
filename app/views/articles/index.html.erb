@@ -50,7 +50,7 @@
                                             <% end %>
                                         </td>
                                         <td class="hidden-xs"><%= article.description %></td>
-                                        <td class="hidden-xs"><%= article.category.name %></td>
+                                        <td class="hidden-xs"><%= article.category_name.capitalize %></td>
                                         <td class="hidden-xs">
                                             <% if !article.image.url.nil? %>
                                             <span data-lightbox="gallery">
@@ -127,6 +127,12 @@
                                     <%= f.text_area :description, :class => "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
+                            <div class="form-group locale-field">
+                                <%= f.label :slug, "URL", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <%= f.text_field :slug, :class => "form-control col-md-7 col-xs-12", placeholder: "my-cool-article" %>
+                                </div>
+                            </div>
                             <div class="form-group locale-field locale-en">
                               <div class="col-md-12 col-sm-12 col-xs-12">
                                 <textarea id="editor2"></textarea>
@@ -139,6 +145,12 @@
                                 <%= f.label :category_id, "Category", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <%= f.select :category_id, options_from_collection_for_select(Category.all, "id", "name"), {}, {class: "form-control col-md-7 col-xs-12"} %>
+                                </div>
+                            </div>
+                            <div class="form-group locale-field">
+                                <%= f.label :date, "Date", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <%= f.date_field :date, :class => "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group">

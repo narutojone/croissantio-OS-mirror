@@ -10,14 +10,14 @@
 <% content_for :ogtitle, @article.title %>
 <% content_for :ogdescription, @article.description %>
 <% content_for :ogtype, "article" %>
-<% content_for :ogimage, image_url(@article.image) %>
+<% content_for :ogimage, @article.image.url %>
 
 <%= render "shared/stack_navbar" %>
 <main role="main" class="main clearfix">
     <div class="js__article article__main" data-title="Finding your way from maker to manager">
         <div class="container">
             <div class="article__hero">
-                <a href="#" class="f__up f__no-und categories__link js__category-name"><%= @article.category.name.capitalize %></a>
+              <%= link_to @article.category.name.capitalize, category_path(@article.category.name.parameterize),  class:"f__up f__no-und categories__link js__category-name"  %>
                 <span class="categories__separator-white">|</span>
                 <span class="f__up categories__text">
                     <span class="js__read-time">
@@ -28,8 +28,8 @@
         </div>
 
         <div class="hero">
-            <div class="hero__image">
-                <%= image_tag("background-blue.png") %>
+            <div class="hero__image clearfix">
+                <%= image_tag @article.image.url %>
             </div>
         </div>
         <div class="container">
@@ -38,20 +38,6 @@
 
                     <div class="article__body article__title">
                         <%= raw @article.body %>
-                    </div>
-                    <div class="article__share text-center">
-                        <a class="btn bg--facebook btn--icon" href="#">
-                            <span class="btn__text">
-                                <i class="socicon socicon-facebook"></i>
-                                Share on Facebook
-                            </span>
-                        </a>
-                        <a class="btn bg--twitter btn--icon" href="#">
-                            <span class="btn__text">
-                                <i class="socicon socicon-twitter"></i>
-                                Share on Twitter
-                            </span>
-                        </a>
                     </div>
                 </article>
             </div>
