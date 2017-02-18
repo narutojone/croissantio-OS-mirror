@@ -14,6 +14,8 @@ class PagesController < ApplicationController
 
   def services; end
 
+  def about; end
+
   def blog
     @articles = Article.where.not(category_name: 'newsletter').where(posted: true)
   end

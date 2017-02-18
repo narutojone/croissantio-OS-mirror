@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get '/admin' => 'pages#admin'
   # Public
   root 'pages#home'
-  get 'blog' => 'pages#blog'
-  get 'services' => 'pages#services'
-  get 'newsletter' => 'pages#newsletter'
-  get 'about' => 'pages#about'
-  get 'thanks' => 'pages#thanks'
+  get '/blog' => 'pages#blog'
+  get '/services' => 'pages#services'
+  get '/newsletter' => 'pages#newsletter'
+  get '/about' => 'pages#about'
+  get '/thanks' => 'pages#thanks'
   get '/search' => 'pages#search'
 
   # ------------------ Model Routing -----------------------
