@@ -15,8 +15,8 @@ gem 'turbolinks', "~> 2.5"
 gem 'jbuilder', '~> 2.3'
 gem 'sdoc', '~> 0.4', group: :doc
 gem 'mailchimp-api', "~> 2.0", require: 'mailchimp'
-gem "carrierwave", "~> 1.0"
-gem "fog-aws", "~> 0.9"
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog-aws'
 gem "mini_magick", "~> 4.6"
 gem "friendly_id", "~> 5.2"
 gem "readingtime", "~> 0.4"
@@ -25,7 +25,6 @@ gem "algoliasearch-rails", "~> 1.17"
 gem "faker", "~> 1.7"
 gem "sitemap_generator", "~> 5.2"
 gem "unicorn", "~> 5.2"
-
 group :production do
   gem "rails_12factor", "~> 0.0"
 end
