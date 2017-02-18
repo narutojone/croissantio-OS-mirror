@@ -1,51 +1,21 @@
-<head>
-	<title>About - Maxime Salomon</title>
-	<meta charset="utf-8">
-	<meta name="apple-mobile-web-app-capable" content="yes"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<meta name="description" content="Maxime Salomon is the founder of The Growth Bakery.">
-    <meta name="author" content="The Growth Bakery">
+<% content_for :title, "About"  %>
+<% content_for :description, "Maxime Salomon is the founder of The Growth Bakery." %>
+<% content_for :ogtitle, "About" %>
+<% content_for :ogdescription, "Maxime Salomon is the founder of The Growth Bakery." %>
+<% content_for :ogtype, "page" %>
+<% content_for :ogimage, image_path('maxime-salomon.jpg') %>
+<% content_for :css do %>
+<%= stylesheet_link_tag "bootstrap", "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/pages" %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<img height="1" width="1" style="display:none" src="https://www.quora.com/_/ad/eb6abf90bc4d41678fdddc89efd6d64e/pixel" />
+<% end %>
 
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="The Growth Bakery" />
-    <meta property="og:site_name" content="The Growth Bakery" />
-    <meta property="og:url" content="http://growthbakery.com" />
-    <meta property="og:description" content="The Growth bakery is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition." />
-	<meta property="og:type" content="article" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="article:publisher" content="https://www.facebook.com/growthbakery" />
-
-</head>
-
-<section class="about">
-	<header>
-		<nav class="navbar">
-		  <div class="container">
-		  	<div class="navbar-header">
-		  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
-		       <span class="sr-only">Toggle navigation</span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="/">The Growth Bakery</a>
-		    </div>
-			<div class="collapse navbar-collapse" id="nav-collapse">
-			  <ul class="nav navbar-nav navbar-right">
-					<li><a href="/about">About</a></li>
-					<li><a href="mailto:maxime@growthbakery.com">Contact</a></li>
-			  </ul>
-			</div>
-		  </div>
-		</nav>
-	</header>
+<div class="about">
+	<%= render "shared/stack_navbar" %>
 		<div class="container">
     		<div class="row">
     			<div class="col-md-12">
-    				<div class="hero">
+    				<div class="hero about-hero">
     					<div class="col-md-4">
     						<img src="http://maximesalomon.com/wp-content/uploads/2015/02/maxime-salomon.jpg" alt="Maxime Salomon" style="width:300px; height:300px;">
     					</div>
@@ -53,15 +23,14 @@
     						<div class="description-about">
     							<h1>Maxime Salomon</h1>
     							<h2>Founder - The Growth Bakery</h2>
-    							</br>
-    							<p>I am an innovative growth marketer with a deep understanding of marketing, product, data & technology. I have experience working for companies backed by Y-Combinator, 500 startups, Point Nine Capital and Alven Capital. I help B2B SaaS startups scale their customer acquisition through data driven strategies.</p></br>
-    							<p>The Growth bakery is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition.</p></br>
-    							<p>You can get in touch with me at <a href="mailto:maxime@growthbakery.com">maxime@growthbakery.com</a></p></br>
-    							
-    							<img src="https://www.ycombinator.com/images/ycombinator-logo-fb889e2e.png" atl="Y-Combinator" style="width:70px; height:70px;">
-    							<img src="https://pbs.twimg.com/profile_images/760219502910910465/2w8KblB7.jpg" atl="500 Startups" style="width:70px; height:70px;">
-    							<img src="https://www.digitalocean.com/assets/media/hatch/partners/pointNine-30bc10b2.svg" style=" height:70px;">
-    							<img src="http://www.frenchweb.fr/wp-content/uploads/2013/12/alven-capital.jpg" atl="Alven Capital" style="height:70px;">
+    							<p>I am an innovative growth marketer with a deep understanding of marketing, product, data & technology. I have experience working for companies backed by Y-Combinator, 500 startups, Point Nine Capital and Alven Capital. I help B2B SaaS startups scale their customer acquisition through data driven strategies.</p>
+    							<p>The Growth bakery is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition.</p>
+    							<p>You can get in touch with me at <a href="mailto:maxime@growthbakery.com">maxime@growthbakery.com</a></p>
+
+    							<img class="about-img" src="https://www.ycombinator.com/images/ycombinator-logo-fb889e2e.png" atl="Y-Combinator" style="width:70px; height:70px;">
+    							<img class="about-img" src="https://pbs.twimg.com/profile_images/760219502910910465/2w8KblB7.jpg" atl="500 Startups" style="width:70px; height:70px;">
+    							<img class="about-img" src="https://www.digitalocean.com/assets/media/hatch/partners/pointNine-30bc10b2.svg" style=" height:70px;">
+    							<img class="about-img" src="http://www.frenchweb.fr/wp-content/uploads/2013/12/alven-capital.jpg" atl="Alven Capital" style="height:70px;">
 							</div>
     					</div>
 
@@ -69,4 +38,8 @@
     			</div><!-- /End col -->
     		</div><!-- /End row -->
     	</div>
-</section>
+			<%= render "shared/stack_footer" %>
+</div>
+<% content_for :js do %>
+<%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+<% end %>

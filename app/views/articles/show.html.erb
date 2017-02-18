@@ -1,0 +1,106 @@
+<!-- CONTENT -->
+<%= content_for :css do %>
+<%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme"  %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<% end %>
+
+<!-- OPEN GRAPH TAGS & STYLING -->
+<% content_for :title, @article.title  %>
+<% content_for :description, @article.description %>
+<% content_for :ogtitle, @article.title %>
+<% content_for :ogdescription, @article.description %>
+<% content_for :ogtype, "article" %>
+<% content_for :ogimage, image_url(@article.image) %>
+
+<%= render "shared/stack_navbar" %>
+<main role="main" class="main clearfix">
+    <div class="js__article article__main" data-title="Finding your way from maker to manager">
+        <div class="container">
+            <div class="article__hero">
+                <a href="#" class="f__up f__no-und categories__link js__category-name"><%= @article.category.name.capitalize %></a>
+                <span class="categories__separator-white">|</span>
+                <span class="f__up categories__text">
+                    <span class="js__read-time">
+                        <%= @article.body.reading_time :format => :approx %></span>
+                    read</span>
+                <h1 class="article__hero-title js__article-hero-title"><%= @article.title %></h1>
+            </div>
+        </div>
+
+        <div class="hero">
+            <div class="hero__image">
+                <%= image_tag("background-blue.png") %>
+            </div>
+        </div>
+        <div class="container">
+            <div class="article__wrap ">
+                <article>
+
+                    <div class="article__body article__title">
+                        <%= @article.body %>
+                    </div>
+                    <div class="article__share text-center">
+                        <a class="btn bg--facebook btn--icon" href="#">
+                            <span class="btn__text">
+                                <i class="socicon socicon-facebook"></i>
+                                Share on Facebook
+                            </span>
+                        </a>
+                        <a class="btn bg--twitter btn--icon" href="#">
+                            <span class="btn__text">
+                                <i class="socicon socicon-twitter"></i>
+                                Share on Twitter
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="bg--secondary">
+    <div class="container">
+        <div class="row text-block">
+            <div class="col-sm-12">
+                <h3>More recent stories</h3>
+            </div>
+        </div>
+        <!--end of row-->
+        <div class="row">
+          <% @relatedarticles.each do |article| %>
+            <div class="col-sm-4">
+                <article class="feature feature-1">
+                  <%= link_to articles_show_path(article) do %>
+                    <%= image_tag article.image.url %>
+                    <% end %>
+                    <div class="feature__body boxed boxed--border">
+                        <span><%= article.created_at.strftime("%B #{article.created_at.day.ordinalize} %Y") %></span>
+                        <h5><%= article.title %></h5>
+                        <%= link_to "Read more", articles_show_path  %>
+                    </div>
+                </article>
+            </div>
+            <% end %>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<%= render "shared/stack_footer" %>
+
+<% content_for :js do %>
+<%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+<% end %>
+
+<style>
+    .main .article__hero {
+        position: absolute;
+        z-index: 10;
+        top: 50% !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+        transform: translateY(-50%);
+    }
+
+</style>

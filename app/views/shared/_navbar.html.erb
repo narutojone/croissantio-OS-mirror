@@ -1,0 +1,28 @@
+<% content_for :css do %>
+<%= stylesheet_link_tag "models/pages"  %>
+<% end %>
+
+<div>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">The Growth Bakery</a>
+      </div>
+    <div class="collapse navbar-collapse" id="nav-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="<%= newsletter_path %>">Newsletter</a></li>
+        <li><a href="<%= blog_path %>">Blog</a></li>
+          <li><a href="<%= about_path %>">About</a></li>
+          <li><a href="<%= search_path %>">Search</a></li>
+          <li><a href="mailto:maxime@growthbakery.com">Contact</a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+</div>

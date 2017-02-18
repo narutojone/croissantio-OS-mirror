@@ -19,3 +19,11 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: datp26q4h9c8hg
+  username: nvhtpqogszcvix
+  password: <%= ENV["FLYING-GRADLY-1814_DATABASE_PASSWORD"] %>

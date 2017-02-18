@@ -1,27 +1,18 @@
-<section class="services">
-	<header>
-		<nav class="navbar">
-		  <div class="container">
-		  	<div class="navbar-header">
-		  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
-		       <span class="sr-only">Toggle navigation</span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="/">The Growth Bakery</a>
-		    </div>
-			<div class="collapse navbar-collapse" id="nav-collapse">
-			  <ul class="nav navbar-nav navbar-right">
-					<li><a href="/services">Services</a></li>
-			  		<li><a href="/newsletter">Newsletter</a></li>
-			  		<li><a href="/about">About</a></li>
-					<li><a href="mailto:maxime@growthbakery.com">Contact</a></li>
-			  </ul>
-			</div>
-		  </div>
-		</nav>
-	</header>
+<% content_for :title, "Service"  %>
+<% content_for :description, "Description for services" %>
+<% content_for :ogtitle, "Services" %>
+<% content_for :ogdescription, "Description for services" %>
+<% content_for :ogtype, "page" %>
+<% content_for :ogimage, image_path('maxime-salomon.jpg') %>
+
+<% content_for :css do %>
+<%= stylesheet_link_tag "bootstrap", "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/pages" %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<% end %>
+
+
+<div class="services">
+	<%= render "shared/stack_navbar" %>
 		<div class="container">
     		<div class="row">
     			<div class="col-md-12">
@@ -37,7 +28,7 @@
 		    					<!--  Form starts here  -->
 							    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/164786/subscribe" onsubmit="Subscribed()" data-remote="true">
 							      <input type="hidden"value="{&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}" id="ck_form_options"></input>
-							      
+
 							      <input type="hidden" name="id" value="164786" id="landing_page_id"></input>
 		          					<div class= "col-md-1"></div>
 		          					<div class="ck_control_group ck_email_field_group col-md-6">
@@ -62,7 +53,7 @@
 		    					<!--  Form starts here  -->
 							    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/3255/subscribe" onsubmit="Subscribed()" data-remote="true">
 							      <input type="hidden"  value="{&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}" id="ck_form_options"></input>
-							      
+
 							      <input type="hidden" name="id" value="3255" id="landing_page_id"></input>
 		          					<div class= "col-md-1"></div>
 		          					<div class="ck_control_group ck_email_field_group col-md-6">
@@ -91,7 +82,7 @@
 		    					<!--  Form starts here  -->
 							    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/3255/subscribe" onsubmit="Subscribed()" data-remote="true">
 							      <input type="hidden"  value="{&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}" id="ck_form_options"></input>
-							      
+
 							      <input type="hidden" name="id" value="3255" id="landing_page_id"></input>
 		          					<div class= "col-md-1"></div>
 		          					<div class="ck_control_group ck_email_field_group col-md-6">
@@ -117,7 +108,7 @@
 		    					<!--  Form starts here  -->
 							    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/3255/subscribe" onsubmit="Subscribed()" data-remote="true">
 							      <input type="hidden"  value="{&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}" id="ck_form_options"></input>
-							      
+
 							      <input type="hidden" name="id" value="3255" id="landing_page_id"></input>
 							      	<div class= "col-md-1"></div>
 		          					<div class="ck_control_group ck_email_field_group col-md-6">
@@ -134,4 +125,4 @@
 				</div>
     		</div><!-- /End row -->
     	</div>
-</section>
+</div>

@@ -1,7 +1,13 @@
+<%= content_for :css do %>
+<%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme"  %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<% end %>
+
+<%= render "shared/stack_navbar" %>
+<div class="col-md-8 col-md-offset-2 margin-top">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -37,3 +43,4 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
