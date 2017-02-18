@@ -244,9 +244,3 @@ DEPENDENCIES
   turbolinks (~> 2.5)
   uglifier (~> 2.7)
   web-console (~> 2.3)
-
-RUBY VERSION
-   ruby 2.1.2p95
-
-BUNDLED WITH
-   1.14.4
