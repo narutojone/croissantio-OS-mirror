@@ -39,3 +39,6 @@
     	</div>
 			<%= render "shared/stack_footer" %>
 </div>
+<% content_for :js do %>
+<%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+<% end %>

@@ -36,6 +36,9 @@
                 <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm">
                     <div class="bar__module">
                         <ul class="menu-horizontal text-left">
+                          <li>
+                            <%= link_to "Search", search_path %>
+                          </li>
                             <li>
                                 <%= link_to "Newsletter", newsletter_path %>
                             </li>
@@ -46,10 +49,7 @@
                                 <%= link_to "About", about_path %>
                             </li>
                             <li>
-                              <%= link_to "Search", search_path %>
-                            </li>
-                            <li>
-                                <span class="dropdown__trigger">Contact</span>
+                                <a href="mailto:maxime@growthbakery.com">Contact</a>
                             </li>
                         </ul>
                     </div>

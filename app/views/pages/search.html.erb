@@ -6,9 +6,11 @@
 <% content_for :ogimage, image_path('maxime-salomon.jpg') %>
 <% content_for :css do %>
 <%= stylesheet_link_tag "bootstrap", "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme" %>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
 <% end %>
+
+<!-- Content start -->
 <div class="about">
 	<%= render "shared/stack_navbar" %>
 	<div class="container">
@@ -16,19 +18,19 @@
 			<div class="col-md-12">
 				<%= form_for resources_path, method: :get, html: {id: "search-form"} do |f| %>
 				<div class="col-md-10 col-md-offset-1">
-					<input type="search" id="aa-search-input" class="aa-input-search" name="query" placeholder="Search by title" autocomplete="on">
+					<input type="search" id="aa-search-input" class="aa-input-search" name="query" placeholder="Search resources by title, url or author" autocomplete="on">
 					<div class="aa-input-container" id="aa-input-container"></div>
 				</div>
 				<div class="col-md-10 col-md-offset-1">
-					<div class="col-md-3 select-search">
+					<div class="col-md-3 col-sm-12 select-search clearfix">
 						<p class="inline">Search</p>
 						<%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
 					</div>
-					<div class="col-md-3 select-search">
+					<div class="col-md-3 col-sm-12 select-search  clearfix">
 						<p class="inline">By</p>
 						<%= f.select params[:order], options_for_select([["Oldest first", "date ASC"],["Newest first", "date DESC"], ["Grade", "grade DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
 					</div>
-					<div class="col-md-6 select-search">
+					<div class="col-md-6 col-sm-12 select-search  clearfix">
 						<p class="inline">From</p>
 						<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 80%;">
 							<i class="fa fa-calendar"></i>&nbsp;
@@ -49,7 +51,6 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="masonry masonry-blog-list">
-
 					<hr>
 					<div id="article-list" class="masonry__container masonry--active">
 						<% @resources.each do |resource|  %>
@@ -59,6 +60,8 @@
 							</h4>
 							<span>
 								<strong><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
+									|
+										<%= resource.author %>
 									|
 									<%= resource.resource_type.capitalize %>
 									|
@@ -85,102 +88,19 @@
 </div>
 </div>
 </div>
-<!-- Include AlgoliaSearch JS Client and autocomplete.js jQuery plugin after the jQuery dependency -->
+<% content_for :js do %>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
-<!-- Initialize autocomplete menu -->
-<script>
-var client = algoliasearch("J97XEMUI7C", "ec96a3adcb4bf3ef61b276cc5a3790d7");
-var index = client.initIndex('Resource');
-window.index = index
-$('#aa-search-input').autocomplete({
-	hint: true
-}, [
-	{
-		source: $.fn.autocomplete.sources.hits(index, {hitsPerPage: 10}),
-		//value to be displayed in input control after user's suggestion selection
-		displayKey: 'title',
-		//hash of templates used when rendering dataset
-		templates: {
-			//'suggestion' templating function used to render a single suggestion
-			suggestion: function (suggestion) {
-				// console.log(suggestion)
-				title = (suggestion.title)
-				window.grade = (suggestion.grade.toString())
-				window.date = (suggestion.date)
-				window.description = (suggestion.description)
-				window.slug = (suggestion.slug)
-				window.resource_type = (suggestion.resource_type)
-				if (grade != null && title != null) {
-					return '<span>' + title + '</span>';
-				} else {
-					return '<span> Nothing found </span>';
-				}
-			}
-		}
-	}
-]);
-</script>
-<% content_for :js do %>
 <%= javascript_include_tag "moment" %>
 <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "search"  %>
 <script>
-$(".manual-filter").on("change", function () {
-	$("#search-form").submit()
-})
-
-window.onload = function () {
-	$(".date-range").on("DOMSubtreeModified", function () {
-		val = $(".date-range").text()
-		$("#daterange").val(val)
-		$("#search-form").submit()
-	})
-}
-
-$("#aa-search-input").on("input", function () {
-	$("#article-list").empty()
-	index.search($('#aa-search-input').val(), function (err, content) {
-		array = content.hits.slice(0, 10)
-		for (var i = 0; i < array.length; i++) {
-			title = array[i].title
-			grade = array[i].grade
-			description = array[i].description
-			date = array[i].date
-			resource_type = array[i].resource_type
-			slug = array[i].slug
-			link = array[i].link
-			var html = "";
-			html += "<div class=\"masonry__item filter-web-design\">";
-			html += "							<h4 class=\"resource-title\">";
-			html += "							<a href=\"\/" + link + "\">" + title + "<\/a>";
-			html += "					<\/h4>";
-			html += "							<span>";
-			html += "								<strong>" + moment(date).format('MMMM Do YYYY') + "";
-			html += "									|";
-			html += "									" + capitalizeFirstLetter(resource_type) + "";
-			html += "									|";
-			html += "									" + grade + "";
-			html += "									stars";
-			html += "								<\/strong>";
-			html += "							<\/span>";
-			html += "							<div>";
-			html += "								<p class=\"resource-description\">";
-			html += "									" + description + "";
-			html += "								<\/p>";
-			html += "							<\/div>";
-			html += "						<\/div>";
-			$("#article-list").append(html)
-		}
-	});
-})
-
+// <!-- The other scripts for the datepicker, submitting the form and algolia are moved into search.js. Just this one requires some ruby variables -->
+// <!-- Initialize Datepicker.js -->
 $(function () {
-
-
 	var start = moment(<%= @selected_option[:upper] %>)
 	var end = moment(<%= @selected_option[:lower] %>);
-
 	function cb(start, end) {
 		$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
 	}
@@ -217,13 +137,5 @@ $(function () {
 	cb(start, end);
 
 });
-
-$("#reportrange").on("click", function () {
-	$(".ranges").show()
-})
-
-function capitalizeFirstLetter(string) {
-	return string.charAt(0).toUpperCase() + string.slice(1);
-}
 </script>
 <% end %>

@@ -30,7 +30,7 @@
 
   // Update hidden field
   function getText() {
-    $(".trumbowyg-editor").on("input", function() {
+    $(".trumbowyg-editor, #editor2").on("input", function() {
       value = $(".trumbowyg-editor").html();
       $("#article_body").val(value);
     })

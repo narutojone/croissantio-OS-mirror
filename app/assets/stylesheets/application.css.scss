@@ -1,4 +1,4 @@
-// This main CSS file contains all style specifications for GrowthBakery.com
+// This main CSS file contains all custom style specifications for GrowthBakery.com
 // There's a styling file for every model that's
 // being generated (page.scss, post.scss, ...). Model stylesheets are organized
 // by page-type (index, show, standalone) whilst the css is ordered by location in the DOM. All
@@ -9,3 +9,8 @@
 // {DOM ordered & property sorted css}
 // - show-page
 // {DOM ordered & property sorted css}
+
+// Currently this website relies heavily (mostly) on vendor stylesheets in the vendor directory.
+// Admin theme is from; https://colorlib.com/polygon/gentelella/general_elements.html
+// User theme is from: http://trystack.mediumra.re/
+// Blog show also has a stylesheet called articles.css.scss in /models

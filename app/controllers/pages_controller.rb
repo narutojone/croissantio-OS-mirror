@@ -22,8 +22,6 @@ class PagesController < ApplicationController
     @newsletters = Article.where(category_name: 'newsletter', posted: true)
   end
 
-  def blog_test; end
-
   def search
     @selected_option = { resource_type: '', order: '', range: '', upper: '', lower: '' }
     @resources = []
