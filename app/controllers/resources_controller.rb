@@ -55,7 +55,7 @@ class ResourcesController < ApplicationController
   private
 
   def resource_params
-    params.require(:resource).permit(:title, :website, :link, :grade, :slug, :description, :author, :date, :resource_type)
+    params.require(:resource).permit(:title, :website, :link, :grade, :slug, :description, :author, :date, :resource_type, :category_id)
   end
   #
   # def set_slug_for_resource(resource) # Set & Update slugs for resources

@@ -1,6 +1,7 @@
 class Category < ActiveRecord::Base
 # Relation to articles
 has_many :articles, dependent: :destroy
+has_many :resources, dependent: :destroy
 
 # Downcase attribute before saving
 before_save { self.name = name.downcase }

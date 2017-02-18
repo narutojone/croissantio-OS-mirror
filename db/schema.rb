@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218152212) do
+ActiveRecord::Schema.define(version: 20170218162520) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20170218152212) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "resource_type"
+    t.integer  "category_id"
   end
 
   add_index "resources", ["slug"], name: "index_resources_on_slug", unique: true
