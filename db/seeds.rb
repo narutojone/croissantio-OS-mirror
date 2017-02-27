@@ -26,6 +26,7 @@ author: name,
 resource_type: ["Article", "Presentation", "Link", "Video"].sample,
 grade: (1..5).to_a.sample,
 category_id: category,
+category_name: category_name,
 date: date
 )
 end
@@ -38,11 +39,14 @@ description = Faker::Lorem.paragraph(2)
 body = Faker::Lorem.paragraph(12)
 category = (1..5).to_a.sample
 category_name = Category.find(category).name
+date = Faker::Date.between(2.months.ago, Date.today)
+
 Article.create!(
 title: title,
 description: description,
 body: body,
 user_id: 1,
+date: date,
 posted: true,
 category_id: category,
 category_name: category_name

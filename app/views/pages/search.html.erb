@@ -27,11 +27,15 @@
 						<%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
 					</div>
 					<div class="col-md-3 col-sm-12 select-search  clearfix">
+						<p class="inline">From</p>
+						<%= f.select params[:category_id], options_from_collection_for_select(Category.all, "id", "name", @selected_option[:category]), {}, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline"} %>
+					</div>
+					<div class="col-md-3 col-sm-12 select-search  clearfix">
 						<p class="inline">By</p>
 						<%= f.select params[:order], options_for_select([["Oldest first", "date ASC"],["Newest first", "date DESC"], ["Grade", "grade DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
 					</div>
-					<div class="col-md-6 col-sm-12 select-search  clearfix">
-						<p class="inline">From</p>
+					<div class="col-md-3 col-sm-12 select-search  clearfix">
+						<p class="inline">In</p>
 						<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 80%;">
 							<i class="fa fa-calendar"></i>&nbsp;
 							<span class="date-range"></span>
@@ -46,6 +50,90 @@
 		</div>
 	</div>
 </div>
+<hr>
+<section class="text-center space--xs">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>Browse resources by Category</h2>
+			</div>
+		</div>
+		<!--end of row-->
+	</div>
+	<!--end of container-->
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<a href="#" class="block">
+					<div class="feature boxed boxed--border border--round text-center">
+						<i class="icon--lg icon-Credit-Card2"></i>
+						<span class="h5 color--primary">Payments and Billing</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="block">
+					<div class="feature boxed boxed--border border--round text-center">
+						<i class="icon--lg icon-Cloud"></i>
+						<span class="h5 color--primary">Account Management</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="block">
+					<div class="feature boxed boxed--border border--round text-center">
+						<i class="icon--lg icon-Checked-User"></i>
+						<span class="h5 color--primary">Permissions</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="block">
+					<div class="feature boxed boxed--border border--round text-center">
+						<i class="icon--lg icon-Handshake"></i>
+						<span class="h5 color--primary">Integrations</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="block">
+					<div class="feature boxed boxed--border border--round text-center">
+						<i class="icon--lg icon-Data-Storage"></i>
+						<span class="h5 color--primary">Managing Storage</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="block">
+					<div class="feature boxed boxed--border border--round text-center">
+						<i class="icon--lg icon-Email"></i>
+						<span class="h5 color--primary">Mailing and Subscriptions</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="block">
+					<div class="feature boxed boxed--border border--round text-center">
+						<i class="icon--lg icon-Brush"></i>
+						<span class="h5 color--primary">Appearance</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="block">
+					<div class="feature boxed boxed--border border--round text-center">
+						<i class="icon--lg icon-Cursor-Click2"></i>
+						<span class="h5 color--primary">Analytics</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!--end of row-->
+	</div>
+	<!--end of container-->
+</section>
 <div >
 	<div class="container">
 		<div class="row">
@@ -61,7 +149,7 @@
 							<span>
 								<strong><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
 									|
-										<%= resource.author %>
+									<%= resource.author %>
 									|
 									<%= resource.resource_type.capitalize %>
 									|
@@ -96,8 +184,7 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "search"  %>
 <script>
-// <!-- The other scripts for the datepicker, submitting the form and algolia are moved into search.js. Just this one requires some ruby variables -->
-// <!-- Initialize Datepicker.js -->
+// <!-- The other scripts for the datepicker, submitting the form and algolia are moved into search.js. Just this one requires some ruby variables --> <!-- Initialize Datepicker.js -->
 $(function () {
 	var start = moment(<%= @selected_option[:upper] %>)
 	var end = moment(<%= @selected_option[:lower] %>);

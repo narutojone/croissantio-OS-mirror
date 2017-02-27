@@ -5677,3 +5677,26 @@ max-width: 850px;
         font-size: 18px;
     }
 }
+
+.main .article__hero {
+    position: absolute;
+    z-index: 10;
+    top: 50% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 769px){
+  .main .article__hero{
+  top: 39% !important;
+  }
+}
+
+
+@media only screen and (max-width: 595px){
+  .main .article__hero{
+  top: 33% !important;
+  }
+}

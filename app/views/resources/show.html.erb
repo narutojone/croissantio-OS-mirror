@@ -35,7 +35,13 @@
             <div class="article__wrap ">
                 <article>
                     <div class="article__body article__title">
-                        <%= @resource.description %>
+                        <%= @resource.description %><br/>
+                        <strong>Author:</strong> <%= @resource.author %><br/>
+                        <strong>Grade:</strong> <%= @resource.grade %> Stars<br/>
+                        <strong>Date:</strong>  <%= @resource.date.strftime("%B #{@resource.date.day.ordinalize} %Y") %><br/>
+                        <strong>Category:</strong> <%= @resource.category_name %><br/>
+                        <%= link_to "Link", @resource.link %>
+                        <%= link_to "Website", @resource.website %>
                     </div>
                 </article>
             </div>
@@ -44,20 +50,6 @@
 </main>
 </section>
 <%= render "shared/stack_footer" %>
-
 <% content_for :js do %>
 <%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
 <% end %>
-
-<style>
-.main .article__hero {
-    position: absolute;
-    z-index: 10;
-    top: 50% !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto !important;
-    transform: translateY(-50%);
-}
-
-</style>
