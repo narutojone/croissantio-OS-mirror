@@ -9,6 +9,13 @@
   )
 end
 
+User.create!(
+email: "simon@test.be",
+password: "password",
+password_confirmation: "password",
+admin: true
+)
+
 20.times do
 name = Faker::Name.name
 link = Faker::Internet.url

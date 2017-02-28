@@ -1,16 +1,12 @@
 (function($) {
     $(function() {
-
         // Focus state for append/prepend inputs
         $('.input-prepend, .input-append').on('focus', 'input', function() {
             $(this).closest('.control-group, form').addClass('focus');
         }).on('blur', 'input', function() {
             $(this).closest('.control-group, form').removeClass('focus');
         });
-
-
     });
-
     $(window).load(function() {
         $('html').addClass('loaded');
         $(window).resize().scroll();
@@ -30,12 +26,13 @@
 
   // Update hidden field
   function getText() {
-    $(".trumbowyg-editor, #editor2").on("input", function() {
+    $(".trumbowyg-editor, #editor2").on("input DOMSubtreeModified click", function() {
       value = $(".trumbowyg-editor").html();
       $("#article_body").val(value);
     })
     $(".trumbowyg-editor").height(500)
   }
+
 
   // Load article in wysiwyg editor from database
   function loadArticle() {
