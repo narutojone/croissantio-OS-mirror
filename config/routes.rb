@@ -12,10 +12,14 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   get '/thanks' => 'pages#thanks'
   get '/search' => 'pages#search'
+  get '/contact' => 'pages#contact'
+  get '404' => "errors#show", code: "404"
+
 
   # ------------------ Model Routing -----------------------
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'register' }
   resources :pages, :categories,:articles, :resources
+  resources :contactforms, only: [:new, :create]
 
 =begin
 This routes articles and resources. First it searches for a matching article by slug (friendly id), then
@@ -31,7 +35,7 @@ www.mysite.com/cool-new-resource (resources#show)
     end
 
     constraints(ArticleUrlConstrainer.new) do
-      match '/:id', :via => [:get], to: "articles#show",  as: "articles_show"
+      match '/:id', :via => [:get], to: "articles#show"
     end
 
     class ResourceUrlConstrainer
@@ -42,13 +46,16 @@ www.mysite.com/cool-new-resource (resources#show)
     end
 
     constraints(ResourceUrlConstrainer.new) do
-      match '/:id', :via => [:get], to: "resources#show", as: "resources_show"
+      match '/:id', :via => [:get], to: "resources#show"
     end
 
     resources :articles, :only => [:show], :path => '', as: "articles_show"
     resources :resources, :only => [:show], :path => '', as: "resources_show"
 
-    match "*path",  :via => [:get], to: "locale#not_found"
+    # Redirect the 404
+    %w( 404 ).each do |code|
+     get code, :to => "errors#show", :code => code
+   end
 
 # Maxime routing (old)
 

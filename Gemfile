@@ -25,6 +25,8 @@ gem "algoliasearch-rails", "~> 1.17"
 gem "faker", "~> 1.7"
 gem "sitemap_generator", "~> 5.2"
 gem "unicorn", "~> 5.2"
+gem "mail_form"
+
 group :production do
   gem "rails_12factor", "~> 0.0"
 end

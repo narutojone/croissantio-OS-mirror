@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-  include ArticlesHelper
   before_action :setup, only: [:show, :edit, :update, :destroy]
   before_filter :logged_in_user?, except: [:show]
   before_filter :is_admin?, except: [:show]

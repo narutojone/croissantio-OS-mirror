@@ -18,6 +18,10 @@ class PagesController < ApplicationController
 
   def about; end
 
+  def contact
+    @contactform = Contactform.new
+  end
+
   def blog
     @articles = Article.where.not(category_name: 'newsletter').where(posted: true)
   end
