@@ -11,4 +11,7 @@ class Resource < ActiveRecord::Base
   algoliasearch do
 
   end
+
+  # Associations with category
+  belongs_to :category
 end

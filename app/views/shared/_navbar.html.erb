@@ -2,6 +2,15 @@
 <%= stylesheet_link_tag "models/pages"  %>
 <% end %>
 
+			<% flash.each do |message_type, message| %>
+			<div class="notification pos-left pos-top col-sm-4 col-md-3 notification--reveal" data-animation="from-top" data-autoshow="0">
+				<div class="boxed boxed--border border--round box-shadow">
+					<div class="text-block">
+						<%= message %>
+					</div>
+				</div>
+				<div class="notification-close-cross notification-close"></div>
+			</div>
 <div>
   <nav class="navbar">
     <div class="container">
@@ -20,7 +29,7 @@
         <li><a href="<%= blog_path %>">Blog</a></li>
           <li><a href="<%= about_path %>">About</a></li>
           <li><a href="<%= search_path %>">Search</a></li>
-          <li><a href="mailto:maxime@growthbakery.com">Contact</a></li>
+          <li><a href="<%= contact_path %>">Contact</a></li>
       </ul>
     </div>
     </div>

@@ -13,3 +13,10 @@
 # Troubleshooting
 
 > For more detailed info about problems or someone to blame when you encounter a bad design pattern, contact info@truetech.be.
+
+# Active To Do/Reminders
+
+- Configure sendgrid
+- Verify 404 is working
+- Configure search page with categories
+- Upload resources to database through CSV file

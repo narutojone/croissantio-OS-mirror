@@ -70,7 +70,7 @@ class CategoriesController < ApplicationController
   end
 
   def setup
-    @category = Category.friendly.find(params[:id])
+    @category = Category.friendly.find(params[:id].parameterize)
     @categories = Category.all
   end
 end

@@ -114,6 +114,12 @@
                                 </div>
                             </div>
                             <div class="form-group locale-field">
+                                <%= f.label :slug, "URL", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <%= f.text_field :slug, :class => "form-control col-md-7 col-xs-12", placeholder: "my-cool-article" %>
+                                </div>
+                            </div>
+                            <div class="form-group locale-field">
                                 <%= f.label :link, "Link", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <%= f.text_field :link, :class => "form-control col-md-7 col-xs-12" %>
@@ -146,7 +152,14 @@
                             <div class="form-group locale-field">
                                 <%= f.label :resource_type, "Type", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.select :resource_type, options_for_select(["Article", "Video", "Presentation", "Link"]), {}, {:class => "form-control col-md-7 col-xs-12" }%>
+                                    <%= f.select :resource_type, options_for_select(["article", "video", "presentation", "link"], selected: @resource.resource_type),{}, {:class => "form-control col-md-7 col-xs-12"} %>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <%= f.label :category_id, "Category", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                    <%= f.select :category_id, options_from_collection_for_select(Category.all, "id", "name", @resource.id), {}, {class: "form-control col-md-7 col-xs-12"} %>
                                 </div>
                             </div>
                             <div class="form-group">

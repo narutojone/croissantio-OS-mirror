@@ -3,6 +3,18 @@
 #
 # Examples:
 #
+["marketing","newsletter","growthhacks","social media", "other"].each do |category|
+  Category.create!(
+  name: category
+  )
+end
+
+User.create!(
+email: "simon@test.be",
+password: "password",
+password_confirmation: "password",
+admin: true
+)
 
 20.times do
 name = Faker::Name.name
@@ -10,23 +22,22 @@ link = Faker::Internet.url
 title = Faker::Book.title
 description = Faker::Lorem.paragraph(2)
 date = Faker::Date.between(2.months.ago, Date.today)
+category = (1..5).to_a.sample
+category_name = Category.find(category).name
 Resource.create!(
 title: title,
 description: description,
 link: link,
 website: link,
 author: name,
-resource_type: ["Article", "Presentation", "Link", "Other"].sample,
+resource_type: ["Article", "Presentation", "Link", "Video"].sample,
 grade: (1..5).to_a.sample,
+category_id: category,
+category_name: category_name,
 date: date
 )
 end
 
-["marketing","newsletter","growthhacks","social media", "other"].each do |category|
-  Category.create!(
-  name: category
-  )
-end
 
 
 20.times do
@@ -35,11 +46,14 @@ description = Faker::Lorem.paragraph(2)
 body = Faker::Lorem.paragraph(12)
 category = (1..5).to_a.sample
 category_name = Category.find(category).name
+date = Faker::Date.between(2.months.ago, Date.today)
+
 Article.create!(
 title: title,
 description: description,
 body: body,
 user_id: 1,
+date: date,
 posted: true,
 category_id: category,
 category_name: category_name

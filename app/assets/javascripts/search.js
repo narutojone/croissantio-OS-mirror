@@ -27,6 +27,8 @@ $('#aa-search-input').autocomplete({
 
 // <!-- Submit form when selecting a new filter  -->
 $(".manual-filter").on("change", function () {
+	val = $(".date-range").text()
+	$("#daterange").val(val)
 	$("#search-form").submit()
 })
 

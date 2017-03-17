@@ -10,16 +10,16 @@
 <% content_for :ogtitle, @article.title %>
 <% content_for :ogdescription, @article.description %>
 <% content_for :ogtype, "article" %>
-<% content_for :ogimage, image_url(@article.image) %>
+<% content_for :ogimage, @article.image.url %>
 
 <%= render "shared/stack_navbar" %>
 <main role="main" class="main clearfix">
     <div class="js__article article__main" data-title="Finding your way from maker to manager">
         <div class="container">
             <div class="article__hero">
-                <a href="#" class="f__up f__no-und categories__link js__category-name"><%= @article.category.name.capitalize %></a>
-                <span class="categories__separator-white">|</span>
-                <span class="f__up categories__text">
+                <%= link_to @article.category.name.capitalize, category_path(@article.category.name.parameterize),  class:"f__up f__no-und categories__link js__category-name hidden-xs"  %>
+                <span class="hidden-xs categories__separator-white">|</span>
+                <span class="hidden-xs f__up categories__text">
                     <span class="js__read-time">
                         <%= @article.body.reading_time :format => :approx %></span>
                     read</span>
@@ -28,8 +28,8 @@
         </div>
 
         <div class="hero">
-            <div class="hero__image">
-                <%= image_tag("background-blue.png") %>
+            <div class="hero__image clearfix">
+                <%= image_tag @article.image.url %>
             </div>
         </div>
         <div class="container">
@@ -37,70 +37,122 @@
                 <article>
 
                     <div class="article__body article__title">
-                        <%= @article.body %>
-                    </div>
-                    <div class="article__share text-center">
-                        <a class="btn bg--facebook btn--icon" href="#">
-                            <span class="btn__text">
-                                <i class="socicon socicon-facebook"></i>
-                                Share on Facebook
-                            </span>
-                        </a>
-                        <a class="btn bg--twitter btn--icon" href="#">
-                            <span class="btn__text">
-                                <i class="socicon socicon-twitter"></i>
-                                Share on Twitter
-                            </span>
-                        </a>
+                        <%= raw @article.body %>
                     </div>
                 </article>
-            </div>
-        </div>
-    </div>
-</main>
-<section class="bg--secondary">
-    <div class="container">
-        <div class="row text-block">
-            <div class="col-sm-12">
-                <h3>More recent stories</h3>
-            </div>
-        </div>
-        <!--end of row-->
-        <div class="row">
-          <% @relatedarticles.each do |article| %>
-            <div class="col-sm-4">
-                <article class="feature feature-1">
-                  <%= link_to articles_show_path(article) do %>
-                    <%= image_tag article.image.url %>
-                    <% end %>
-                    <div class="feature__body boxed boxed--border">
-                        <span><%= article.created_at.strftime("%B #{article.created_at.day.ordinalize} %Y") %></span>
-                        <h5><%= article.title %></h5>
-                        <%= link_to "Read more", articles_show_path  %>
+                <h1 class="text-center">Subscribe for more!
+                </h1>
+                <p class="lead description-home"></p>
+                <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/3255/subscribe" onsubmit="Subscribed()" data-remote="true">
+                    <input
+                        type="hidden"
+                        value="{&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}"
+                        id="ck_form_options"></input>
+                    <input type="hidden" name="id" value="3255" id="landing_page_id"></input>
+                    <div class="ck_control_group ck_email_field_group col-sm-8">
+                        <!-- <input class="validate-required validate-email" type="email" name="EMAIL" placeholder="Email Address"> -->
+                        <input type="email" class="validate-required validate-email form-control ck_email_address" name="email" id="ck_emailField" autocomplete="on" placeholder="Please fill in your email address to subscribe" required>
                     </div>
-                </article>
+                    <div class="col-sm-4">
+                        <!-- <input type="submit" value="Subscribe"   class="col-md-12 btn btn-lg btn-success subscribe_button ck_subscribe_button"> -->
+                        <button type="submit" name="subscribed" id="ck_subscribe_button" class="btn btn--primary type--uppercase">Subscribe</button>
+                    </div>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
+                    </div>
+                </form>
+                <!-- /End hero-section -->
+                <div class="ck_errorArea">
+                    <div id="ck_error_msg" style="display:none">
+                        <p>Sorry, there was an error. Please try again to subscribe.</p>
+                    </div>
+                </div>
             </div>
-            <% end %>
         </div>
         <!--end of row-->
     </div>
     <!--end of container-->
 </section>
+<script type="text/javascript">
+    function Subscribed() {
+        analytics.track('Subscribed');
+
+        window.optimizely.push(["trackEvent", "Subscribed"]);
+    }
+</script>
+</div>
+</div>
+</div>
+</main>
+<section class="space--sm">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<hr>
+</div>
+</div>
+<!--end of row-->
+</div>
+<!--end of container-->
+</section>
+<section class="space--sm">
+<div class="container">
+<h3>
+<a href="<%= request.original_url %>#disqus_thread"></a>
+</h3>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+    this.page.url = "<%= request.original_url %>;" // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = "<%= @article.id %>"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function () {
+    var d = document,
+        s = d.createElement('script');
+    s.src = '//growthbakery.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', + new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the
+<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+</div>
+</section>
+<section class="bg--secondary">
+<div class="container">
+<div class="row text-block">
+<div class="col-sm-12">
+<h3>More recent stories</h3>
+</div>
+</div>
+<!--end of row-->
+<div class="row">
+<% @relatedarticles.each do |article| %>
+<div class="col-sm-4">
+<article class="feature feature-1">
+    <%= link_to articles_show_path(article) do %>
+    <%= image_tag article.image.url %>
+    <% end %>
+    <div class="feature__body boxed boxed--border">
+        <span><%= article.date.strftime("%B #{article.date.day.ordinalize} %Y") %></span>
+        <h5><%= article.title %></h5>
+        <%= link_to "Read more", articles_show_path  %>
+    </div>
+</article>
+</div>
+<% end %>
+</div>
+<!--end of row-->
+</div>
+<!--end of container-->
+</section>
 <%= render "shared/stack_footer" %>
 
 <% content_for :js do %>
+<script id="dsq-count-scr" src="//growthbakery.disqus.com/count.js" async></script>
 <%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
 <% end %>
-
-<style>
-    .main .article__hero {
-        position: absolute;
-        z-index: 10;
-        top: 50% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto !important;
-        transform: translateY(-50%);
-    }
-
-</style>

@@ -1,0 +1,32 @@
+<!-- CONTENT -->
+<%= content_for :css do %>
+<%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme"  %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<% end %>
+
+<!-- OPEN GRAPH TAGS & STYLING -->
+<% content_for :title, "404 Page"  %>
+<% content_for :description, "error page" %>
+<% content_for :ogtitle, "404 Page" %>
+<% content_for :ogdescription, "error page" %>
+<% content_for :ogtype, "page" %>
+
+<%= render "shared/stack_navbar" %>
+<div class="main-container">
+            <section class="height-100 bg--dark text-center">
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1 class="h1--large">404</h1>
+                            <p class="lead">
+                                The page you were looking for doesn't appear to exist.
+                            </p>
+                            <a href="<%= root_path %>">Go back to home page</a>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+        </div>
+  <%= render "shared/stack_footer" %>

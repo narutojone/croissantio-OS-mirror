@@ -22,7 +22,7 @@
                                     <%= link_to articles_show_path(article) do %>
                                         <h2><%= article.title %></h2>
                                     <% end %>
-                                    <span><%= article.created_at.strftime("%B #{article.created_at.day.ordinalize} %Y") %> in
+                                    <span><%= article.date.strftime("%B #{article.date.day.ordinalize} %Y") %> in
                                     </span>
                                     <span>
                                         <%= link_to category_path(article.category_name) do %>
@@ -38,7 +38,6 @@
                                     <p>
                                         <%= article.description %>
                                     </p>
-                                    <%= link_to "Continue reading »", articles_show_path(article) %>
                                 </div>
                             </article>
                             <% end %>

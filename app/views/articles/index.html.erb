@@ -4,7 +4,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
-<%= stylesheet_link_tag "admin", "magnific-popup", "font-icons", "trumbowyg.min", "style"  %>
+<%= stylesheet_link_tag "admin", "magnific-popup", "font-icons", "trumbowyg.min"  %>
 <% end %>
 
 <body class="nav-md">
@@ -50,7 +50,7 @@
                                             <% end %>
                                         </td>
                                         <td class="hidden-xs"><%= article.description %></td>
-                                        <td class="hidden-xs"><%= article.category.name %></td>
+                                        <td class="hidden-xs"><%= article.category_name.capitalize %></td>
                                         <td class="hidden-xs">
                                             <% if !article.image.url.nil? %>
                                             <span data-lightbox="gallery">
@@ -127,6 +127,12 @@
                                     <%= f.text_area :description, :class => "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
+                            <div class="form-group locale-field">
+                                <%= f.label :slug, "URL", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <%= f.text_field :slug, :class => "form-control col-md-7 col-xs-12", placeholder: "my-cool-article" %>
+                                </div>
+                            </div>
                             <div class="form-group locale-field locale-en">
                               <div class="col-md-12 col-sm-12 col-xs-12">
                                 <textarea id="editor2"></textarea>
@@ -138,7 +144,13 @@
                             <div class="form-group">
                                 <%= f.label :category_id, "Category", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.select :category_id, options_from_collection_for_select(Category.all, "id", "name"), {}, {class: "form-control col-md-7 col-xs-12"} %>
+                                    <%= f.select :category_id, options_from_collection_for_select(Category.all, "id", "name", @article.category_id), {}, {class: "form-control col-md-7 col-xs-12"} %>
+                                </div>
+                            </div>
+                            <div class="form-group locale-field">
+                                <%= f.label :date, "Date", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <%= f.date_field :date, :class => "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group">
