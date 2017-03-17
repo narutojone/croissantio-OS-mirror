@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   # ------------------ Model Routing -----------------------
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'register' }
-  resources :pages, :categories,:articles, :resources
+  resources :pages, :categories, :articles, :resources
   resources :contactforms, only: [:new, :create]
 
 =begin

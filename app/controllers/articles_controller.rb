@@ -79,7 +79,7 @@ class ArticlesController < ApplicationController
   # end
 
   def setup
-    @article = Article.friendly.find(params[:id])
+    @article = Article.friendly.find(params[:id].parameterize)
     @articles = Article.all
   end
 end

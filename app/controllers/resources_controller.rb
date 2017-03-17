@@ -59,7 +59,7 @@ class ResourcesController < ApplicationController
   end
 
   def setup
-    @resource = Resource.friendly.find(params[:id])
+    @resource = Resource.friendly.find(params[:id].parameterize)
     @resources = Resource.all
   end
 end

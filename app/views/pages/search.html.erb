@@ -65,70 +65,16 @@
 <section>
 	<div class="container">
 		<div class="row">
+			<% @categories.each do |category| %>
 			<div class="col-sm-3">
-				<a href="#" class="block">
+				<%= link_to category_path(category) do %>
 					<div class="feature boxed boxed--border border--round text-center">
 						<i class="icon--lg icon-Credit-Card2"></i>
-						<span class="h5 color--primary">Payments and Billing</span>
+						<span class="h5 color--primary"><%= category.name %></span>
 					</div>
-				</a>
+				<% end %>
 			</div>
-			<div class="col-sm-3">
-				<a href="#" class="block">
-					<div class="feature boxed boxed--border border--round text-center">
-						<i class="icon--lg icon-Cloud"></i>
-						<span class="h5 color--primary">Account Management</span>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-3">
-				<a href="#" class="block">
-					<div class="feature boxed boxed--border border--round text-center">
-						<i class="icon--lg icon-Checked-User"></i>
-						<span class="h5 color--primary">Permissions</span>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-3">
-				<a href="#" class="block">
-					<div class="feature boxed boxed--border border--round text-center">
-						<i class="icon--lg icon-Handshake"></i>
-						<span class="h5 color--primary">Integrations</span>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-3">
-				<a href="#" class="block">
-					<div class="feature boxed boxed--border border--round text-center">
-						<i class="icon--lg icon-Data-Storage"></i>
-						<span class="h5 color--primary">Managing Storage</span>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-3">
-				<a href="#" class="block">
-					<div class="feature boxed boxed--border border--round text-center">
-						<i class="icon--lg icon-Email"></i>
-						<span class="h5 color--primary">Mailing and Subscriptions</span>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-3">
-				<a href="#" class="block">
-					<div class="feature boxed boxed--border border--round text-center">
-						<i class="icon--lg icon-Brush"></i>
-						<span class="h5 color--primary">Appearance</span>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-3">
-				<a href="#" class="block">
-					<div class="feature boxed boxed--border border--round text-center">
-						<i class="icon--lg icon-Cursor-Click2"></i>
-						<span class="h5 color--primary">Analytics</span>
-					</div>
-				</a>
-			</div>
+			<% end %>
 		</div>
 		<!--end of row-->
 	</div>

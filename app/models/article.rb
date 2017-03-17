@@ -7,5 +7,5 @@ extend FriendlyId
 friendly_id :title, use: :slugged
 
 # Associations with category
-belongs_to :category
+belongs_to :category, counter_cache: true
 end

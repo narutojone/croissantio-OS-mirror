@@ -31,6 +31,7 @@ class PagesController < ApplicationController
   end
 
   def search
+    @categories = Category.all.order("articles_count DESC").limit(8)
     @selected_option = { resource_type: '', order: '', range: '', upper: '', lower: '', category: "" }
     @resources = []
     if params['/resources']
