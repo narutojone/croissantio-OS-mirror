@@ -16,8 +16,10 @@ class ResourcesController < ApplicationController
   def create
     @resources = Resource.all
     @resource = Resource.new(resource_params)
-    @resource.category_name = Category.find(resource_params[:category_id]).name
+    categories = params["resource"]["resources_categories"].reject{|r| r.empty? }
     if @resource.save
+      categories.each {|c| ResourcesCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
+      @resource.update_attribute("category_name",categories.map{|c| Category.find(c).name.capitalize}.join(", "))
       redirect_to resources_path
     else
       flash[:danger] = 'Something went wrong!'
@@ -32,8 +34,11 @@ class ResourcesController < ApplicationController
 
   def update
     @action = 'Edit'
-    @resource.category_name = Category.find(resource_params[:category_id]).name
+    categories = params["resource"]["resources_categories"].reject{|r| r.empty? }
     if @resource.update(resource_params)
+      @resource.resources_categories.destroy_all
+      categories.each {|c| ResourcesCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
+      @resource.update_attribute("category_name",categories.map{|c| Category.find(c).name.capitalize}.join(", "))
       flash[:success] = 'Resource succesfully updated!'
       render :index
     else
@@ -55,7 +60,7 @@ class ResourcesController < ApplicationController
   private
 
   def resource_params
-    params.require(:resource).permit(:title, :website, :link, :grade, :slug, :description, :author, :date, :resource_type, :category_id, :category_name)
+    params.require(:resource).permit(:title, :website, :link, :grade, :slug, :description, :author, :date, :resource_type)
   end
 
   def setup

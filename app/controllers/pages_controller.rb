@@ -31,21 +31,26 @@ class PagesController < ApplicationController
   end
 
   def search
-    @categories = Category.all.order("articles_count DESC").limit(8)
+    @topcategories = ResourceCategory.joins(:resources).group("categories.id").order("count(resources.id) DESC").limit(8)
     @selected_option = { resource_type: '', order: '', range: '', upper: '', lower: '', category: "" }
     @resources = []
-    if params['/resources']
+    if params[:id] && !params['/resources']
+      category = ResourceCategory.find_by(slug: params[:id].parameterize)
+      @resources = Resource.includes(:categories).where(categories: { id: category.id })
+      @status = "hidden"
+    elsif params['/resources']
       type = params['/resources'][0]
       category = params['/resources'][1]
       order = params['/resources'][2]
       range = params['/resources'][3]
       range = range.split('-').collect(&:to_datetime)
-      @selected_option = { category: category, upper: range[0].to_f * 1000, lower: range[1].to_f * 1000, resource_type: params['/resources'][0], order: params['/resources'][1], range: params['/resources'][2] } if params['/resources'].present?
+      @selected_option = { category: category, upper: range[0].to_f * 1000, lower: range[1].to_f * 1000, resource_type: type, order: order, range: params['/resources'][3] }
       range = range[0]..range[1]
-      @resources = Resource.where(resource_type: type.downcase, date: range, category_id: category).order(order)
-      render :search
+      @resources = Resource.includes(:categories).where(resource_type: type.downcase, date: range, categories: { id: category }).order(order)
+      @status = "hidden"
     else
+      @status = ""
       @resource = Resource.new
-  end
+    end
   end
 end

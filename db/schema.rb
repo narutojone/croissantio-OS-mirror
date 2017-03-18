@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170317185434) do
+ActiveRecord::Schema.define(version: 20170318150815) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -35,7 +35,9 @@ ActiveRecord::Schema.define(version: 20170317185434) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.integer  "articles_count", default: 0
+    t.integer  "articles_count",  default: 0
+    t.integer  "resources_count", default: 0
+    t.string   "type"
   end
 
   add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true
@@ -65,11 +67,18 @@ ActiveRecord::Schema.define(version: 20170317185434) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "resource_type"
-    t.integer  "category_id"
     t.string   "category_name"
   end
 
   add_index "resources", ["slug"], name: "index_resources_on_slug", unique: true
+
+  create_table "resources_categories", force: true do |t|
+    t.integer "category_id"
+    t.integer "resource_id"
+  end
+
+  add_index "resources_categories", ["category_id"], name: "index_resources_categories_on_category_id"
+  add_index "resources_categories", ["resource_id"], name: "index_resources_categories_on_resource_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

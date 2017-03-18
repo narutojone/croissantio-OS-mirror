@@ -28,7 +28,7 @@
 					</div>
 					<div class="col-md-2 col-sm-12 select-search  clearfix">
 						<p class="inline">From</p>
-						<%= f.select params[:category_id], options_from_collection_for_select(Category.all, "id", "name", @selected_option[:category]), {}, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline"} %>
+						<%= f.select params[:category_id], options_from_collection_for_select(ResourceCategory.all, :id, :display_name, @selected_option[:category]), {}, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline"} %>
 					</div>
 					<div class="col-md-3 col-sm-12 select-search  clearfix">
 						<p class="inline">By</p>
@@ -51,26 +51,26 @@
 	</div>
 </div>
 <hr>
-<section class="text-center space--xs">
+<section class="text-center space--xs <%= @status %>">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2>Browse resources by Category</h2>
+				<h2>Browse resources by category</h2>
 			</div>
 		</div>
 		<!--end of row-->
 	</div>
 	<!--end of container-->
 </section>
-<section>
+<section class="<%= @status %>">
 	<div class="container">
 		<div class="row">
-			<% @categories.each do |category| %>
+			<% @topcategories.each do |category| %>
 			<div class="col-sm-3">
-				<%= link_to category_path(category) do %>
+				<%= link_to resource_category_path(category) do %>
 					<div class="feature boxed boxed--border border--round text-center">
 						<i class="icon--lg icon-Credit-Card2"></i>
-						<span class="h5 color--primary"><%= category.name %></span>
+						<span class="h5 color--primary"><%= category.name.capitalize %></span>
 					</div>
 				<% end %>
 			</div>
@@ -85,12 +85,11 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="masonry masonry-blog-list">
-					<hr>
 					<div id="article-list" class="masonry__container masonry--active">
 						<% @resources.each do |resource|  %>
 						<div class="masonry__item resource_card">
 							<h4 class="resource-title">
-								<%= link_to resource.title, resource.link %>
+								<%= link_to resource.title, resource_path(resource) %>
 							</h4>
 							<span>
 								<strong><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>

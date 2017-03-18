@@ -12,6 +12,7 @@ class Resource < ActiveRecord::Base
 
   end
 
-  # Associations with category
-  belongs_to :category
+  # Associations with resource_category
+  has_many :resources_categories
+  has_many :categories, through: :resources_categories
 end
