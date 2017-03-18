@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  include CategoriesHelper
   before_action :setup, only: [:show, :edit, :update, :destroy]
   before_filter :logged_in_user?, except: [:show]
   before_filter :is_admin?, except: [:show]
@@ -11,7 +12,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @articles = @category.articles
+    @articles = Article.where(category_id: @category)
   end
 
   def create
@@ -56,10 +57,10 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, :slug)
+    params.require(:category).permit(:name, :slug, :type)
   end
 
-  def set_slug_for_category(category) # Set & Update slugs for categorys
+  def set_slug_for_category(category) # Set & Update slugs for categories
     category.slug = category_params[:name].delete("\'").parameterize
     category.save!
   end
@@ -70,7 +71,7 @@ class CategoriesController < ApplicationController
   end
 
   def setup
-    @category = Category.friendly.find(params[:id].parameterize)
+    @category = Category.find_by(slug: params[:id].parameterize)
     @categories = Category.all
   end
 end

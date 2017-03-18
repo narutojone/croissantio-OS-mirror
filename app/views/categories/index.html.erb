@@ -1,116 +1,122 @@
 <% content_for :title, "Categories"  %>
 <% content_for :description, "This is the meta description for the category-admin menu" %>
 <% content_for :css do %>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-
-<%= stylesheet_link_tag "admin", "magnific-popup", "font-icons", "trumbowyg.min", "style"  %>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <%= stylesheet_link_tag "admin", "magnific-popup", "font-icons", "trumbowyg.min"%>
 <% end %>
-
 <body class="nav-md">
-    <div class="container body admin-body">
-        <div class="main_container admin-body">
-            <%= render "shared/admin_menu" %>
-            <div class="right_col clearfix" role="main">
-                <div class="col-md-12 col-sm-12 col-xs-12 table-fade <%= table_hidden? %>">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>
-                                <i class="fa fa-list-ul"></i>
-                                Categories |
+  <div class="container body admin-body">
+    <div class="main_container admin-body">
+      <%= render "shared/admin_menu" %>
+      <div class="right_col clearfix" role="main">
+        <div class="col-md-12 col-sm-12 col-xs-12 table-fade <%= table_hidden? %>">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>
+                <i class="fa fa-list-ul"></i>
+                Categories |
                                 <a onclick="createForm()" class="btn btn-sm btn-round btn-success">
-                                    <i class="fa fa-plus"></i>
-                                    <%= @action %>
-                                    Category</a>
-                            </h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <table class="table table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th class="hidden-xs">#</th>
-                                        <th>Name</th>
-                                          <th>Options</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% @categories.each do |category| %>
-                                    <tr>
-                                        <td scope="row" class="hidden-xs"><%= category.id %></td>
-                                        <td>
-                                            <%= link_to category_path(category)  do %>
-                                            <i class="fa fa-search"></i>
-                                            <%= category.name %>
-                                            <% end %>
-                                        </td>
-                                        <td>
-                                            <%= link_to(edit_category_path(category), :class => "edit-link") do %>
-                                            <i class="fa fa-pencil"></i>
-                                            edit
-                                            <% end %>
-                                            |
-                                            <%= link_to category_path(category), :method => "delete", :data => {:confirm => 'Are you sure?'} do %>
-                                            <i class="fa fa-trash"></i>
-                                            delete
-                                            <% end %>
-                                        </td>
-                                    </tr>
-                                    <% end %>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div id="create-form" class="col-md-12 col-sm-12 col-xs-12 margin-top create-form <%= form_hidden? %>">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>
-                                <i class="fa fa-list-ul"></i>
-                                <%= @action %>
-                                Category
-                                <span class="<%= form_hidden? %>">|</span>
-                                <%= link_to("All Categories", categories_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?}", :data => {:confirm => 'Your changes will not be saved - proceed?'}) %></h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li>
-                                    <%= link_to "#", :class => "change-locale" do %>
-                                    <div class="locale locale-menu <%= I18n.locale %>"></div>
-                                    <% end %>
-                                </li>
-                            </ul>
-                            <ul class="nav navbar-right panel_toolbox <%= table_hidden? %>">
-                                <li>
-                                    <a onclick="closeForm();">
-                                        <i class="fa fa-close"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <br>
-                            <%= form_for(@category, :html => { :class => "form-horizontal form-label-left", :id => "demo-form2", :multipart => true }) do |f| %>
-                            <%= render "shared/error_messages", object: @category %>
-                            <div class="form-group locale-field">
-                                <%= f.label :name, "Category Name", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.text_field :name, :class => "form-control col-md-7 col-xs-12" %>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                    <%= f.submit "#{@action} Category", class: "text-center btn btn-success" %>
-                                </div>
-                            </div>
-                            <% end %>
-                        </div>
-                    </div>
-                </div>
+                  <i class="fa fa-plus"></i>
+                  <%= @action %>
+                  Category</a>
+              </h2>
+              <div class="clearfix"></div>
             </div>
+            <div class="x_content">
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th class="hidden-xs">#</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Options</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @categories.each do |category| %>
+                    <tr>
+                      <td scope="row" class="hidden-xs"><%= category.id %></td>
+                      <td>
+                        <%= link_to set_category_path(category) do %>
+                          <i class="fa fa-search"></i>
+                          <%= category.name %>
+                        <% end %>
+                      </td>
+                      <td><%= category.type == "ResourceCategory" ? "Resource" : "Article" %></td>
+                      <td>
+                        <%= link_to(edit_category_path(category), :class => "edit-link") do %>
+                          <i class="fa fa-pencil"></i>
+                          edit
+                                            <% end %>
+                        |
+                                            <%= link_to category_path(category), :method => "delete", :data => {:confirm => 'Are you sure?'} do %>
+                          <i class="fa fa-trash"></i>
+                          delete
+                                            <% end %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
+        <div id="create-form" class="col-md-12 col-sm-12 col-xs-12 margin-top create-form <%= form_hidden? %>">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>
+                <i class="fa fa-list-ul"></i>
+                <%= @action %>
+                Category
+                                <span class="<%= form_hidden? %>">|</span>
+                <%= link_to("All Categories", categories_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?}", :data => {:confirm => 'Your changes will not be saved - proceed?'}) %></h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li>
+                  <%= link_to "#", :class => "change-locale" do %>
+                    <div class="locale locale-menu <%= I18n.locale %>"></div>
+                  <% end %>
+                </li>
+              </ul>
+              <ul class="nav navbar-right panel_toolbox <%= table_hidden? %>">
+                <li>
+                  <a onclick="closeForm();">
+                    <i class="fa fa-close"></i>
+                  </a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <br>
+              <%= form_for(@category, :html => { :class => "form-horizontal form-label-left", :id => "demo-form2", :multipart => true }) do |f| %>
+                <%= render "shared/error_messages", object: @category %>
+                <div class="form-group locale-field">
+                  <%= f.label :name, "Category Name", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <%= f.text_field :name, :class => "form-control col-md-7 col-xs-12" %>
+                  </div>
+                </div>
+                <div class="form-group locale-field">
+                  <%= f.label :type, "Category Type", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <%= f.select :type, options_for_select([["Article", "ArticleCategory"],["Resource", "ResourceCategory"]], selected: @category.type), {}, {:class => "form-control col-md-7 col-xs-12" }%>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                    <%= f.submit "#{@action} Category", class: "text-center btn btn-success" %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <% content_for :js do %>
+  </div>
+  <% content_for :js do %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <%= javascript_include_tag "jquery_ujs", "admin", "trumbowyg.min", "script" %>
-    <% end %>
+  <% end %>
 </body>

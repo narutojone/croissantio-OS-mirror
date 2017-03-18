@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   resources :pages, :categories, :articles, :resources
   resources :contactforms, only: [:new, :create]
 
+  get "search/:id" => "pages#search", as: "resource_category"
+
 =begin
 This routes articles and resources. First it searches for a matching article by slug (friendly id), then
 falls down to resources. Ex;

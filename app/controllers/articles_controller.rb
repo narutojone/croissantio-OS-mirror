@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     @article = Article.new(article_params)
     @article.update_attribute(:user_id, current_user.id)
-    @article.category_name = Category.find(article_params[:category_id]).name
+    @article.category_name = ArticleCategory.find(article_params[:category_id]).name
     # set_slug_for_article(@article)
     if @article.save
       if @article.posted?
@@ -67,16 +67,6 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :description, :body, :image, :user_id, :category_id, :posted, :date, :slug)
   end
-
-  # def set_slug_for_article(article) # Set & Update slugs for articles
-  #   article.slug = article_params[:title].gsub("\'", "").parameterize
-  #   article.save!
-  # end
-  #
-  # def update_slug_for_article(article_params) # Add updated slugs to params (not passed through form)
-  #   article_params.merge! slug: article_params[:title].gsub("\'", "").parameterize
-  #   article_params
-  # end
 
   def setup
     @article = Article.friendly.find(params[:id].parameterize)
