@@ -46,7 +46,11 @@ class PagesController < ApplicationController
       range = range.split('-').collect(&:to_datetime)
       @selected_option = { category: category, upper: range[0].to_f * 1000, lower: range[1].to_f * 1000, resource_type: type, order: order, range: params['/resources'][3] }
       range = range[0]..range[1]
-      @resources = Resource.includes(:categories).where(resource_type: type.downcase, date: range, categories: { id: category }).order(order)
+      if category == ""
+        @resources = Resource.includes(:categories).where(resource_type: type.downcase, date: range).order(order)
+      else
+        @resources = Resource.includes(:categories).where(resource_type: type.downcase, date: range, categories: { id: category }).order(order)
+      end
       @status = "hidden"
     else
       @status = ""

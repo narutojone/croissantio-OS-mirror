@@ -28,11 +28,11 @@
 					</div>
 					<div class="col-md-2 col-sm-12 select-search  clearfix">
 						<p class="inline">From</p>
-						<%= f.select params[:category_id], options_from_collection_for_select(ResourceCategory.all, :id, :display_name, @selected_option[:category]), {}, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline"} %>
+						<%= f.select params[:category_id], options_from_collection_for_select(ResourceCategory.all, :id, :display_name, @selected_option[:category]), {:include_blank => 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline"} %>
 					</div>
 					<div class="col-md-3 col-sm-12 select-search  clearfix">
 						<p class="inline">By</p>
-						<%= f.select params[:order], options_for_select([["Oldest first", "date ASC"],["Newest first", "date DESC"], ["Grade", "grade DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
+						<%= f.select params[:order], options_for_select([ ["Grade", "grade DESC"],["Oldest first", "date ASC"],["Newest first", "date DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
 					</div>
 					<div class="col-md-4 col-sm-12 select-search  clearfix">
 						<p class="inline">In</p>
@@ -87,28 +87,30 @@
 				<div class="masonry masonry-blog-list">
 					<div id="article-list" class="masonry__container masonry--active">
 						<% @resources.each do |resource|  %>
-						<div class="masonry__item resource_card">
-							<h4 class="resource-title">
-								<%= link_to resource.title, resource_path(resource) %>
-							</h4>
-							<span>
-								<strong><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
-									|
-									<%= resource.author %>
-									|
-									<%= resource.resource_type.capitalize %>
-									|
-									<%= resource.grade %>
-									stars
-								</strong>
-							</span>
-							<!--end article title-->
-							<div>
-								<p class="resource-description">
-									<%= resource.description %>
-								</p>
-							</div>
-						</div>
+							<%= link_to resource.link do %>
+								<div class="masonry__item resource_card">
+									<h4 class="resource-title">
+										<%= link_to resource.title, resource.link %>
+									</h4>
+									<span>
+										<strong><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
+											|
+											<%= resource.author %>
+											|
+											<%= resource.resource_type.capitalize %>
+											|
+											<%= resource.grade %>
+											stars
+										</strong>
+									</span>
+									<!--end article title-->
+									<div>
+										<p class="resource-description">
+											<%= resource.description %>
+										</p>
+									</div>
+								</div>
+							<% end %>
 						<% end %>
 					</div>
 				</div>

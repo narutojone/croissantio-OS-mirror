@@ -10,7 +10,7 @@ class Category < ActiveRecord::Base
 
   # To display it pretty in selector on /search page
   def display_name
-    name.capitalize
+    name.split.map(&:capitalize)*' '
   end
 
   # Connects resource_category (STI of Category) with resources
