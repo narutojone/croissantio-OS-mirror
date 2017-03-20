@@ -13,15 +13,18 @@ Rails.application.routes.draw do
   get '/thanks' => 'pages#thanks'
   get '/search' => 'pages#search'
   get '/contact' => 'pages#contact'
-  get '404' => "errors#show", code: "404"
-
-
+  
+  # Redirect the errors
+  %w( 404 500 ).each do |code|
+    match code, :to => "errors#show",:code => code, :via => :all
+  end
   # ------------------ Model Routing -----------------------
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'register' }
   resources :pages, :categories, :articles, :resources
   resources :contactforms, only: [:new, :create]
 
   get "search/:id" => "pages#search", as: "resource_category"
+
 
 =begin
 This routes articles and resources. First it searches for a matching article by slug (friendly id), then
@@ -53,43 +56,4 @@ www.mysite.com/cool-new-resource (resources#show)
 
     resources :articles, :only => [:show], :path => '', as: "articles_show"
     resources :resources, :only => [:show], :path => '', as: "resources_show"
-
-    # Redirect the 404
-    %w( 404 ).each do |code|
-     get code, :to => "errors#show", :code => code
-   end
-
-# Maxime routing (old)
-
-  # get 'apprendre-cmo-slack' => "pages#apprendre-cmo-slack"
-  #
-  # get 'experience-developpeur-mailjet' => "pages#experience-developpeur-mailjet"
-  #
-  # get 'chiffres-retention-applications-mobiles' => "pages#chiffres-retention-applications-mobiles"
-  #
-  # get 'croissance-etsy-analyse' => "pages#croissance-etsy-analyse"
-  #
-  # get 'alex-schultz-vp-growth-facebook' => "pages#alex-schultz-vp-growth-facebook"
-  #
-  # get 'culture-data-zynga' => "pages#culture-data-zynga"
-  #
-  # get 'non-growth-hacking' => "pages#non-growth-hacking"
-  #
-  # get 'mauvaise-retention' => "pages#mauvaise-retention"
-  #
-  # get 'from-zero-to-one-point-two' => "pages#from-zero-to-one-point-two"
-  #
-  # get 'produit-levier-croissance' => "pages#produit-levier-croissance"
-  #
-  # get 'dette-analytics' => "pages#dette-analytics"
-  #
-  # get '16-metriques-startups' => "pages#16-metriques-startups"
-  #
-  # get 'vraie-strategie-croissance' => "pages#vraie-strategie-croissance"
-  #
-  # get 'utilisation-feedbacks-slack' => "pages#utilisation-feedbacks-slack"
-  #
-  # get 'brian-balfour-discute-growth-marketing' => "pages#brian-balfour-discute-growth-marketing"
-  #
-  # get 'premiere-campagne-acquisition-payante' => "pages#premiere-campagne-acquisition-payante"
 end

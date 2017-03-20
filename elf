@@ -1,0 +1,1131 @@
+=> [32m#<ErrorsController:0x007f93f028e840[0m
+ @_action_has_layout[32m=[0m[1;36mtrue[0m,
+ @_action_name[32m=[0m[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m,
+ @_config[32m=[0m{},
+ @_env[32m=[0m
+  {[31m[1;31m"[0m[31mGATEWAY_INTERFACE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mCGI/1.1[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mPATH_INFO[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/404[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mQUERY_STRING[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mREMOTE_ADDR[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m127.0.0.1[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mREMOTE_HOST[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m127.0.0.1[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGET[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mREQUEST_URI[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/sfsd[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mSCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mSERVER_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mlocalhost[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mSERVER_PORT[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m3000[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mSERVER_PROTOCOL[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mHTTP/1.1[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mSERVER_SOFTWARE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mWEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_HOST[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mlocalhost:3000[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_CONNECTION[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mkeep-alive[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_CACHE_CONTROL[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mmax-age=0[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_UPGRADE_INSECURE_REQUESTS[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_USER_AGENT[1;31m"[0m[31m[0m=>
+    [31m[1;31m"[0m[31mMozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_ACCEPT[1;31m"[0m[31m[0m=>
+    [31m[1;31m"[0m[31mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_ACCEPT_ENCODING[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mgzip, deflate, sdch, br[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_ACCEPT_LANGUAGE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31men-US,en;q=0.8[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_COOKIE[1;31m"[0m[31m[0m=>
+    [31m[1;31m"[0m[31mahoy_visitor=c2781f60-e81c-4443-aa0b-de06f6467201; optimizelyEndUserId=oeu1487059110891r0.036116082231490765; ajs_anonymous_id=%22888e4b8b-4fd6-4a69-a5bf-9890d6060f3f%22; _ck_form=%7B%223255%22%3A%7B%22shown%22%3A%222017-02-17T09%3A06%3A46.295Z%22%2C%22c%22%3Atrue%7D%2C%22164786%22%3A%7B%22shown%22%3A%222017-02-18T11%3A22%3A34.212Z%22%7D%7D; _pk_id.3.1fff=3135e58cb8e5d676.1487059113.24.1488278152.1488273700.; __insp_wid=1765014167; __insp_nv=false; __insp_targlpu=http%3A%2F%2Flocalhost%3A3000%2Fcontact; __insp_targlpt=Blog%20%7C%20The%20Growth%20Bakery; _growthbakery_session=SkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ%3D%3D--59f68de01b29e9bdf7fd7c6890ccd07a408f90da; optimizelySegments=%7B%223214222086%22%3A%22gc%22%2C%223227673125%22%3A%22direct%22%2C%223229811852%22%3A%22false%22%7D; optimizelyBuckets=%7B%7D; ajs_user_id=null; ajs_group_id=null; mp_2085cd601b4516bf8678fd18573c8f3e_mixpanel=%7B%22distinct_id%22%3A%20%2215a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725%22%2C%22mp_lib%22%3A%20%22Segment%3A%20web%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; amplitude_id=eyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==; _ga=GA1.1.481962050.1489775728; __smToken=xCmTfNX7YMvVasn7YjEsRmn7; __insp_sid=1989144671; __insp_uid=2904948026; mp_mixpanel__c=1; __insp_slim=1490031912395[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mrack.version[1;31m"[0m[31m[0m=>[[1;34m1[0m, [1;34m2[0m],
+   [31m[1;31m"[0m[31mrack.input[1;31m"[0m[31m[0m=>[32m#<StringIO:0x007f93f270a868[0m[32m>[0m,
+   [31m[1;31m"[0m[31mrack.errors[1;31m"[0m[31m[0m=>[32m#<IO:<STDERR>>[0m,
+   [31m[1;31m"[0m[31mrack.multithread[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+   [31m[1;31m"[0m[31mrack.multiprocess[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+   [31m[1;31m"[0m[31mrack.run_once[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+   [31m[1;31m"[0m[31mrack.url_scheme[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mHTTP_VERSION[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mHTTP/1.1[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mREQUEST_PATH[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/sfsd[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mORIGINAL_FULLPATH[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/sfsd[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mORIGINAL_SCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.routes[1;31m"[0m[31m[0m=>
+    [32m#<ActionDispatch::Routing::RouteSet:0x00557058c4b558>[0m,
+   [31m[1;31m"[0m[31maction_dispatch.parameter_filter[1;31m"[0m[31m[0m=>[[33m:password[0m],
+   [31m[1;31m"[0m[31maction_dispatch.redirect_filter[1;31m"[0m[31m[0m=>[],
+   [31m[1;31m"[0m[31maction_dispatch.secret_token[1;31m"[0m[31m[0m=>[1;36mnil[0m,
+   [31m[1;31m"[0m[31maction_dispatch.secret_key_base[1;31m"[0m[31m[0m=>
+    [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.show_exceptions[1;31m"[0m[31m[0m=>[1;36mtrue[0m,
+   [31m[1;31m"[0m[31maction_dispatch.show_detailed_exceptions[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+   [31m[1;31m"[0m[31maction_dispatch.logger[1;31m"[0m[31m[0m=>
+    [32m#<ActiveSupport::Logger:0x0055705afa9a18[0m
+     @default_formatter[32m=[0m
+      [32m#<Logger::Formatter:0x0055705afa9b80[0m @datetime_format[32m=[0m[1;36mnil[0m[32m>[0m,
+     @formatter[32m=[0m
+      [32m#<ActiveSupport::Logger::SimpleFormatter:0x00557058c72568[0m
+       @datetime_format[32m=[0m[1;36mnil[0m[32m>[0m,
+     @level[32m=[0m[1;34m0[0m,
+     @logdev[32m=[0m
+      [32m#<Logger::LogDevice:0x0055705afa9d38[0m
+       @dev[32m=[0m
+        [32m#<File:/home/simon/Desktop/Code/work/growthbakery/log/development.log>[0m,
+       @filename[32m=[0m[1;36mnil[0m,
+       @mutex[32m=[0m
+        [32m#<Logger::LogDevice::LogDeviceMutex:0x0055705afa9e50[0m
+         @mon_count[32m=[0m[1;34m0[0m,
+         @mon_mutex[32m=[0m[32m#<Mutex:0x0055705afa9fb8[0m[32m>[0m,
+         @mon_owner[32m=[0m[1;36mnil[0m[32m>[0m,
+       @shift_age[32m=[0m[1;36mnil[0m,
+       @shift_size[32m=[0m[1;36mnil[0m[32m>[0m,
+     @progname[32m=[0m[1;36mnil[0m[32m>[0m,
+   [31m[1;31m"[0m[31maction_dispatch.backtrace_cleaner[1;31m"[0m[31m[0m=>
+    [32m#<Rails::BacktraceCleaner:0x007f93f004b3a8[0m
+     @filters[32m=[0m
+      [[32m#<Proc:0x007f93f004b2e0@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:10>[0m,
+       [32m#<Proc:0x007f93f004b2b8@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:11>[0m,
+       [32m#<Proc:0x007f93f004b290@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:12>[0m,
+       [32m#<Proc:0x007f93f004aea8@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:24>[0m],
+     @silencers[32m=[0m
+      [[32m#<Proc:0x007f93f004ae80@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:15>[0m][32m>[0m,
+   [31m[1;31m"[0m[31maction_dispatch.key_generator[1;31m"[0m[31m[0m=>
+    [32m#<ActiveSupport::CachingKeyGenerator:0x007f93f004ad18[0m
+     @cache_keys[32m=[0m
+      [32m#<ThreadSafe::Cache:0x007f93f004acf0[0m
+       @backend[32m=[0m
+        {[31m[1;31m"[0m[31mencrypted cookie64[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31msigned encrypted cookie64[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m},
+       @default_proc[32m=[0m[1;36mnil[0m[32m>[0m,
+     @key_generator[32m=[0m
+      [32m#<ActiveSupport::KeyGenerator:0x007f93f004ad40[0m
+       @iterations[32m=[0m[1;34m1000[0m,
+       @secret[32m=[0m
+        [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+   [31m[1;31m"[0m[31maction_dispatch.http_auth_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp authentication[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.signed_cookie_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.encrypted_cookie_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.encrypted_signed_cookie_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.cookies_serializer[1;31m"[0m[31m[0m=>[33m:json[0m,
+   [31m[1;31m"[0m[31mROUTES_46970506992300_SCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.request_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m0b99b12e-29f7-4145-b69c-573bd0b0b0e4[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.remote_ip[1;31m"[0m[31m[0m=>
+    [32m#<ActionDispatch::RemoteIp::GetIp:0x007f93f26fbf98[0m
+     @check_ip[32m=[0m[1;36mtrue[0m,
+     @env[32m=[0m{...},
+     @proxies[32m=[0m
+      [35m[1;35m/[0m[35m
+      ^127[1;35m\.[0m[35m0[1;35m\.[0m[35m0[1;35m\.[0m[35m1$                | # localhost IPv4
+      ^::1$                         | # localhost IPv6
+      ^fc00:                        | # private IPv6 range fc00
+      ^10[1;35m\.[0m[35m                         | # private IPv4 range 10.x.x.x
+      ^172[1;35m\.[0m[35m(1[6-9]|2[0-9]|3[0-1])[1;35m\.[0m[35m| # private IPv4 range 172.16.0.0 .. 172.31.255.255
+      ^192[1;35m\.[0m[35m168[1;35m\.[0m[35m                     # private IPv4 range 192.168.x.x
+    [1;35m/[0m[35m[35mx[0m[35m[0m[32m>[0m,
+   [31m[1;31m"[0m[31mrack.session[1;31m"[0m[31m[0m=>[32m#<ActionDispatch::Request::Session:0x007f93f1c29610 ...>[0m,
+   [31m[1;31m"[0m[31mrack.session.options[1;31m"[0m[31m[0m=>
+    [32m#<ActionDispatch::Request::Session::Options:0x007f93f1c29570[0m
+     @by[32m=[0m
+      [32m#<ActionDispatch::Session::CookieStore:0x00557057832fa8[0m
+       @app[32m=[0m
+        [32m#<ActionDispatch::Flash:0x00557057833200[0m
+         @app[32m=[0m
+          [32m#<ActionDispatch::ParamsParser:0x0055705784e258[0m
+           @app[32m=[0m
+            [32m#<Rack::Head:0x0055705784eca8[0m
+             @app[32m=[0m
+              [32m#<Rack::ConditionalGet:0x0055705784eff0[0m
+               @app[32m=[0m
+                [32m#<Rack::ETag:0x0055705784f108[0m
+                 @app[32m=[0m
+                  [32m#<Warden::Manager:0x0055705786a688[0m
+                   @app[32m=[0m
+                    [32m#<MetaRequest::Middlewares::MetaRequestHandler:0x0055705786ac50[0m
+                     @app[32m=[0m
+                      [32m#<MetaRequest::Middlewares::AppRequestHandler:0x0055705786b5b0[0m
+                       @app[32m=[0m
+                        [32m#<ActionDispatch::Routing::RouteSet:0x00557058c4b558>[0m[32m>[0m[32m>[0m,
+                   @config[32m=[0m
+                    {[33m:default_scope[0m=>[33m:user[0m,
+                     [33m:scope_defaults[0m=>{},
+                     [33m:default_strategies[0m=>
+                      {[33m:user[0m=>[[33m:rememberable[0m, [33m:database_authenticatable[0m]},
+                     [33m:intercept_401[0m=>[1;36mfalse[0m,
+                     [33m:failure_app[0m=>[32m#<Devise::Delegator:0x0055705d063600[0m[32m>[0m}[32m>[0m,
+                 @cache_control[32m=[0m[31m[1;31m"[0m[31mmax-age=0, private, must-revalidate[1;31m"[0m[31m[0m,
+                 @no_cache_control[32m=[0m[31m[1;31m"[0m[31mno-cache[1;31m"[0m[31m[0m[32m>[0m[32m>[0m[32m>[0m,
+           @parsers[32m=[0m
+            {[32m#<Mime::Type:0x005570572b8280[0m
+              @string[32m=[0m[31m[1;31m"[0m[31mapplication/json[1;31m"[0m[31m[0m,
+              @symbol[32m=[0m[33m:json[0m,
+              @synonyms[32m=[0m[[31m[1;31m"[0m[31mtext/x-json[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mapplication/jsonrequest[1;31m"[0m[31m[0m][32m>[0m=>[33m:json[0m}[32m>[0m[32m>[0m,
+       @cookie_only[32m=[0m[1;36mtrue[0m,
+       @default_options[32m=[0m
+        {[33m:path[0m=>[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+         [33m:domain[0m=>[1;36mnil[0m,
+         [33m:expire_after[0m=>[1;36mnil[0m,
+         [33m:secure[0m=>[1;36mfalse[0m,
+         [33m:httponly[0m=>[1;36mtrue[0m,
+         [33m:defer[0m=>[1;36mfalse[0m,
+         [33m:renew[0m=>[1;36mfalse[0m},
+       @key[32m=[0m[31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m[32m>[0m,
+     @delegate[32m=[0m
+      {[33m:path[0m=>[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+       [33m:domain[0m=>[1;36mnil[0m,
+       [33m:expire_after[0m=>[1;36mnil[0m,
+       [33m:secure[0m=>[1;36mfalse[0m,
+       [33m:httponly[0m=>[1;36mtrue[0m,
+       [33m:defer[0m=>[1;36mfalse[0m,
+       [33m:renew[0m=>[1;36mfalse[0m,
+       [33m:id[0m=>[31m[1;31m"[0m[31m4d44ce2e097fba50d7f13e854a1fdd9e[1;31m"[0m[31m[0m},
+     @env[32m=[0m{...}[32m>[0m,
+   [31m[1;31m"[0m[31mwarden[1;31m"[0m[31m[0m=>
+    [1;34;4mWarden[0m::[1;34;4mProxy[0m:[1;34m70136696490360[0m @config={[33m:default_scope[0m=>[33m:user[0m, [33m:scope_defaults[0m=>{}, [33m:default_strategies[0m=>{[33m:user[0m=>[[33m:rememberable[0m, [33m:database_authenticatable[0m]}, [33m:intercept_401[0m=>[1;36mfalse[0m, [33m:failure_app[0m=>[1;34m#<Devise::Delegator:0x0055705d063600>}[0m,
+   [31m[1;31m"[0m[31maction_dispatch.request.path_parameters[1;31m"[0m[31m[0m=>
+    {[33m:action[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [33m:controller[0m=>[31m[1;31m"[0m[31merrors[1;31m"[0m[31m[0m, [33m:id[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m, [33m:code[0m=>[31m[1;31m"[0m[31m404[1;31m"[0m[31m[0m},
+   [31m[1;31m"[0m[31maction_controller.instance[1;31m"[0m[31m[0m=>[32m#<ErrorsController:0x007f93f028e840[0m ...[32m>[0m,
+   [31m[1;31m"[0m[31maction_dispatch.request.content_type[1;31m"[0m[31m[0m=>[1;36mnil[0m,
+   [31m[1;31m"[0m[31maction_dispatch.request.request_parameters[1;31m"[0m[31m[0m=>{},
+   [31m[1;31m"[0m[31mrack.request.query_string[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mrack.request.query_hash[1;31m"[0m[31m[0m=>{},
+   [31m[1;31m"[0m[31maction_dispatch.request.query_parameters[1;31m"[0m[31m[0m=>{},
+   [31m[1;31m"[0m[31maction_dispatch.request.parameters[1;31m"[0m[31m[0m=>
+    {[31m[1;31m"[0m[31maction[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mcontroller[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31marticles[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m},
+   [31m[1;31m"[0m[31maction_dispatch.request.formats[1;31m"[0m[31m[0m=>
+    [[32m#<Mime::Type:0x005570572f0fe0[0m
+      @string[32m=[0m[31m[1;31m"[0m[31mtext/html[1;31m"[0m[31m[0m,
+      @symbol[32m=[0m[33m:html[0m,
+      @synonyms[32m=[0m[[31m[1;31m"[0m[31mapplication/xhtml+xml[1;31m"[0m[31m[0m][32m>[0m],
+   [31m[1;31m"[0m[31mrack.request.cookie_hash[1;31m"[0m[31m[0m=>
+    {[31m[1;31m"[0m[31mahoy_visitor[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mc2781f60-e81c-4443-aa0b-de06f6467201[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31moptimizelyEndUserId[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31moeu1487059110891r0.036116082231490765[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31majs_anonymous_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;35m\"[0m[31m888e4b8b-4fd6-4a69-a5bf-9890d6060f3f[1;35m\"[0m[31m[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m_ck_form[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3255[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-17T09:06:46.295Z[1;35m\"[0m[31m,[1;35m\"[0m[31mc[1;35m\"[0m[31m:true},[1;35m\"[0m[31m164786[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-18T11:22:34.212Z[1;35m\"[0m[31m}}[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m_pk_id.3.1fff[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m3135e58cb8e5d676.1487059113.24.1488278152.1488273700.[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m__insp_wid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1765014167[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m__insp_nv[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mfalse[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m__insp_targlpu[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/contact[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m__insp_targlpt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mBlog | The Growth Bakery[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31mSkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ==--59f68de01b29e9bdf7fd7c6890ccd07a408f90da[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31moptimizelySegments[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3214222086[1;35m\"[0m[31m:[1;35m\"[0m[31mgc[1;35m\"[0m[31m,[1;35m\"[0m[31m3227673125[1;35m\"[0m[31m:[1;35m\"[0m[31mdirect[1;35m\"[0m[31m,[1;35m\"[0m[31m3229811852[1;35m\"[0m[31m:[1;35m\"[0m[31mfalse[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31moptimizelyBuckets[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m{}[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31majs_user_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31majs_group_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mmp_2085cd601b4516bf8678fd18573c8f3e_mixpanel[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31m{[1;35m\"[0m[31mdistinct_id[1;35m\"[0m[31m: [1;35m\"[0m[31m15a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725[1;35m\"[0m[31m,[1;35m\"[0m[31mmp_lib[1;35m\"[0m[31m: [1;35m\"[0m[31mSegment: web[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referrer[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referring_domain[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mamplitude_id[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31meyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m_ga[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGA1.1.481962050.1489775728[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m__smToken[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mxCmTfNX7YMvVasn7YjEsRmn7[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m__insp_sid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1989144671[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m__insp_uid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m2904948026[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mmp_mixpanel__c[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m__insp_slim[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1490031912395[1;31m"[0m[31m[0m},
+   [31m[1;31m"[0m[31mrack.request.cookie_string[1;31m"[0m[31m[0m=>
+    [31m[1;31m"[0m[31mahoy_visitor=c2781f60-e81c-4443-aa0b-de06f6467201; optimizelyEndUserId=oeu1487059110891r0.036116082231490765; ajs_anonymous_id=%22888e4b8b-4fd6-4a69-a5bf-9890d6060f3f%22; _ck_form=%7B%223255%22%3A%7B%22shown%22%3A%222017-02-17T09%3A06%3A46.295Z%22%2C%22c%22%3Atrue%7D%2C%22164786%22%3A%7B%22shown%22%3A%222017-02-18T11%3A22%3A34.212Z%22%7D%7D; _pk_id.3.1fff=3135e58cb8e5d676.1487059113.24.1488278152.1488273700.; __insp_wid=1765014167; __insp_nv=false; __insp_targlpu=http%3A%2F%2Flocalhost%3A3000%2Fcontact; __insp_targlpt=Blog%20%7C%20The%20Growth%20Bakery; _growthbakery_session=SkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ%3D%3D--59f68de01b29e9bdf7fd7c6890ccd07a408f90da; optimizelySegments=%7B%223214222086%22%3A%22gc%22%2C%223227673125%22%3A%22direct%22%2C%223229811852%22%3A%22false%22%7D; optimizelyBuckets=%7B%7D; ajs_user_id=null; ajs_group_id=null; mp_2085cd601b4516bf8678fd18573c8f3e_mixpanel=%7B%22distinct_id%22%3A%20%2215a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725%22%2C%22mp_lib%22%3A%20%22Segment%3A%20web%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; amplitude_id=eyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==; _ga=GA1.1.481962050.1489775728; __smToken=xCmTfNX7YMvVasn7YjEsRmn7; __insp_sid=1989144671; __insp_uid=2904948026; mp_mixpanel__c=1; __insp_slim=1490031912395[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31maction_dispatch.cookies[1;31m"[0m[31m[0m=>
+    [32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m
+     @committed[32m=[0m[1;36mfalse[0m,
+     @cookies[32m=[0m
+      {[31m[1;31m"[0m[31mahoy_visitor[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mc2781f60-e81c-4443-aa0b-de06f6467201[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31moptimizelyEndUserId[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31moeu1487059110891r0.036116082231490765[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31majs_anonymous_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;35m\"[0m[31m888e4b8b-4fd6-4a69-a5bf-9890d6060f3f[1;35m\"[0m[31m[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_ck_form[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3255[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-17T09:06:46.295Z[1;35m\"[0m[31m,[1;35m\"[0m[31mc[1;35m\"[0m[31m:true},[1;35m\"[0m[31m164786[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-18T11:22:34.212Z[1;35m\"[0m[31m}}[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_pk_id.3.1fff[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31m3135e58cb8e5d676.1487059113.24.1488278152.1488273700.[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_wid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1765014167[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_nv[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mfalse[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_targlpu[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/contact[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_targlpt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mBlog | The Growth Bakery[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31mSkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ==--59f68de01b29e9bdf7fd7c6890ccd07a408f90da[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31moptimizelySegments[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3214222086[1;35m\"[0m[31m:[1;35m\"[0m[31mgc[1;35m\"[0m[31m,[1;35m\"[0m[31m3227673125[1;35m\"[0m[31m:[1;35m\"[0m[31mdirect[1;35m\"[0m[31m,[1;35m\"[0m[31m3229811852[1;35m\"[0m[31m:[1;35m\"[0m[31mfalse[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31moptimizelyBuckets[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m{}[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31majs_user_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31majs_group_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mmp_2085cd601b4516bf8678fd18573c8f3e_mixpanel[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31m{[1;35m\"[0m[31mdistinct_id[1;35m\"[0m[31m: [1;35m\"[0m[31m15a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725[1;35m\"[0m[31m,[1;35m\"[0m[31mmp_lib[1;35m\"[0m[31m: [1;35m\"[0m[31mSegment: web[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referrer[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referring_domain[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mamplitude_id[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31meyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_ga[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGA1.1.481962050.1489775728[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__smToken[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mxCmTfNX7YMvVasn7YjEsRmn7[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_sid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1989144671[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_uid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m2904948026[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mmp_mixpanel__c[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_slim[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1490031912395[1;31m"[0m[31m[0m},
+     @delete_cookies[32m=[0m{},
+     @encrypted[32m=[0m
+      [32m#<ActionDispatch::Cookies::EncryptedCookieJar:0x007f93f0d1a958[0m
+       @encryptor[32m=[0m
+        [32m#<ActiveSupport::MessageEncryptor:0x007f93f0d1a6d8[0m
+         @cipher[32m=[0m[31m[1;31m"[0m[31maes-256-cbc[1;31m"[0m[31m[0m,
+         @secret[32m=[0m
+          [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+         @serializer[32m=[0m[1;34;4mActionDispatch[0m::[1;34;4mCookies[0m::[1;34;4mNullSerializer[0m,
+         @sign_secret[32m=[0m
+          [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+         @verifier[32m=[0m
+          [32m#<ActiveSupport::MessageVerifier:0x007f93f0d1a570[0m
+           @digest[32m=[0m[31m[1;31m"[0m[31mSHA1[1;31m"[0m[31m[0m,
+           @secret[32m=[0m
+            [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+           @serializer[32m=[0m[1;34;4mActiveSupport[0m::[1;34;4mMessageEncryptor[0m::[1;34;4mNullSerializer[0m[32m>[0m[32m>[0m,
+       @options[32m=[0m
+        {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+         [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+         [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+         [33m:secret_token[0m=>[1;36mnil[0m,
+         [33m:secret_key_base[0m=>
+          [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+         [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+         [33m:serializer[0m=>[33m:json[0m},
+       @parent_jar[32m=[0m[32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m ...[32m>[0m[32m>[0m,
+     @host[32m=[0m[31m[1;31m"[0m[31mlocalhost[1;31m"[0m[31m[0m,
+     @key_generator[32m=[0m
+      [32m#<ActiveSupport::CachingKeyGenerator:0x007f93f004ad18[0m
+       @cache_keys[32m=[0m
+        [32m#<ThreadSafe::Cache:0x007f93f004acf0[0m
+         @backend[32m=[0m
+          {[31m[1;31m"[0m[31mencrypted cookie64[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31msigned encrypted cookie64[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m},
+         @default_proc[32m=[0m[1;36mnil[0m[32m>[0m,
+       @key_generator[32m=[0m
+        [32m#<ActiveSupport::KeyGenerator:0x007f93f004ad40[0m
+         @iterations[32m=[0m[1;34m1000[0m,
+         @secret[32m=[0m
+          [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+     @options[32m=[0m
+      {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+       [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+       [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+       [33m:secret_token[0m=>[1;36mnil[0m,
+       [33m:secret_key_base[0m=>
+        [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+       [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+       [33m:serializer[0m=>[33m:json[0m},
+     @secure[32m=[0m[1;36mfalse[0m,
+     @set_cookies[32m=[0m{},
+     @signed_or_encrypted[32m=[0m
+      [32m#<ActionDispatch::Cookies::EncryptedCookieJar:0x007f93f0d1a958[0m
+       @encryptor[32m=[0m
+        [32m#<ActiveSupport::MessageEncryptor:0x007f93f0d1a6d8[0m
+         @cipher[32m=[0m[31m[1;31m"[0m[31maes-256-cbc[1;31m"[0m[31m[0m,
+         @secret[32m=[0m
+          [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+         @serializer[32m=[0m[1;34;4mActionDispatch[0m::[1;34;4mCookies[0m::[1;34;4mNullSerializer[0m,
+         @sign_secret[32m=[0m
+          [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+         @verifier[32m=[0m
+          [32m#<ActiveSupport::MessageVerifier:0x007f93f0d1a570[0m
+           @digest[32m=[0m[31m[1;31m"[0m[31mSHA1[1;31m"[0m[31m[0m,
+           @secret[32m=[0m
+            [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+           @serializer[32m=[0m[1;34;4mActiveSupport[0m::[1;34;4mMessageEncryptor[0m::[1;34;4mNullSerializer[0m[32m>[0m[32m>[0m,
+       @options[32m=[0m
+        {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+         [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+         [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+         [33m:secret_token[0m=>[1;36mnil[0m,
+         [33m:secret_key_base[0m=>
+          [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+         [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+         [33m:serializer[0m=>[33m:json[0m},
+       @parent_jar[32m=[0m
+        [32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m ...[32m>[0m[32m>[0m[32m>[0m,
+   [31m[1;31m"[0m[31maction_dispatch.request.unsigned_session_cookie[1;31m"[0m[31m[0m=>
+    {[31m[1;31m"[0m[31msession_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m4d44ce2e097fba50d7f13e854a1fdd9e[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31m_csrf_token[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m5iu6/0prgpFBeBUbXTkczDS/irSYPz6/TwlqKASbjo0=[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mflash[1;31m"[0m[31m[0m=>{[31m[1;31m"[0m[31mdiscard[1;31m"[0m[31m[0m=>[], [31m[1;31m"[0m[31mflashes[1;31m"[0m[31m[0m=>{[31m[1;31m"[0m[31malert[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mStatus 404[1;31m"[0m[31m[0m}}},
+   [31m[1;31m"[0m[31maction_dispatch.exception[1;31m"[0m[31m[0m=>
+    [32m#<ActiveRecord::RecordNotFound: can't find record with friendly id: "sfsd">[0m,
+   [31m[1;31m"[0m[31maction_dispatch.request.flash_hash[1;31m"[0m[31m[0m=>
+    [32m#<ActionDispatch::Flash::FlashHash:0x007f93f0275b10[0m
+     @discard[32m=[0m[32m#<Set: {[0m}>,
+     @flashes[32m=[0m{[31m[1;31m"[0m[31malert[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mStatus 500[1;31m"[0m[31m[0m},
+     @now[32m=[0m[1;36mnil[0m[32m>[0m},
+ @_headers[32m=[0m{[31m[1;31m"[0m[31mContent-Type[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mtext/html[1;31m"[0m[31m[0m},
+ @_lookup_context[32m=[0m
+  [32m#<ActionView::LookupContext:0x007f93f028e138[0m
+   @cache[32m=[0m[1;36mtrue[0m,
+   @details[32m=[0m
+    {[33m:locale[0m=>[[33m:en[0m],
+     [33m:formats[0m=>[[33m:html[0m],
+     [33m:variants[0m=>[],
+     [33m:handlers[0m=>[[33m:erb[0m, [33m:builder[0m, [33m:raw[0m, [33m:ruby[0m, [33m:coffee[0m, [33m:jbuilder[0m]},
+   @details_key[32m=[0m[1;36mnil[0m,
+   @prefixes[32m=[0m[[31m[1;31m"[0m[31merrors[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mapplication[1;31m"[0m[31m[0m],
+   @rendered_format[32m=[0m[1;36mnil[0m,
+   @skip_default_locale[32m=[0m[1;36mfalse[0m,
+   @view_paths[32m=[0m
+    [32m#<ActionView::PathSet:0x007f93f028e098[0m
+     @paths[32m=[0m
+      [[32m#<ActionView::OptimizedFileSystemResolver:0x0055705b0fb1c8[0m
+        @cache[32m=[0m
+         [32m#<ActionView::Resolver::Cache:0x0055705b0fb1a0[0m
+          @data[32m=[0m
+           [32m#<ActionView::Resolver::Cache::SmallCache:0x0055705b0fb128[0m
+            @backend[32m=[0m{},
+            @default_proc[32m=[0m
+             [32m#<Proc:0x00557059160bd8@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/lib/action_view/template/resolver.rb:48 (lambda)>[0m[32m>[0m[32m>[0m,
+        @path[32m=[0m[31m[1;31m"[0m[31m/home/simon/Desktop/Code/work/growthbakery/app/views[1;31m"[0m[31m[0m,
+        @pattern[32m=[0m
+         [31m[1;31m"[0m[31m:prefix/:action{.:locale,}{.:formats,}{+:variants,}{.:handlers,}[1;31m"[0m[31m[0m[32m>[0m,
+       [32m#<ActionView::OptimizedFileSystemResolver:0x0055705b100ad8[0m
+        @cache[32m=[0m
+         [32m#<ActionView::Resolver::Cache:0x0055705b100ab0[0m
+          @data[32m=[0m
+           [32m#<ActionView::Resolver::Cache::SmallCache:0x0055705b100a88[0m
+            @backend[32m=[0m{},
+            @default_proc[32m=[0m
+             [32m#<Proc:0x00557059160bd8@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/lib/action_view/template/resolver.rb:48 (lambda)>[0m[32m>[0m[32m>[0m,
+        @path[32m=[0m
+         [31m[1;31m"[0m[31m/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/devise-3.5.1/app/views[1;31m"[0m[31m[0m,
+        @pattern[32m=[0m
+         [31m[1;31m"[0m[31m:prefix/:action{.:locale,}{.:formats,}{+:variants,}{.:handlers,}[1;31m"[0m[31m[0m[32m>[0m][32m>[0m[32m>[0m,
+ @_params[32m=[0m{[31m[1;31m"[0m[31maction[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mcontroller[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31marticles[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m},
+ @_prefixes[32m=[0m[[31m[1;31m"[0m[31merrors[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mapplication[1;31m"[0m[31m[0m],
+ @_request[32m=[0m
+  [32m#<ActionDispatch::Request:0x007f93f028e750[0m
+   @env[32m=[0m
+    {[31m[1;31m"[0m[31mGATEWAY_INTERFACE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mCGI/1.1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mPATH_INFO[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/404[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mQUERY_STRING[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREMOTE_ADDR[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m127.0.0.1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREMOTE_HOST[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m127.0.0.1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGET[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREQUEST_URI[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/sfsd[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSERVER_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mlocalhost[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSERVER_PORT[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m3000[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSERVER_PROTOCOL[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mHTTP/1.1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSERVER_SOFTWARE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mWEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_HOST[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mlocalhost:3000[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_CONNECTION[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mkeep-alive[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_CACHE_CONTROL[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mmax-age=0[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_UPGRADE_INSECURE_REQUESTS[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_USER_AGENT[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31mMozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_ACCEPT[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_ACCEPT_ENCODING[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mgzip, deflate, sdch, br[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_ACCEPT_LANGUAGE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31men-US,en;q=0.8[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_COOKIE[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31mahoy_visitor=c2781f60-e81c-4443-aa0b-de06f6467201; optimizelyEndUserId=oeu1487059110891r0.036116082231490765; ajs_anonymous_id=%22888e4b8b-4fd6-4a69-a5bf-9890d6060f3f%22; _ck_form=%7B%223255%22%3A%7B%22shown%22%3A%222017-02-17T09%3A06%3A46.295Z%22%2C%22c%22%3Atrue%7D%2C%22164786%22%3A%7B%22shown%22%3A%222017-02-18T11%3A22%3A34.212Z%22%7D%7D; _pk_id.3.1fff=3135e58cb8e5d676.1487059113.24.1488278152.1488273700.; __insp_wid=1765014167; __insp_nv=false; __insp_targlpu=http%3A%2F%2Flocalhost%3A3000%2Fcontact; __insp_targlpt=Blog%20%7C%20The%20Growth%20Bakery; _growthbakery_session=SkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ%3D%3D--59f68de01b29e9bdf7fd7c6890ccd07a408f90da; optimizelySegments=%7B%223214222086%22%3A%22gc%22%2C%223227673125%22%3A%22direct%22%2C%223229811852%22%3A%22false%22%7D; optimizelyBuckets=%7B%7D; ajs_user_id=null; ajs_group_id=null; mp_2085cd601b4516bf8678fd18573c8f3e_mixpanel=%7B%22distinct_id%22%3A%20%2215a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725%22%2C%22mp_lib%22%3A%20%22Segment%3A%20web%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; amplitude_id=eyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==; _ga=GA1.1.481962050.1489775728; __smToken=xCmTfNX7YMvVasn7YjEsRmn7; __insp_sid=1989144671; __insp_uid=2904948026; mp_mixpanel__c=1; __insp_slim=1490031912395[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mrack.version[1;31m"[0m[31m[0m=>[[1;34m1[0m, [1;34m2[0m],
+     [31m[1;31m"[0m[31mrack.input[1;31m"[0m[31m[0m=>[32m#<StringIO:0x007f93f270a868[0m[32m>[0m,
+     [31m[1;31m"[0m[31mrack.errors[1;31m"[0m[31m[0m=>[32m#<IO:<STDERR>>[0m,
+     [31m[1;31m"[0m[31mrack.multithread[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+     [31m[1;31m"[0m[31mrack.multiprocess[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+     [31m[1;31m"[0m[31mrack.run_once[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+     [31m[1;31m"[0m[31mrack.url_scheme[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_VERSION[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mHTTP/1.1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREQUEST_PATH[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/sfsd[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mORIGINAL_FULLPATH[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/sfsd[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mORIGINAL_SCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.routes[1;31m"[0m[31m[0m=>
+      [32m#<ActionDispatch::Routing::RouteSet:0x00557058c4b558>[0m,
+     [31m[1;31m"[0m[31maction_dispatch.parameter_filter[1;31m"[0m[31m[0m=>[[33m:password[0m],
+     [31m[1;31m"[0m[31maction_dispatch.redirect_filter[1;31m"[0m[31m[0m=>[],
+     [31m[1;31m"[0m[31maction_dispatch.secret_token[1;31m"[0m[31m[0m=>[1;36mnil[0m,
+     [31m[1;31m"[0m[31maction_dispatch.secret_key_base[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.show_exceptions[1;31m"[0m[31m[0m=>[1;36mtrue[0m,
+     [31m[1;31m"[0m[31maction_dispatch.show_detailed_exceptions[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+     [31m[1;31m"[0m[31maction_dispatch.logger[1;31m"[0m[31m[0m=>
+      [32m#<ActiveSupport::Logger:0x0055705afa9a18[0m
+       @default_formatter[32m=[0m
+        [32m#<Logger::Formatter:0x0055705afa9b80[0m @datetime_format[32m=[0m[1;36mnil[0m[32m>[0m,
+       @formatter[32m=[0m
+        [32m#<ActiveSupport::Logger::SimpleFormatter:0x00557058c72568[0m
+         @datetime_format[32m=[0m[1;36mnil[0m[32m>[0m,
+       @level[32m=[0m[1;34m0[0m,
+       @logdev[32m=[0m
+        [32m#<Logger::LogDevice:0x0055705afa9d38[0m
+         @dev[32m=[0m
+          [32m#<File:/home/simon/Desktop/Code/work/growthbakery/log/development.log>[0m,
+         @filename[32m=[0m[1;36mnil[0m,
+         @mutex[32m=[0m
+          [32m#<Logger::LogDevice::LogDeviceMutex:0x0055705afa9e50[0m
+           @mon_count[32m=[0m[1;34m0[0m,
+           @mon_mutex[32m=[0m[32m#<Mutex:0x0055705afa9fb8[0m[32m>[0m,
+           @mon_owner[32m=[0m[1;36mnil[0m[32m>[0m,
+         @shift_age[32m=[0m[1;36mnil[0m,
+         @shift_size[32m=[0m[1;36mnil[0m[32m>[0m,
+       @progname[32m=[0m[1;36mnil[0m[32m>[0m,
+     [31m[1;31m"[0m[31maction_dispatch.backtrace_cleaner[1;31m"[0m[31m[0m=>
+      [32m#<Rails::BacktraceCleaner:0x007f93f004b3a8[0m
+       @filters[32m=[0m
+        [[32m#<Proc:0x007f93f004b2e0@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:10>[0m,
+         [32m#<Proc:0x007f93f004b2b8@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:11>[0m,
+         [32m#<Proc:0x007f93f004b290@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:12>[0m,
+         [32m#<Proc:0x007f93f004aea8@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:24>[0m],
+       @silencers[32m=[0m
+        [[32m#<Proc:0x007f93f004ae80@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:15>[0m][32m>[0m,
+     [31m[1;31m"[0m[31maction_dispatch.key_generator[1;31m"[0m[31m[0m=>
+      [32m#<ActiveSupport::CachingKeyGenerator:0x007f93f004ad18[0m
+       @cache_keys[32m=[0m
+        [32m#<ThreadSafe::Cache:0x007f93f004acf0[0m
+         @backend[32m=[0m
+          {[31m[1;31m"[0m[31mencrypted cookie64[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31msigned encrypted cookie64[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m},
+         @default_proc[32m=[0m[1;36mnil[0m[32m>[0m,
+       @key_generator[32m=[0m
+        [32m#<ActiveSupport::KeyGenerator:0x007f93f004ad40[0m
+         @iterations[32m=[0m[1;34m1000[0m,
+         @secret[32m=[0m
+          [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+     [31m[1;31m"[0m[31maction_dispatch.http_auth_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp authentication[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.signed_cookie_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.encrypted_cookie_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.encrypted_signed_cookie_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.cookies_serializer[1;31m"[0m[31m[0m=>[33m:json[0m,
+     [31m[1;31m"[0m[31mROUTES_46970506992300_SCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.request_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m0b99b12e-29f7-4145-b69c-573bd0b0b0e4[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.remote_ip[1;31m"[0m[31m[0m=>
+      [32m#<ActionDispatch::RemoteIp::GetIp:0x007f93f26fbf98[0m
+       @check_ip[32m=[0m[1;36mtrue[0m,
+       @env[32m=[0m{...},
+       @proxies[32m=[0m
+        [35m[1;35m/[0m[35m
+      ^127[1;35m\.[0m[35m0[1;35m\.[0m[35m0[1;35m\.[0m[35m1$                | # localhost IPv4
+      ^::1$                         | # localhost IPv6
+      ^fc00:                        | # private IPv6 range fc00
+      ^10[1;35m\.[0m[35m                         | # private IPv4 range 10.x.x.x
+      ^172[1;35m\.[0m[35m(1[6-9]|2[0-9]|3[0-1])[1;35m\.[0m[35m| # private IPv4 range 172.16.0.0 .. 172.31.255.255
+      ^192[1;35m\.[0m[35m168[1;35m\.[0m[35m                     # private IPv4 range 192.168.x.x
+    [1;35m/[0m[35m[35mx[0m[35m[0m[32m>[0m,
+     [31m[1;31m"[0m[31mrack.session[1;31m"[0m[31m[0m=>[32m#<ActionDispatch::Request::Session:0x007f93f1c29610 ...>[0m,
+     [31m[1;31m"[0m[31mrack.session.options[1;31m"[0m[31m[0m=>
+      [32m#<ActionDispatch::Request::Session::Options:0x007f93f1c29570[0m
+       @by[32m=[0m
+        [32m#<ActionDispatch::Session::CookieStore:0x00557057832fa8[0m
+         @app[32m=[0m
+          [32m#<ActionDispatch::Flash:0x00557057833200[0m
+           @app[32m=[0m
+            [32m#<ActionDispatch::ParamsParser:0x0055705784e258[0m
+             @app[32m=[0m
+              [32m#<Rack::Head:0x0055705784eca8[0m
+               @app[32m=[0m
+                [32m#<Rack::ConditionalGet:0x0055705784eff0[0m
+                 @app[32m=[0m
+                  [32m#<Rack::ETag:0x0055705784f108[0m
+                   @app[32m=[0m
+                    [32m#<Warden::Manager:0x0055705786a688[0m
+                     @app[32m=[0m
+                      [32m#<MetaRequest::Middlewares::MetaRequestHandler:0x0055705786ac50[0m
+                       @app[32m=[0m
+                        [32m#<MetaRequest::Middlewares::AppRequestHandler:0x0055705786b5b0[0m
+                         @app[32m=[0m
+                          [32m#<ActionDispatch::Routing::RouteSet:0x00557058c4b558>[0m[32m>[0m[32m>[0m,
+                     @config[32m=[0m
+                      {[33m:default_scope[0m=>[33m:user[0m,
+                       [33m:scope_defaults[0m=>{},
+                       [33m:default_strategies[0m=>
+                        {[33m:user[0m=>[[33m:rememberable[0m, [33m:database_authenticatable[0m]},
+                       [33m:intercept_401[0m=>[1;36mfalse[0m,
+                       [33m:failure_app[0m=>[32m#<Devise::Delegator:0x0055705d063600[0m[32m>[0m}[32m>[0m,
+                   @cache_control[32m=[0m[31m[1;31m"[0m[31mmax-age=0, private, must-revalidate[1;31m"[0m[31m[0m,
+                   @no_cache_control[32m=[0m[31m[1;31m"[0m[31mno-cache[1;31m"[0m[31m[0m[32m>[0m[32m>[0m[32m>[0m,
+             @parsers[32m=[0m
+              {[32m#<Mime::Type:0x005570572b8280[0m
+                @string[32m=[0m[31m[1;31m"[0m[31mapplication/json[1;31m"[0m[31m[0m,
+                @symbol[32m=[0m[33m:json[0m,
+                @synonyms[32m=[0m[[31m[1;31m"[0m[31mtext/x-json[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mapplication/jsonrequest[1;31m"[0m[31m[0m][32m>[0m=>
+                [33m:json[0m}[32m>[0m[32m>[0m,
+         @cookie_only[32m=[0m[1;36mtrue[0m,
+         @default_options[32m=[0m
+          {[33m:path[0m=>[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+           [33m:domain[0m=>[1;36mnil[0m,
+           [33m:expire_after[0m=>[1;36mnil[0m,
+           [33m:secure[0m=>[1;36mfalse[0m,
+           [33m:httponly[0m=>[1;36mtrue[0m,
+           [33m:defer[0m=>[1;36mfalse[0m,
+           [33m:renew[0m=>[1;36mfalse[0m},
+         @key[32m=[0m[31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m[32m>[0m,
+       @delegate[32m=[0m
+        {[33m:path[0m=>[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+         [33m:domain[0m=>[1;36mnil[0m,
+         [33m:expire_after[0m=>[1;36mnil[0m,
+         [33m:secure[0m=>[1;36mfalse[0m,
+         [33m:httponly[0m=>[1;36mtrue[0m,
+         [33m:defer[0m=>[1;36mfalse[0m,
+         [33m:renew[0m=>[1;36mfalse[0m,
+         [33m:id[0m=>[31m[1;31m"[0m[31m4d44ce2e097fba50d7f13e854a1fdd9e[1;31m"[0m[31m[0m},
+       @env[32m=[0m{...}[32m>[0m,
+     [31m[1;31m"[0m[31mwarden[1;31m"[0m[31m[0m=>
+      [1;34;4mWarden[0m::[1;34;4mProxy[0m:[1;34m70136696490360[0m @config={[33m:default_scope[0m=>[33m:user[0m, [33m:scope_defaults[0m=>{}, [33m:default_strategies[0m=>{[33m:user[0m=>[[33m:rememberable[0m, [33m:database_authenticatable[0m]}, [33m:intercept_401[0m=>[1;36mfalse[0m, [33m:failure_app[0m=>[1;34m#<Devise::Delegator:0x0055705d063600>}[0m,
+     [31m[1;31m"[0m[31maction_dispatch.request.path_parameters[1;31m"[0m[31m[0m=>
+      {[33m:action[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [33m:controller[0m=>[31m[1;31m"[0m[31merrors[1;31m"[0m[31m[0m, [33m:id[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m, [33m:code[0m=>[31m[1;31m"[0m[31m404[1;31m"[0m[31m[0m},
+     [31m[1;31m"[0m[31maction_controller.instance[1;31m"[0m[31m[0m=>[32m#<ErrorsController:0x007f93f028e840[0m ...[32m>[0m,
+     [31m[1;31m"[0m[31maction_dispatch.request.content_type[1;31m"[0m[31m[0m=>[1;36mnil[0m,
+     [31m[1;31m"[0m[31maction_dispatch.request.request_parameters[1;31m"[0m[31m[0m=>{},
+     [31m[1;31m"[0m[31mrack.request.query_string[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mrack.request.query_hash[1;31m"[0m[31m[0m=>{},
+     [31m[1;31m"[0m[31maction_dispatch.request.query_parameters[1;31m"[0m[31m[0m=>{},
+     [31m[1;31m"[0m[31maction_dispatch.request.parameters[1;31m"[0m[31m[0m=>
+      {[31m[1;31m"[0m[31maction[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mcontroller[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31marticles[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m},
+     [31m[1;31m"[0m[31maction_dispatch.request.formats[1;31m"[0m[31m[0m=>
+      [[32m#<Mime::Type:0x005570572f0fe0[0m
+        @string[32m=[0m[31m[1;31m"[0m[31mtext/html[1;31m"[0m[31m[0m,
+        @symbol[32m=[0m[33m:html[0m,
+        @synonyms[32m=[0m[[31m[1;31m"[0m[31mapplication/xhtml+xml[1;31m"[0m[31m[0m][32m>[0m],
+     [31m[1;31m"[0m[31mrack.request.cookie_hash[1;31m"[0m[31m[0m=>
+      {[31m[1;31m"[0m[31mahoy_visitor[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mc2781f60-e81c-4443-aa0b-de06f6467201[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31moptimizelyEndUserId[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31moeu1487059110891r0.036116082231490765[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31majs_anonymous_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;35m\"[0m[31m888e4b8b-4fd6-4a69-a5bf-9890d6060f3f[1;35m\"[0m[31m[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_ck_form[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3255[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-17T09:06:46.295Z[1;35m\"[0m[31m,[1;35m\"[0m[31mc[1;35m\"[0m[31m:true},[1;35m\"[0m[31m164786[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-18T11:22:34.212Z[1;35m\"[0m[31m}}[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_pk_id.3.1fff[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31m3135e58cb8e5d676.1487059113.24.1488278152.1488273700.[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_wid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1765014167[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_nv[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mfalse[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_targlpu[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/contact[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_targlpt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mBlog | The Growth Bakery[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31mSkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ==--59f68de01b29e9bdf7fd7c6890ccd07a408f90da[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31moptimizelySegments[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3214222086[1;35m\"[0m[31m:[1;35m\"[0m[31mgc[1;35m\"[0m[31m,[1;35m\"[0m[31m3227673125[1;35m\"[0m[31m:[1;35m\"[0m[31mdirect[1;35m\"[0m[31m,[1;35m\"[0m[31m3229811852[1;35m\"[0m[31m:[1;35m\"[0m[31mfalse[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31moptimizelyBuckets[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m{}[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31majs_user_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31majs_group_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mmp_2085cd601b4516bf8678fd18573c8f3e_mixpanel[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31m{[1;35m\"[0m[31mdistinct_id[1;35m\"[0m[31m: [1;35m\"[0m[31m15a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725[1;35m\"[0m[31m,[1;35m\"[0m[31mmp_lib[1;35m\"[0m[31m: [1;35m\"[0m[31mSegment: web[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referrer[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referring_domain[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mamplitude_id[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31meyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_ga[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGA1.1.481962050.1489775728[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__smToken[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mxCmTfNX7YMvVasn7YjEsRmn7[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_sid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1989144671[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_uid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m2904948026[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mmp_mixpanel__c[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m__insp_slim[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1490031912395[1;31m"[0m[31m[0m},
+     [31m[1;31m"[0m[31mrack.request.cookie_string[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31mahoy_visitor=c2781f60-e81c-4443-aa0b-de06f6467201; optimizelyEndUserId=oeu1487059110891r0.036116082231490765; ajs_anonymous_id=%22888e4b8b-4fd6-4a69-a5bf-9890d6060f3f%22; _ck_form=%7B%223255%22%3A%7B%22shown%22%3A%222017-02-17T09%3A06%3A46.295Z%22%2C%22c%22%3Atrue%7D%2C%22164786%22%3A%7B%22shown%22%3A%222017-02-18T11%3A22%3A34.212Z%22%7D%7D; _pk_id.3.1fff=3135e58cb8e5d676.1487059113.24.1488278152.1488273700.; __insp_wid=1765014167; __insp_nv=false; __insp_targlpu=http%3A%2F%2Flocalhost%3A3000%2Fcontact; __insp_targlpt=Blog%20%7C%20The%20Growth%20Bakery; _growthbakery_session=SkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ%3D%3D--59f68de01b29e9bdf7fd7c6890ccd07a408f90da; optimizelySegments=%7B%223214222086%22%3A%22gc%22%2C%223227673125%22%3A%22direct%22%2C%223229811852%22%3A%22false%22%7D; optimizelyBuckets=%7B%7D; ajs_user_id=null; ajs_group_id=null; mp_2085cd601b4516bf8678fd18573c8f3e_mixpanel=%7B%22distinct_id%22%3A%20%2215a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725%22%2C%22mp_lib%22%3A%20%22Segment%3A%20web%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; amplitude_id=eyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==; _ga=GA1.1.481962050.1489775728; __smToken=xCmTfNX7YMvVasn7YjEsRmn7; __insp_sid=1989144671; __insp_uid=2904948026; mp_mixpanel__c=1; __insp_slim=1490031912395[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31maction_dispatch.cookies[1;31m"[0m[31m[0m=>
+      [32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m
+       @committed[32m=[0m[1;36mfalse[0m,
+       @cookies[32m=[0m
+        {[31m[1;31m"[0m[31mahoy_visitor[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mc2781f60-e81c-4443-aa0b-de06f6467201[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31moptimizelyEndUserId[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31moeu1487059110891r0.036116082231490765[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31majs_anonymous_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;35m\"[0m[31m888e4b8b-4fd6-4a69-a5bf-9890d6060f3f[1;35m\"[0m[31m[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_ck_form[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3255[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-17T09:06:46.295Z[1;35m\"[0m[31m,[1;35m\"[0m[31mc[1;35m\"[0m[31m:true},[1;35m\"[0m[31m164786[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-18T11:22:34.212Z[1;35m\"[0m[31m}}[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_pk_id.3.1fff[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m3135e58cb8e5d676.1487059113.24.1488278152.1488273700.[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_wid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1765014167[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_nv[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mfalse[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_targlpu[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/contact[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_targlpt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mBlog | The Growth Bakery[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31mSkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ==--59f68de01b29e9bdf7fd7c6890ccd07a408f90da[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31moptimizelySegments[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3214222086[1;35m\"[0m[31m:[1;35m\"[0m[31mgc[1;35m\"[0m[31m,[1;35m\"[0m[31m3227673125[1;35m\"[0m[31m:[1;35m\"[0m[31mdirect[1;35m\"[0m[31m,[1;35m\"[0m[31m3229811852[1;35m\"[0m[31m:[1;35m\"[0m[31mfalse[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31moptimizelyBuckets[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m{}[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31majs_user_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31majs_group_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31mmp_2085cd601b4516bf8678fd18573c8f3e_mixpanel[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m{[1;35m\"[0m[31mdistinct_id[1;35m\"[0m[31m: [1;35m\"[0m[31m15a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725[1;35m\"[0m[31m,[1;35m\"[0m[31mmp_lib[1;35m\"[0m[31m: [1;35m\"[0m[31mSegment: web[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referrer[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referring_domain[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31mamplitude_id[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31meyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_ga[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGA1.1.481962050.1489775728[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__smToken[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mxCmTfNX7YMvVasn7YjEsRmn7[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_sid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1989144671[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_uid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m2904948026[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31mmp_mixpanel__c[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_slim[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1490031912395[1;31m"[0m[31m[0m},
+       @delete_cookies[32m=[0m{},
+       @encrypted[32m=[0m
+        [32m#<ActionDispatch::Cookies::EncryptedCookieJar:0x007f93f0d1a958[0m
+         @encryptor[32m=[0m
+          [32m#<ActiveSupport::MessageEncryptor:0x007f93f0d1a6d8[0m
+           @cipher[32m=[0m[31m[1;31m"[0m[31maes-256-cbc[1;31m"[0m[31m[0m,
+           @secret[32m=[0m
+            [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+           @serializer[32m=[0m[1;34;4mActionDispatch[0m::[1;34;4mCookies[0m::[1;34;4mNullSerializer[0m,
+           @sign_secret[32m=[0m
+            [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+           @verifier[32m=[0m
+            [32m#<ActiveSupport::MessageVerifier:0x007f93f0d1a570[0m
+             @digest[32m=[0m[31m[1;31m"[0m[31mSHA1[1;31m"[0m[31m[0m,
+             @secret[32m=[0m
+              [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+             @serializer[32m=[0m[1;34;4mActiveSupport[0m::[1;34;4mMessageEncryptor[0m::[1;34;4mNullSerializer[0m[32m>[0m[32m>[0m,
+         @options[32m=[0m
+          {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+           [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+           [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+           [33m:secret_token[0m=>[1;36mnil[0m,
+           [33m:secret_key_base[0m=>
+            [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+           [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+           [33m:serializer[0m=>[33m:json[0m},
+         @parent_jar[32m=[0m
+          [32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m ...[32m>[0m[32m>[0m,
+       @host[32m=[0m[31m[1;31m"[0m[31mlocalhost[1;31m"[0m[31m[0m,
+       @key_generator[32m=[0m
+        [32m#<ActiveSupport::CachingKeyGenerator:0x007f93f004ad18[0m
+         @cache_keys[32m=[0m
+          [32m#<ThreadSafe::Cache:0x007f93f004acf0[0m
+           @backend[32m=[0m
+            {[31m[1;31m"[0m[31mencrypted cookie64[1;31m"[0m[31m[0m=>
+              [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+             [31m[1;31m"[0m[31msigned encrypted cookie64[1;31m"[0m[31m[0m=>
+              [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m},
+           @default_proc[32m=[0m[1;36mnil[0m[32m>[0m,
+         @key_generator[32m=[0m
+          [32m#<ActiveSupport::KeyGenerator:0x007f93f004ad40[0m
+           @iterations[32m=[0m[1;34m1000[0m,
+           @secret[32m=[0m
+            [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+       @options[32m=[0m
+        {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+         [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+         [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+         [33m:secret_token[0m=>[1;36mnil[0m,
+         [33m:secret_key_base[0m=>
+          [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+         [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+         [33m:serializer[0m=>[33m:json[0m},
+       @secure[32m=[0m[1;36mfalse[0m,
+       @set_cookies[32m=[0m{},
+       @signed_or_encrypted[32m=[0m
+        [32m#<ActionDispatch::Cookies::EncryptedCookieJar:0x007f93f0d1a958[0m
+         @encryptor[32m=[0m
+          [32m#<ActiveSupport::MessageEncryptor:0x007f93f0d1a6d8[0m
+           @cipher[32m=[0m[31m[1;31m"[0m[31maes-256-cbc[1;31m"[0m[31m[0m,
+           @secret[32m=[0m
+            [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+           @serializer[32m=[0m[1;34;4mActionDispatch[0m::[1;34;4mCookies[0m::[1;34;4mNullSerializer[0m,
+           @sign_secret[32m=[0m
+            [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+           @verifier[32m=[0m
+            [32m#<ActiveSupport::MessageVerifier:0x007f93f0d1a570[0m
+             @digest[32m=[0m[31m[1;31m"[0m[31mSHA1[1;31m"[0m[31m[0m,
+             @secret[32m=[0m
+              [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+             @serializer[32m=[0m[1;34;4mActiveSupport[0m::[1;34;4mMessageEncryptor[0m::[1;34;4mNullSerializer[0m[32m>[0m[32m>[0m,
+         @options[32m=[0m
+          {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+           [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+           [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+           [33m:secret_token[0m=>[1;36mnil[0m,
+           [33m:secret_key_base[0m=>
+            [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+           [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+           [33m:serializer[0m=>[33m:json[0m},
+         @parent_jar[32m=[0m
+          [32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m ...[32m>[0m[32m>[0m[32m>[0m,
+     [31m[1;31m"[0m[31maction_dispatch.request.unsigned_session_cookie[1;31m"[0m[31m[0m=>
+      {[31m[1;31m"[0m[31msession_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m4d44ce2e097fba50d7f13e854a1fdd9e[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31m_csrf_token[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m5iu6/0prgpFBeBUbXTkczDS/irSYPz6/TwlqKASbjo0=[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mflash[1;31m"[0m[31m[0m=>{[31m[1;31m"[0m[31mdiscard[1;31m"[0m[31m[0m=>[], [31m[1;31m"[0m[31mflashes[1;31m"[0m[31m[0m=>{[31m[1;31m"[0m[31malert[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mStatus 404[1;31m"[0m[31m[0m}}},
+     [31m[1;31m"[0m[31maction_dispatch.exception[1;31m"[0m[31m[0m=>
+      [32m#<ActiveRecord::RecordNotFound: can't find record with friendly id: "sfsd">[0m,
+     [31m[1;31m"[0m[31maction_dispatch.request.flash_hash[1;31m"[0m[31m[0m=>
+      [32m#<ActionDispatch::Flash::FlashHash:0x007f93f0275b10[0m
+       @discard[32m=[0m[32m#<Set: {[0m}>,
+       @flashes[32m=[0m{[31m[1;31m"[0m[31malert[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mStatus 500[1;31m"[0m[31m[0m},
+       @now[32m=[0m[1;36mnil[0m[32m>[0m},
+   @filtered_env[32m=[0m[1;36mnil[0m,
+   @filtered_parameters[32m=[0m
+    {[31m[1;31m"[0m[31maction[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mcontroller[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31marticles[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m},
+   @filtered_path[32m=[0m[1;36mnil[0m,
+   @fullpath[32m=[0m[31m[1;31m"[0m[31m/404[1;31m"[0m[31m[0m,
+   @ip[32m=[0m[1;36mnil[0m,
+   @method[32m=[0m[31m[1;31m"[0m[31mGET[1;31m"[0m[31m[0m,
+   @original_fullpath[32m=[0m[1;36mnil[0m,
+   @port[32m=[0m[1;36mnil[0m,
+   @protocol[32m=[0m[1;36mnil[0m,
+   @remote_ip[32m=[0m[1;36mnil[0m,
+   @request_method[32m=[0m[31m[1;31m"[0m[31mGET[1;31m"[0m[31m[0m,
+   @symbolized_path_params[32m=[0m[1;36mnil[0m,
+   @uuid[32m=[0m[1;36mnil[0m[32m>[0m,
+ @_response[32m=[0m
+  [32m#<ActionDispatch::Response:0x007f93f028e728[0m
+   @blank[32m=[0m[1;36mfalse[0m,
+   @cache_control[32m=[0m{},
+   @charset[32m=[0m[1;36mnil[0m,
+   @committed[32m=[0m[1;36mfalse[0m,
+   @content_type[32m=[0m[1;36mnil[0m,
+   @cv[32m=[0m
+    [32m#<MonitorMixin::ConditionVariable:0x007f93f028e458[0m
+     @cond[32m=[0m[32m#<Thread::ConditionVariable:0x007f93f028e408[0m[32m>[0m,
+     @monitor[32m=[0m[32m#<ActionDispatch::Response:0x007f93f028e728[0m ...[32m>[0m[32m>[0m,
+   @etag[32m=[0m[1;36mnil[0m,
+   @header[32m=[0m
+    {[31m[1;31m"[0m[31mX-Frame-Options[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mSAMEORIGIN[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mX-XSS-Protection[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1; mode=block[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mX-Content-Type-Options[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnosniff[1;31m"[0m[31m[0m},
+   @mon_count[32m=[0m[1;34m0[0m,
+   @mon_mutex[32m=[0m[32m#<Mutex:0x007f93f028e5e8[0m[32m>[0m,
+   @mon_owner[32m=[0m[1;36mnil[0m,
+   @request[32m=[0m
+    [32m#<ActionDispatch::Request:0x007f93f028e750[0m
+     @env[32m=[0m
+      {[31m[1;31m"[0m[31mGATEWAY_INTERFACE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mCGI/1.1[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mPATH_INFO[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/404[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mQUERY_STRING[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mREMOTE_ADDR[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m127.0.0.1[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mREMOTE_HOST[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m127.0.0.1[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGET[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mREQUEST_URI[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/sfsd[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mSCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mSERVER_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mlocalhost[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mSERVER_PORT[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m3000[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mSERVER_PROTOCOL[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mHTTP/1.1[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mSERVER_SOFTWARE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mWEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_HOST[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mlocalhost:3000[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_CONNECTION[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mkeep-alive[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_CACHE_CONTROL[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mmax-age=0[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_UPGRADE_INSECURE_REQUESTS[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_USER_AGENT[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31mMozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_ACCEPT[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_ACCEPT_ENCODING[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mgzip, deflate, sdch, br[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_ACCEPT_LANGUAGE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31men-US,en;q=0.8[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_COOKIE[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31mahoy_visitor=c2781f60-e81c-4443-aa0b-de06f6467201; optimizelyEndUserId=oeu1487059110891r0.036116082231490765; ajs_anonymous_id=%22888e4b8b-4fd6-4a69-a5bf-9890d6060f3f%22; _ck_form=%7B%223255%22%3A%7B%22shown%22%3A%222017-02-17T09%3A06%3A46.295Z%22%2C%22c%22%3Atrue%7D%2C%22164786%22%3A%7B%22shown%22%3A%222017-02-18T11%3A22%3A34.212Z%22%7D%7D; _pk_id.3.1fff=3135e58cb8e5d676.1487059113.24.1488278152.1488273700.; __insp_wid=1765014167; __insp_nv=false; __insp_targlpu=http%3A%2F%2Flocalhost%3A3000%2Fcontact; __insp_targlpt=Blog%20%7C%20The%20Growth%20Bakery; _growthbakery_session=SkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ%3D%3D--59f68de01b29e9bdf7fd7c6890ccd07a408f90da; optimizelySegments=%7B%223214222086%22%3A%22gc%22%2C%223227673125%22%3A%22direct%22%2C%223229811852%22%3A%22false%22%7D; optimizelyBuckets=%7B%7D; ajs_user_id=null; ajs_group_id=null; mp_2085cd601b4516bf8678fd18573c8f3e_mixpanel=%7B%22distinct_id%22%3A%20%2215a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725%22%2C%22mp_lib%22%3A%20%22Segment%3A%20web%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; amplitude_id=eyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==; _ga=GA1.1.481962050.1489775728; __smToken=xCmTfNX7YMvVasn7YjEsRmn7; __insp_sid=1989144671; __insp_uid=2904948026; mp_mixpanel__c=1; __insp_slim=1490031912395[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mrack.version[1;31m"[0m[31m[0m=>[[1;34m1[0m, [1;34m2[0m],
+       [31m[1;31m"[0m[31mrack.input[1;31m"[0m[31m[0m=>[32m#<StringIO:0x007f93f270a868[0m[32m>[0m,
+       [31m[1;31m"[0m[31mrack.errors[1;31m"[0m[31m[0m=>[32m#<IO:<STDERR>>[0m,
+       [31m[1;31m"[0m[31mrack.multithread[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+       [31m[1;31m"[0m[31mrack.multiprocess[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+       [31m[1;31m"[0m[31mrack.run_once[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+       [31m[1;31m"[0m[31mrack.url_scheme[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mHTTP_VERSION[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mHTTP/1.1[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mREQUEST_PATH[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/sfsd[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mORIGINAL_FULLPATH[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/sfsd[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mORIGINAL_SCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.routes[1;31m"[0m[31m[0m=>
+        [32m#<ActionDispatch::Routing::RouteSet:0x00557058c4b558>[0m,
+       [31m[1;31m"[0m[31maction_dispatch.parameter_filter[1;31m"[0m[31m[0m=>[[33m:password[0m],
+       [31m[1;31m"[0m[31maction_dispatch.redirect_filter[1;31m"[0m[31m[0m=>[],
+       [31m[1;31m"[0m[31maction_dispatch.secret_token[1;31m"[0m[31m[0m=>[1;36mnil[0m,
+       [31m[1;31m"[0m[31maction_dispatch.secret_key_base[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.show_exceptions[1;31m"[0m[31m[0m=>[1;36mtrue[0m,
+       [31m[1;31m"[0m[31maction_dispatch.show_detailed_exceptions[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+       [31m[1;31m"[0m[31maction_dispatch.logger[1;31m"[0m[31m[0m=>
+        [32m#<ActiveSupport::Logger:0x0055705afa9a18[0m
+         @default_formatter[32m=[0m
+          [32m#<Logger::Formatter:0x0055705afa9b80[0m @datetime_format[32m=[0m[1;36mnil[0m[32m>[0m,
+         @formatter[32m=[0m
+          [32m#<ActiveSupport::Logger::SimpleFormatter:0x00557058c72568[0m
+           @datetime_format[32m=[0m[1;36mnil[0m[32m>[0m,
+         @level[32m=[0m[1;34m0[0m,
+         @logdev[32m=[0m
+          [32m#<Logger::LogDevice:0x0055705afa9d38[0m
+           @dev[32m=[0m
+            [32m#<File:/home/simon/Desktop/Code/work/growthbakery/log/development.log>[0m,
+           @filename[32m=[0m[1;36mnil[0m,
+           @mutex[32m=[0m
+            [32m#<Logger::LogDevice::LogDeviceMutex:0x0055705afa9e50[0m
+             @mon_count[32m=[0m[1;34m0[0m,
+             @mon_mutex[32m=[0m[32m#<Mutex:0x0055705afa9fb8[0m[32m>[0m,
+             @mon_owner[32m=[0m[1;36mnil[0m[32m>[0m,
+           @shift_age[32m=[0m[1;36mnil[0m,
+           @shift_size[32m=[0m[1;36mnil[0m[32m>[0m,
+         @progname[32m=[0m[1;36mnil[0m[32m>[0m,
+       [31m[1;31m"[0m[31maction_dispatch.backtrace_cleaner[1;31m"[0m[31m[0m=>
+        [32m#<Rails::BacktraceCleaner:0x007f93f004b3a8[0m
+         @filters[32m=[0m
+          [[32m#<Proc:0x007f93f004b2e0@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:10>[0m,
+           [32m#<Proc:0x007f93f004b2b8@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:11>[0m,
+           [32m#<Proc:0x007f93f004b290@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:12>[0m,
+           [32m#<Proc:0x007f93f004aea8@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:24>[0m],
+         @silencers[32m=[0m
+          [[32m#<Proc:0x007f93f004ae80@/home/simon/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.6/lib/rails/backtrace_cleaner.rb:15>[0m][32m>[0m,
+       [31m[1;31m"[0m[31maction_dispatch.key_generator[1;31m"[0m[31m[0m=>
+        [32m#<ActiveSupport::CachingKeyGenerator:0x007f93f004ad18[0m
+         @cache_keys[32m=[0m
+          [32m#<ThreadSafe::Cache:0x007f93f004acf0[0m
+           @backend[32m=[0m
+            {[31m[1;31m"[0m[31mencrypted cookie64[1;31m"[0m[31m[0m=>
+              [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+             [31m[1;31m"[0m[31msigned encrypted cookie64[1;31m"[0m[31m[0m=>
+              [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m},
+           @default_proc[32m=[0m[1;36mnil[0m[32m>[0m,
+         @key_generator[32m=[0m
+          [32m#<ActiveSupport::KeyGenerator:0x007f93f004ad40[0m
+           @iterations[32m=[0m[1;34m1000[0m,
+           @secret[32m=[0m
+            [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+       [31m[1;31m"[0m[31maction_dispatch.http_auth_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp authentication[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.signed_cookie_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.encrypted_cookie_salt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.encrypted_signed_cookie_salt[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.cookies_serializer[1;31m"[0m[31m[0m=>[33m:json[0m,
+       [31m[1;31m"[0m[31mROUTES_46970506992300_SCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.request_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m0b99b12e-29f7-4145-b69c-573bd0b0b0e4[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.remote_ip[1;31m"[0m[31m[0m=>
+        [32m#<ActionDispatch::RemoteIp::GetIp:0x007f93f26fbf98[0m
+         @check_ip[32m=[0m[1;36mtrue[0m,
+         @env[32m=[0m{...},
+         @proxies[32m=[0m
+          [35m[1;35m/[0m[35m
+      ^127[1;35m\.[0m[35m0[1;35m\.[0m[35m0[1;35m\.[0m[35m1$                | # localhost IPv4
+      ^::1$                         | # localhost IPv6
+      ^fc00:                        | # private IPv6 range fc00
+      ^10[1;35m\.[0m[35m                         | # private IPv4 range 10.x.x.x
+      ^172[1;35m\.[0m[35m(1[6-9]|2[0-9]|3[0-1])[1;35m\.[0m[35m| # private IPv4 range 172.16.0.0 .. 172.31.255.255
+      ^192[1;35m\.[0m[35m168[1;35m\.[0m[35m                     # private IPv4 range 192.168.x.x
+    [1;35m/[0m[35m[35mx[0m[35m[0m[32m>[0m,
+       [31m[1;31m"[0m[31mrack.session[1;31m"[0m[31m[0m=>
+        [32m#<ActionDispatch::Request::Session:0x007f93f1c29610 ...>[0m,
+       [31m[1;31m"[0m[31mrack.session.options[1;31m"[0m[31m[0m=>
+        [32m#<ActionDispatch::Request::Session::Options:0x007f93f1c29570[0m
+         @by[32m=[0m
+          [32m#<ActionDispatch::Session::CookieStore:0x00557057832fa8[0m
+           @app[32m=[0m
+            [32m#<ActionDispatch::Flash:0x00557057833200[0m
+             @app[32m=[0m
+              [32m#<ActionDispatch::ParamsParser:0x0055705784e258[0m
+               @app[32m=[0m
+                [32m#<Rack::Head:0x0055705784eca8[0m
+                 @app[32m=[0m
+                  [32m#<Rack::ConditionalGet:0x0055705784eff0[0m
+                   @app[32m=[0m
+                    [32m#<Rack::ETag:0x0055705784f108[0m
+                     @app[32m=[0m
+                      [32m#<Warden::Manager:0x0055705786a688[0m
+                       @app[32m=[0m
+                        [32m#<MetaRequest::Middlewares::MetaRequestHandler:0x0055705786ac50[0m
+                         @app[32m=[0m
+                          [32m#<MetaRequest::Middlewares::AppRequestHandler:0x0055705786b5b0[0m
+                           @app[32m=[0m
+                            [32m#<ActionDispatch::Routing::RouteSet:0x00557058c4b558>[0m[32m>[0m[32m>[0m,
+                       @config[32m=[0m
+                        {[33m:default_scope[0m=>[33m:user[0m,
+                         [33m:scope_defaults[0m=>{},
+                         [33m:default_strategies[0m=>
+                          {[33m:user[0m=>[[33m:rememberable[0m, [33m:database_authenticatable[0m]},
+                         [33m:intercept_401[0m=>[1;36mfalse[0m,
+                         [33m:failure_app[0m=>[32m#<Devise::Delegator:0x0055705d063600[0m[32m>[0m}[32m>[0m,
+                     @cache_control[32m=[0m[31m[1;31m"[0m[31mmax-age=0, private, must-revalidate[1;31m"[0m[31m[0m,
+                     @no_cache_control[32m=[0m[31m[1;31m"[0m[31mno-cache[1;31m"[0m[31m[0m[32m>[0m[32m>[0m[32m>[0m,
+               @parsers[32m=[0m
+                {[32m#<Mime::Type:0x005570572b8280[0m
+                  @string[32m=[0m[31m[1;31m"[0m[31mapplication/json[1;31m"[0m[31m[0m,
+                  @symbol[32m=[0m[33m:json[0m,
+                  @synonyms[32m=[0m[[31m[1;31m"[0m[31mtext/x-json[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mapplication/jsonrequest[1;31m"[0m[31m[0m][32m>[0m=>
+                  [33m:json[0m}[32m>[0m[32m>[0m,
+           @cookie_only[32m=[0m[1;36mtrue[0m,
+           @default_options[32m=[0m
+            {[33m:path[0m=>[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+             [33m:domain[0m=>[1;36mnil[0m,
+             [33m:expire_after[0m=>[1;36mnil[0m,
+             [33m:secure[0m=>[1;36mfalse[0m,
+             [33m:httponly[0m=>[1;36mtrue[0m,
+             [33m:defer[0m=>[1;36mfalse[0m,
+             [33m:renew[0m=>[1;36mfalse[0m},
+           @key[32m=[0m[31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m[32m>[0m,
+         @delegate[32m=[0m
+          {[33m:path[0m=>[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+           [33m:domain[0m=>[1;36mnil[0m,
+           [33m:expire_after[0m=>[1;36mnil[0m,
+           [33m:secure[0m=>[1;36mfalse[0m,
+           [33m:httponly[0m=>[1;36mtrue[0m,
+           [33m:defer[0m=>[1;36mfalse[0m,
+           [33m:renew[0m=>[1;36mfalse[0m,
+           [33m:id[0m=>[31m[1;31m"[0m[31m4d44ce2e097fba50d7f13e854a1fdd9e[1;31m"[0m[31m[0m},
+         @env[32m=[0m{...}[32m>[0m,
+       [31m[1;31m"[0m[31mwarden[1;31m"[0m[31m[0m=>
+        [1;34;4mWarden[0m::[1;34;4mProxy[0m:[1;34m70136696490360[0m @config={[33m:default_scope[0m=>[33m:user[0m, [33m:scope_defaults[0m=>{}, [33m:default_strategies[0m=>{[33m:user[0m=>[[33m:rememberable[0m, [33m:database_authenticatable[0m]}, [33m:intercept_401[0m=>[1;36mfalse[0m, [33m:failure_app[0m=>[1;34m#<Devise::Delegator:0x0055705d063600>}[0m,
+       [31m[1;31m"[0m[31maction_dispatch.request.path_parameters[1;31m"[0m[31m[0m=>
+        {[33m:action[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [33m:controller[0m=>[31m[1;31m"[0m[31merrors[1;31m"[0m[31m[0m, [33m:id[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m, [33m:code[0m=>[31m[1;31m"[0m[31m404[1;31m"[0m[31m[0m},
+       [31m[1;31m"[0m[31maction_controller.instance[1;31m"[0m[31m[0m=>[32m#<ErrorsController:0x007f93f028e840[0m ...[32m>[0m,
+       [31m[1;31m"[0m[31maction_dispatch.request.content_type[1;31m"[0m[31m[0m=>[1;36mnil[0m,
+       [31m[1;31m"[0m[31maction_dispatch.request.request_parameters[1;31m"[0m[31m[0m=>{},
+       [31m[1;31m"[0m[31mrack.request.query_string[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31mrack.request.query_hash[1;31m"[0m[31m[0m=>{},
+       [31m[1;31m"[0m[31maction_dispatch.request.query_parameters[1;31m"[0m[31m[0m=>{},
+       [31m[1;31m"[0m[31maction_dispatch.request.parameters[1;31m"[0m[31m[0m=>
+        {[31m[1;31m"[0m[31maction[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mcontroller[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31marticles[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m},
+       [31m[1;31m"[0m[31maction_dispatch.request.formats[1;31m"[0m[31m[0m=>
+        [[32m#<Mime::Type:0x005570572f0fe0[0m
+          @string[32m=[0m[31m[1;31m"[0m[31mtext/html[1;31m"[0m[31m[0m,
+          @symbol[32m=[0m[33m:html[0m,
+          @synonyms[32m=[0m[[31m[1;31m"[0m[31mapplication/xhtml+xml[1;31m"[0m[31m[0m][32m>[0m],
+       [31m[1;31m"[0m[31mrack.request.cookie_hash[1;31m"[0m[31m[0m=>
+        {[31m[1;31m"[0m[31mahoy_visitor[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mc2781f60-e81c-4443-aa0b-de06f6467201[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31moptimizelyEndUserId[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31moeu1487059110891r0.036116082231490765[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31majs_anonymous_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;35m\"[0m[31m888e4b8b-4fd6-4a69-a5bf-9890d6060f3f[1;35m\"[0m[31m[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_ck_form[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3255[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-17T09:06:46.295Z[1;35m\"[0m[31m,[1;35m\"[0m[31mc[1;35m\"[0m[31m:true},[1;35m\"[0m[31m164786[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-18T11:22:34.212Z[1;35m\"[0m[31m}}[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_pk_id.3.1fff[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m3135e58cb8e5d676.1487059113.24.1488278152.1488273700.[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_wid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1765014167[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_nv[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mfalse[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_targlpu[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/contact[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_targlpt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mBlog | The Growth Bakery[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31mSkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ==--59f68de01b29e9bdf7fd7c6890ccd07a408f90da[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31moptimizelySegments[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3214222086[1;35m\"[0m[31m:[1;35m\"[0m[31mgc[1;35m\"[0m[31m,[1;35m\"[0m[31m3227673125[1;35m\"[0m[31m:[1;35m\"[0m[31mdirect[1;35m\"[0m[31m,[1;35m\"[0m[31m3229811852[1;35m\"[0m[31m:[1;35m\"[0m[31mfalse[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31moptimizelyBuckets[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m{}[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31majs_user_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31majs_group_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31mmp_2085cd601b4516bf8678fd18573c8f3e_mixpanel[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31m{[1;35m\"[0m[31mdistinct_id[1;35m\"[0m[31m: [1;35m\"[0m[31m15a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725[1;35m\"[0m[31m,[1;35m\"[0m[31mmp_lib[1;35m\"[0m[31m: [1;35m\"[0m[31mSegment: web[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referrer[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referring_domain[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31mamplitude_id[1;31m"[0m[31m[0m=>
+          [31m[1;31m"[0m[31meyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_ga[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGA1.1.481962050.1489775728[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__smToken[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mxCmTfNX7YMvVasn7YjEsRmn7[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_sid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1989144671[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_uid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m2904948026[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31mmp_mixpanel__c[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m__insp_slim[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1490031912395[1;31m"[0m[31m[0m},
+       [31m[1;31m"[0m[31mrack.request.cookie_string[1;31m"[0m[31m[0m=>
+        [31m[1;31m"[0m[31mahoy_visitor=c2781f60-e81c-4443-aa0b-de06f6467201; optimizelyEndUserId=oeu1487059110891r0.036116082231490765; ajs_anonymous_id=%22888e4b8b-4fd6-4a69-a5bf-9890d6060f3f%22; _ck_form=%7B%223255%22%3A%7B%22shown%22%3A%222017-02-17T09%3A06%3A46.295Z%22%2C%22c%22%3Atrue%7D%2C%22164786%22%3A%7B%22shown%22%3A%222017-02-18T11%3A22%3A34.212Z%22%7D%7D; _pk_id.3.1fff=3135e58cb8e5d676.1487059113.24.1488278152.1488273700.; __insp_wid=1765014167; __insp_nv=false; __insp_targlpu=http%3A%2F%2Flocalhost%3A3000%2Fcontact; __insp_targlpt=Blog%20%7C%20The%20Growth%20Bakery; _growthbakery_session=SkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ%3D%3D--59f68de01b29e9bdf7fd7c6890ccd07a408f90da; optimizelySegments=%7B%223214222086%22%3A%22gc%22%2C%223227673125%22%3A%22direct%22%2C%223229811852%22%3A%22false%22%7D; optimizelyBuckets=%7B%7D; ajs_user_id=null; ajs_group_id=null; mp_2085cd601b4516bf8678fd18573c8f3e_mixpanel=%7B%22distinct_id%22%3A%20%2215a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725%22%2C%22mp_lib%22%3A%20%22Segment%3A%20web%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; amplitude_id=eyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==; _ga=GA1.1.481962050.1489775728; __smToken=xCmTfNX7YMvVasn7YjEsRmn7; __insp_sid=1989144671; __insp_uid=2904948026; mp_mixpanel__c=1; __insp_slim=1490031912395[1;31m"[0m[31m[0m,
+       [31m[1;31m"[0m[31maction_dispatch.cookies[1;31m"[0m[31m[0m=>
+        [32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m
+         @committed[32m=[0m[1;36mfalse[0m,
+         @cookies[32m=[0m
+          {[31m[1;31m"[0m[31mahoy_visitor[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mc2781f60-e81c-4443-aa0b-de06f6467201[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31moptimizelyEndUserId[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31moeu1487059110891r0.036116082231490765[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31majs_anonymous_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;35m\"[0m[31m888e4b8b-4fd6-4a69-a5bf-9890d6060f3f[1;35m\"[0m[31m[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m_ck_form[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3255[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-17T09:06:46.295Z[1;35m\"[0m[31m,[1;35m\"[0m[31mc[1;35m\"[0m[31m:true},[1;35m\"[0m[31m164786[1;35m\"[0m[31m:{[1;35m\"[0m[31mshown[1;35m\"[0m[31m:[1;35m\"[0m[31m2017-02-18T11:22:34.212Z[1;35m\"[0m[31m}}[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m_pk_id.3.1fff[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31m3135e58cb8e5d676.1487059113.24.1488278152.1488273700.[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m__insp_wid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1765014167[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m__insp_nv[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mfalse[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m__insp_targlpu[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/contact[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m__insp_targlpt[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mBlog | The Growth Bakery[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m_growthbakery_session[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31mSkgzK0xRSzR4VjNMd0VpSER1Y2dHcnh4TUhpTFR3aURZUEVVOFptU2FiTmRWMExvejh3UlhnUGtYL0pHQUhBMHFqb2haK1dEOVVJWE5LTlVFQVZ0VFdqN1FEWHZ1dVVhMWVaTjJFRHA3Y2NlcW9JVXhacTJXdXB3clAyTW4rbDZHQ3hPbkd4T0VySVRmcnowbzNDTDlRcU04aXEwc25BdkVLWCs1dFMweW5qNnNub1d1OEdQSWZvdU1VR0l2VXpicWtsM3h2ckdpQ0NWdi9lV1FHcTFySVIxVTZQQ2pFaHZad0pyV1FtTTdVST0tLTVBNXJQVmlsY0FSMVBzaWdDa2h0ZVE9PQ==--59f68de01b29e9bdf7fd7c6890ccd07a408f90da[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31moptimizelySegments[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31m{[1;35m\"[0m[31m3214222086[1;35m\"[0m[31m:[1;35m\"[0m[31mgc[1;35m\"[0m[31m,[1;35m\"[0m[31m3227673125[1;35m\"[0m[31m:[1;35m\"[0m[31mdirect[1;35m\"[0m[31m,[1;35m\"[0m[31m3229811852[1;35m\"[0m[31m:[1;35m\"[0m[31mfalse[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31moptimizelyBuckets[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m{}[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31majs_user_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31majs_group_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mnull[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31mmp_2085cd601b4516bf8678fd18573c8f3e_mixpanel[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31m{[1;35m\"[0m[31mdistinct_id[1;35m\"[0m[31m: [1;35m\"[0m[31m15a3ba151b82c7-0fd81ce3178f63-1a2a120c-100200-15a3ba151b9725[1;35m\"[0m[31m,[1;35m\"[0m[31mmp_lib[1;35m\"[0m[31m: [1;35m\"[0m[31mSegment: web[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referrer[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m,[1;35m\"[0m[31m$initial_referring_domain[1;35m\"[0m[31m: [1;35m\"[0m[31m$direct[1;35m\"[0m[31m}[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31mamplitude_id[1;31m"[0m[31m[0m=>
+            [31m[1;31m"[0m[31meyJkZXZpY2VJZCI6ImI0YWQzY2ZjLTMyZTEtNGMxYy04YTQ1LTdlYTgxMWQxMmEyYlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTQ5MDAzMDU5MzY0OCwibGFzdEV2ZW50VGltZSI6MTQ5MDAzMTgxOTkwNywiZXZlbnRJZCI6MTMwLCJpZGVudGlmeUlkIjo4LCJzZXF1ZW5jZU51bWJlciI6MTM4fQ==[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m_ga[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mGA1.1.481962050.1489775728[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m__smToken[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mxCmTfNX7YMvVasn7YjEsRmn7[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m__insp_sid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1989144671[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m__insp_uid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m2904948026[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31mmp_mixpanel__c[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m,
+           [31m[1;31m"[0m[31m__insp_slim[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1490031912395[1;31m"[0m[31m[0m},
+         @delete_cookies[32m=[0m{},
+         @encrypted[32m=[0m
+          [32m#<ActionDispatch::Cookies::EncryptedCookieJar:0x007f93f0d1a958[0m
+           @encryptor[32m=[0m
+            [32m#<ActiveSupport::MessageEncryptor:0x007f93f0d1a6d8[0m
+             @cipher[32m=[0m[31m[1;31m"[0m[31maes-256-cbc[1;31m"[0m[31m[0m,
+             @secret[32m=[0m
+              [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+             @serializer[32m=[0m[1;34;4mActionDispatch[0m::[1;34;4mCookies[0m::[1;34;4mNullSerializer[0m,
+             @sign_secret[32m=[0m
+              [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+             @verifier[32m=[0m
+              [32m#<ActiveSupport::MessageVerifier:0x007f93f0d1a570[0m
+               @digest[32m=[0m[31m[1;31m"[0m[31mSHA1[1;31m"[0m[31m[0m,
+               @secret[32m=[0m
+                [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+               @serializer[32m=[0m[1;34;4mActiveSupport[0m::[1;34;4mMessageEncryptor[0m::[1;34;4mNullSerializer[0m[32m>[0m[32m>[0m,
+           @options[32m=[0m
+            {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+             [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+             [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+             [33m:secret_token[0m=>[1;36mnil[0m,
+             [33m:secret_key_base[0m=>
+              [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+             [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+             [33m:serializer[0m=>[33m:json[0m},
+           @parent_jar[32m=[0m
+            [32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m ...[32m>[0m[32m>[0m,
+         @host[32m=[0m[31m[1;31m"[0m[31mlocalhost[1;31m"[0m[31m[0m,
+         @key_generator[32m=[0m
+          [32m#<ActiveSupport::CachingKeyGenerator:0x007f93f004ad18[0m
+           @cache_keys[32m=[0m
+            [32m#<ThreadSafe::Cache:0x007f93f004acf0[0m
+             @backend[32m=[0m
+              {[31m[1;31m"[0m[31mencrypted cookie64[1;31m"[0m[31m[0m=>
+                [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+               [31m[1;31m"[0m[31msigned encrypted cookie64[1;31m"[0m[31m[0m=>
+                [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m},
+             @default_proc[32m=[0m[1;36mnil[0m[32m>[0m,
+           @key_generator[32m=[0m
+            [32m#<ActiveSupport::KeyGenerator:0x007f93f004ad40[0m
+             @iterations[32m=[0m[1;34m1000[0m,
+             @secret[32m=[0m
+              [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+         @options[32m=[0m
+          {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+           [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+           [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+           [33m:secret_token[0m=>[1;36mnil[0m,
+           [33m:secret_key_base[0m=>
+            [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+           [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+           [33m:serializer[0m=>[33m:json[0m},
+         @secure[32m=[0m[1;36mfalse[0m,
+         @set_cookies[32m=[0m{},
+         @signed_or_encrypted[32m=[0m
+          [32m#<ActionDispatch::Cookies::EncryptedCookieJar:0x007f93f0d1a958[0m
+           @encryptor[32m=[0m
+            [32m#<ActiveSupport::MessageEncryptor:0x007f93f0d1a6d8[0m
+             @cipher[32m=[0m[31m[1;31m"[0m[31maes-256-cbc[1;31m"[0m[31m[0m,
+             @secret[32m=[0m
+              [31m[1;31m"[0m[31m[1;35m\x99[0m[31m<[1;35m\xA2[0m[31mb[1;35m\xE8[0m[31m[1;35m\xE3[0m[31m[1;35m\xB3[0m[31m<[1;35m\x01[0m[31m[1;35m\xAE[0m[31m[1;35m\xCD[0m[31mC[1;35m\xBB[0m[31m[1;35m\xD5[0m[31m[1;35m\xFA[0m[31m[1;35m\xD6[0m[31m[1;35m\xD2[0m[31m[1;35m\x96[0m[31m[1;35m\xFE[0m[31m[1;35m\xD8[0m[31me[1;35m\x16[0m[31mx/np[1;35m\x84[0m[31m[1;35m\xDD[0m[31m[1;35m\x11[0m[31m8[1;35m\x1E[0m[31mv[1;35m\xDD[0m[31m[1;35m\xCD[0m[31m9[1;35m\xD3[0m[31m1u[1;35m\x1A[0m[31m[1;35m\n[0m[31m[1;35m\xA5[0m[31m[1;35m\x8A[0m[31m@|[1;35m\xC1[0m[31m[1;35m\xC5[0m[31mkY[1;35m\xC4[0m[31m+[1;35m\xC2[0m[31m[1;35m\xC5[0m[31mR[1;35m\x8C[0m[31m[1;35m\xC5[0m[31m[1;35m\x94[0m[31m[1;35m\xA8[0m[31m[1;35m\xE2[0m[31mf[1;35m\xAC[0m[31m[1;35m\x1A[0m[31mg[1;35m\xD5[0m[31m[1;35m\xCD[0m[31m[1;31m"[0m[31m[0m,
+             @serializer[32m=[0m[1;34;4mActionDispatch[0m::[1;34;4mCookies[0m::[1;34;4mNullSerializer[0m,
+             @sign_secret[32m=[0m
+              [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+             @verifier[32m=[0m
+              [32m#<ActiveSupport::MessageVerifier:0x007f93f0d1a570[0m
+               @digest[32m=[0m[31m[1;31m"[0m[31mSHA1[1;31m"[0m[31m[0m,
+               @secret[32m=[0m
+                [31m[1;31m"[0m[31m[1;35m\x1C[0m[31m[1;35m\x17[0m[31m[1;35m\x85[0m[31m[1;35m\xC3[0m[31md[1;35m\xF2[0m[31m[1;35m\xBA[0m[31m[1;35m\x9D[0m[31m[1;35m\x11[0m[31m0[1;35m\x03[0m[31m1A[1;35m\xB7[0m[31m[1;35m\x91[0m[31mG[1;35m\x89[0m[31m[1;35m\xC9[0m[31m[1;35m\xAC[0m[31m[1;35m\xEE[0m[31m[1;35m\v[0m[31m[1;35m\x01[0m[31m[1;35m\xB2[0m[31m[1;35m\n[0m[31m1[1;35m\x05[0m[31m[1;35m\x99[0m[31m[1;35m\x10[0m[31m9[1;35m\x86[0m[31m[1;35m\xFD[0m[31mp[1;35m\r[0m[31m[1;35m\xB7[0m[31m[1;35m\b[0m[31m[1;35m\xD2[0m[31m[1;35m\x92[0m[31m[1;35m\xEA[0m[31m[1;35m\xA0[0m[31m[Y?(Z [1;35m\x96[0m[31m7[1;35m\xBC[0m[31m[1;35m\xF2[0m[31ma[1;35m\b[0m[31m.[1;35m\xB8[0m[31m[1;35m\x89[0m[31mZOy[1;35m\xD1[0m[31mL[1;35m\xC0[0m[31m[1;35m\x10[0m[31m[1;35m\x85[0m[31mD[1;35m\e[0m[31m[1;31m"[0m[31m[0m,
+               @serializer[32m=[0m[1;34;4mActiveSupport[0m::[1;34;4mMessageEncryptor[0m::[1;34;4mNullSerializer[0m[32m>[0m[32m>[0m,
+           @options[32m=[0m
+            {[33m:signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned cookie[1;31m"[0m[31m[0m,
+             [33m:encrypted_cookie_salt[0m=>[31m[1;31m"[0m[31mencrypted cookie[1;31m"[0m[31m[0m,
+             [33m:encrypted_signed_cookie_salt[0m=>[31m[1;31m"[0m[31msigned encrypted cookie[1;31m"[0m[31m[0m,
+             [33m:secret_token[0m=>[1;36mnil[0m,
+             [33m:secret_key_base[0m=>
+              [31m[1;31m"[0m[31mf4c9c1137bd3191d128bcd53a7fef5bc0d5f7ea7186b62c3b4ecdafd42d19520e11294aadaf6a76a5d53f2b84d0b6d767ac62bd555a9706d04c6f778668a5c5b[1;31m"[0m[31m[0m,
+             [33m:upgrade_legacy_signed_cookies[0m=>[1;36mfalse[0m,
+             [33m:serializer[0m=>[33m:json[0m},
+           @parent_jar[32m=[0m
+            [32m#<ActionDispatch::Cookies::CookieJar:0x007f93f0e0a570[0m ...[32m>[0m[32m>[0m[32m>[0m,
+       [31m[1;31m"[0m[31maction_dispatch.request.unsigned_session_cookie[1;31m"[0m[31m[0m=>
+        {[31m[1;31m"[0m[31msession_id[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m4d44ce2e097fba50d7f13e854a1fdd9e[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31m_csrf_token[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m5iu6/0prgpFBeBUbXTkczDS/irSYPz6/TwlqKASbjo0=[1;31m"[0m[31m[0m,
+         [31m[1;31m"[0m[31mflash[1;31m"[0m[31m[0m=>{[31m[1;31m"[0m[31mdiscard[1;31m"[0m[31m[0m=>[], [31m[1;31m"[0m[31mflashes[1;31m"[0m[31m[0m=>{[31m[1;31m"[0m[31malert[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mStatus 404[1;31m"[0m[31m[0m}}},
+       [31m[1;31m"[0m[31maction_dispatch.exception[1;31m"[0m[31m[0m=>
+        [32m#<ActiveRecord::RecordNotFound: can't find record with friendly id: "sfsd">[0m,
+       [31m[1;31m"[0m[31maction_dispatch.request.flash_hash[1;31m"[0m[31m[0m=>
+        [32m#<ActionDispatch::Flash::FlashHash:0x007f93f0275b10[0m
+         @discard[32m=[0m[32m#<Set: {[0m}>,
+         @flashes[32m=[0m{[31m[1;31m"[0m[31malert[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mStatus 500[1;31m"[0m[31m[0m},
+         @now[32m=[0m[1;36mnil[0m[32m>[0m},
+     @filtered_env[32m=[0m[1;36mnil[0m,
+     @filtered_parameters[32m=[0m
+      {[31m[1;31m"[0m[31maction[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mshow[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mcontroller[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31marticles[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31msfsd[1;31m"[0m[31m[0m},
+     @filtered_path[32m=[0m[1;36mnil[0m,
+     @fullpath[32m=[0m[31m[1;31m"[0m[31m/404[1;31m"[0m[31m[0m,
+     @ip[32m=[0m[1;36mnil[0m,
+     @method[32m=[0m[31m[1;31m"[0m[31mGET[1;31m"[0m[31m[0m,
+     @original_fullpath[32m=[0m[1;36mnil[0m,
+     @port[32m=[0m[1;36mnil[0m,
+     @protocol[32m=[0m[1;36mnil[0m,
+     @remote_ip[32m=[0m[1;36mnil[0m,
+     @request_method[32m=[0m[31m[1;31m"[0m[31mGET[1;31m"[0m[31m[0m,
+     @symbolized_path_params[32m=[0m[1;36mnil[0m,
+     @uuid[32m=[0m[1;36mnil[0m[32m>[0m,
+   @sending[32m=[0m[1;36mfalse[0m,
+   @sending_file[32m=[0m[1;36mfalse[0m,
+   @sent[32m=[0m[1;36mfalse[0m,
+   @status[32m=[0m[1;34m200[0m,
+   @stream[32m=[0m
+    [32m#<ActionDispatch::Response::Buffer:0x007f93f028e4a8[0m
+     @buf[32m=[0m[],
+     @closed[32m=[0m[1;36mfalse[0m,
+     @response[32m=[0m[32m#<ActionDispatch::Response:0x007f93f028e728[0m ...[32m>[0m[32m>[0m[32m>[0m,
+ @_response_body[32m=[0m[1;36mnil[0m,
+ @_routes[32m=[0m[1;36mnil[0m,
+ @_status[32m=[0m[1;34m200[0m,
+ @marked_for_same_origin_verification[32m=[0m[1;36mtrue[0m[32m>[0m
