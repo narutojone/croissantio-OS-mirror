@@ -73,7 +73,7 @@
 					<div class="masonry masonry-blog-list">
 						<div class="masonry__container">
 							<% @newsletters.each do |newsletter| %>
-							<article class="masonry__item filter-<%= newsletter.category_name %>" data-masonry-filter="<%= newsletter.category_name %>">
+							<article class="masonry__item filter-<%= newsletter.topic_name %>" data-masonry-filter="<%= newsletter.topic_name %>">
 								<div class="article__title text-center">
 									<%= link_to articles_show_path(newsletter) do %>
 									<h2><%= newsletter.title %></h2>
@@ -82,8 +82,8 @@
 										in
 									</span>
 									<span>
-										<%= link_to category_path(newsletter.category_name) do %>
-										<%= newsletter.category_name.capitalize %>
+										<%= link_to topic_path(newsletter.topic_name) do %>
+										<%= newsletter.topic_name.capitalize %>
 										<% end %>
 									</span>
 								</div>

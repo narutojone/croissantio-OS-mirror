@@ -14,12 +14,12 @@ class ResourcesController < ApplicationController
   end
 
   def create
+    categories = params["resource"]["categories"].reject{|r| r.empty? }
     @resources = Resource.all
     @resource = Resource.new(resource_params)
-    categories = params["resource"]["resources_categories"].reject{|r| r.empty? }
     if @resource.save
-      categories.each {|c| ResourcesCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
-      @resource.update_attribute("category_name",categories.map{|c| Category.find(c).name.capitalize}.join(", "))
+      @resource.update_attributes(:category_name => categories.map{|c| Category.find(c).name.capitalize}.join(", "))
+      categories.each {|c| ResourceCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
       redirect_to resources_path
     else
       flash[:danger] = 'Something went wrong!'
@@ -33,12 +33,12 @@ class ResourcesController < ApplicationController
   end
 
   def update
+    categories = params["resource"]["categories"].reject{|r| r.empty? }
     @action = 'Edit'
-    categories = params["resource"]["resources_categories"].reject{|r| r.empty? }
     if @resource.update(resource_params)
-      @resource.resources_categories.destroy_all
-      categories.each {|c| ResourcesCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
-      @resource.update_attribute("category_name",categories.map{|c| Category.find(c).name.capitalize}.join(", "))
+      @resource.categories.destroy_all
+      @resource.update_attributes(:category_name => categories.map{|c| Category.find(c).name.capitalize}.join(", "))
+      categories.each {|c| ResourceCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
       flash[:success] = 'Resource succesfully updated!'
       render :index
     else

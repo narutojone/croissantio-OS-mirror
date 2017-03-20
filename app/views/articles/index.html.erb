@@ -32,7 +32,7 @@
                                         <th class="hidden-xs">#</th>
                                         <th>Title</th>
                                         <th class="hidden-xs">Description</th>
-                                        <th class="hidden-xs">Category</th>
+                                        <th class="hidden-xs">Topics</th>
                                         <th class="hidden-xs">Image</th>
                                         <th class="hidden-xs">Author</th>
                                         <th class="hidden-xs">Status</th>
@@ -50,7 +50,7 @@
                                             <% end %>
                                         </td>
                                         <td class="hidden-xs"><%= article.description %></td>
-                                        <td class="hidden-xs"><%= article.category_name.capitalize %></td>
+                                        <td class="hidden-xs"><%= article.topic_name.capitalize %></td>
                                         <td class="hidden-xs">
                                             <% if !article.image.url.nil? %>
                                             <span data-lightbox="gallery">
@@ -74,7 +74,7 @@
                                             edit
                                             <% end %>
                                             |
-                                            <%= link_to articles_show_path(article), :method => "delete", :data => {:confirm => 'Are you sure?'} do %>
+                                            <%= link_to article_path(article), :method => "delete", :data => {:confirm => 'Are you sure?'} do %>
                                             <i class="fa fa-trash"></i>
                                             delete
                                             <% end %>
@@ -141,16 +141,16 @@
                             <div class="form-group form-en">
                                 <%= f.hidden_field :body %>
                             </div>
-                            <div class="form-group">
-                                <%= f.label :category_id, "Category", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.select :category_id, options_from_collection_for_select(ArticleCategory.all, "id", "name", @article.category_id), {}, {class: "form-control col-md-7 col-xs-12"} %>
-                                </div>
-                            </div>
                             <div class="form-group locale-field">
                                 <%= f.label :date, "Date", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <%= f.date_field :date, :class => "form-control col-md-7 col-xs-12" %>
+                                </div>
+                            </div>
+                            <div class="form-group locale-field">
+                                <%= f.label :topics, "Topics", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <%=   f.select :topics, options_from_collection_for_select(Topic.all, "id", "name", @article.topics.map(&:id)), {}, {multiple: true, class: "form-control col-md-7 col-xs-12"} %>
                                 </div>
                             </div>
                             <div class="form-group">

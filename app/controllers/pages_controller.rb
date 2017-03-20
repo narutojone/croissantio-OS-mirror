@@ -23,19 +23,19 @@ class PagesController < ApplicationController
   end
 
   def blog
-    @articles = Article.where.not(category_name: 'newsletter').where(posted: true)
+    @articles = Article.includes(:topics).where.not(topics: {name: 'newsletter'}).where(posted: true)
   end
 
   def newsletter
-    @newsletters = Article.where(category_name: 'newsletter', posted: true)
+    @newsletters = Article.includes(:topics).where(topics: {name: 'newsletter'}).where(posted: true)
   end
 
   def search
-    @topcategories = ResourceCategory.joins(:resources).group("categories.id").order("count(resources.id) DESC").limit(8)
+    @topcategories = Category.joins(:resources).group("categories.id").order("count(resources.id) DESC").limit(8)
     @selected_option = { resource_type: '', order: '', range: '', upper: '', lower: '', category: "" }
     @resources = []
     if params[:id] && !params['/resources']
-      category = ResourceCategory.find_by(slug: params[:id].parameterize)
+      category = Category.find_by(slug: params[:id].parameterize)
       @resources = Resource.includes(:categories).where(categories: { id: category.id })
       @status = "hidden"
     elsif params['/resources']

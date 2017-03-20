@@ -6,6 +6,6 @@ class Article < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  # Associations with article_category
-  belongs_to :article_category
+  has_many :article_topics, :dependent => :delete_all
+  has_many :topics, through: :article_topics
 end

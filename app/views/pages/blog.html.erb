@@ -17,7 +17,7 @@
                     <div class="masonry masonry-blog-list">
                         <div class="masonry__container">
                           <% @articles.each do |article| %>
-                            <article class="masonry__item filter-<%= article.category_name %>" data-masonry-filter="<%= article.category_name %>">
+                            <article class="masonry__item filter-<%= article.topic_name %>" data-masonry-filter="<%= article.topic_name %>">
                                 <div class="article__title text-center">
                                     <%= link_to articles_show_path(article) do %>
                                         <h2><%= article.title %></h2>
@@ -25,9 +25,17 @@
                                     <span><%= article.date.strftime("%B #{article.date.day.ordinalize} %Y") %> in
                                     </span>
                                     <span>
-                                        <%= link_to category_path(article.category_name) do %>
-                                          <%= article.category_name.capitalize %>
+                                      <% if multiple_categories?(article) %>
+                                        <% article.topic_name.split(",").collect {|t| t.strip}.each do |topic| %>
+                                          <%= link_to topic_path(topic.downcase.parameterize) do %>
+                                            <%= topic %>
+                                          ,<% end %>
                                         <% end %>
+                                      <% else %>
+                                      <%= link_to topic_path(article.topic_name.downcase.parameterize) do %>
+                                        <%= article.topic_name %>
+                                      <% end %>
+                                    <% end %>
                                     </span>
                                 </div>
                                 <!--end article title-->

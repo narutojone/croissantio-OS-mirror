@@ -1,4 +1,8 @@
-<% content_for :body_class, "nav-md" %>
+<% content_for :body_class, "nav-md admin-body" %>
+<% content_for :css do %>
+<%= stylesheet_link_tag "models/pages" %>
+
+<% end %>
 <% flash.each do |message_type, message| %>
   <div class="alert alert-<%= message_type %> alert-dismissible fade in"><%=message %>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
@@ -23,7 +27,8 @@
       <div class="clearfix"></div>
       <ul class="nav side-menu menu_section">
         <li> <%=link_to(admin_path, class: "current_page") do %> <i class="fa fa-home"></i> Home <span></span> <% end %> </li>
-        <li> <%=link_to(categories_path) do %> <i class="fa fa-list-ul"></i> Categories <span ></span> <% end %> </li>
+        <li> <%=link_to(topics_path) do %> <i class="fa fa-bars"></i> Topics (Articles) <span ></span> <% end %> </li>
+        <li> <%=link_to(categories_path) do %> <i class="fa fa-list-ul"></i> Categories (Resources) <span ></span> <% end %> </li>
         <li> <%=link_to(articles_path) do %> <i class="fa fa-pencil"></i> Articles <span ></span> <% end %> </li>
         <li> <%=link_to(resources_path) do %> <i class="fa fa-archive"></i> Resources <span ></span> <% end %> </li>
       </ul>

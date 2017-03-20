@@ -28,7 +28,7 @@
 					</div>
 					<div class="col-md-2 col-sm-12 select-search  clearfix">
 						<p class="inline">From</p>
-						<%= f.select params[:category_id], options_from_collection_for_select(ResourceCategory.all, :id, :display_name, @selected_option[:category]), {:include_blank => 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline"} %>
+						<%= f.select params[:category_id], options_from_collection_for_select(Category.all, :id, :display_name, @selected_option[:category]), {:include_blank => 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline"} %>
 					</div>
 					<div class="col-md-3 col-sm-12 select-search  clearfix">
 						<p class="inline">By</p>

@@ -35,6 +35,7 @@
                                         <th>Author</th>
                                         <th>Grade</th>
                                         <th>Date</th>
+                                        <th>Categories</th>
                                         <th>Type</th>
                                         <th>Options</th>
                                     </tr>
@@ -53,6 +54,7 @@
                                         <td><%= resource.author %></td>
                                         <td><%= resource.grade %> Stars</td>
                                         <td><%= resource.date %></td>
+                                        <td><%= resource.category_name %></td>
                                         <td><%= resource.resource_type %></td>
                                         <td>
                                             <%= link_to(edit_resource_path(resource), :class => "edit-link") do %>
@@ -150,15 +152,15 @@
                                 </div>
                             </div>
                             <div class="form-group locale-field">
+                                <%= f.label :categories, "Categories", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <%=   f.select :categories, options_from_collection_for_select(Category.all, "id", "name", @resource.categories.map(&:id)), {}, {multiple: true, class: "form-control col-md-7 col-xs-12"} %>
+                                </div>
+                            </div>
+                            <div class="form-group locale-field">
                                 <%= f.label :resource_type, "Type", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <%= f.select :resource_type, options_for_select(["article", "video", "presentation", "link"], selected: @resource.resource_type),{}, {:class => "form-control col-md-7 col-xs-12"} %>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <%= f.label :resources_categories, "Category", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.select :resources_categories, options_from_collection_for_select(ResourceCategory.all, "id", "name", @resource.categories.map(&:id)), {}, {multiple: true, class: "form-control col-md-7 col-xs-12"} %>
                                 </div>
                             </div>
                             <div class="form-group">

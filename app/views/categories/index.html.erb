@@ -29,7 +29,6 @@
                   <tr>
                     <th class="hidden-xs">#</th>
                     <th>Name</th>
-                    <th>Type</th>
                     <th>Options</th>
                   </tr>
                 </thead>
@@ -38,12 +37,11 @@
                     <tr>
                       <td scope="row" class="hidden-xs"><%= category.id %></td>
                       <td>
-                        <%= link_to set_category_path(category) do %>
+                        <%= link_to resource_category_path(category) do %>
                           <i class="fa fa-search"></i>
                           <%= category.name %>
                         <% end %>
                       </td>
-                      <td><%= category.type == "ResourceCategory" ? "Resource" : "Article" %></td>
                       <td>
                         <%= link_to(edit_category_path(category), :class => "edit-link") do %>
                           <i class="fa fa-pencil"></i>
@@ -95,12 +93,6 @@
                   <%= f.label :name, "Category Name", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <%= f.text_field :name, :class => "form-control col-md-7 col-xs-12" %>
-                  </div>
-                </div>
-                <div class="form-group locale-field">
-                  <%= f.label :type, "Category Type", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <%= f.select :type, options_for_select([["Article", "ArticleCategory"],["Resource", "ResourceCategory"]], selected: @category.type), {}, {:class => "form-control col-md-7 col-xs-12" }%>
                   </div>
                 </div>
                 <div class="form-group">

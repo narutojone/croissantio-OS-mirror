@@ -13,7 +13,6 @@ class Category < ActiveRecord::Base
     name.split.map(&:capitalize)*' '
   end
 
-  # Connects resource_category (STI of Category) with resources
-  has_many :resources_categories
-  has_many :resources, through: :resources_categories
+  has_many :resource_categories, :dependent => :delete_all
+  has_many :resources, through: :resource_categories
 end

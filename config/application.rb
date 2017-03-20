@@ -17,7 +17,7 @@ module Growthbakery
     # config.time_zone = 'Central Time (US & Canada)'
 
     # Set errors to custom routes
-    # config.exceptions_app = self.routes
+    config.exceptions_app = self.routes
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]

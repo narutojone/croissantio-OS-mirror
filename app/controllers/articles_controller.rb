@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  include TopicsHelper
   before_action :setup, only: [:show, :edit, :update, :destroy]
   before_filter :logged_in_user?, except: [:show]
   before_filter :is_admin?, except: [:show]
@@ -11,16 +12,16 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @relatedarticles = (Article.where(category_name: @article.category_name).where.not(id: @article.id)).limit(3)
+    @relatedarticles = Article.includes(:topics).where(topics: { id: @article.topics.map(&:id) }).limit(3)
   end
 
   def create
+    topics = params["article"]["topics"].reject{|r| r.empty? }
     @articles = Article.all
     @article = Article.new(article_params)
-    @article.update_attribute(:user_id, current_user.id)
-    @article.category_name = ArticleCategory.find(article_params[:category_id]).name
-    # set_slug_for_article(@article)
     if @article.save
+      @article.update_attributes(:user_id => current_user.id, :topic_name => topics.map{|c| Topic.find(c).name.capitalize}.join(", "))
+      topics.each {|c| ArticleTopic.create!(article_id: @article.id, topic_id: c.to_i)}
       if @article.posted?
         flash[:success] = "Article succesfully posted!"
         redirect_to articles_path
@@ -41,9 +42,11 @@ class ArticlesController < ApplicationController
 
   def update
     @action = "Edit"
-    # new_article_params = update_slug_for_article(article_params)
-    @article.category_name = Category.find(article_params[:category_id]).name
+    topics = params["article"]["topics"].reject{|r| r.empty? }
     if @article.update(article_params)
+      @article.topics.destroy_all
+      @article.update_attributes(:topic_name => topics.map{|c| Topic.find(c).name.capitalize}.join(", "))
+      topics.each {|c| ArticleTopic.create!(article_id: @article.id, topic_id: c.to_i)}
       flash[:success] = "Article succesfully updated!"
       render :index
     else
@@ -65,7 +68,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description, :body, :image, :user_id, :category_id, :posted, :date, :slug)
+    params.require(:article).permit(:title, :description, :body, :image, :user_id, :posted, :date, :slug,:topics)
   end
 
   def setup

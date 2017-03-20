@@ -58,7 +58,7 @@ $("#aa-search-input").on("input", function () {
 			var html = "";
 			html += "<div class=\"masonry__item resource_card\">";
 			html += "							<h4 class=\"resource-title\">";
-			html += "							<a href=\"\/" + link + "\">" + title + "<\/a>";
+			html += "							<a href=" + link + ">" + title + "<\/a>";
 			html += "					<\/h4>";
 			html += "							<span>";
 			html += "								<strong>" + moment(date).format('MMMM Do YYYY') + "";

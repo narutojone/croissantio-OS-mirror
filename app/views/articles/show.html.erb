@@ -17,7 +17,17 @@
     <div class="js__article article__main" data-title="Finding your way from maker to manager">
         <div class="container">
             <div class="article__hero">
-                <%= link_to @article.category_name.capitalize, category_path(@article.category_name.parameterize),  class:"f__up f__no-und categories__link js__category-name hidden-xs"  %>
+              <% if multiple_categories?(@article) %>
+                <% @article.topic_name.split(",").collect {|t| t.strip}.each do |topic| %>
+                  <%= link_to topic_path(topic.downcase), class:"f__up f__no-und categories__link js__category-name hidden-xs" do %>
+                    <%= topic %>
+                  <% end %>
+                <% end %>
+              <% else %>
+              <%= link_to topic_path(@article.topic_name.downcase) do %>
+                <%= @article.topic_name %>
+              <% end %>
+            <% end %>
                 <span class="hidden-xs categories__separator-white">|</span>
                 <span class="hidden-xs f__up categories__text">
                     <span class="js__read-time">
@@ -140,7 +150,7 @@ var disqus_config = function () {
     <div class="feature__body boxed boxed--border">
         <span><%= article.date.strftime("%B #{article.date.day.ordinalize} %Y") %></span>
         <h5><%= article.title %></h5>
-        <%= link_to "Read more", articles_show_path  %>
+        <%= link_to "Read more", articles_show_path(article)  %>
     </div>
 </article>
 </div>

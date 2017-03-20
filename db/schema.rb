@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318150815) do
+ActiveRecord::Schema.define(version: 20170320194158) do
+
+  create_table "article_topics", force: true do |t|
+    t.integer "article_id"
+    t.integer "topic_id"
+  end
+
+  add_index "article_topics", ["article_id"], name: "index_article_topics_on_article_id"
+  add_index "article_topics", ["topic_id"], name: "index_article_topics_on_topic_id"
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -23,8 +31,7 @@ ActiveRecord::Schema.define(version: 20170318150815) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.integer  "category_id"
-    t.string   "category_name"
+    t.string   "topic_name"
     t.datetime "date"
   end
 
@@ -35,9 +42,7 @@ ActiveRecord::Schema.define(version: 20170318150815) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.integer  "articles_count",  default: 0
     t.integer  "resources_count", default: 0
-    t.string   "type"
   end
 
   add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true
@@ -54,6 +59,14 @@ ActiveRecord::Schema.define(version: 20170318150815) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "resource_categories", force: true do |t|
+    t.integer "resource_id"
+    t.integer "category_id"
+  end
+
+  add_index "resource_categories", ["category_id"], name: "index_resource_categories_on_category_id"
+  add_index "resource_categories", ["resource_id"], name: "index_resource_categories_on_resource_id"
 
   create_table "resources", force: true do |t|
     t.integer  "grade"
@@ -72,13 +85,12 @@ ActiveRecord::Schema.define(version: 20170318150815) do
 
   add_index "resources", ["slug"], name: "index_resources_on_slug", unique: true
 
-  create_table "resources_categories", force: true do |t|
-    t.integer "category_id"
-    t.integer "resource_id"
+  create_table "topics", force: true do |t|
+    t.string "name"
+    t.string "slug"
   end
 
-  add_index "resources_categories", ["category_id"], name: "index_resources_categories_on_category_id"
-  add_index "resources_categories", ["resource_id"], name: "index_resources_categories_on_resource_id"
+  add_index "topics", ["slug"], name: "index_topics_on_slug", unique: true
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

@@ -13,14 +13,14 @@ Rails.application.routes.draw do
   get '/thanks' => 'pages#thanks'
   get '/search' => 'pages#search'
   get '/contact' => 'pages#contact'
-  
+
   # Redirect the errors
   %w( 404 500 ).each do |code|
     match code, :to => "errors#show",:code => code, :via => :all
   end
   # ------------------ Model Routing -----------------------
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'register' }
-  resources :pages, :categories, :articles, :resources
+  resources :pages, :categories, :topics, :articles, :resources
   resources :contactforms, only: [:new, :create]
 
   get "search/:id" => "pages#search", as: "resource_category"
