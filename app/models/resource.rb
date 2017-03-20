@@ -6,7 +6,7 @@ class Resource < ActiveRecord::Base
   # Save type as downcase
   before_save { self.resource_type = resource_type.downcase }
 
-  Adding algoliasearch
+  # Adding algoliasearch
   include AlgoliaSearch
   algoliasearch do
 
