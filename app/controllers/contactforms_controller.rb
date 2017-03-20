@@ -5,6 +5,7 @@ class ContactformsController < ApplicationController
 
   def create
     @contactform = Contactform.new(params[:contactform])
+    @contactform.services = @contactform.services.delete_if{|e| e == "0"}.collect{|e| e.gsub!("_"," "); e.capitalize}
     @contactform.request = request
     if @contactform.deliver
       flash[:notice] = "Your message was succesfully send!"

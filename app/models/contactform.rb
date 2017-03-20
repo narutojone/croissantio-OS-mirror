@@ -1,11 +1,13 @@
 class Contactform < MailForm::Base
  attribute :name, :validate => true
- attribute :company, :validate => true
+ attribute :company
  attribute :message, :validate => true
- attribute :email, :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
- attribute :phone, :validate => true
- attribute :budget, :validate => true
- attribute :services, :validate => true
+ attribute :email
+ # :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+ attribute :phone
+ attribute :url
+ attribute :budget
+ attribute :services
  attribute :nickname, :captcha => true
 
   def headers

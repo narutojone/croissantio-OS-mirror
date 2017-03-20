@@ -9,7 +9,7 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # show error pages instead of stack traces
+  # Show error pages instead of stack traces
   config.consider_all_requests_local = true
 
   # Show full error reports and disable caching.

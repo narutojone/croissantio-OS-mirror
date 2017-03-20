@@ -9,15 +9,17 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = false
-  # Full error reports are disabled and caching is turned on.
+
+  # Show error pages instead of stack traces
   config.consider_all_requests_local       = false
+
+  # Full error reports are disabled and caching is turned on.
   config.action_controller.perform_caching = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
-  config.exceptions_app = self.routes
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
