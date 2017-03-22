@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @relatedarticles = Article.includes(:topics).where(topics: { id: @article.topics.map(&:id) }).limit(3)
+    @relatedarticles = Article.includes(:topics).where(topics: { id: @article.topics.map(&:id) }).where.not(id: @article.id).limit(3)
   end
 
   def create

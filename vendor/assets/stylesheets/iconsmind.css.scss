@@ -20,6 +20,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+a:hover{
+	text-decoration: none !important;
+}
+
 .icon-A-Z:before {
 	content: "\e600";
 }

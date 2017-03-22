@@ -57,7 +57,7 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, :slug, :type)
+    params.require(:category).permit(:name, :slug, :type, :icon)
   end
 
   def set_slug_for_category(category) # Set & Update slugs for categories

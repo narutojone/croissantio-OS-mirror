@@ -29,6 +29,7 @@
                   <tr>
                     <th class="hidden-xs">#</th>
                     <th>Name</th>
+                    <th>Icon</th>
                     <th>Options</th>
                   </tr>
                 </thead>
@@ -42,6 +43,7 @@
                           <%= category.name %>
                         <% end %>
                       </td>
+                      <td><i style="font-size: 40px;" class="icon--lg <%= category.icon  %>"></i></td>
                       <td>
                         <%= link_to(edit_category_path(category), :class => "edit-link") do %>
                           <i class="fa fa-pencil"></i>
@@ -93,6 +95,12 @@
                   <%= f.label :name, "Category Name", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <%= f.text_field :name, :class => "form-control col-md-7 col-xs-12" %>
+                  </div>
+                </div>
+                <div class="form-group locale-field">
+                  <%= f.label :icon, "Icon", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <%= f.text_field :icon, :class => "form-control col-md-7 col-xs-12", placeholder: "icon-Add-File" %>
                   </div>
                 </div>
                 <div class="form-group">

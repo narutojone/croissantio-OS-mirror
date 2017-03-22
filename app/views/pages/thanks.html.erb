@@ -50,8 +50,8 @@
 										in
 									</span>
 									<span>
-										<%= link_to category_path(@newsletter.category_name) do %>
-										<%= @newsletter.category_name.capitalize %>
+										<% @newsletter.topics.each do |topic| %>
+											<%= link_to topic.name.capitalize, topic_path(topic.name.downcase), class:"f__up f__no-und categories__link js__category-name hidden-xs"%>
 										<% end %>
 									</span>
 								</div>

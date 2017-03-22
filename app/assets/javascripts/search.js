@@ -44,6 +44,11 @@ window.onload = function () {
 // <!-- Append suggestions to article list as typing happens -->
 $("#aa-search-input").on("input", function () {
 	$("#article-list").empty()
+	if ($(this).val() == ""){
+		$(".category-search").show()
+	} else {
+		$(".category-search").hide()
+	}
 	index.search($('#aa-search-input').val(), function (err, content) {
 		array = content.hits.slice(0, 10)
 		for (var i = 0; i < array.length; i++) {
@@ -55,10 +60,11 @@ $("#aa-search-input").on("input", function () {
 			slug = array[i].slug
 			link = array[i].link
 			author = array[i].author
+			categories = array[i].category_name
 			var html = "";
 			html += "<div class=\"masonry__item resource_card\">";
 			html += "							<h4 class=\"resource-title\">";
-			html += "							<a href=" + link + ">" + title + "<\/a>";
+			html += "							<a href=\"" + link + "\">" + title + "<\/a>";
 			html += "					<\/h4>";
 			html += "							<span>";
 			html += "								<strong>" + moment(date).format('MMMM Do YYYY') + "";
@@ -69,6 +75,8 @@ $("#aa-search-input").on("input", function () {
 			html += "									|";
 			html += "									" + grade + "";
 			html += "									stars";
+			html += "									|";
+			html += "									" + categories + "";
 			html += "								<\/strong>";
 			html += "							<\/span>";
 			html += "							<div>";
@@ -78,6 +86,9 @@ $("#aa-search-input").on("input", function () {
 			html += "							<\/div>";
 			html += "						<\/div>";
 			$("#article-list").append(html)
+		}
+		if ($("#aa-search-input").val() == ""){
+			$("#article-list").empty()
 		}
 	});
 })
