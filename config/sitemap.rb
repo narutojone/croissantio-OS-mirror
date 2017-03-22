@@ -15,13 +15,16 @@ SitemapGenerator::Sitemap.sitemaps_host = "https://thegrowthbakeryblog.s3.amazon
 # The paths that need to be included into the sitemap.
 SitemapGenerator::Sitemap.create do
     Article.find_each do |article|
-     add articles_show_path(article.slug)
+     add articles_show_path(article.slug.parameterize)
     end
     Resource.find_each do |resource|
-     add resources_show_path(resource.slug)
+     add resources_show_path(resource.slug.parameterize)
     end
     Category.find_each do |category|
-     add category_path(category.name)
+     add category_path(category.name.parameterize)
+    end
+    Topic.find_each do |topic|
+     add topic_path(topic.name.parameterize)
     end
 
     add "/thanks"
