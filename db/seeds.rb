@@ -10,7 +10,7 @@ csv = CSV.read(Rails.root.join('db', 'file.csv'), headers: true, header_converte
 csv.each do |row|
   next if row[:facebook_ads].blank?
   category = row[:facebook_ads]
-  Category.create!(name: category)
+  Category.create!(name: category, icon: "")
 end
 
 csv.each do |row|
