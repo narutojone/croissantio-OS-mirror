@@ -44,8 +44,8 @@
                   <%= f.text_field :url %>
                 </div>
                 <div class="col-sm-6">
-                  <%= f.label :email, "Email" %>
-                  <%= f.email_field :email %>
+                  <%= f.label :email, "Email*" %>
+                  <%= f.email_field :email, required: true, :class => "validate-required" %>
                 </div>
                 <div class="col-sm-6">
                   <%= f.label :phone, "Phone" %>
