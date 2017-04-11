@@ -38,17 +38,26 @@ class PagesController < ApplicationController
       category = Category.find_by(slug: params[:id].parameterize)
       @resources = Resource.includes(:categories).where(categories: { id: category.id })
       @status = "hidden"
+      respond_to do |format|
+        format.html
+        format.json { render json: @resources }
+      end
     elsif params['/resources']
       type = params['/resources'][0]
       category = params['/resources'][1]
       order = params['/resources'][2]
       range = params['/resources'][3]
-      range = range.split('-').collect(&:to_datetime)
-      @selected_option = { category: category, upper: range[0].to_f * 1000, lower: range[1].to_f * 1000, resource_type: type, order: order, range: params['/resources'][3] }
-      range = range[0]..range[1]
-      @resources = Resource.includes(:categories).where(date: range)
+      if range == "All Time"
+        date, range = [nil, nil], [nil, nil]
+      else
+        date = range.split('-').collect(&:to_datetime)
+        range = date[0]..date[1]
+      end
+      @selected_option = { category: category, upper: date[0].to_f * 1000, lower: date[1].to_f * 1000, resource_type: type, order: order, range: params['/resources'][3] }
+      @resources = Resource.includes(:categories).all
+      @resources = @resources.where(date: range) if date != [nil, nil]
       @resources = @resources.where(resource_type: type.downcase) if type != ""
-      @resources = @resources.where(categories: { id: category }) if category != ""
+      @resources = @resources.where(categories: { slug: category.gsub(" ","-") }) if category != ""
       @resources = @resources.order(order)
       @status = "hidden"
     else

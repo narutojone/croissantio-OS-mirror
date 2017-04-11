@@ -68,7 +68,6 @@ html:before {
 }
 
 body {
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #4f5a65;
@@ -136,7 +135,6 @@ img[width="1"][height="1"] {
 
 button,
 input {
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -173,24 +171,7 @@ textarea {
         display: block!important;
     }
 }
-@font-face {
-    font-family: Akkurat Pro;
-    font-weight: 300;
-    font-style: normal;
-    src: url("Akkurat-light-a977be5e3ae90cac965992671172d39b.woff") format("woff");
-}
-@font-face {
-    font-family: Akkurat Pro;
-    font-weight: 400;
-    font-style: normal;
-    src: url("Akkurat-regular-a246750ef2e0c477367dd0781cd1ab54.woff") format("woff");
-}
-@font-face {
-    font-family: Akkurat Pro;
-    font-weight: 500;
-    font-style: normal;
-    src: url("Akkurat-bold-368c888f4aa2bb4485aca34d688fe9b7.woff") format("woff");
-}
+
 @font-face {
     font-family: Tiempos;
     font-weight: 400;
@@ -544,7 +525,6 @@ h6 {
 
 .t__h6 {
     text-transform: uppercase;
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: #0000c0;
     letter-spacing: 0.1em;
     font-size: 15px;
@@ -1257,7 +1237,6 @@ h6 {
 }
 
 .btn {
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     display: inline-block;
     font-weight: 500;
     letter-spacing: 0.01em;
@@ -4539,7 +4518,6 @@ max-width: 850px;
 
 .quote__author {
     font-size: 13px;
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-weight: 600;
@@ -4940,14 +4918,12 @@ max-width: 850px;
 .ns__shortcode {
     max-width: 600px;
     margin: 2em auto 3em;
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     position: relative;
 }
 
 .article .ns__shortcode-headline,
 .ns__shortcode-headline {
     font-size: 30px;
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: #1f8ceb;
     font-weight: 300;
     text-align: center;
@@ -5401,7 +5377,6 @@ max-width: 850px;
     border: 2px solid #e6e7e9;
     padding: 50px 125px 40px;
     margin: 60px 0;
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .pdfkit .ns__success-msg {
@@ -5417,7 +5392,6 @@ max-width: 850px;
     margin: 0;
     font-size: 30px;
     color: #0923ec;
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     line-height: 1.4;
 }
 
@@ -5425,7 +5399,6 @@ max-width: 850px;
     margin: 5px 0 0;
     font-size: 16px;
     color: #637280;
-    font-family: Akkurat Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 400;
     line-height: 1.6;
 }

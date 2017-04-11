@@ -2,6 +2,9 @@ class Article < ActiveRecord::Base
   # Adding images to articles
   mount_uploader :image, ImageUploader
 
+  # Downcase attribute before saving
+  before_save { self.slug = slug.downcase }
+
   # Friendly Id (mydomain.com/my-cool-article)
   extend FriendlyId
   friendly_id :title, use: :slugged

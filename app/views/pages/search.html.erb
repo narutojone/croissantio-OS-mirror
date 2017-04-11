@@ -27,7 +27,7 @@
             </div>
             <div class="col-md-2 col-sm-12 select-search  clearfix">
               <p class="inline">From</p>
-              <%= f.select params[:category_id], options_from_collection_for_select(Category.all, :id, :display_name, @selected_option[:category]), {:include_blank => 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline"} %>
+              <%= f.select params[:category_id], options_from_collection_for_select(Category.all, :name, :display_name, @selected_option[:category]), {:include_blank => 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline", id: "category_filter"} %>
             </div>
             <div class="col-md-3 col-sm-12 select-search  clearfix">
               <p class="inline">By</p>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-md-4 col-sm-12 select-search  clearfix">
               <p class="inline">In</p>
-              <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+              <div id="reportrange" class="pull-right" style="width: 90%; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
                 <i class="fa fa-calendar"></i>&nbsp;
 							<span class="date-range"></span>
                 <b class="caret"></b>
@@ -66,11 +66,11 @@
     <div class="row">
       <% @topcategories.each do |category| %>
         <div class="col-sm-3">
-          <%= link_to resource_category_path(category), class: "clearfix block" do %>
+          <%= link_to resource_category_path(category), remote: true, class: "category-link clearfix block" do %>
             <div class="feature boxed boxed--border border--round text-center">
               <i class="icon--lg <%= category.icon %>"></i>
               <span class="h5 color--primary">
-                <%= category.name.capitalize %></span>
+                <%= category.name.split(" ").collect{|word| word.capitalize}.join(" ") %></span>
             </div>
           <% end %>
         </div>
@@ -87,10 +87,10 @@
         <div class="masonry masonry-blog-list">
           <div id="article-list" class="masonry__container masonry--active">
             <% @resources.each do |resource|  %>
-              <%= link_to resource.link do %>
+              <%= link_to (resource.link + "?utm_campaign=TGBSearch&utm_medium=referral&utm_source=GrowthBakery.com") do %>
                 <div class="masonry__item resource_card">
                   <h4 class="resource-title">
-                    <%= link_to resource.title, resource.link %>
+                    <%= link_to resource.title, resource.link  + "?utm_campaign=TGBSearch&utm_medium=referral&utm_source=GrowthBakery.com" %>
                   </h4>
                   <span>
                     <strong><%= resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
@@ -138,34 +138,19 @@
     	var start = moment(<%= @selected_option[:upper] %>)
     	var end = moment(<%= @selected_option[:lower] %>);
     	function cb(start, end) {
-    		$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        if (start._i == undefined || start._i == 0.0){
+          $('#reportrange span').html("All Time");
+        } else {
+          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
     	}
 
     	$('#reportrange').daterangepicker({
     		startDate: start,
     		endDate: end,
     		ranges: {
-    			'Today': [
-    				moment(), moment()
-    			],
-    			'Yesterday': [
-    				moment().subtract(1, 'days'),
-    				moment().subtract(1, 'days')
-    			],
-    			'Last 7 Days': [
-    				moment().subtract(6, 'days'),
-    				moment()
-    			],
-    			'Last 30 Days': [
-    				moment().subtract(29, 'days'),
-    				moment()
-    			],
-    			'This Month': [
-    				moment().startOf('month'), moment().endOf('month')
-    			],
-    			'Last Month': [
-    				moment().subtract(1, 'month').startOf('month'),
-    				moment().subtract(1, 'month').endOf('month')
+    			'All Time': [
+    				moment().subtract(20, 'years'), moment()
     			]
     		}
     	}, cb);

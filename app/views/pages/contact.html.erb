@@ -15,7 +15,7 @@
         <div class="col-sm-8 col-md-6">
           <h1>Let's talk about your project</h1>
           <p class="lead">
-            Use the form below to get in touch with me
+            Use the form below to get in touch with me or just send me an email: <a href="mailto:maxime@growthbakery.com">maxime@growthbakery.com</a>
                     </p>
         </div>
       </div>
@@ -32,8 +32,8 @@
               <%= form_for @contactform, html: {class: "text-left"} do |f| %>
                 <%= render "shared/error_messages", object: f.object %>
                 <div class="col-sm-6">
-                  <%= f.label :name, "Name*" %>
-                  <%= f.text_field :name, required: true, :class => "validate-required", style: "background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" %>
+                  <%= f.label :name, "Name" %>
+                  <%= f.text_field :name, style: "background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" %>
                 </div>
                 <div class="col-sm-6">
                   <%= f.label :company, "Company" %>
@@ -53,30 +53,37 @@
                 </div>
                 <div class="col-sm-12">
                   <%= f.label :message, "Details about your project*" %>
-                  <%= f.text_area :message, required: true, rows: "20",:class => "validate-required" %>
+                  <%= f.text_area :message, required: true, rows: 3, style: "height: auto", :class => "validate-required" %>
                 </div>
                 <div class="col-sm-12 text-center boxed">
-                  <h5>Services Required</h5>
+                  <h5>The Growth Bakery Services you are interested in:</h5>
                 </div>
                 <div class="col-sm-3 col-xs-6 text-center">
-                  <%= f.label :marketing_growth_foundation, "Marketing/Growth Foundation", class: "block" %>
+                  <%= f.label :marketing_foundation, "Marketing Foundation", class: "block" %>
                   <div class="input-checkbox">
                     <div class="inner"></div>
-                    <%= f.check_box :services, {:multiple => true}, "marketing_growth_foundation" %>
+                    <%= f.check_box :services, {:multiple => true}, "marketing_foundation" %>
                   </div>
                 </div>
                 <div class="col-sm-3 col-xs-6 text-center">
-                  <%= f.label :marketing_growth_stack, "Marketing/Growth Stack", class: "block" %>
+                  <%= f.label :growth_stack, "Growth Stack", class: "block" %>
                   <div class="input-checkbox">
                     <div class="inner"></div>
-                    <%= f.check_box :services, {:multiple => true}, "marketing_growth_stack" %>
+                    <%= f.check_box :services, {:multiple => true}, "growth_stack" %>
                   </div>
                 </div>
                 <div class="col-sm-3 col-xs-6 text-center">
-                  <%= f.label :customer_acquisition, "Customer Acquisition", class: "block" %>
+                  <%= f.label :growth_process, "Growth Process", class: "block" %>
                   <div class="input-checkbox">
                     <div class="inner"></div>
-                    <%= f.check_box :services, {:multiple => true}, "customer_acquisition" %>
+                    <%= f.check_box :services, {:multiple => true}, "growth_process" %>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 text-center">
+                  <%= f.label :growth_coaching, "Growth Coaching", class: "block" %>
+                  <div class="input-checkbox">
+                    <div class="inner"></div>
+                    <%= f.check_box :services, {:multiple => true}, "growth_coaching" %>
                   </div>
                 </div>
                 <div class="col-sm-12 text-center boxed">
@@ -86,21 +93,21 @@
                   <div class="input-radio">
                     <%= label :budget, '$4,000' %>
                     <div class="inner"></div>
-                    <%= f.radio_button :budget, 'Less than 4K', class: "validate-required" %>
+                    <%= f.radio_button :budget, 'Less than 4K' %>
                   </div>
                 </div>
                 <div class="col-xs-4 text-center">
                   <div class="input-radio">
                     <%= label :budget, '$4,000 - $10,000' %>
                     <div class="inner"></div>
-                    <%= f.radio_button :budget, 'Between 4k and 10K', class: "validate-required" %>
+                    <%= f.radio_button :budget, 'Between 4k and 10K' %>
                   </div>
                 </div>
                 <div class="col-xs-4 text-center">
                   <div class="input-radio">
                     <%= label :budget, '$ 10,000+' %>
                     <div class="inner"></div>
-                    <%= f.radio_button :budget, 'More than 10K', class: "validate-required" %>
+                    <%= f.radio_button :budget, 'More than 10K' %>
                   </div>
                 </div>
                 <div class="hidden">

@@ -1,0 +1,29 @@
+/* line 17, /home/simon/Desktop/Code/work/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.admin-body .sumome-share-client-wrapper {
+  display: none;
+}
+
+/* line 25, /home/simon/Desktop/Code/work/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+article .article__title {
+  position: absolute !important;
+  z-index: 10;
+  color: white;
+  top: 12em !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+  transform: translateY(-50%);
+  padding: 0px 40px;
+}
+
+/* line 38, /home/simon/Desktop/Code/work/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+article .article__title a
+, .article__title a h2 {
+  color: white;
+}
+
+/* line 43, /home/simon/Desktop/Code/work/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.description-about .about-img {
+  text-align: center;
+  margin: 20px;
+}

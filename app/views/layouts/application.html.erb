@@ -35,111 +35,118 @@
       <!-- Google analytics -->
       <script type="text/javascript">
         !function () {
-                        				var analytics = window.analytics = window.analytics || [];
-                        				if (!analytics.initialize)
-                        				if (analytics.invoked)
-                        				window.console && console.error && console.error("Segment snippet included twice.");
-                        				else {
-                        					analytics.invoked = !0;
-                        					analytics.methods = [
-                        						"trackSubmit",
-                        						"trackClick",
-                        						"trackLink",
-                        						"trackForm",
-                        						"pageview",
-                        						"identify",
-                        						"group",
-                        						"track",
-                        						"ready",
-                        						"alias",
-                        						"page",
-                        						"once",
-                        						"off",
-                        						"on"
-                        					];
-                        					analytics.factory = function (t) {
-                        						return function () {
-                        							var e = Array.prototype.slice.call(arguments);
-                        							e.unshift(t);
-                        							analytics.push(e);
-                        							return analytics
-                        						}
-                        					};
-                        					for (var t = 0; t < analytics.methods.length; t++) {
-                        						var e = analytics.methods[t];
-                        						analytics[e] = analytics.factory(e)
-                        					}
-                        					analytics.load = function (t) {
-                        						var e = document.createElement("script");
-                        						e.type = "text/javascript";
-                        						e.async = !0;
-                        						e.src = ("https:" === document.location.protocol
-                        						? "https://"
-                        						: "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-                        						var n = document.getElementsByTagName("script")[0];
-                        						n.parentNode.insertBefore(e, n)
-                        					};
-                        					analytics.SNIPPET_VERSION = "3.0.1";
-                        					analytics.load("PnGBZ4AU8r3ObQ5uuLBykl2AGZnEriem");
-                        					analytics.page()
-                        				}
-                        			}();
+          var analytics = window.analytics = window.analytics || [];
+          if (!analytics.initialize)
+          if (analytics.invoked)
+          window.console && console.error && console.error("Segment snippet included twice.");
+          else {
+          analytics.invoked = !0;
+          analytics.methods = [
+          "trackSubmit",
+          "trackClick",
+          "trackLink",
+          "trackForm",
+          "pageview",
+          "identify",
+          "group",
+          "track",
+          "ready",
+          "alias",
+          "page",
+          "once",
+          "off",
+          "on"
+          ];
+          analytics.factory = function (t) {
+          return function () {
+          	var e = Array.prototype.slice.call(arguments);
+          	e.unshift(t);
+          	analytics.push(e);
+          	return analytics
+          }
+          };
+          for (var t = 0; t < analytics.methods.length; t++) {
+          var e = analytics.methods[t];
+          analytics[e] = analytics.factory(e)
+          }
+          analytics.load = function (t) {
+          var e = document.createElement("script");
+          e.type = "text/javascript";
+          e.async = !0;
+          e.src = ("https:" === document.location.protocol
+          ? "https://"
+          : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+          var n = document.getElementsByTagName("script")[0];
+          n.parentNode.insertBefore(e, n)
+          };
+          analytics.SNIPPET_VERSION = "3.0.1";
+          analytics.load("PnGBZ4AU8r3ObQ5uuLBykl2AGZnEriem");
+          analytics.page()
+          }
+          }();
       </script>
       <!-- Sumome -->
       <script src="//load.sumome.com/" data-sumo-site-id="05c7c1fa06e0605735d7e11bee46ba6b94e324de4d17683792d8c35b3e058b1c" async="async"></script>
       <!-- Inspectlet -->
       <script type="text/javascript" id="inspectletjs">
         window.__insp = window.__insp || [];
-                        			__insp.push(['wid', 1765014167]);
-                        			(function () {
-                        				function __ldinsp() {
-                        					var insp = document.createElement('script');
-                        					insp.type = 'text/javascript';
-                        					insp.async = true;
-                        					insp.id = "inspsync";
-                        					insp.src = ('https:' == document.location.protocol
-                        					? 'https'
-                        					: 'http') + '://cdn.inspectlet.com/inspectlet.js';
-                        					var x = document.getElementsByTagName('script')[0];
-                        					x.parentNode.insertBefore(insp, x);
-                        				};
-                        				document.readyState != "complete"
-                        				? (window.attachEvent
-                        				? window.attachEvent('onload', __ldinsp)
-                        				: window.addEventListener('load', __ldinsp, false))
-                        				: __ldinsp();
+  			__insp.push(['wid', 1765014167]);
+  			(function () {
+  				function __ldinsp() {
+  					var insp = document.createElement('script');
+  					insp.type = 'text/javascript';
+  					insp.async = true;
+  					insp.id = "inspsync";
+  					insp.src = ('https:' == document.location.protocol
+  					? 'https'
+  					: 'http') + '://cdn.inspectlet.com/inspectlet.js';
+  					var x = document.getElementsByTagName('script')[0];
+  					x.parentNode.insertBefore(insp, x);
+  				};
+  				document.readyState != "complete"
+  				? (window.attachEvent
+  				? window.attachEvent('onload', __ldinsp)
+  				: window.addEventListener('load', __ldinsp, false))
+  				: __ldinsp();
 
-                        			})();
+  			})();
       </script>
       <!-- Facebook Conversion Code for Visited GrowthBakery.com -->
       <script>
         (function () {
-                        				var _fbq = window._fbq || (window._fbq = []);
-                        				if (!_fbq.loaded) {
-                        					var fbds = document.createElement('script');
-                        					fbds.async = true;
-                        					fbds.src = '//connect.facebook.net/en_US/fbds.js';
-                        					var s = document.getElementsByTagName('script')[0];
-                        					s.parentNode.insertBefore(fbds, s);
-                        					_fbq.loaded = true;
-                        				}
-                        			})();
-                        			window._fbq = window._fbq || [];
-                        			window._fbq.push([
-                        			'track',
-                        			'6025811922822', {
-                        				'value': '0.00',
-                        				'currency': 'EUR'
-                        			}
-                        			]);
+      		var _fbq = window._fbq || (window._fbq = []);
+      		if (!_fbq.loaded) {
+      			var fbds = document.createElement('script');
+      			fbds.async = true;
+      			fbds.src = '//connect.facebook.net/en_US/fbds.js';
+      			var s = document.getElementsByTagName('script')[0];
+      			s.parentNode.insertBefore(fbds, s);
+      			_fbq.loaded = true;
+      		}
+      	})();
+      	window._fbq = window._fbq || [];
+      	window._fbq.push([
+      	'track',
+      	'6025811922822', {
+      		'value': '0.00',
+      		'currency': 'EUR'
+      	}
+              			]);
       </script>
       <noscript>
         <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6025811922822&amp;cd[value]=0.00&amp;cd[currency]=EUR&amp;noscript=1"/>
       </noscript>
     </head>
     <body class="<%= yield :body_class %>">
-
+      <% flash.each do |message_type, message| %>
+        <div class="notification pos-left pos-top col-sm-4 col-md-3" data-animation="from-top" data-autoshow="500" data-autohide="3500">
+          <div class="boxed boxed--border border--round box-shadow">
+            <%= message %>
+          </div>
+        </div>
+      <% end %>
       <%= yield %>
-      <%=yield :js %>
+      
+      <%= yield :js %>
     </body>
   </html>

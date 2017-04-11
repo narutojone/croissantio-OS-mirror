@@ -38,3 +38,22 @@
   function loadArticle() {
     $(".trumbowyg-editor").html($("#article_body").val())
   }
+
+function toggleMenu(){
+  $('a.hamburger-toggle').on("click", function(){
+    console.log("click")
+    var candidate     = $(this),
+    data          = candidate.attr('data-toggle-class'),
+    dataArray     = [],
+    toggleClass   = '',
+    toggleElement = '';
+    dataArray = data.split(";");
+
+    if(dataArray.length === 2){
+      toggleElement = dataArray[0];
+      toggleClass   = dataArray[1];
+      candidate.toggleClass('toggled-class');
+      $(toggleElement).toggleClass(toggleClass);
+      });
+  })
+}
