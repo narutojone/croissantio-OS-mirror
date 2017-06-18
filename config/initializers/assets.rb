@@ -7,5 +7,5 @@ Rails.application.config.assets.compress = true
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
-Rails.application.config.assets.precompile << Proc.new { |path, fn| fn =~ /vendor\/assets/ }
-Rails.application.config.assets.precompile << Proc.new { |path, fn| fn =~ /app\/assets/  }
+Rails.application.config.assets.precompile << proc { |_path, fn| fn =~ /vendor\/assets/ }
+Rails.application.config.assets.precompile << proc { |_path, fn| fn =~ /app\/assets/ }

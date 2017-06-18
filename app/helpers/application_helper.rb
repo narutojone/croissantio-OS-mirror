@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module ApplicationHelper
   def table_hidden?
     'col-hidden' if @action == 'Edit'

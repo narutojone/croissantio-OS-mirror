@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  before_action :setup, only: [:show, :edit, :update, :destroy]
+  before_action :setup, only: %i[show edit update destroy]
   before_action :logged_in_user?, except: [:show]
   before_action :is_admin?, except: [:show]
 
@@ -9,17 +9,15 @@ class ResourcesController < ApplicationController
     @resource = Resource.new
   end
 
-  def show
-
-  end
+  def show; end
 
   def create
-    categories = params["resource"]["categories"].reject{|r| r.empty? }
+    categories = params['resource']['categories'].reject(&:empty?)
     @resources = Resource.all
     @resource = Resource.new(resource_params)
     if @resource.save
-      @resource.update_attributes(category_name: categories.map{|c| Category.find(c).name.capitalize}.join(", "))
-      categories.each {|c| ResourceCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
+      @resource.update_attributes(category_name: categories.map { |c| Category.find(c).name.capitalize }.join(', '))
+      categories.each { |c| ResourceCategory.create!(resource_id: @resource.id, category_id: c.to_i) }
       redirect_to resources_path
     else
       flash[:danger] = 'Something went wrong!'
@@ -33,12 +31,12 @@ class ResourcesController < ApplicationController
   end
 
   def update
-    categories = params["resource"]["categories"].reject{|r| r.empty? }
+    categories = params['resource']['categories'].reject(&:empty?)
     @action = 'Edit'
     if @resource.update(resource_params)
       @resource.categories.destroy_all
-      @resource.update_attributes(category_name: categories.map{|c| Category.find(c).name.capitalize}.join(", "))
-      categories.each {|c| ResourceCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
+      @resource.update_attributes(category_name: categories.map { |c| Category.find(c).name.capitalize }.join(', '))
+      categories.each { |c| ResourceCategory.create!(resource_id: @resource.id, category_id: c.to_i) }
       flash[:success] = 'Resource succesfully updated!'
       render :index
     else

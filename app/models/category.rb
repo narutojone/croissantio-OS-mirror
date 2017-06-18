@@ -10,7 +10,7 @@ class Category < ActiveRecord::Base
 
   # To display it pretty in selector on /search page
   def display_name
-    name.size > 3 ? name.split.map(&:capitalize)*' ' : name.upcase
+    name.size > 3 ? name.split.map(&:capitalize) * ' ' : name.upcase
   end
 
   has_many :resource_categories, dependent: :delete_all

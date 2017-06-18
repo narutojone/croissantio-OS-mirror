@@ -1,9 +1,8 @@
 class CategoriesController < ApplicationController
   include CategoriesHelper
-  before_action :setup, only: [:show, :edit, :update, :destroy]
+  before_action :setup, only: %i[show edit update destroy]
   before_action :logged_in_user?, except: [:show]
   before_action :is_admin?, except: [:show]
-
 
   def index
     @action = 'New'

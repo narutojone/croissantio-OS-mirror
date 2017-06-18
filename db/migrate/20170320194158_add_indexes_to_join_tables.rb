@@ -5,6 +5,5 @@ class AddIndexesToJoinTables < ActiveRecord::Migration[5.1]
 
     add_index(:resource_categories, :category_id)
     add_index(:resource_categories, :resource_id)
-
   end
 end

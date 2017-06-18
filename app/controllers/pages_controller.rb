@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class PagesController < ApplicationController
   require 'active_support/core_ext/integer/inflections'
   before_action :logged_in_user?, only: [:admin]
@@ -11,7 +12,7 @@ class PagesController < ApplicationController
   def about; end
 
   def thanks
-    @newsletter = Article.includes(:topics).where(topics: {name: 'newsletter'}, posted: true).first
+    @newsletter = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true).first
   end
 
   def services; end
@@ -23,21 +24,21 @@ class PagesController < ApplicationController
   end
 
   def blog
-    @articles = Article.includes(:topics).where.not(topics: {name: 'newsletter'}).where(posted: true)
+    @articles = Article.includes(:topics).where.not(topics: { name: 'newsletter' }).where(posted: true)
   end
 
   def newsletter
-    @newsletters = Article.includes(:topics).where(topics: {name: 'newsletter'}, posted: true)
+    @newsletters = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true)
   end
 
   def search
-    @topcategories = Category.joins(:resources).group("categories.id").order("count(resources.id) DESC").limit(8)
-    @selected_option = { resource_type: '', order: '', range: '', upper: '', lower: '', category: "" }
+    @topcategories = Category.joins(:resources).group('categories.id').order('count(resources.id) DESC').limit(8)
+    @selected_option = { resource_type: '', order: '', range: '', upper: '', lower: '', category: '' }
     @resources = []
     if params[:id] && !params['/resources']
       category = Category.find_by(slug: params[:id].parameterize)
       @resources = Resource.includes(:categories).where(categories: { id: category.id })
-      @status = "hidden"
+      @status = 'hidden'
       respond_to do |format|
         format.html
         format.json { render json: @resources }
@@ -47,8 +48,9 @@ class PagesController < ApplicationController
       category = params['/resources'][1]
       order = params['/resources'][2]
       range = params['/resources'][3]
-      if range == "All Time"
-        date, range = [nil, nil], [nil, nil]
+      if range == 'All Time'
+        date = [nil, nil]
+        range = [nil, nil]
       else
         date = range.split('-').collect(&:to_datetime)
         range = date[0]..date[1]
@@ -56,12 +58,12 @@ class PagesController < ApplicationController
       @selected_option = { category: category, upper: date[0].to_f * 1000, lower: date[1].to_f * 1000, resource_type: type, order: order, range: params['/resources'][3] }
       @resources = Resource.includes(:categories).all
       @resources = @resources.where(date: range) if date != [nil, nil]
-      @resources = @resources.where(resource_type: type.downcase) if type != ""
-      @resources = @resources.where(categories: { slug: category.gsub(" ","-") }) if category != ""
+      @resources = @resources.where(resource_type: type.downcase) if type != ''
+      @resources = @resources.where(categories: { slug: category.tr(' ', '-') }) if category != ''
       @resources = @resources.order(order)
-      @status = "hidden"
+      @status = 'hidden'
     else
-      @status = ""
+      @status = ''
       @resource = Resource.new
     end
   end

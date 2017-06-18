@@ -10,7 +10,7 @@ class Topic < ActiveRecord::Base
 
   # To display it pretty in selector on /search page
   def display_name
-    name.split.map(&:capitalize)*' '
+    name.split.map(&:capitalize) * ' '
   end
 
   has_many :article_topics, dependent: :delete_all
