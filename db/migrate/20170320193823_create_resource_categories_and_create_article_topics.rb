@@ -1,4 +1,4 @@
-class CreateResourceCategoriesAndCreateArticleTopics < ActiveRecord::Migration
+class CreateResourceCategoriesAndCreateArticleTopics < ActiveRecord::Migration[5.1]
   def change
     create_table :resource_categories do |t|
       t.integer :resource_id, index: true

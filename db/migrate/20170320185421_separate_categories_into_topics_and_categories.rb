@@ -1,4 +1,4 @@
-class SeparateCategoriesIntoTopicsAndCategories < ActiveRecord::Migration
+class SeparateCategoriesIntoTopicsAndCategories < ActiveRecord::Migration[5.1]
   def change
     drop_table :resources_categories
     remove_column :articles, :category_id

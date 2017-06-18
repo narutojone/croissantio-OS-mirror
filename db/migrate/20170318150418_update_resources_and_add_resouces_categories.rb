@@ -1,4 +1,4 @@
-class UpdateResourcesAndAddResoucesCategories < ActiveRecord::Migration
+class UpdateResourcesAndAddResoucesCategories < ActiveRecord::Migration[5.1]
   def change
     remove_column :resources, :category_id
     create_table :resources_categories do |t|

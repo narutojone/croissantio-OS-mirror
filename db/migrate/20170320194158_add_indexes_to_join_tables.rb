@@ -1,4 +1,4 @@
-class AddIndexesToJoinTables < ActiveRecord::Migration
+class AddIndexesToJoinTables < ActiveRecord::Migration[5.1]
   def change
     add_index(:article_topics, :article_id)
     add_index(:article_topics, :topic_id)
