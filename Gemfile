@@ -27,6 +27,7 @@ gem 'sqlite3', '~> 1.3.13', group: %i[development test]
 gem 'turbolinks', '~> 5.0.1'
 gem 'uglifier', '~> 3.2.0'
 gem 'unicorn', '~> 5.3.0'
+gem 'meta-tags'
 
 group :production do
   gem 'rails_12factor', '~> 0.0'
