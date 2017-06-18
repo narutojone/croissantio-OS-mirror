@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 class PagesController < ApplicationController
   require 'active_support/core_ext/integer/inflections'
-  before_filter :logged_in_user?, only: [:admin]
-  before_filter :is_admin?, only: [:admin]
+  before_action :logged_in_user?, only: [:admin]
+  before_action :is_admin?, only: [:admin]
 
   def home; end
 

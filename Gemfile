@@ -26,6 +26,7 @@ gem "sitemap_generator", "~> 5.3.1"
 gem "unicorn", "~> 5.3.0"
 gem "mail_form"
 gem "rubocop", '~> 0.49.1'
+gem "algoliasearch-rails"
 
 group :production do
   gem "rails_12factor", "~> 0.0"

@@ -20,7 +20,7 @@ module ApplicationHelper
     end
   end
 
-  # before_filter for authorization in controller
+  # before_action for authorization in controller
   def is_admin?
     unless current_user.admin?
       flash[:danger] = 'Only admins can do that'

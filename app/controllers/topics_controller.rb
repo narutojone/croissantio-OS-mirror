@@ -1,8 +1,8 @@
 class TopicsController < ApplicationController
   include TopicsHelper
   before_action :setup, only: [:show, :edit, :update, :destroy]
-  before_filter :logged_in_user?, except: [:show]
-  before_filter :is_admin?, except: [:show]
+  before_action :logged_in_user?, except: [:show]
+  before_action :is_admin?, except: [:show]
 
 
   def index
