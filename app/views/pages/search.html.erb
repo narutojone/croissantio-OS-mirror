@@ -23,15 +23,15 @@
           <div class="col-md-10 col-md-offset-1">
             <div class="col-md-3 col-sm-12 select-search clearfix">
               <p class="inline">Search</p>
-              <%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {:include_blank => 'All' }, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
+              <%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {include_blank: 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
             </div>
             <div class="col-md-2 col-sm-12 select-search  clearfix">
               <p class="inline">From</p>
-              <%= f.select params[:category_id], options_from_collection_for_select(Category.all, :name, :display_name, @selected_option[:category]), {:include_blank => 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline", id: "category_filter"} %>
+              <%= f.select params[:category_id], options_from_collection_for_select(Category.all, :name, :display_name, @selected_option[:category]), {include_blank: 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline", id: "category_filter"} %>
             </div>
             <div class="col-md-3 col-sm-12 select-search  clearfix">
               <p class="inline">By</p>
-              <%= f.select params[:order], options_for_select([ ["Grade", "grade DESC"],["Oldest first", "date ASC"],["Newest first", "date DESC"]], selected: @selected_option[:order]), {}, {:class => "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
+              <%= f.select params[:order], options_for_select([ ["Grade", "grade DESC"],["Oldest first", "date ASC"],["Newest first", "date DESC"]], selected: @selected_option[:order]), {}, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
             </div>
             <div class="col-md-4 col-sm-12 select-search  clearfix">
               <p class="inline">In</p>

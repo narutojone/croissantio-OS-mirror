@@ -6,6 +6,6 @@ class Resource < ActiveRecord::Base
   # Save type as downcase
   before_save { self.resource_type = resource_type.downcase }
 
-  has_many :resource_categories, :dependent => :delete_all
+  has_many :resource_categories, dependent: :delete_all
   has_many :categories, through: :resource_categories
 end

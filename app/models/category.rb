@@ -13,6 +13,6 @@ class Category < ActiveRecord::Base
     name.size > 3 ? name.split.map(&:capitalize)*' ' : name.upcase
   end
 
-  has_many :resource_categories, :dependent => :delete_all
+  has_many :resource_categories, dependent: :delete_all
   has_many :resources, through: :resource_categories
 end

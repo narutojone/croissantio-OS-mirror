@@ -18,7 +18,7 @@ class ResourcesController < ApplicationController
     @resources = Resource.all
     @resource = Resource.new(resource_params)
     if @resource.save
-      @resource.update_attributes(:category_name => categories.map{|c| Category.find(c).name.capitalize}.join(", "))
+      @resource.update_attributes(category_name: categories.map{|c| Category.find(c).name.capitalize}.join(", "))
       categories.each {|c| ResourceCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
       redirect_to resources_path
     else
@@ -37,7 +37,7 @@ class ResourcesController < ApplicationController
     @action = 'Edit'
     if @resource.update(resource_params)
       @resource.categories.destroy_all
-      @resource.update_attributes(:category_name => categories.map{|c| Category.find(c).name.capitalize}.join(", "))
+      @resource.update_attributes(category_name: categories.map{|c| Category.find(c).name.capitalize}.join(", "))
       categories.each {|c| ResourceCategory.create!(resource_id: @resource.id, category_id: c.to_i)}
       flash[:success] = 'Resource succesfully updated!'
       render :index

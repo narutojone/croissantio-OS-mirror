@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     @article = Article.new(article_params)
     if @article.save
-      @article.update_attributes(:user_id => current_user.id, :topic_name => topics.map{|c| Topic.find(c).name.capitalize}.join(", "))
+      @article.update_attributes(user_id: current_user.id, topic_name: topics.map{|c| Topic.find(c).name.capitalize}.join(", "))
       topics.each {|c| ArticleTopic.create!(article_id: @article.id, topic_id: c.to_i)}
       if @article.posted?
         flash[:success] = "Article succesfully posted!"
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     topics = params["article"]["topics"].reject{|r| r.empty? }
     if @article.update(article_params)
       @article.topics.destroy_all
-      @article.update_attributes(:topic_name => topics.map{|c| Topic.find(c).name.capitalize}.join(", "))
+      @article.update_attributes(topic_name: topics.map{|c| Topic.find(c).name.capitalize}.join(", "))
       topics.each {|c| ArticleTopic.create!(article_id: @article.id, topic_id: c.to_i)}
       flash[:success] = "Article succesfully updated!"
       render :index

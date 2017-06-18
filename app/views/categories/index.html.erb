@@ -45,12 +45,12 @@
                       </td>
                       <td><i style="font-size: 40px;" class="icon--lg <%= category.icon  %>"></i></td>
                       <td>
-                        <%= link_to(edit_category_path(category), :class => "edit-link") do %>
+                        <%= link_to(edit_category_path(category), class: "edit-link") do %>
                           <i class="fa fa-pencil"></i>
                           edit
                                             <% end %>
                         |
-                                            <%= link_to category_path(category), :method => "delete", :data => {:confirm => 'Are you sure?'} do %>
+                                            <%= link_to category_path(category), method: "delete", data: {confirm: 'Are you sure?'} do %>
                           <i class="fa fa-trash"></i>
                           delete
                                             <% end %>
@@ -70,10 +70,10 @@
                 <%= @action %>
                 Category
                                 <span class="<%= form_hidden? %>">|</span>
-                <%= link_to("All Categories", categories_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?}", :data => {:confirm => 'Your changes will not be saved - proceed?'}) %></h2>
+                <%= link_to("All Categories", categories_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?}", data: {confirm: 'Your changes will not be saved - proceed?'}) %></h2>
               <ul class="nav navbar-right panel_toolbox">
                 <li>
-                  <%= link_to "#", :class => "change-locale" do %>
+                  <%= link_to "#", class: "change-locale" do %>
                     <div class="locale locale-menu <%= I18n.locale %>"></div>
                   <% end %>
                 </li>
@@ -89,18 +89,18 @@
             </div>
             <div class="x_content">
               <br>
-              <%= form_for(@category, :html => { :class => "form-horizontal form-label-left", :id => "demo-form2", :multipart => true }) do |f| %>
+              <%= form_for(@category, html: { class: "form-horizontal form-label-left", id: "demo-form2", multipart: true }) do |f| %>
                 <%= render "shared/error_messages", object: @category %>
                 <div class="form-group locale-field">
                   <%= f.label :name, "Category Name", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                    <%= f.text_field :name, :class => "form-control col-md-7 col-xs-12" %>
+                    <%= f.text_field :name, class: "form-control col-md-7 col-xs-12" %>
                   </div>
                 </div>
                 <div class="form-group locale-field">
                   <%= f.label :icon, "Icon", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                    <%= f.text_field :icon, :class => "form-control col-md-7 col-xs-12", placeholder: "icon-Add-File" %>
+                    <%= f.text_field :icon, class: "form-control col-md-7 col-xs-12", placeholder: "icon-Add-File" %>
                   </div>
                 </div>
                 <div class="form-group">

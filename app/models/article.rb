@@ -9,6 +9,6 @@ class Article < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  has_many :article_topics, :dependent => :delete_all
+  has_many :article_topics, dependent: :delete_all
   has_many :topics, through: :article_topics
 end

@@ -13,6 +13,6 @@ class Topic < ActiveRecord::Base
     name.split.map(&:capitalize)*' '
   end
 
-  has_many :article_topics, :dependent => :delete_all
+  has_many :article_topics, dependent: :delete_all
   has_many :articles, through: :article_topics
 end

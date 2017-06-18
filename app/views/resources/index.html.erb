@@ -57,12 +57,12 @@
                                         <td><%= resource.category_name %></td>
                                         <td><%= resource.resource_type %></td>
                                         <td>
-                                            <%= link_to(edit_resource_path(resource), :class => "edit-link") do %>
+                                            <%= link_to(edit_resource_path(resource), class: "edit-link") do %>
                                             <i class="fa fa-pencil"></i>
                                             edit
                                             <% end %>
                                             |
-                                            <%= link_to resource_path(resource), :method => "delete", :data => {:confirm => 'Are you sure?'} do %>
+                                            <%= link_to resource_path(resource), method: "delete", data: {confirm: 'Are you sure?'} do %>
                                             <i class="fa fa-trash"></i>
                                             delete
                                             <% end %>
@@ -82,10 +82,10 @@
                                 <%= @action %>
                                 Resource
                                 <span class="<%= form_hidden? %>">|</span>
-                                <%= link_to("All Resources", resources_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?}", :data => {:confirm => 'Your changes will not be saved - proceed?'}) %></h2>
+                                <%= link_to("All Resources", resources_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?}", data: {confirm: 'Your changes will not be saved - proceed?'}) %></h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li>
-                                    <%= link_to "#", :class => "change-locale" do %>
+                                    <%= link_to "#", class: "change-locale" do %>
                                     <div class="locale locale-menu <%= I18n.locale %>"></div>
                                     <% end %>
                                 </li>
@@ -101,54 +101,54 @@
                         </div>
                         <div class="x_content">
                             <br>
-                            <%= form_for(@resource, :html => { :class => "form-horizontal form-label-left", :id => "demo-form2", :multipart => true }) do |f| %>
+                            <%= form_for(@resource, html: { class: "form-horizontal form-label-left", id: "demo-form2", multipart: true }) do |f| %>
                             <%= render "shared/error_messages", object: @resource %>
                             <div class="form-group locale-field">
                                 <%= f.label :title, "Title", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.text_field :title, :class => "form-control col-md-7 col-xs-12" %>
+                                    <%= f.text_field :title, class: "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group locale-field">
                                 <%= f.label :description, "Description", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.text_area :description, :class => "form-control col-md-7 col-xs-12" %>
+                                    <%= f.text_area :description, class: "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group locale-field">
                                 <%= f.label :slug, "URL", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.text_field :slug, :class => "form-control col-md-7 col-xs-12", placeholder: "my-cool-resource" %>
+                                    <%= f.text_field :slug, class: "form-control col-md-7 col-xs-12", placeholder: "my-cool-resource" %>
                                 </div>
                             </div>
                             <div class="form-group locale-field">
                                 <%= f.label :link, "Link", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.text_field :link, :class => "form-control col-md-7 col-xs-12" %>
+                                    <%= f.text_field :link, class: "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group locale-field">
                                 <%= f.label :website, "Website", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.text_field :website, :class => "form-control col-md-7 col-xs-12" %>
+                                    <%= f.text_field :website, class: "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group locale-field">
                                 <%= f.label :author, "Author", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.text_field :author, :class => "form-control col-md-7 col-xs-12" %>
+                                    <%= f.text_field :author, class: "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group locale-field">
                                 <%= f.label :grade, "Grade", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.number_field :grade, :class => "form-control col-md-7 col-xs-12" %>
+                                    <%= f.number_field :grade, class: "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group locale-field">
                                 <%= f.label :date, "Date", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.date_field :date, :class => "form-control col-md-7 col-xs-12" %>
+                                    <%= f.date_field :date, class: "form-control col-md-7 col-xs-12" %>
                                 </div>
                             </div>
                             <div class="form-group locale-field">
@@ -160,7 +160,7 @@
                             <div class="form-group locale-field">
                                 <%= f.label :resource_type, "Type", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <%= f.select :resource_type, options_for_select(["article", "video", "presentation", "link"], selected: @resource.resource_type),{}, {:class => "form-control col-md-7 col-xs-12"} %>
+                                    <%= f.select :resource_type, options_for_select(["article", "video", "presentation", "link"], selected: @resource.resource_type),{}, {class: "form-control col-md-7 col-xs-12"} %>
                                 </div>
                             </div>
                             <div class="form-group">
