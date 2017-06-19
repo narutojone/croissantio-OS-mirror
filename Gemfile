@@ -25,7 +25,6 @@ gem 'sass-rails', '~> 5.0.6'
 gem 'sdoc', '~> 0.4', group: :doc
 gem 'sitemap_generator', '~> 5.3.1'
 gem 'sqlite3', '~> 1.3.13', group: %i[development test]
-gem 'turbolinks', '~> 5.0.1'
 gem 'uglifier', '~> 3.2.0'
 gem 'unicorn', '~> 5.3.0'
 

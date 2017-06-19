@@ -24,6 +24,9 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
+  
+  #Compression
+    config.middleware.use Rack::Deflater
 
   config.serve_static_assets = true
   config.assets.compile = true
