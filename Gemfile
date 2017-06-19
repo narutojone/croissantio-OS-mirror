@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.7.0'
 gem 'jquery-rails', '~> 4.3.1'
 gem 'mail_form'
 gem 'mailchimp-api', '~> 2.0', require: 'mailchimp'
+gem 'meta-tags'
 gem 'mini_magick', '~> 4.7.1'
 gem 'pg', '~> 0.21.0', group: :production
 gem 'pry', '~> 0.10'
@@ -27,7 +28,6 @@ gem 'sqlite3', '~> 1.3.13', group: %i[development test]
 gem 'turbolinks', '~> 5.0.1'
 gem 'uglifier', '~> 3.2.0'
 gem 'unicorn', '~> 5.3.0'
-gem 'meta-tags'
 
 group :production do
   gem 'rails_12factor', '~> 0.0'
