@@ -54,6 +54,6 @@ function toggleMenu(){
       toggleClass   = dataArray[1];
       candidate.toggleClass('toggled-class');
       $(toggleElement).toggleClass(toggleClass);
-      });
-  })
+      };
+  });
 }

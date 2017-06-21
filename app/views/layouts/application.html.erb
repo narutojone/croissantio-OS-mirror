@@ -38,16 +38,6 @@
       <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
       <link rel="shortcut icon" type="image/x-icon" href="<%= asset_path('favicon.ico') %>"/>
       <%= csrf_meta_tags %>
-    </head>
-    <body class="<%= yield :body_class %>">
-      <% flash.each do |message_type, message| %>
-        <div class="notification pos-left pos-top col-sm-4 col-md-3" data-animation="from-top" data-autoshow="500" data-autohide="3500">
-          <div class="boxed boxed--border border--round box-shadow">
-            <%= message %>
-          </div>
-        </div>
-      <% end %>
-      <%= yield %>
       <%= yield :css %>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <!-- Optimizely -->
@@ -157,6 +147,17 @@
       <noscript>
         <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6025811922822&amp;cd[value]=0.00&amp;cd[currency]=EUR&amp;noscript=1"/>
       </noscript>
+    </head>
+    <body class="<%= yield :body_class %>">
+      <% flash.each do |message_type, message| %>
+        <div class="notification pos-left pos-top col-sm-4 col-md-3" data-animation="from-top" data-autoshow="500" data-autohide="3500">
+          <div class="boxed boxed--border border--round box-shadow">
+            <%= message %>
+          </div>
+        </div>
+      <% end %>
+      <%= yield %>
+      
       <%= yield :js %>
     </body>
   </html>
