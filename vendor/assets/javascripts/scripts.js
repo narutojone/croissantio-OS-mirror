@@ -1245,9 +1245,9 @@ mr = (function (mr, $, window, document){
         $('.masonry').each(function(){
             var masonry = $(this).find('.masonry__container');
 
-            masonry.on('layoutComplete',function(){
+           /* masonry.on('layoutComplete',function(){
                 masonry.addClass('masonry--active');
-            });
+            }); */
 
             masonry.isotope({
               itemSelector: '.masonry__item',
