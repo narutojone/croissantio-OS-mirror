@@ -57,3 +57,23 @@ function toggleMenu(){
       };
   });
 }
+
+function trackFieldChanges() {
+  var originalValue = $("#article_body").val();
+  var changedValue = $("#article_body").val();
+  $(".trumbowyg-editor").on('DOMSubtreeModified', function() {
+    changedValue = $(".trumbowyg-editor").html();
+  });
+  $('.js--check-field').on('click', function() {
+    if (originalValue == changedValue) {
+      return true 
+    } else {
+      var bool = confirm('Your changes will not be saved - proceed?');
+      if (bool == true) {
+        return true
+      } else {
+        return false
+      }
+    }
+  })
+}

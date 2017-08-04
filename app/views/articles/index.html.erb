@@ -94,7 +94,7 @@
                                 <%= @action %>
                                 Article
                                 <span class="<%= form_hidden? %>">|</span>
-                                <%= link_to("All Articles", articles_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?}", data: {confirm: 'Your changes will not be saved - proceed?'}) %></h2>
+                                <%= link_to("All Articles", articles_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?} js--check-field") %></h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li>
                                     <%= link_to "#", class: "change-locale" do %>
@@ -189,7 +189,8 @@
     <script>
         $('#editor2').trumbowyg();
         getText();
-        loadArticle()
+        loadArticle();
+        trackFieldChanges();
     </script>
     <% end %>
 </body>
