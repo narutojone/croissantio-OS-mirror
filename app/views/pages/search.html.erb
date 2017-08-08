@@ -93,7 +93,7 @@
                     <%= link_to resource.title, resource.link  + "?utm_campaign=TGBSearch&utm_medium=referral&utm_source=GrowthBakery.com" %>
                   </h4>
                   <span>
-                    <strong><%= resource.date == 'No Date' ? resource.date : resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
+                    <strong><%= resource.date ? 'No Date' : resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") %>
                       |
 											<%= resource.author %>
                       |
