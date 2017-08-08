@@ -23,7 +23,7 @@ csv.each do |row|
   link = row[:link]
   description = 'no description'
   website = row[:website_url]
-  Resource.create!(description: description, category_name: category, title: title, author: author, grade: grade.to_i, resource_type: resource_type, link: link, website: website, date: DateTime.parse(date))
+  Resource.create!(description: description, category_name: category, title: title, author: author, grade: grade.to_i, resource_type: resource_type, link: link, website: website, date: date ? DateTime.parse(date) : 'No Date')
   @resource = Resource.last
   category = [category]
   category = category[0].split(',').collect(&:strip) if category[0].include?(',')
