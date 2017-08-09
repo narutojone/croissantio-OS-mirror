@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/thanks' => 'pages#thanks'
   get '/search' => 'pages#search'
   get '/contact' => 'pages#contact'
+  get '/marketing-101-for-B2B-SaaS' => 'pages#marketing_101', as: 'marketing_course'
+  get '/courses' => 'pages#all_courses', as: 'all_courses'
 
   # Redirect the errors
   %w[404 500].each do |code|

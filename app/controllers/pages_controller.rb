@@ -19,6 +19,10 @@ class PagesController < ApplicationController
 
   def about; end
 
+  def marketing_101; end
+
+  def all_courses; end
+
   def contact
     @contactform = Contactform.new
   end

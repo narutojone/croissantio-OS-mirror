@@ -44,6 +44,100 @@ article .article__title a
     text-align: center;
     margin: 20px;
 }
+//Course page
+.row._offset {
+    margin-top: 4rem;
+}
+.logo_bold {
+    a {
+        font-size: 1.7rem;
+        line-height: 3.3rem;
+        color: #fff;
+    }
+}
+    .bar-1 .menu-horizontal>li>.dropdown__trigger, .bar-1 .menu-horizontal>li>.link_color_white {
+        opacity: 1;
+        text-transform: capitalize;
+        font-size: 1.2em;
+        font-weight: 400;
+        color: white;
+        border: none;
+        height: 0;
+        &:hover {
+            opacity: 0.5;
+        }
+        span{ 
+            font-size: 0.7em;
+            position: relative;
+            top: -1px;
+        }
+    }
+.title {
+    &-course, &-desc {
+        color: #fff;
+    }
+    &-course {
+        font-size: 2.5rem;
+        line-height: 3;
+    }
+    &-desc {
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+}
+.info {
+    &._bg_white {
+        background-color: #fff
+    }
+    &__title {
+        letter-spacing: -0.03rem;
+        line-height: 2;
+    }
+    &__par {
+        margin-top: 1.7rem;
+        line-height: 2;
+        &._font_medium {
+            font-family: 'Helvetica';
+            font-size: 1.2rem;
+            color: #000;
+            letter-spacing: -0.03rem;
+        }
+    }
+    &__list {
+        margin-left: 3rem;
+        li {
+            font-family: 'Helvetica';
+            font-size: 1.2rem;
+            color: #000;
+        }
+    }
+    &__image-centered {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.sub-field-offset {
+    margin: 5rem 0 2rem 0;
+}
+.btn--light-green {
+    background-color: #24BD24;
+    line-height: 1;
+    font-size: 1.3rem !important;
+    border: none;
+}
+.res-dropdown {
+    display: none;
+    background-color: white;
+    width: 9rem;
+    position: absolute;
+    top: 4rem;
+    right: 10.9rem;
+    padding: 0.7rem;
+    @media (max-width: 989px) {
+        right: 0;
+        left: 4rem;
+    }
+}
 // -------------- THANKS -----------------------------
 // --------------------------------------------------------------------------------------
 // -------------- OLD STYLE RULES (REPLACED BY STACK THEME) -----------------------------

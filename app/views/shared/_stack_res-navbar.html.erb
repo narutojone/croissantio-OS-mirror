@@ -1,0 +1,64 @@
+<div class="nav-container">
+    <div class="bar bar--sm visible-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 col-sm-2">
+                    <%= link_to root_path, class: "clearfix" do %>
+                      <%= image_tag "logo.png", class: "logo logo-dark", style: "min-width: 230px;" %>
+                        <!-- <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"/> -->
+                        <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png"/> -->
+                  <% end %>
+                </div>
+                <div class="col-xs-9 col-sm-10 text-right">
+                    <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+                        <i class="icon icon--sm stack-interface stack-menu"></i>
+                    </a>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </div>
+    <!--end bar-->
+    <nav id="menu1" class="bar bar--sm bar-1 hidden-xs hiddem-sm ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-2 hidden-xs">
+                    <div class="bar__module logo_bold">
+					    <%= link_to "The Growth Bakery", root_path %>
+                    </div>
+                    <!--end module-->
+                </div>
+                <div class="col-md-6 col-sm-12 text-right text-right-xs text-right-sm">
+                    <div class="bar__module">
+                        <ul class="menu-horizontal text-left resources__links">
+                          <li>
+                            <%= link_to "Search", search_path, class: 'link_color_white' %>
+                          </li>
+                          <li>
+                            <button class="js--res-dropdown link_color_white">
+															Resources
+															<span><i class="fa fa-chevron-down" aria-hidden="true"></i><span>
+														</button>
+                          </li>
+														<div class="res-dropdown">
+															<%= link_to "Blog", blog_path %>
+															<%= link_to "Newsletter", newsletter_path %>
+															<%= link_to "Courses", all_courses_path %>
+													 </div>
+                          <li>
+                           <%= link_to "Services", services_path, class: 'link_color_white' %>
+                          </li>
+                          <li >
+                    	      <%= link_to "About", about_path, class: 'link_color_white' %>
+                           </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </nav>
+    <!--end bar-->
+</div>
