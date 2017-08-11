@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/newsletter' => 'pages#newsletter'
   get '/about' => 'pages#about'
   get '/thanks' => 'pages#thanks'
+  get '/thanks-marketing-101-B2B-SaaS' => 'pages#thanks_marketing_101'
+  get '/thanks-30-min-call' => 'pages#thanks_call'
   get '/search' => 'pages#search'
   get '/contact' => 'pages#contact'
   get '/marketing-101-for-B2B-SaaS' => 'pages#marketing_101', as: 'marketing_course'
