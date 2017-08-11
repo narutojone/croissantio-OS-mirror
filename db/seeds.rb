@@ -8,22 +8,15 @@ require 'csv'
 csv = CSV.read(Rails.root.join('db', 'file.csv'), headers: true, header_converters: :symbol)
 
 csv.each do |row|
-  next if row[:facebook_ads].blank?
-  category = row[:facebook_ads]
-  Category.create!(name: category, icon: '')
-end
-
-csv.each do |row|
   title = row[:title]
   author = row[:author]
   category = row[:category]
-  grade = row[:grade]
   resource_type = row[:type]
   date = row[:date]
   link = row[:link]
   description = 'no description'
   website = row[:website_url]
-  Resource.create!(description: description, category_name: category, title: title, author: author, grade: grade.to_i, resource_type: resource_type ? resource_type : 'Undefined', link: link, website: website, date: date ? DateTime.parse(date) : 'No Date')
+  Resource.create!(description: description, category_name: category, title: title, author: author, resource_type: resource_type ? resource_type : 'Undefined', link: link, website: website, date: date && DateTime.parse(date))
   @resource = Resource.last
   category = [category]
   category = category[0].split(',').collect(&:strip) if category[0].include?(',')

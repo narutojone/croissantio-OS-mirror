@@ -88,14 +88,11 @@ function addResourcesToList(array, live = false){
     html += "							<a href=\"" + link + "?utm_campaign=TGBSearch&utm_medium=referral&utm_source=GrowthBakery.com" + "\">" + title + "<\/a>";
     html += "					<\/h4>";
     html += "							<span>";
-    html += "								<strong>" + moment(date).format('MMMM Do YYYY') + "";
+    html += "								<strong>" + (date ? moment(date).format('MMMM Do YYYY') : "No Date") + "";
     html += "									|";
     html += "									" + author + "";
     html += "									|";
     html += "									" + capitalizeFirstLetter(resource_type) + "";
-    html += "									|";
-    html += "									" + grade + "";
-    html += "									stars";
     html += "									|";
     html += "									" + categories + "";
     html += "								<\/strong>";
