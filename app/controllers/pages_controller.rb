@@ -16,11 +16,9 @@ class PagesController < ApplicationController
   end
 
   def thanks_marketing_101
-    @newsletter = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true).last
   end
 
   def thanks_call
-    @newsletter = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true).last
   end
 
   def services; end

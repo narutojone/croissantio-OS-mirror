@@ -26,45 +26,6 @@
 	</div>
 	</section>
 
-	<hr>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12 text-center">
-						<h1 class="text-center">Last Newsletter</h1>
-				</div>
-			</div>
-			<!--end of row-->
-		</div>
-	<section class="space--sm">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-					<div class="masonry masonry-blog-list">
-						<div class="masonry__container">
-							<article>
-								<div class="article__title text-center">
-									<%= link_to articles_show_path(@newsletter) do %>
-									<h2><%= @newsletter.title %></h2>
-									<% end %>
-									<span><%= @newsletter.date.strftime("%B #{@newsletter.date.day.ordinalize} %Y") %>
-										in
-									</span>
-									<span>
-										<% @newsletter.topics.each do |topic| %>
-											<%= link_to topic.name.capitalize, topic_path(topic.name.downcase), class:"f__up f__no-und categories__link js__category-name hidden-xs"%>
-										<% end %>
-									</span>
-								</div>
-								<div class="article__body">
-									<%= link_to articles_show_path(@newsletter) do %>
-									<%= image_tag @newsletter.image.url %>
-									<% end %>
-									<p>
-										<%= @newsletter.description %>
-									</p>
-								</div>
-							</article>
-						</div>
 <script>
 (function () {
 	var _fbq = window._fbq || (window._fbq = []);
