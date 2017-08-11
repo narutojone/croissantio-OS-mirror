@@ -127,8 +127,10 @@ article .article__title a
 .btn--light-green {
     background-color: #24BD24;
     line-height: 1;
-    font-size: 1.3rem !important;
     border: none;
+    @media (min-width: 1200px) {
+        font-size: 1.3rem !important;
+    }
     &._pad {
         padding: 0.5rem;
     }
@@ -149,7 +151,7 @@ article .article__title a
 }
 .table {
     &_border_white_bg_transparent {
-        width: 100%;
+        display: block;
         border: 2px solid #fff;
         th, td {
             border-right: 2px solid #fff;
@@ -161,6 +163,7 @@ article .article__title a
         td {
             text-align: left;
             padding: 1rem 4rem 3rem 4rem;
+            border-top: none;
         }
     }
     &__cell-equal {
@@ -177,7 +180,7 @@ article .article__title a
 }
 ._o-scroll {
     @media (max-width: 768px) {
-        overflow: scroll;
+        overflow-x: scroll;
     }
 }
 // -------------- THANKS -----------------------------
