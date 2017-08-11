@@ -1,0 +1,213 @@
+/* line 17, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.admin-body .sumome-share-client-wrapper {
+  display: none;
+}
+
+/* line 25, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+article .article__title {
+  position: absolute !important;
+  z-index: 10;
+  color: white;
+  top: 12em !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+  transform: translateY(-50%);
+  padding: 0px 40px;
+}
+
+/* line 37, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+article .article__title a
+, .article__title a h2 {
+  color: white;
+}
+
+/* line 43, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.description-about .about-img {
+  text-align: center;
+  margin: 20px;
+}
+
+/* line 48, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.row._offset {
+  margin-top: 4rem;
+}
+
+/* line 52, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.logo_bold a {
+  font-size: 1.7rem;
+  line-height: 3.3rem;
+  color: #fff;
+}
+
+/* line 58, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger, .bar-1 .menu-horizontal > li > .link_color_white {
+  opacity: 1;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: white;
+  border: none;
+  height: 0;
+}
+/* line 66, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger:hover, .bar-1 .menu-horizontal > li > .link_color_white:hover {
+  opacity: 0.5;
+}
+/* line 69, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger span, .bar-1 .menu-horizontal > li > .link_color_white span {
+  font-size: 0.7em;
+  position: relative;
+  top: -1px;
+}
+
+/* line 76, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.title_thin_white {
+  font-weight: 400;
+  color: white;
+  padding: 0.4rem;
+}
+/* line 81, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.title-course, .title-desc {
+  color: #fff;
+}
+/* line 84, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.title-course {
+  font-size: 2.5rem;
+  line-height: 3;
+}
+/* line 88, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.title-desc {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* line 94, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.info._bg_white {
+  background-color: #fff;
+}
+/* line 97, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.info__title {
+  letter-spacing: -0.03rem;
+  line-height: 2;
+}
+/* line 101, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.info__par {
+  margin-top: 1.7rem;
+  line-height: 2;
+}
+/* line 104, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.info__par._font_medium {
+  font-family: 'Helvetica';
+  font-size: 1.2rem;
+  color: #000;
+  letter-spacing: -0.03rem;
+}
+/* line 111, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.info__list {
+  margin-left: 3rem;
+}
+/* line 113, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.info__list li {
+  font-family: 'Helvetica';
+  font-size: 1.2rem;
+  color: #000;
+}
+/* line 119, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.info__image-centered {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 124, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.sub-field-offset {
+  margin: 5rem 0 2rem 0;
+}
+
+/* line 127, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.btn--light-green {
+  background-color: #24BD24;
+  line-height: 1;
+  border: none;
+}
+@media (min-width: 1200px) {
+  /* line 127, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .btn--light-green {
+    font-size: 1.3rem !important;
+  }
+}
+/* line 134, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.btn--light-green._pad {
+  padding: 0.5rem;
+}
+
+/* line 138, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.res-dropdown {
+  z-index: 100;
+  display: none;
+  background-color: white;
+  width: 9rem;
+  position: absolute;
+  top: 4rem;
+  right: 10.9rem;
+  padding: 0.7rem;
+}
+@media (max-width: 989px) {
+  /* line 138, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .res-dropdown {
+    right: 0;
+    left: 4rem;
+  }
+}
+
+/* line 153, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.table_border_white_bg_transparent {
+  display: block;
+  border: 2px solid #fff;
+}
+/* line 156, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.table_border_white_bg_transparent th, .table_border_white_bg_transparent td {
+  border-right: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+/* line 163, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.table_border_white_bg_transparent td {
+  text-align: left;
+  padding: 1rem 4rem 3rem 4rem;
+  border-top: none;
+}
+/* line 169, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.table__cell-equal {
+  width: 33.3333333333%;
+  font-size: 1.4rem;
+}
+/* line 173, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.table__main-head {
+  border-bottom: 2px solid #fff;
+  font-size: 1.8rem;
+}
+
+/* line 178, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+._no-pad {
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  /* line 181, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  ._o-scroll {
+    overflow-x: scroll;
+  }
+}
+
+/* line 186, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+h1._one-line {
+  font-size: 2.142857em;
+}
+
+/* line 189, /home/superbialux/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+h2._one-line {
+  font-size: 1.357143em;
+}
