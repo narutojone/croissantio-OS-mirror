@@ -6,11 +6,10 @@
 <% content_for :ogimage, image_path('maxime-salomon.jpg') %>
 <% content_for :body_class, "blue" %>
 <%= content_for :css do %>
-  <%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/pages"  %>
+  <%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/_services"  %>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <% end %>
-<%= render "shared/stack_res-navbar" %>
+<%= render "shared/stack_navbar" %>
 <div class="main-container">
   <section class="text-center _no-pad">
 		<div class="container">
@@ -23,23 +22,50 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
-					<table class="table_border_white_bg_transparent _o-scroll">
+					<table class="table_border_white_bg_transparent _screen_normal">
 						<thead>
-						<tr>
-							<th class="table__main-head" colspan="3">Consulting</th>
-						</tr>
+							<tr>
+								<th class="table__main-head" colspan="3">Consulting</th>
+							</tr>
 						</thead>
 						 <tbody>
-						<tr>
-							<th class="table__cell-equal">Growth</th>
-							<th class="table__cell-equal">Analytics</th>
-							<th class="table__cell-equal">Customer Data Automation</th>
-						</tr>
-						<tr>
-							<td valign="top" class="table__cell-equal">I help companies with customer acquisition by implementing growth processes, testing new acquisition channels and optimizing them.</td>
-							<td valign="top" class="table__cell-equal">I help companies understand their customers by defining the metrics that matter for their business and implementing user oriented analytics tools like Google Analytics, Amplitude, Hotjar, etc.</td>
-							<td valign="top" class="table__cell-equal">I help companies automate their customer data management by implementing tech driven strategies using tools like Clearbit & Hull.</td>
-						</tr>
+							<tr>
+								<th class="table__cell-equal">Growth</th>
+								<th class="table__cell-equal">Analytics</th>
+								<th class="table__cell-equal">Customer Data Automation</th>
+							</tr>
+							<tr>
+								<td valign="top" class="table__cell-equal">I help companies with customer acquisition by implementing growth processes, testing new acquisition channels and optimizing them.</td>
+								<td valign="top" class="table__cell-equal">I help companies understand their customers by defining the metrics that matter for their business and implementing user oriented analytics tools like Google Analytics, Amplitude, Hotjar, etc.</td>
+								<td valign="top" class="table__cell-equal">I help companies automate their customer data management by implementing tech driven strategies using tools like Clearbit & Hull.</td>
+							</tr>
+						 <tbody>
+					</table>
+					<table class="table_border_white_bg_transparent _screen_mobile">
+						<thead>
+							<tr>
+								<th class="table__main-head" colspan="1">Consulting</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="table__cell-equal">Growth</th>
+							</tr>
+							<tr>
+								<td valign="top" class="table__cell-equal">I help companies with customer acquisition by implementing growth processes, testing new acquisition channels and optimizing them.</td>
+							</tr>
+							<tr>
+								<th class="table__cell-equal">Analytics</th>
+							</tr>
+							<tr>
+								<td valign="top" class="table__cell-equal">I help companies understand their customers by defining the metrics that matter for their business and implementing user oriented analytics tools like Google Analytics, Amplitude, Hotjar, etc.</td>
+							</tr>
+							<tr>
+								<th class="table__cell-equal">Customer Data Automation</th>
+							</tr>
+							<tr>
+								<td valign="top" class="table__cell-equal">I help companies automate their customer data management by implementing tech driven strategies using tools like Clearbit & Hull.</td>
+							</tr>
 						 <tbody>
 					</table>
 				</div>

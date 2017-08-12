@@ -1,0 +1,38 @@
+.logo_bold {
+    a {
+        font-size: 1.7rem;
+        line-height: 3.3rem;
+        color: #fff;
+    }
+}
+.bar-1 .menu-horizontal>li>.dropdown__trigger, .bar-1 .menu-horizontal>li>.link_color_white {
+    opacity: 1;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: white;
+    border: none;
+    height: 0;
+    &:hover {
+        opacity: 0.5;
+    }
+    span { 
+        font-size: 0.7em;   
+		position: relative;
+        top: -1px;
+    }
+}
+.res-dropdown {
+    z-index: 100;
+    display: none;
+    background-color: white;
+    width: 9rem;
+    position: absolute;
+    top: 4rem;
+    right: 10.9rem;
+    padding: 0.7rem;
+    @media (max-width: 989px) {
+        right: 0;
+        left: 4rem;
+    }
+}
