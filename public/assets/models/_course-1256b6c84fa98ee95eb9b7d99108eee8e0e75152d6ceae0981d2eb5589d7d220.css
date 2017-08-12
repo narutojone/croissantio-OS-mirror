@@ -1,0 +1,78 @@
+/* line 1, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.row._offset {
+  margin-top: 4rem;
+}
+
+/* line 5, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.title-course, .title-desc {
+  color: #fff;
+}
+/* line 8, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.title-course {
+  font-size: 2.5rem;
+  line-height: 3;
+}
+/* line 12, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.title-desc {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* line 18, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.info._bg_white {
+  background-color: #fff;
+}
+/* line 21, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.info__title {
+  letter-spacing: -0.03rem;
+  line-height: 2;
+}
+/* line 25, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.info__par {
+  margin-top: 1.7rem;
+  line-height: 2;
+}
+/* line 28, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.info__par._font_medium {
+  font-family: 'Helvetica';
+  font-size: 1.2rem;
+  color: #000;
+  letter-spacing: -0.03rem;
+}
+/* line 35, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.info__list {
+  margin-left: 3rem;
+}
+/* line 37, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.info__list li {
+  font-family: 'Helvetica';
+  font-size: 1.2rem;
+  color: #000;
+}
+/* line 43, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.info__image-centered {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 48, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.sub-field-offset {
+  margin: 5rem 0 2rem 0;
+}
+
+/* line 51, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.btn--light-green {
+  background-color: #24BD24;
+  line-height: 1;
+  border: none;
+}
+@media (min-width: 1200px) {
+  /* line 51, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+  .btn--light-green {
+    font-size: 1.3rem !important;
+  }
+}
+/* line 58, /home/superbialux/growthbakery/app/assets/stylesheets/models/_course.scss */
+.btn--light-green._pad {
+  padding: 0.5rem;
+}
