@@ -171,7 +171,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                    <%= f.submit "#{@action} Article", class: "text-center btn btn-success" %>
+                                    <%= f.submit "#{@action} Article", class: "text-center btn btn-success js--fetch" %>
                                 </div>
                             </div>
                             <% end %>
@@ -183,7 +183,7 @@
     </div>
     <% content_for :js do %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <%= javascript_include_tag "jquery_ujs", "admin", "trumbowyg.min", "script" %>
+    <%= javascript_include_tag "jquery_ujs", "admin", "trumbowyg.min", "script", "fetchLinks" %>
     <script>
         $('#editor2').trumbowyg();
         getText();
