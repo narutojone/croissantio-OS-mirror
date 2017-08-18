@@ -15,3 +15,5 @@
 /log/*.log
 /tmp
 /config/initializers/environment_variables.rb
+
+bot.env
