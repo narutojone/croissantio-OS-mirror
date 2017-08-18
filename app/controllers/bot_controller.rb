@@ -1,11 +1,11 @@
 class BotController < ApplicationController
 	def create
-		i = 0
-		params[:links].each do |link|
-			if !FacebookLink.exists?(link: link[i.to_s][0])
-				FacebookLink.create(link: link[i.to_s][0], title: link[i.to_s][1], sent: false)
+		@links = []
+		params["links"].permit!.to_hash.map { |key, value| @links.push(value)}
+		@links.each do |msg|
+			if !FacebookLink.exists?(link: msg["link"])
+				FacebookLink.create(link: msg["link"], title: msg["title"], sent: false)
 			end
-			i =+ 1
 		end
 	end
 end
