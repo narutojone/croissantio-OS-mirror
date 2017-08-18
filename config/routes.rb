@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/contact' => 'pages#contact'
   get '/marketing-101-for-B2B-SaaS' => 'pages#marketing_101', as: 'marketing_course'
   get '/courses' => 'pages#all_courses', as: 'all_courses'
+  post '/fb/create-link' => 'bot#create'
 
   # Redirect the errors
   %w[404 500].each do |code|
@@ -53,6 +54,10 @@ Rails.application.routes.draw do
 
   constraints(ResourceUrlConstrainer.new) do
     match '/:id', via: [:get], to: 'resources#show'
+  end
+
+  Rails.application.routes.draw do
+    mount Facebook::Messenger::Server, at: "bot"
   end
 
   resources :articles, only: [:show], path: '', as: 'articles_show'
