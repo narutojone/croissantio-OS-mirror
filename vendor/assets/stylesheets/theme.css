@@ -5286,7 +5286,7 @@ section.parallax .row .background-image-holder {
 }
 
 .hamburger-toggle i {
-    color: #252525;
+    color: #fff;
 }
 
 @media all and (min-width: 990px) {
