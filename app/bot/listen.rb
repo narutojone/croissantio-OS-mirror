@@ -8,15 +8,6 @@ Facebook::Messenger::Profile.set({
   }
 }, access_token: ENV['ACCESS_TOKEN'])
 
-Bot.on :message do |message|
-  Bot.deliver({
-    recipient: message.sender,
-    message: {
-      text: 'Hello!'
-    }
-  }, access_token: ENV["ACCESS_TOKEN"])
-end
-
 Bot.on :postback do |postback|
   if !FacebookId.exists?(fb_id: postback.sender["id"]) 
   	FacebookId.create(fb_id: postback.sender["id"])
