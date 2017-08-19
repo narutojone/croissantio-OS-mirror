@@ -9,6 +9,7 @@
 - Routes for articles and resources are shortened to mydomain.com/my-cool-article and mydomain.com/my-even-cooler-resource using friendly_id gem. Routes will friendly-search for /slug in articles table first, then in resources table as they "cascade" down the routes.rb file.
 - Routes for categories are shortened to mydomain.com/categories/my-cool-category and are basically the same as the /blog but just only contains the articles for that category.
 - Sitemap is automatically generated every week using the heroku scheduler and the sitemap_generator gem.
+- Facebook Bot: You have to add ACCESS TOKEN, VERIFY TOKEN and APP SECRET keys in bot.env in root directory and create a webhook in the Facebook Developers page for ngrok to run a bot in the development stage.
 
 # Troubleshooting
 
