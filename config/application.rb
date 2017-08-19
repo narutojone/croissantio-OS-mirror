@@ -6,8 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-Dotenv::Railtie.load
-Dotenv.load('bot.env')
+unless Rails.env.production?
+  Dotenv::Railtie.load
+  Dotenv.load('bot.env')
+end
 
 module Growthbakery
   class Application < Rails::Application
