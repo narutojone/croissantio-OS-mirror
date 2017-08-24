@@ -23,12 +23,10 @@ module Growthbakery
 
     # Set errors to custom routes
     config.exceptions_app = routes
-    # Facebook bot directory
-    config.paths.add File.join('app', 'bot'), glob: File.join('**', '*.rb')
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    Dir[Rails.root.join('app', 'bot', '**', '*.rb')].each { |file| require_dependency file }
+
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 
     # Required for Heroku
