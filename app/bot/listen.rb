@@ -14,8 +14,6 @@
 		return params
 	end
 
-	post_link = Article.includes(:topics).where.not(topics: { name: 'newsletter' }).where(posted: true).last.slug
-
 	Facebook::Messenger::Profile.set({
 		get_started: {
 			payload: 'GET_STARTED_PAYLOAD'
@@ -100,7 +98,7 @@
 									buttons: [
 										{
 											type: "web_url",
-											url: "https://growthbakery.com/#{post_link}",
+											url: "https://growthbakery.com/fsdfasd",
 											title: "Read Article"
 										}
 									]
