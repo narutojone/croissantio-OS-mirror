@@ -1,1 +1,1 @@
-Dir["#{Rails.root}/app/bots/**/*.rb"].each { |file| require file }
+Dir["#{Rails.root}/app/bot/*.rb"].each { |file| require file }
