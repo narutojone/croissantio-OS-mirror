@@ -23,8 +23,9 @@
 
 	Bot.on :postback do |postback|
 		if postback.payload == 'SUBSCRIBE_TO_BOT'
-			if !FacebookId.exists?(fb_id: postback.sender["id"])
-				FacebookId.create(fb_id: postback.sender["id"])
+			fb_user = FacebookId.find_by(fb_id: postback.sender["id"])
+			if !fb_user.subscribed
+				fb_user.update(subscribed: true)
 				Bot.deliver({
 					recipient: postback.sender,
 					message: {
@@ -41,6 +42,9 @@
 			end
 		end
 		if postback.payload == 'GET_STARTED_PAYLOAD'
+			if !FacebookId.exists?(fb_id: postback.sender["id"])
+				FacebookId.create(fb_id: postback.sender["id"])
+			end
 			first_name = get_sender_profile(postback.sender)["first_name"]
 			Bot.deliver({
 				recipient: postback.sender,

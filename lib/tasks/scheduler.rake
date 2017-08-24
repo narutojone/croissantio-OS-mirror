@@ -3,7 +3,7 @@ task :send_newsletter => :environment do
 	include Facebook::Messenger
 	Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 	@link = FacebookLink.where(sent: false).last
-	FacebookId.all.each do |recipient|
+	FacebookId.where(subscribed:true).all.each do |recipient|
 		Bot.deliver({
 			recipient: {"id": recipient.fb_id},
 			message: {"attachment":{
