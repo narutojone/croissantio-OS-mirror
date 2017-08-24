@@ -1,4 +1,4 @@
-if Rails.env.production?
+if Rails.env.development?
   bot_files = Dir[Rails.root.join('app', 'bot', '**', '*.rb')]
   bot_reloader = ActiveSupport::FileUpdateChecker.new(bot_files) do
     bot_files.each{ |file| require_dependency file }
