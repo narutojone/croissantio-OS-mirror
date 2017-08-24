@@ -1,0 +1,1 @@
+Dir["#{Rails.root}/app/bots/**/*.rb"].each { |file| require file }

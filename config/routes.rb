@@ -58,7 +58,7 @@ Rails.application.routes.draw do
   end
 
   Rails.application.routes.draw do
-    mount Facebook::Messenger::Server, at: "bot"
+    mount Facebook::Messenger::Server, at: 'bot'
   end
 
   resources :articles, only: [:show], path: '', as: 'articles_show'
