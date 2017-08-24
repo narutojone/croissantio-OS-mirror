@@ -68,7 +68,7 @@ Bot.on :postback do |postback|
       recipient: postback.sender,
       message: {
         text: 
-        "I’m a messenger bot created by Maxime to help you grow your B2B SaaS Business!"
+        "I’m a messenger bot created by Maxime to help you grow your B2B SaaS business!"
       }
     }, access_token: ENV["ACCESS_TOKEN"])
     Bot.deliver({
