@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817113423) do
+ActiveRecord::Schema.define(version: 20170823135830) do
 
   create_table "article_topics", force: :cascade do |t|
     t.integer "article_id"
@@ -52,10 +52,11 @@ ActiveRecord::Schema.define(version: 20170817113423) do
 
   create_table "facebook_links", force: :cascade do |t|
     t.string "link"
-    t.boolean "sent"
+    t.boolean "sent", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+    t.text "desc"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

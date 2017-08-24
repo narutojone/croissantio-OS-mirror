@@ -13,6 +13,7 @@ task :send_newsletter => :environment do
 					"elements":[
 					{
 						"title": @link.title,
+						"subtitle": @link.desc,
 						"default_action": {
 						"type": "web_url",
 						"url": @link.link,

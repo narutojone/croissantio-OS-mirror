@@ -1,0 +1,125 @@
+<% content_for :title, "Facebook Links"  %>
+<% content_for :description, "This is the meta description for the facebook-link-admin menu" %>
+<% content_for :css do %>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <%= stylesheet_link_tag "admin", "magnific-popup", "font-icons", "trumbowyg.min"%>
+<% end %>
+<body class="nav-md">
+  <div class="container body admin-body">
+    <div class="main_container admin-body">
+      <%= render "shared/admin_menu" %>
+      <div class="right_col clearfix" role="main">
+        <div class="col-md-12 col-sm-12 col-xs-12 table-fade <%= table_hidden? %>">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>
+                <i class="fa fa-bars"></i>
+                FB Links |
+                                <a onclick="createForm()" class="btn btn-sm btn-round btn-success">
+                  <i class="fa fa-plus"></i>
+                  <%= @action %>
+                  Link</a>
+              </h2>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th class="hidden-xs">#</th>
+                    <th>Title</th>
+                    <th>Subtitle</th>
+                    <th>Link</th>
+                    <th>Sent?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @FacebookLinks.each do |facebook_link| %>
+                    <tr>
+                      <td scope="row" class="hidden-xs"><%= facebook_link.id %></td>
+                      <td><%= truncate(facebook_link.title, length: 30) %></td>
+                      <td><%= truncate(facebook_link.desc, length: 30) %></td>
+                      <td><%= truncate(facebook_link.link, length: 30) %></td>
+                      <td><%= facebook_link.sent %></td>
+                      <td>
+                        <%= link_to(edit_facebook_link_path(facebook_link), class: "edit-link") do %>
+                          <i class="fa fa-pencil"></i>
+                          edit
+                                            <% end %>
+                        |
+                                            <%= link_to facebook_link_path(facebook_link), method: "delete", data: {confirm: 'Are you sure?'} do %>
+                          <i class="fa fa-trash"></i>
+                          delete
+                                            <% end %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="create-form" class="col-md-12 col-sm-12 col-xs-12 margin-top create-form <%= form_hidden? %>">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>
+                <i class="fa fa-bars"></i>
+                <%= @action %>
+                Link
+                                <span class="<%= form_hidden? %>">|</span>
+                <%= link_to("All Links", facebook_links_path, class: "open-form btn btn-sm btn-round btn-success #{form_hidden?}", data: {confirm: 'Your changes will not be saved - proceed?'}) %></h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li>
+                  <%= link_to "#", class: "change-locale" do %>
+                    <div class="locale locale-menu <%= I18n.locale %>"></div>
+                  <% end %>
+                </li>
+              </ul>
+              <ul class="nav navbar-right panel_toolbox <%= table_hidden? %>">
+                <li>
+                  <a onclick="closeForm();">
+                    <i class="fa fa-close"></i>
+                  </a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <br>
+              <%= form_for(@FacebookLink, html: { class: "form-horizontal form-label-left", id: "demo-form2", multipart: true }) do |f| %>
+                <%= render "shared/error_messages", object: @FacebookLink %>
+                <div class="form-group locale-field">
+                  <%= f.label :title, "Title", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <%= f.text_field :title, maxlength: 80, class: "form-control col-md-7 col-xs-12", required: true %>
+                  </div>
+                </div>
+                <div class="form-group locale-field">
+                  <%= f.label :link, "Link", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <%= f.text_field :link, class: "form-control col-md-7 col-xs-12", required: true %>
+                  </div>
+                </div>
+                <div class="form-group locale-field">
+                  <%= f.label :desc, "Subtitle", class: "control-label col-md-3 col-sm-3 col-xs-12" %>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <%= f.text_area :desc, maxlength: 80, class: "form-control col-md-7 col-xs-12", required: true %>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                    <%= f.submit "#{@action} Link", class: "text-center btn btn-success" %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% content_for :js do %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <%= javascript_include_tag "jquery_ujs", "admin", "trumbowyg.min", "script" %>
+  <% end %>
+</body>

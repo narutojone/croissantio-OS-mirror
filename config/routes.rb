@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   get '/contact' => 'pages#contact'
   get '/marketing-101-for-B2B-SaaS' => 'pages#marketing_101', as: 'marketing_course'
   get '/courses' => 'pages#all_courses', as: 'all_courses'
-  post '/fb/create-link' => 'bot#create'
+  get '/instant-message' => 'facebook_links#instant_message', as: 'instant_message'
+  post '/send-instant-message' => 'facebook_links#send_instant_message', as: 'send_instant_message'
 
   # Redirect the errors
   %w[404 500].each do |code|
@@ -25,7 +26,7 @@ Rails.application.routes.draw do
   end
   # ------------------ Model Routing -----------------------
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'register' }
-  resources :pages, :categories, :topics, :articles, :resources
+  resources :pages, :categories, :topics, :articles, :resources, :facebook_links
   resources :contactforms, only: %i[new create]
 
   get 'search/:id' => 'pages#search', as: 'resource_category'
