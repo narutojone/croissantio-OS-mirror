@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   post '/send-instant-message' => 'facebook_links#send_instant_message', as: 'send_instant_message'
 
   # Redirect the errors
-  %w[404 500].each do |code|
+  %w[ 404 422 500 503 ].each do |code|
     match code, to: 'errors#show', code: code, via: :all
   end
   # ------------------ Model Routing -----------------------

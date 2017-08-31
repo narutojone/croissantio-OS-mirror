@@ -65,6 +65,7 @@ class PagesController < ApplicationController
         date = range.split('-').collect(&:to_datetime)
         range = date[0]..date[1]
       end
+      @search_resource = params[:query]
       @selected_option = { category: category, upper: date[0].to_f * 1000, lower: date[1].to_f * 1000, resource_type: type, order: order, range: params['/resources'][3] }
       @resources = Resource.includes(:categories).all
       @resources = @resources.where(date: range) if date != [nil, nil]

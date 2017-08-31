@@ -136,3 +136,4 @@ $(".category-link").on("click", function(e) {
   })
   $("#category_filter").val(category)
 })
+;

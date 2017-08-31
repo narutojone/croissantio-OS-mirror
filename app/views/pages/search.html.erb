@@ -17,7 +17,7 @@
       <div class="col-md-12">
         <%= form_for resources_path, method: :get, html: {id: "search-form"} do |f| %>
           <div class="col-md-10 col-md-offset-1">
-            <input type="search" id="aa-search-input" class="aa-input-search" name="query" placeholder="Search resources by title, url or author" autocomplete="on">
+            <input onkeypress="return runScript(event)" type="search" id="aa-search-input" class="aa-input-search" name="query" placeholder="Search resources by title, url or author" autocomplete="on">
             <div class="aa-input-container" id="aa-input-container"></div>
           </div>
           <div class="col-md-10 col-md-offset-1">

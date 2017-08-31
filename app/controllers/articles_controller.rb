@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   include TopicsHelper
+  Rails.env.production? && (rescue_from ActiveRecord::RecordNotFound, :with => :render_404)
   before_action :setup, only: %i[show edit update destroy]
   before_action :logged_in_user?, except: [:show]
   before_action :is_admin?, except: [:show]
@@ -8,6 +9,10 @@ class ArticlesController < ApplicationController
     @action = 'New'
     @articles = Article.all
     @article  = Article.new
+  end
+
+  def render_404
+    render :template => "errors/show"
   end
 
   def show

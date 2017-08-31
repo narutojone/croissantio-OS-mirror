@@ -9,21 +9,35 @@
     <div class="main_container admin-body">
       <%= render "shared/admin_menu" %>
 	  <div class="right_col clearfix" role="main">
+    <div class="modal fade" id="verificationModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary js--send-message">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
 	  <div class="col-md-12 col-sm-12 col-xs-12 margin-top">
       <div class="x_content">
 	  	<br>
-        <%= form_tag send_instant_message_path, method: :post do |f| %>
-            <div class="form-group">
-				<label class='col-2 col-form-label'>Send Instant Message</label>
-                <div class="col-12">
-					<%= text_area_tag :message, '', rows: 9, maxlength: 640, placeholder: "Your message here...", class: 'form-control', required: true %>
-                </div>
+        <%= form_tag send_instant_message_path, id: 'send-message-form', method: :post do |f| %>
+          <div class="form-group">
+            <label class='col-2 col-form-label'>Send Instant Message</label>
+              <div class="col-12">
+                <%= text_area_tag :message, '', rows: 9, maxlength: 640, placeholder: "Your message here...", class: 'form-control', id: 'send-message-input', required: true %>
+              </div>
+          </div>
+          <div class="form-group">
+            <div class="col-10">
+              <button type="button" class="btn btn-primary js--open-modal" data-toggle="modal" data-target="#verificationModal">
+                Send Message
+              </button>
             </div>
-            <div class="form-group">
-                <div class="col-10">
-                    <%= submit_tag "Send Message", class: "text-center btn btn-success", data: { disable_with: false }  %>
-        		</div>
-            </div>
+          </div>
         <% end %>
       </div>
 	  </div>
@@ -33,5 +47,8 @@
   <% content_for :js do %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <%= javascript_include_tag "jquery_ujs", "admin", "trumbowyg.min", "script" %>
+    <script>
+      submitMessageForm()
+    </script>
   <% end %>
 </body>
