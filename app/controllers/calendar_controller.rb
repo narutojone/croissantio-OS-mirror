@@ -1,7 +1,5 @@
 class CalendarController < ApplicationController
-  skip_before_action :verify_authenticity_token
-  protect_from_forgery with: :null_session
-  
+
   def new_event(time, first_name, number)
 	cal = Google::Calendar.new(:client_id     => ENV['CLIENT_ID'],
                            :client_secret => ENV['CLIENT_SECRET'],
