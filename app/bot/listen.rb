@@ -158,7 +158,7 @@ Example: _Timeslot - 28/07/1999 15:15_"
 					text: "What would you like to do?"
 				}
 			}, access_token: ENV["ACCESS_TOKEN"])
-			@article = Article.includes(:topics).where.not(topics: { name: 'newsletter' }).where(posted: true).last.slug
+			@article = 'topkek'
 			Bot.deliver({
 				recipient: postback.sender,
 				message: {
