@@ -1,5 +1,6 @@
 	require "facebook/messenger"
 	include Facebook::Messenger
+	require 'uri'
 	require 'net/http'
 	require 'json'
 
@@ -14,11 +15,69 @@
 		return params
 	end
 
+	def pick_timeslot(time)
+		uri = URI("http://localhost:3000/calendar/new-event")
+		params = {access_token: ENV['ACCESS_TOKEN'], fields: 'first_name'}
+		request = Net::HTTP::Post.new(uri.path)
+		request["time"] = time
+	end
+
+
 	Facebook::Messenger::Profile.set({
 		get_started: {
 			payload: 'GET_STARTED_PAYLOAD'
 		}
 	}, access_token: ENV['ACCESS_TOKEN'])
+
+Bot.on :message do |message|
+	if message.text.include?('Phone - ')
+		if @time
+			@phone = message.text.sub('Phone -', '')
+			Bot.deliver({
+					recipient: message.sender,
+					message: {
+						attachment: {
+							type: "template",
+							payload: {
+								template_type: 'generic',
+								elements: [
+									{
+										title: "Name: #{@first_name}, Phone number: #{@phone}, Timeslot: #{@time}.
+All Good?",
+										buttons: [
+											{
+												type: "postback",
+												title: "Request Call",
+												payload: "REQUEST_CALL_CONFIRM"
+											}
+										]
+									}
+								]
+							}
+						}
+					}
+				}, access_token: ENV["ACCESS_TOKEN"])
+		else
+			Bot.deliver({
+					recipient: message.sender,
+					message: {
+						text: "Set a timeslot first!"
+					}
+				}, access_token: ENV["ACCESS_TOKEN"])
+		end
+	end
+		
+	if message.text.include?('Timeslot -')
+		@time = message.text.sub('Timeslot -', '')
+		Bot.deliver({
+					recipient: message.sender,
+					message: {
+						text: "Now tell me your phone number or skype ID.
+Example: _Phone - +01 23456789_"
+					}
+				}, access_token: ENV["ACCESS_TOKEN"])
+	end
+end
 
 
 	Bot.on :postback do |postback|
@@ -41,16 +100,36 @@
 				}, access_token: ENV["ACCESS_TOKEN"])
 			end
 		end
+		if postback.payload == 'REQUEST_CALL'
+				Bot.deliver({
+					recipient: postback.sender,
+					message: {
+						text: "Pick a time slot according to the example below. 
+Example: _Timeslot - 28/07/1999 15:15_"
+					}
+				}, access_token: ENV["ACCESS_TOKEN"])			
+		end
+		if postback.payload == 'REQUEST_CALL_CONFIRM'
+			CalendarController.new.new_event(@time, @first_name, @phone )
+				Bot.deliver({
+					recipient: postback.sender,
+					message: {
+						text: "Thank you, Maxime will get to you soon!"
+					}
+				}, access_token: ENV["ACCESS_TOKEN"])
+			@time = ''	
+			@first_name = ''	
+			@phone = ''
+		end
 		if postback.payload == 'GET_STARTED_PAYLOAD'
+			@first_name = get_sender_profile(postback.sender)["first_name"]
 			if !FacebookId.exists?(fb_id: postback.sender["id"])
 				FacebookId.create(fb_id: postback.sender["id"])
 			end
-			first_name = get_sender_profile(postback.sender)["first_name"]
 			Bot.deliver({
 				recipient: postback.sender,
 				message: {
-					text:
-					"Hello #{first_name} 🚀"
+					text: "Hello #{@first_name} 🚀"
 				}
 			}, access_token: ENV["ACCESS_TOKEN"])
 			Bot.deliver({
@@ -79,6 +158,7 @@
 					text: "What would you like to do?"
 				}
 			}, access_token: ENV["ACCESS_TOKEN"])
+			@article = Article.includes(:topics).where.not(topics: { name: 'newsletter' }).where(posted: true).last.slug
 			Bot.deliver({
 				recipient: postback.sender,
 				message: {
@@ -102,7 +182,7 @@
 									buttons: [
 										{
 											type: "web_url",
-											url: "https://growthbakery.com/fsdfasd",
+											url: "https://growthbakery.com/#{@article}",
 											title: "Read Article"
 										}
 									]
@@ -111,12 +191,12 @@
 									title: 'Request a Free 30-min consulting call with Maxime?',
 									buttons: [
 										{
-											type: "web_url",
-											url: "https://growthbakery.com/services",
-											title: "Request Call"
+											type: "postback",
+											title: "Request Call",
+											payload: "REQUEST_CALL"
 										}
 									]
-								},
+								}
 							]
 						}
 					}

@@ -30,6 +30,8 @@ csv.each do |row|
     @resource.categories << c
   end
 end
+
+AppSetting.create( refresh_token: nil, access_token: nil )
 #
 # ["marketing","newsletter","growthhacks","social media", "other"].each do |category|
 #   Topic.create!(

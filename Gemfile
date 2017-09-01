@@ -29,6 +29,7 @@ gem 'uglifier', '~> 3.2.0'
 gem 'unicorn', '~> 5.3.0'
 gem 'dotenv-rails', group: %i[development test]
 gem 'facebook-messenger'
+gem 'google_calendar'
 
 group :production do
   gem 'rails_12factor', '~> 0.0'
