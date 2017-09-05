@@ -16,7 +16,7 @@
 	end
 
 	def pick_timeslot(time)
-		uri = URI("http://localhost:3000/calendar/new-event")
+		uri = URI("https://growthbakery.com/calendar/new-event")
 		params = {access_token: ENV['ACCESS_TOKEN'], fields: 'first_name'}
 		request = Net::HTTP::Post.new(uri.path)
 		request["time"] = time

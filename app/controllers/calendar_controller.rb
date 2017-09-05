@@ -28,7 +28,7 @@ class CalendarController < ApplicationController
 	{
 		client_id: ENV['CLIENT_ID'],
 		client_secret: ENV['CLIENT_SECRET'],
-		calendar: 'superbia.lux@gmail.com',
+		calendar: ENV['CALENDAR_ID'],
 		redirect_url: "urn:ietf:wg:oauth:2.0:oob"
 	}
   end
