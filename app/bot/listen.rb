@@ -16,7 +16,7 @@
 	end
 
 	def pick_timeslot(time)
-		uri = URI("https://growthbakery.com/calendar/new-event")
+		uri = URI("https://croissant.io/calendar/new-event")
 		params = {access_token: ENV['ACCESS_TOKEN'], fields: 'first_name'}
 		request = Net::HTTP::Post.new(uri.path)
 		request["time"] = time
@@ -182,7 +182,7 @@ Example: _Timeslot - 28/07/1999 15:15_"
 									buttons: [
 										{
 											type: "web_url",
-											url: "https://growthbakery.com/#{@article}",
+											url: "https://croissant.io/#{@article}",
 											title: "Read Article"
 										}
 									]

@@ -10,7 +10,7 @@
 <% content_for :ogtitle, @article.title %>
 <% content_for :ogdescription, @article.description %>
 <% content_for :ogtype, "article" %>
-<% content_for :ogimage, @article.image.url %>
+<% content_for :ogimage, image_path('maxime-salomon.jpg') %>
 
 <%= render "shared/stack_navbar" %>
 <main role="main" class="main clearfix">
@@ -36,7 +36,7 @@
                 <article>
 
                     <div class="article__body article__title">
-                        <%= raw @article.body.sub('<a', "<a target='_blank'") %>
+                        <%= raw @article.body.gsub('<a', "<a target='_blank'") %>
                     </div>
                 </article>
                 <h1 class="text-center">The Growth Bakery Newsletter
@@ -121,6 +121,7 @@ var disqus_config = function () {
 
 </div>
 </section>
+<% if @relatedarticles.present? %>
 <section class="bg--secondary">
 <div class="container">
 <div class="row text-block">
@@ -149,6 +150,7 @@ var disqus_config = function () {
 </div>
 <!--end of container-->
 </section>
+<% end %>
 <%= render "shared/stack_footer" %>
 
 <% content_for :js do %>

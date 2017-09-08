@@ -33,12 +33,13 @@
                                         <th class="hidden-xs">Topics</th>
                                         <th class="hidden-xs">Image</th>
                                         <th class="hidden-xs">Author</th>
-                                        <th class="hidden-xs">Status</th>
+                                        <th class="hidden-xs">Status(Date)</th>
+                                        <th class="hidden-xs">Created At Date</th>
                                         <th>Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <% @articles.each do |article| %>
+                                    <% @articles.order(created_at: :desc).each do |article| %>
                                     <tr>
                                         <td scope="row" class="hidden-xs"><%= article.id %></td>
                                         <td>
@@ -61,10 +62,14 @@
                                         <td class="hidden-xs"><%= current_user.email %></td>
                                         <td class="hidden-xs">
                                             <% if article.posted? %>
-                                            <%= "Posted" %>
+                                            <%= "Posted at" %>
+                                            <%= article.date.strftime("%d-%m-%Y") %>
                                         <% else %>
                                             <%= "Draft" %>
                                             <% end %>
+                                        </td>
+                                        <td class="hidden-xs">
+                                            <%= article.created_at.strftime("%d-%m-%Y") %>
                                         </td>
                                         <td>
                                             <%= link_to(edit_article_path(article), class: "edit-link") do %>

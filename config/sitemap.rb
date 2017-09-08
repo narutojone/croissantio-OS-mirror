@@ -1,5 +1,5 @@
 # config/sitemap.rb
-SitemapGenerator::Sitemap.default_host = 'https://www.growthbakery.com' # Your Domain Name
+SitemapGenerator::Sitemap.default_host = 'https://www.croissant.io' # Your Domain Name
 SitemapGenerator::Sitemap.public_path = 'tmp/sitemap'
 # Where you want your sitemap.xml.gz file to be uploaded.
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
