@@ -135,14 +135,14 @@ Example: _Timeslot - 28/07/1999 15:15_"
 			Bot.deliver({
 				recipient: postback.sender,
 				message: {
-					text: "Growth Bakery is a solo B2B SaaS Marketing & Growth consultancy founded in 2013 by Maxime Salomon in Paris, France that uses a data-driven approach to customer acquisition."
+					text: "Croissant is a solo B2B SaaS Marketing & Growth consultancy founded in 2013 by Maxime Salomon in Paris, France that uses a data-driven approach to customer acquisition."
 				}
 			}, access_token: ENV["ACCESS_TOKEN"])
 			Bot.deliver({
 				recipient: postback.sender,
 				message: {
 					text:
-					"But enough about Growth Bakery…"
+					"But enough about Croissant…"
 				}
 			}, access_token: ENV["ACCESS_TOKEN"])
 			Bot.deliver({
@@ -178,7 +178,7 @@ Example: _Timeslot - 28/07/1999 15:15_"
 									]
 								},
 								{
-									title: 'Read Growth Bakery latest blog post?',
+									title: 'Read Croissant latest blog post?',
 									buttons: [
 										{
 											type: "web_url",

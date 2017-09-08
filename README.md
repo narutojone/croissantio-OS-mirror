@@ -1,4 +1,4 @@
-# The Growth Bakery
+# Croissant
 
 > In all respects a standard, smallscale rails application using articles, resources, users (devise) and categories as database models + a pagescontroller for static pages. Admin panel is custom-built using the gentella theme  (https://colorlib.com/polygon/gentelella/general_elements.html) whilst the rest uses the stack theme from themeforest (http://trystack.mediumra.re/). Currently has no test coverage.
 
