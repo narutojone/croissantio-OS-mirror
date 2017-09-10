@@ -35,11 +35,11 @@ article .article__title {
     @media (max-width: 320px) {
         top: 10.4rem !important;
     }
-    @media (max-width: 460px) {
-        transform: translateY(-127%);
+    @media (max-width: 768px) and (min-width: 540px) {
+        transform: translateY(-54%);
     }
-    @media (max-width: 768px) and (min-width: 461px) {
-        transform: translateY(-74%);
+    @media (max-width: 540px) {
+        transform: translateY(-123%);
     }
 }
 
