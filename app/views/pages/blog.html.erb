@@ -26,7 +26,7 @@
                                     </span>
                     <span>
                       <% article.topics.each do |topic| %>
-                        <%= link_to topic.name.capitalize, topic_path(topic.name.downcase), class:"f__up f__no-und categories__link js__category-name hidden-xs"%>
+                        <%= link_to topic.name.capitalize, topic_path(topic.name.downcase), class:"f__up f__no-und categories__link js__category-name"%>
                       <% end %>
                     </span>
                   </div>

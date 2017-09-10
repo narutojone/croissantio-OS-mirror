@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xs-3 col-sm-2">
                     <%= link_to root_path, class: "clearfix" do %>
-                      <%= image_tag "logo.png", class: "logo logo-dark", style: "min-width: 230px;" %>
+                      <%= image_tag "logo.jpg", class: "logo logo-dark", style: "min-width: 230px;" %>
                         <!-- <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"/> -->
                         <!-- <img class="logo logo-light" alt="logo" src="img/logo-light.png"/> -->
                   <% end %>
@@ -23,20 +23,20 @@
     <nav id="menu1" class="bar bar--sm bar-1 hidden-xs hiddem-sm ">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6 hidden-xs">
-                    <div class="bar__module logo_bold">
-					    <%= link_to "Croissant", root_path %>
+                <div class="col-md-6 col-sm-4 hidden-xs">
+                    <div class="bar__module col-md-5">
+					    <%= link_to image_tag("logo.jpg"), root_path %>
                     </div>
                     <!--end module-->
                 </div>
-                <div class="col-md-6 col-sm-12 text-right text-right-xs text-right-sm">
+                <div class="col-md-6 col-sm-8 text-right text-right-xs text-right-sm">
                     <div class="bar__module">
                         <ul class="menu-horizontal text-left resources__links">
                           <li>
-                            <%= link_to "Search", search_path, class: 'link_color_white' %>
+                            <%= link_to "Search", search_path, class: 'link_color_blue' %>
                           </li>
                           <li>
-                            <button class="js--res-dropdown link_color_white">
+                            <button class="js--res-dropdown link_color_blue">
 															Resources
 															<span><i class="fa fa-chevron-down" aria-hidden="true"></i><span>
 														</button>
@@ -45,11 +45,8 @@
 															<%= link_to "Blog", blog_path %>
 															<%= link_to "Newsletter", newsletter_path %>
 													 </div>
-                          <li>
-                           <%= link_to "Services", services_path, class: 'link_color_white' %>
-                          </li>
                           <li >
-                    	      <%= link_to "About", about_path, class: 'link_color_white' %>
+                    	      <%= link_to "About", about_path, class: 'link_color_blue' %>
                            </li>
                         </ul>
                     </div>

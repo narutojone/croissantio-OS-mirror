@@ -1,16 +1,10 @@
-.logo_bold {
-    a {
-        font-size: 1.7rem;
-        line-height: 3.3rem;
-        color: #fff;
-    }
-}
-.bar-1 .menu-horizontal>li>.dropdown__trigger, .bar-1 .menu-horizontal>li>.link_color_white {
+.bar-1 .menu-horizontal>li>.dropdown__trigger, .bar-1 .menu-horizontal>li>.link_color_blue {
     opacity: 1;
     text-transform: capitalize;
-    font-size: 1.2em;
-    font-weight: 400;
-    color: white;
+    font-size: 1.1em;
+    line-height: 4.7rem;
+    font-weight: 600;
+    color: #3e396b;
     border: none;
     height: 0;
     &:hover {
@@ -21,18 +15,42 @@
 		position: relative;
         top: -1px;
     }
+    @media (max-width: 767px) {
+        right: 0;
+        left: 4rem;
+        line-height: 1rem;
+    }
 }
 .res-dropdown {
     z-index: 100;
     display: none;
     background-color: white;
-    width: 9rem;
+    width: 11rem;
     position: absolute;
-    top: 3.8rem;
-    right: 10.6rem;
-    padding: 0.7rem;
+    top: 5rem;
+    left: 4rem;
+    right: 0;
+    box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2), 0 0px 10px rgba(0,0,0,0.05);
+    border-radius: 0.3rem;
+    a {
+        color: #7E7AA1;
+        display: block;
+        padding: 10px 20px 10px 16px;
+        border-bottom: solid 1px #eee;
+        &:hover {
+            color: #3e396b;
+            background-color: #f9f9f9;
+        }
+    }
     @media (max-width: 989px) {
         right: 0;
         left: 4rem;
     }
+    @media (max-width: 767px) {
+        right: 0;
+        left: 4rem;
+    }
+}
+.hamburger-toggle {
+    line-height: 6.5rem;
 }
