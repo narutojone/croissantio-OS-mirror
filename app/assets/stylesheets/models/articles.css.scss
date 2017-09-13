@@ -4302,15 +4302,12 @@ article {
             }
         }
     }
-    p {
-        font-size: 18px !important;
-        span {
+    p, p span {
             font-size: 18px !important;
             line-height: 1.6 !important;
             font-weight: 400 !important;
             color: #4f5a65 !important; 
             letter-spacing: 0.23px;
-        }
     }
     a {
         letter-spacing: 0.23px;
