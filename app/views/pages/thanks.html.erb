@@ -46,8 +46,7 @@
 									<%= link_to articles_show_path(@newsletter) do %>
 									<h2><%= @newsletter.title %></h2>
 									<% end %>
-									<span><%= @newsletter.date.strftime("%B #{@newsletter.date.day.ordinalize} %Y") %>
-										in
+									<span><%= @newsletter.date && (@newsletter.date.strftime("%B #{@newsletter.date.day.ordinalize} %Y") + ' in ') %>
 									</span>
 									<span>
 										<% @newsletter.topics.each do |topic| %>

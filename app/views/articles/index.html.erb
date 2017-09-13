@@ -62,8 +62,8 @@
                                         <td class="hidden-xs"><%= current_user.email %></td>
                                         <td class="hidden-xs">
                                             <% if article.posted? %>
-                                            <%= "Posted at" %>
-                                            <%= article.date.strftime("%d-%m-%Y") %>
+                                            <%= "Posted" %>
+                                            <%= article.date && ("at " + article.date.strftime("%d-%m-%Y")) %>
                                         <% else %>
                                             <%= "Draft" %>
                                             <% end %>

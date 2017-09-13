@@ -32,9 +32,9 @@
                 <div class="col-md-6 col-sm-8 text-right text-right-xs text-right-sm">
                     <div class="bar__module">
                         <ul class="menu-horizontal text-left resources__links">
-                          <li>
-                            <%= link_to "Search", search_path, class: 'link_color_blue' %>
-                          </li>
+                           <li >
+                    	      <%= link_to "About", about_path, class: 'link_color_blue' %>
+                           </li>
                           <li>
                             <button class="js--res-dropdown link_color_blue">
 															Resources
@@ -42,12 +42,10 @@
 														</button>
                           </li>
 														<div class="res-dropdown">
+                                                            <%= link_to "Search", search_path%>
 															<%= link_to "Blog", blog_path %>
 															<%= link_to "Newsletter", newsletter_path %>
 													 </div>
-                          <li >
-                    	      <%= link_to "About", about_path, class: 'link_color_blue' %>
-                           </li>
                         </ul>
                     </div>
                 </div>

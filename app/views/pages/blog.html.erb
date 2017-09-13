@@ -16,14 +16,13 @@
         <div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
           <div class="masonry masonry-blog-list">
             <div class="masonry__container">
-              <% @articles.each do |article| %>
+              <% @articles.order("date desc").each do |article| %>
                 <article class="masonry__item filter-<%= article.topic_name %>" data-masonry-filter="<%= article.topic_name %>">
                   <div class="article__title text-center">
                     <%= link_to articles_show_path(article) do %>
                       <h2><%= article.title %></h2>
                     <% end %>
-                    <span><%= article.date.strftime("%B #{article.date.day.ordinalize} %Y") %> in
-                                    </span>
+                    <span><%= article.date && (article.date.strftime("%B #{article.date.day.ordinalize} %Y") + ' in ') %></span>
                     <span>
                       <% article.topics.each do |topic| %>
                         <%= link_to topic.name.capitalize, topic_path(topic.name.downcase), class:"f__up f__no-und categories__link js__category-name"%>
