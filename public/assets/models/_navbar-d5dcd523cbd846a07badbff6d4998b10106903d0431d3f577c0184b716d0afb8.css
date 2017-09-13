@@ -1,0 +1,75 @@
+/* line 1, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger, .bar-1 .menu-horizontal > li > .link_color_blue {
+  opacity: 1;
+  text-transform: capitalize;
+  font-size: 1.1em;
+  line-height: 5.1rem;
+  font-weight: 600;
+  color: #3e396b;
+  border: none;
+  height: 0;
+}
+/* line 10, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger:hover, .bar-1 .menu-horizontal > li > .link_color_blue:hover {
+  opacity: 0.5;
+}
+/* line 13, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger span, .bar-1 .menu-horizontal > li > .link_color_blue span {
+  font-size: 0.7em;
+  position: relative;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  /* line 1, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .bar-1 .menu-horizontal > li > .dropdown__trigger, .bar-1 .menu-horizontal > li > .link_color_blue {
+    right: 0;
+    left: 4rem;
+    line-height: 1rem;
+  }
+}
+
+/* line 24, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.res-dropdown {
+  z-index: 100;
+  display: none;
+  background-color: white;
+  width: 11rem;
+  position: absolute;
+  top: 5rem;
+  left: 4rem;
+  right: 0;
+  box-shadow: 0 16px 32px 0 rgba(62, 57, 107, 0.2), 0 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0.3rem;
+}
+/* line 35, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.res-dropdown a {
+  color: #7E7AA1;
+  display: block;
+  padding: 10px 20px 10px 16px;
+  border-bottom: solid 1px #eee;
+}
+/* line 40, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.res-dropdown a:hover {
+  color: #3e396b;
+  background-color: #f9f9f9;
+}
+@media (max-width: 989px) {
+  /* line 24, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .res-dropdown {
+    right: 0;
+    left: 4rem;
+  }
+}
+@media (max-width: 767px) {
+  /* line 24, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .res-dropdown {
+    left: 8rem;
+    top: 2rem;
+  }
+}
+
+/* line 54, /home/superbialux/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.hamburger-toggle {
+  position: relative;
+  bottom: -27px;
+}
