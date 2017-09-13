@@ -4270,15 +4270,15 @@ article {
     font-size: 1.125em !important;
     h1 {
         font-family: Tiempos Headline,Helvetica Neue,Helvetica,Arial,sans-serif;
-        color: #313030;
-        font-size: 34px;
-        font-weight: 400;
+        color: #313030 !important;
+        font-size: 34px !important;
+        font-weight: 400 !important;
         word-break: break-all;
     }
     h2 {
-        color: #313030;
+        color: #313030 !important;
         font-size: 1.5em !important;
-        font-weight: 500;
+        font-weight: 500 !important;
         word-break: break-all;
     }
     blockquote {
@@ -4290,8 +4290,8 @@ article {
         span {
             font-size: 44px !important;
             color: #800080 !important;
-            line-height: 1.3;
-            font-weight: 700;
+            line-height: 1.3 !important;
+            font-weight: 700 !important;
         }
         @media (max-width: 865px) {
             width: auto;
