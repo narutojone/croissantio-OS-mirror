@@ -72,6 +72,7 @@
           <div class="masonry__container">
             <% @newsletters.order("date desc").each do |newsletter| %>
               <article class="masonry__item filter-<%= newsletter.topic_name %>" data-masonry-filter="<%= newsletter.topic_name %>">
+              <% if newsletter.image.blank? %>
                 <div class="article__title text-center">
                   <%= link_to articles_show_path(newsletter) do %>
                     <h2><%= newsletter.title %></h2>
@@ -84,6 +85,7 @@
 										<% end %>
                   </span>
                 </div>
+              <% end %>
                 <!--end newsletter title-->
                 <div class="article__body">
                   <%= link_to articles_show_path(newsletter) do %>

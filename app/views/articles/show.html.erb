@@ -15,26 +15,43 @@
 <%= render "shared/stack_navbar" %>
 <main role="main" class="main clearfix">
     <div class="js__article article__main" data-title="Finding your way from maker to manager">
-        <div class="hero">
-            <div class="article__hero">
-                <% @article.topics.each do |topic| %>
-                  <%= link_to topic.name.capitalize, topic_path(topic.name.downcase), class:"f__up f__no-und categories__link js__category-name"%>
-                <% end %>
-                <span class="hidden-xs categories__separator-white">|</span>
-                <span class="hidden-xs f__up categories__text">
-                    <span class="js__read-time">
-                        <%= @article.body.reading_time format: :approx %></span>
-                    read</span>
-                <h1 class="article__hero-title js__article-hero-title"><%= @article.title %></h1>
-            </div>
+        <% if @article.image.blank? %>
+            <div class="hero">
+                    <div class="article__hero">
+                        <% @article.topics.each do |topic| %>
+                        <%= link_to topic.name.capitalize, topic_path(topic.name.downcase), class:"f__up f__no-und categories__link js__category-name"%>
+                        <% end %>
+                        <span class="hidden-xs categories__separator-white">|</span>
+                        <span class="hidden-xs f__up categories__text">
+                            <span class="js__read-time">
+                                <%= @article.body.reading_time format: :approx %></span>
+                            read</span>
+                        <h1 class="article__hero-title js__article-hero-title"><%= @article.title %></h1>
+                    </div>
             </div>
             <div class="hero__image clearfix">
                 <%= image_tag @article.image.url %>
             </div>
+        <% else %>
+            <div class="hero">
+                    <div class="article__hero_no-over">
+                        <% @article.topics.each do |topic| %>
+                        <%= link_to topic.name.capitalize, topic_path(topic.name.downcase), class:"f__up f__no-und categories__link _black js__category-name"%>
+                        <% end %>
+                        <span class="hidden-xs categories__separator">|</span>
+                        <span class="hidden-xs f__up categories__text _black">
+                            <span class="js__read-time">
+                                <%= @article.body.reading_time format: :approx %></span>
+                            read</span>
+                    </div>
+            </div>
+            <div class="hero__image_no-over clearfix">
+                <%= image_tag @article.image.url %>
+            </div>
+        <% end %>
         <div class="container">
-            <div class="article__wrap ">
+            <div class=<%= @article.image.blank? ? 'article__wrap' : 'article__wrap_clear' %>>
                 <article>
-
                     <div class="article__body article__title">
                         <%= raw @article.body.gsub('<a', "<a target='_blank'") %>
                     </div>

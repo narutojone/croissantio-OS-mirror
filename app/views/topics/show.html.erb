@@ -18,6 +18,7 @@
                         <div class="masonry__container">
                           <% @articles.each do |article| %>
                             <article class="masonry__item filter-<%= article.topic_name %>" data-masonry-filter="<%= article.topic_name %>">
+                                <% if article.image.blank? %>
                                 <div class="article__title text-center">
                                     <%= link_to articles_show_path(article) do %>
                                         <h2><%= article.title %></h2>
@@ -37,6 +38,7 @@
                                     <% end %>
                                     </span>
                                 </div>
+                                <% end %>
                                 <!--end article title-->
                                 <div class="article__body">
                                   <%= link_to articles_show_path(article) do %>
