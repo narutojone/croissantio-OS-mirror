@@ -14,3 +14,4 @@ $("#search-form").on("submit", function() {
   }
 })
 
+;

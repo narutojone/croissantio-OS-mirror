@@ -71,6 +71,7 @@ class PagesController < ApplicationController
       @resources = @resources.where(date: range) if date != [nil, nil]
       @resources = @resources.where(resource_type: type.downcase) if type != ''
       @resources = @resources.where(categories: { slug: category.tr(' ', '-') }) if category != ''
+      @resources = @resources.where("title LIKE ?", "%#{@search_resource}%") if @search_resource != ''
       @resources = @resources.order(order)
       @status = 'hidden'
     else
