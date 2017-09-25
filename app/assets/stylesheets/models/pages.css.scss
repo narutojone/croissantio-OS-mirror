@@ -32,14 +32,14 @@ article .article__title {
     margin: 0 auto !important;
     transform: translateY(-50%);
     padding: 0px 40px;
-    @media (max-width: 320px) {
-        top: 10.4rem !important;
+    @media (max-width: 768px) {
+        transform: translateY(-58%);
     }
-    @media (max-width: 768px) and (min-width: 540px) {
-        transform: translateY(-54%);
-    }
-    @media (max-width: 540px) {
-        transform: translateY(-123%);
+    @media (max-width: 520px) {
+        transform: translateY(-127%);
+        h2 {
+            font-size: 1em;
+        }
     }
 }
 

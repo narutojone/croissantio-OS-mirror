@@ -18,3 +18,6 @@
 
 # Ignore environment variables
 *.env
+
+# Ignore developmeny uploads
+public/uploads/*
