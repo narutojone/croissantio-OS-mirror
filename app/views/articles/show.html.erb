@@ -92,11 +92,12 @@
 <script type="text/javascript">
     function Subscribed() {
         analytics.track('Subscribed');
-        analytics.page(<%= @article.title %>, {
-            path: '/' + <%= @article.slug %>
-        });
+
         window.optimizely.push(["trackEvent", "Subscribed"]);
     }
+    analytics.page(<%= @article.title %>, {
+        path: '/' + <%= @article.slug %>
+    });
 </script>
 </div>
 </div>
