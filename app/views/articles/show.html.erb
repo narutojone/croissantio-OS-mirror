@@ -95,8 +95,8 @@
 
         window.optimizely.push(["trackEvent", "Subscribed"]);
     }
-    analytics.page("#{@article.title}", {
-        path: "/#{@article.slug}"
+    analytics.page("<%= @article.title %>", {
+        path: "<%= @article.slug %>"
     });
 </script>
 </div>
