@@ -57,7 +57,9 @@
   	window.optimizely.push(["trackEvent", "Subscribed"]);
   }
 
-  analytics.page('Home');
+  analytics.page('Home', {
+    path: "/"
+  });
 
 </script>
 <% end %>
