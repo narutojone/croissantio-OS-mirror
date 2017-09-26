@@ -96,7 +96,8 @@
         window.optimizely.push(["trackEvent", "Subscribed"]);
     }
     analytics.page("<%= @article.title %>", {
-        path: "<%= @article.slug %>"
+        path: "/<%= @article.slug %>",
+        url: "https://croissant.io/<%= @article.slug %>"
     });
 </script>
 </div>
