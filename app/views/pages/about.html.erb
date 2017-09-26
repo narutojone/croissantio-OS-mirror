@@ -43,5 +43,7 @@
 <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
 <% end %>
 <script type="text/javascript">
-	analytics.page('About');
+	analytics.page('About', {
+		path: '/about'
+	});
 </script>

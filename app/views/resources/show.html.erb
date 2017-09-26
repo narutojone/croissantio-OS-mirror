@@ -54,5 +54,7 @@
 <%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
 <% end %>
 <script type="text/javascript">
-	analytics.page(@resource.title);
+	analytics.page(@resource.title, {
+		path: window.location.pathname
+	});
 </script>
