@@ -2,6 +2,4 @@
 #
 # To ban all spiders from the entire site uncomment the next two lines:
 User-agent: *
-Disallow: /courses
-Disallow: /marketing-101-for-B2B-SaaS
 Sitemap: https://www.croissant.io/sitemap.xml.gz

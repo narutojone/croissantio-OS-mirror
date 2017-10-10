@@ -32,5 +32,6 @@ SitemapGenerator::Sitemap.create do
   add '/search'
   add '/blog'
   add '/about'
+  add '/videos'
   add '/services'
 end

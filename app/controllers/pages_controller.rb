@@ -15,9 +15,6 @@ class PagesController < ApplicationController
     @newsletter = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true).last
   end
 
-  def thanks_marketing_101
-  end
-
   def thanks_call
   end
 
@@ -25,20 +22,20 @@ class PagesController < ApplicationController
 
   def about; end
 
-  def marketing_101; end
-
-  def all_courses; end
-
   def contact
     @contactform = Contactform.new
   end
 
   def blog
-    @articles = Article.includes(:topics).where.not(topics: { name: 'newsletter' }).where(posted: true)
+    @articles = Article.includes(:topics).where.not(topics: { name: ['newsletter', 'video'] }).where(posted: true)
   end
 
   def newsletter
     @newsletters = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true)
+  end
+
+  def videos
+    @videos = Article.includes(:topics).where(topics: { name: 'video' }, posted: true)
   end
 
   def search

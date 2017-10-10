@@ -19,8 +19,44 @@
         </div>
         <!--end of container-->
     </div>
-    <!--end bar-->
-    <nav id="menu1" class="bar bar--sm bar-1 hidden-xs hiddem-sm ">
+    <!--end mob bar-->
+        <nav id="menu1" class="bar bar--sm bar-1 hidden-xs hiddem-sm ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-4 hidden-xs">
+                    <div class="bar__module col-md-5">
+					    <%= link_to image_tag("logo.jpg"), root_path %>
+                    </div>
+                    <!--end module-->
+                </div>
+                <div class="col-md-6 col-sm-8 text-right text-right-xs text-right-sm">
+                    <div class="bar__module">
+                        <ul class="menu-horizontal text-left resources__links">
+                           <li >
+                    	      <%= link_to "About", about_path, class: 'link_color_blue' %>
+                           </li>
+                          <li>
+                              <%= link_to "Search", search_path, class: 'link_color_blue' %>
+                          </li>
+                          <li>
+                              <%= link_to "Blog", blog_path, class: 'link_color_blue'  %>
+                          </li>
+                          <li>
+                              <%= link_to "Newsletter", newsletter_path, class: 'link_color_blue'  %>
+                          </li>
+                          <li>
+                              <%= link_to "Videos", videos_path, class: 'link_color_blue'  %>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </nav>
+    <!--end mob bar-->
+    <nav id="menu2" class="bar bar--sm bar-1 hidden-xs hiddem-sm ">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-4 hidden-xs">
@@ -45,6 +81,7 @@
                                                             <%= link_to "Search", search_path%>
 															<%= link_to "Blog", blog_path %>
 															<%= link_to "Newsletter", newsletter_path %>
+                                                            <%= link_to "Videos", videos_path %>
 													 </div>
                         </ul>
                     </div>
