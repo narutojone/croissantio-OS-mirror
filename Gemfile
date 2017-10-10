@@ -30,10 +30,8 @@ gem 'unicorn', '~> 5.3.0'
 gem 'dotenv-rails', group: %i[development test]
 gem 'facebook-messenger'
 gem 'google_calendar'
-
-group :production do
-  gem 'rails_12factor', '~> 0.0'
-end
+gem 'derailed_benchmarks', group: :development
+gem 'rails_12factor', group: :production
 
 group :development do
   gem 'better_errors', '~> 2.1'
