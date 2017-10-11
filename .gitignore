@@ -18,6 +18,7 @@
 
 # Ignore environment variables
 *.env
+.vscode/
 
 # Ignore developmeny uploads
 public/uploads/*
