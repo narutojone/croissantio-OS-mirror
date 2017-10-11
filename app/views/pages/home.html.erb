@@ -14,27 +14,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1 col-md-9 col-md-offset-3">
-          <h1 class="title-home">A weekly email of interesting <strong>Marketing & Growth</strong> resources for startups</h1>
-          <p class="lead description-home">
+          <h1 class="title-home section__title">Growth Recipes for SaaS</h1>
+          <p class="lead section__desc">
+          "Growth Recipes" <strong>=</strong> Growth Tools Implementation <strong>+</strong> Growth Tactics Execution
           </p>
-          <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/3255/subscribe" onsubmit="Subscribed()" data-remote="true">
-            <input
-							type="hidden"
-							value="{&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}"
-							id="ck_form_options"></input>
-            <input type="hidden" name="id" value="3255" id="landing_page_id"></input>
-          <div class="ck_control_group ck_email_field_group col-sm-8">
-            <!-- <input class="validate-required validate-email" type="email" name="EMAIL" placeholder="Email Address"> -->
-            <input type="email" class="validate-required validate-email form-control ck_email_address" name="email"id="ck_emailField" autocomplete="on" placeholder="Please fill in your email address to subscribe" required>
-          </div>
-          <div class="col-sm-4">
-            <!-- <input type="submit" value="Subscribe"   class="col-md-12 btn btn-lg btn-success subscribe_button ck_subscribe_button"> -->
-            <button type="submit" name="subscribed" id="ck_subscribe_button" class="btn btn--primary type--uppercase">Subscribe</button>
-          </div>
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
-          </div>
-        </form>
+          <button type="submit" class="btn section__btn _color_grad-blue type--uppercase js--open-popover col-md-5 col-sm-7 col-xs-12">Explore Growth Recipes</button>
         <!-- /End hero-section -->
         <div class="ck_errorArea">
           <div id="ck_error_msg" style="display:none">
@@ -46,10 +30,23 @@
     <!--end of row-->
   </div>
   <!--end of container-->
+  <div class="col-md-4 col-sm-6 col-xs-11 section__popover _shadow_light js--home-popover">
+    <form action="https://www.getdrip.com/forms/412417630/submissions" method="post" data-drip-embedded-form="412417630">
+      <h3 class="hidden" data-drip-attribute="headline">Growth Recipes</h3>
+      <div data-drip-attribute="description"></div>
+        <div class="form-group">
+            <label class="hidden"  for="drip-email">Email Address</label>
+            <input placeholder="Email" class="form-control"  type="email" id="drip-email" name="fields[email]" value="" />
+        </div>
+      <div>
+        <input class="btn section__btn _color_grad-blue type--uppercase" type="submit" name="submit" value="Sign Up" data-drip-attribute="sign-up-button" />
+      </div>
+    </form>
+  </div>
 </section>
 </div>
 <% content_for :js do %>
-<%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+<%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"  %>
 <script type="text/javascript">
   function Subscribed() {
   	analytics.track('Subscribed');
@@ -60,5 +57,6 @@
     path: "/"
   });
 
+  openPopover()
 </script>
 <% end %>
