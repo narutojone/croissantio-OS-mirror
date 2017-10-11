@@ -91,7 +91,7 @@
               <%= link_to (resource.link) do %>
                 <div class="masonry__item resource_card">
                   <h4 class="resource-title">
-                    <%= link_to resource.title, resource.link + "?utm_campaign=TGBSearch&utm_medium=referral&utm_source=Croissant.io" %>
+                    <%= link_to resource.title, resource.link + "?utm_campaign=TGBSearch&utm_medium=referral&utm_source=Croissant.io", target: '_blank' %>
                   </h4>
                   <span>
                     <strong><%= resource.date ? resource.date.strftime("%B #{resource.date.day.ordinalize} %Y") : 'No Date'  %>
