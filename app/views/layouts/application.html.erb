@@ -6,9 +6,8 @@
       <meta charset="utf-8">
       <% set_meta_tags keywords: %w[startup startups marketing data technology data-driven newsletters growth retention career engagement],
           description: yield(:description),
-          author: "https://www.facebook.com/growthbakery",
-          publisher: "https://www.facebook.com/growthbakery",
-          canonical: "https://croissant.io/",
+          author: "https://www.facebook.com/croissantIO",
+          publisher: "https://www.facebook.com/croissantIO",
           image_src: yield(:ogimage),
           og: {
             site_name: "Croissant",
@@ -25,10 +24,8 @@
             creator: "@MaximeSalomon",
             url: request.original_url,
             title: yield(:ogtitle)
-          },
-          article: {
-            publisher: "https://www.facebook.com/growthbakery",
-          } %>
+          }
+      %>
       <%= display_meta_tags %>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="google-site-verification" content="-9QYp6rs8P-WyuEXUc1T5O-zddmnYyuC51RHsFPw848" />
