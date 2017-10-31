@@ -32,6 +32,7 @@ gem 'facebook-messenger'
 gem 'google_calendar'
 gem 'derailed_benchmarks', group: :development
 gem 'rails_12factor', group: :production
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
 
 group :development do
   gem 'better_errors', '~> 2.1'

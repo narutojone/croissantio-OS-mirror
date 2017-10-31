@@ -69,7 +69,9 @@ article .article__title a
         border-bottom-right-radius: 0 !important;
     }
 }
-
+.ck_form_container {
+  display: none;
+}
 .section {
     &__btn {
         float: none;
@@ -82,6 +84,10 @@ article .article__title a
             background: -ms-linear-gradient(left, rgba(52,149,246,1) 0%, rgba(71,116,228,1) 100%);
             background: linear-gradient(to right, rgba(52,149,246,1) 0%, rgba(71,116,228,1) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3495f6', endColorstr='#4774e4', GradientType=1 );
+            &:hover, &:focus {
+              color: #fff !important;
+              border-color: #d3d3d3;
+            }
         }
     }
     &__popover {

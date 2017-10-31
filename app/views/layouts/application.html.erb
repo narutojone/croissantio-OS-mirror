@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= yield :title %> | Croissant </title>
+    <title>
+    <% if current_page?('/') %>
+      <%= yield :title %>
+    <% else %>
+      <%=  yield :title %> | Croissant 
+    <% end %>
+    </title>
     <html lang="en">
       <meta charset="utf-8">
       <% set_meta_tags keywords: %w[startup startups marketing data technology data-driven newsletters growth retention career engagement],
@@ -34,6 +40,7 @@
       <meta name="robots" content="index, follow">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+      <%= canonical_tag -%>
       <link rel="shortcut icon" type="image/x-icon" href="<%= asset_path('favicon.ico') %>"/>
       <%= csrf_meta_tags %>
       <%= yield :css %>

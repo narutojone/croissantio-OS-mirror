@@ -1,9 +1,9 @@
-<% content_for :title, "B2B SaaS Marketing & Growth"  %>
-<% content_for :description, "Croissant is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition." %>
-<% content_for :ogtitle, "B2B SaaS Marketing & Growth" %>
-<% content_for :ogdescription, "Croissant is a solo B2B SaaS Marketing & Growth consultancy that uses a data-driven approach to customer acquisition." %>
+<% content_for :title, "Croissant - Growth Recipes for SaaS"  %>
+<% content_for :description, "Croissant helps SaaS companies build their Growth Stack by implementing tools such as Hull, Segment, Amplitude, Hotjar, Optimizely & many more." %>
+<% content_for :ogtitle, "Croissant - Growth Recipes for SaaS" %>
+<% content_for :ogdescription, "Croissant helps SaaS companies build their Growth Stack by implementing tools such as Hull, Segment, Amplitude, Hotjar, Optimizely & many more." %>
 <% content_for :ogtype, "page" %>
-<% content_for :ogimage, image_path('maxime-salomon.jpg') %>
+<% content_for :ogimage, image_path('Croissant-OG.png') %>
 <%= content_for :css do %>
   <%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/pages"  %>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
@@ -16,31 +16,28 @@
         <div class="col-sm-10 col-sm-offset-1 col-md-9 col-md-offset-3">
           <h1 class="title-home section__title">Growth Recipes for SaaS</h1>
           <p class="lead section__desc">
-          "Growth Recipes" <strong>=</strong> Growth Tools Implementation <strong>+</strong> Growth Tactics Execution
+          "Growth Recipes" <strong>=</strong> Tools Implementation <strong>+</strong> Growth Process
           </p>
           <button type="submit" class="btn section__btn _color_grad-blue type--uppercase js--open-popover col-md-5 col-sm-7 col-xs-12">Explore Growth Recipes</button>
-        <!-- /End hero-section -->
-        <div class="ck_errorArea">
-          <div id="ck_error_msg" style="display:none">
-            <p>Sorry, there was an error. Please try again to subscribe.</p>
-          </div>
-        </div>
       </div>
     </div>
-    <!--end of row-->
   </div>
-  <!--end of container-->
   <div class="col-md-4 col-sm-6 col-xs-11 section__popover _shadow_light js--home-popover">
-    <form action="https://www.getdrip.com/forms/412417630/submissions" method="post" data-drip-embedded-form="412417630">
-      <h3 class="hidden" data-drip-attribute="headline">Growth Recipes</h3>
-      <div data-drip-attribute="description"></div>
-        <div class="form-group">
-            <label class="hidden"  for="drip-email">Email Address</label>
-            <input placeholder="Email" class="form-control"  type="email" id="drip-email" name="fields[email]" value="" />
+    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+      <h3>Coming Soon</h3>
+        <div class="form-group ck_control_group ck_email_field_group">
+            <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
+            <input placeholder="Enter your email to be notified..." name="email" class="form-control ck_email_address" id="ck_emailField" type="email" required="" />
         </div>
-      <div>
-        <input class="btn section__btn _color_grad-blue type--uppercase" type="submit" name="submit" value="Sign Up" data-drip-attribute="sign-up-button" />
-      </div>
+
+        <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+          <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+        </div>
+
+        <div>
+          <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn section__btn _color_grad-blue type--uppercase" type="submit" name="submit" value="Let Me Know" data-drip-attribute="sign-up-button" />
+        </div>
+        <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
     </form>
   </div>
 </section>
