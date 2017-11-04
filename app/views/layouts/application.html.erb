@@ -19,7 +19,7 @@
             site_name: "Croissant",
             title: yield(:ogtitle),
             description: yield(:ogdescription),
-            type: "article",
+            type: yield(:ogtype),
             url: request.original_url,
             image: yield(:ogimage),
             locale: "en_US"
