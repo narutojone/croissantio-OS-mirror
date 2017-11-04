@@ -19,28 +19,48 @@
           "Growth Recipes" <strong>=</strong> Tools Implementation <strong>+</strong> Growth Process
           </p>
           <button type="submit" class="btn section__btn _color_grad-blue type--uppercase js--open-popover col-md-5 col-sm-7 col-xs-12">Explore Growth Recipes</button>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-11 section__popover _shadow_light js--home-popover">
+        <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+        <h3>Coming Soon</h3>
+          <div class="form-group ck_control_group ck_email_field_group">
+              <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
+              <input placeholder="Enter your email to be notified..." name="email" class="form-control ck_email_address" id="ck_emailField" type="email" required="" />
+          </div>
+
+          <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+            <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+          </div>
+
+          <div>
+            <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn section__btn _color_grad-blue type--uppercase" type="submit" name="submit" value="Let Me Know" data-drip-attribute="sign-up-button" />
+          </div>
+          <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
+        </form>
       </div>
     </div>
-  </div>
-  <div class="col-md-4 col-sm-6 col-xs-11 section__popover _shadow_light js--home-popover">
-    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
-      <h3>Coming Soon</h3>
-        <div class="form-group ck_control_group ck_email_field_group">
-            <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
-            <input placeholder="Enter your email to be notified..." name="email" class="form-control ck_email_address" id="ck_emailField" type="email" required="" />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="row center logo-row">
+            <div class="col-sm-12 col-md-2 col-md-offset-1"><a href="https://www.hull.io" class="img-link"><%= image_tag("logos/hull.png", class: "company-img") %></a></div>
+            <div class="col-sm-12 col-md-2"><a href="https://clearbit.com" class="img-link"><%= image_tag("logos/clearbit.png", class: "company-img") %></a></div>
+            <div class="col-sm-12 col-md-2"><a href="https://zapier.com" class="img-link"><%= image_tag("logos/zapier.png", class: "company-img") %></a></div>
+            <div class="col-sm-12 col-md-2"><a href="https://www.hotjar.com" class="img-link"><%= image_tag("logos/hotjar.png", class: "company-img") %></a></div>
+            <div class="col-sm-12 col-md-2"><a href="https://www.optimizely.com" class="img-link"><%= image_tag("logos/opt.png", class: "company-img opt") %></a></div>
+          </div>
+          <div class="row logo-row">
+            <div class="col-sm-12 col-md-2 col-md-offset-1"><a href="https://amplitude.com" class="img-link"><%= image_tag("logos/ampl.png", class: "company-img") %></a></div>
+            <div class="col-sm-12 col-md-2"><a href="https://www.madkudu.com" class="img-link"><%= image_tag("logos/madkudu.svg", class: "company-img") %></a></div>
+            <div class="col-sm-12 col-md-2"><a href="https://customer.io" class="img-link"><%= image_tag("logos/customer.png", class: "company-img") %></a></div>
+            <div class="col-sm-12 col-md-2"><a href="https://www.semrush.com" class="img-link"><%= image_tag("logos/semrush.png", class: "company-img") %></a></div>
+            <div class="col-sm-12 col-md-2"><a href="https://www.hubspot.com" class="img-link"><%= image_tag("logos/hubspot.jpg", class: "company-img") %></a></div>
+          </div>
         </div>
-
-        <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
-          <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
-        </div>
-
-        <div>
-          <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn section__btn _color_grad-blue type--uppercase" type="submit" name="submit" value="Let Me Know" data-drip-attribute="sign-up-button" />
-        </div>
-        <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
-    </form>
-  </div>
-</section>
+      </div>
+    </div>
+  </section>
 </div>
 <% content_for :js do %>
 <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"  %>

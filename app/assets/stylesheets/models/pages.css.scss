@@ -117,3 +117,21 @@ article .article__title a
         }
     }
 }
+
+.logo-row {
+  margin-top: 40px
+}
+
+.img-link {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.company-img {
+  padding: 9px;
+  max-width: 100%;
+  max-height: 70px;
+  &.opt {
+    margin-top: 10px;
+  }
+}
