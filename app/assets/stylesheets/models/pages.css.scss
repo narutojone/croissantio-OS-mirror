@@ -125,8 +125,10 @@ article .article__title a
 .img-link {
   height: 100%;
   width: 100%;
-  display: block;
+  opacity: 0;
 }
+
+
 .company-img {
   padding: 9px;
   max-width: 100%;
@@ -134,4 +136,8 @@ article .article__title a
   &.opt {
     margin-top: 10px;
   }
+}
+
+.img-container:first-child {
+  margin-left: 8.33333333%;
 }

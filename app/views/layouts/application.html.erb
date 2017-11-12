@@ -10,7 +10,7 @@
     </title>
     <html lang="en">
       <meta charset="utf-8">
-      <% set_meta_tags keywords: %w[startup startups marketing data technology data-driven newsletters growth retention career engagement],
+      <% set_meta_tags keywords: 'growth recipes, growth tools, growth stack, growth, saas, b2b SaaS',
           description: yield(:description),
           author: "https://www.facebook.com/croissantIO",
           publisher: "https://www.facebook.com/croissantIO",
@@ -26,7 +26,7 @@
           },
           twitter: {
             card: "summary_large_image",
-            site: "@GrowthBakery",
+            site: "@CroissantIO",
             creator: "@MaximeSalomon",
             url: request.original_url,
             title: yield(:ogtitle)
@@ -166,5 +166,6 @@
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
       <%= stylesheet_link_tag "models/_navbar" %>
       <%= yield :js %>
+
     </body>
   </html>

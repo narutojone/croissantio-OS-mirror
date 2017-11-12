@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Sitemap
-  get '/sitemap.xml.gz', to: redirect('https://s3-eu-west-1.amazonaws.com/thegrowthbakeryblog/sitemap.xml.gz')
+  # get '/sitemap.xml.gz', to: redirect('https://s3-eu-west-1.amazonaws.com/thegrowthbakeryblog/sitemap.xml.gz')
   # ------------------ Static Pages -----------------------
   # Private
   get '/admin' => 'pages#admin'

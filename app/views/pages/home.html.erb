@@ -16,7 +16,7 @@
         <div class="col-sm-10 col-sm-offset-1 col-md-9 col-md-offset-3">
           <h1 class="title-home section__title">Growth Recipes for SaaS</h1>
           <p class="lead section__desc">
-          "Growth Recipes" <strong>=</strong> Tools Implementation <strong>+</strong> Growth Process
+          Growth Recipes <strong>=</strong> Tools Implementation <strong>+</strong> Growth Process
           </p>
           <button type="submit" class="btn section__btn _color_grad-blue type--uppercase js--open-popover col-md-5 col-sm-7 col-xs-12">Explore Growth Recipes</button>
         </div>
@@ -43,19 +43,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <div class="row center logo-row">
-            <div class="col-sm-12 col-md-2 col-md-offset-1"><a href="https://www.hull.io" class="img-link"><%= image_tag("logos/hull.png", class: "company-img") %></a></div>
-            <div class="col-sm-12 col-md-2"><a href="https://clearbit.com" class="img-link"><%= image_tag("logos/clearbit.png", class: "company-img") %></a></div>
-            <div class="col-sm-12 col-md-2"><a href="https://zapier.com" class="img-link"><%= image_tag("logos/zapier.png", class: "company-img") %></a></div>
-            <div class="col-sm-12 col-md-2"><a href="https://www.hotjar.com" class="img-link"><%= image_tag("logos/hotjar.png", class: "company-img") %></a></div>
-            <div class="col-sm-12 col-md-2"><a href="https://www.optimizely.com" class="img-link"><%= image_tag("logos/opt.png", class: "company-img opt") %></a></div>
+          <div class="row center logo-row js--row-1">
           </div>
-          <div class="row logo-row">
-            <div class="col-sm-12 col-md-2 col-md-offset-1"><a href="https://amplitude.com" class="img-link"><%= image_tag("logos/ampl.png", class: "company-img") %></a></div>
-            <div class="col-sm-12 col-md-2"><a href="https://www.madkudu.com" class="img-link"><%= image_tag("logos/madkudu.svg", class: "company-img") %></a></div>
-            <div class="col-sm-12 col-md-2"><a href="https://customer.io" class="img-link"><%= image_tag("logos/customer.png", class: "company-img") %></a></div>
-            <div class="col-sm-12 col-md-2"><a href="https://www.semrush.com" class="img-link"><%= image_tag("logos/semrush.png", class: "company-img") %></a></div>
-            <div class="col-sm-12 col-md-2"><a href="https://www.hubspot.com" class="img-link"><%= image_tag("logos/hubspot.jpg", class: "company-img") %></a></div>
+          <div class="row logo-row js--row-2">
           </div>
         </div>
       </div>
@@ -63,7 +53,7 @@
   </section>
 </div>
 <% content_for :js do %>
-<%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"  %>
+<%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script", "random-order"  %>
 <script type="text/javascript">
   function Subscribed() {
   	analytics.track('Subscribed');
