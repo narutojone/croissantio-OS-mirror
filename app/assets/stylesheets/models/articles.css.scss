@@ -1,10 +1,4 @@
-// STYLESHEET CONTAINING ALL STYLING
-// SPECIFICATION FOR ARTICLES
-
-// Table of contents
-// - ARTICLE SHOW
-
-// -------------- ARTICLE SHOW -----------------------------
+@import '../fonts';
 
 html {
     color: #222;
@@ -3682,7 +3676,6 @@ input[type=range]:focus+.rangeslider .rangeslider__handle {
 
     .author__image,
     .featured__desc,
-    .hero__desc,
     .post__desc {
         display: none;
     }

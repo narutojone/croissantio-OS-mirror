@@ -99,3 +99,21 @@
     width: 80%;
   }
 }
+
+@media (min-width: 990px) and (max-width: 992px) {
+  .hidden-991-1199 {
+    display: none;
+  }
+}
+
+@media (min-width: 1198px) and (max-width: 1200px) {
+  .hidden-991-1199 {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar__first-col {
+    display: none !important;
+  }
+}
