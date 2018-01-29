@@ -1,7 +1,6 @@
 <% content_for :body_class, "nav-md admin-body" %>
 <% content_for :css do %>
-<%= stylesheet_link_tag "iconsmind", "models/pages" %>
-
+  <%= stylesheet_link_tag "iconsmind", "models/pages" %>
 <% end %>
 <% flash.each do |message_type, message| %>
   <div class="alert alert-<%= message_type %> alert-dismissible fade in"><%=message %>
@@ -9,7 +8,6 @@
     </button>
   </div>
 <% end %>
-
 <div class="col-md-3 left_col">
   <div class="left_col scroll-view">
     <div class="navbar nav_title"> <%=link_to(root_path , class: "site_title") do %> <i class="fa fa-diamond"></i> <span>Croissant</span></a> <% end %> </div>
@@ -18,7 +16,7 @@
     <div class="profile_pic"><%=image_tag("maxime-salomon.png", class: "img-circle profile_img") %> </div>
     <div class="profile_info">
       <span>Welcome,</span>
-        <h2>Maxime</h2>
+      <h2>Maxime</h2>
     </div>
   </div>
   <br/>

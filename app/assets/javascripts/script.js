@@ -92,11 +92,3 @@ function submitMessageForm() {
     }
   })
 }
-
-function openPopover() {
-  console.log("The script has been loaded")
-  $('.js--open-popover').click(function() {
-    console.log("The button has been clicked")
-    $('.js--home-popover').toggle()
-  })
-}

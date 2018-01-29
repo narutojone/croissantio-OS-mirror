@@ -10,60 +10,51 @@
 <% end %>
 <%= render "shared/stack_navbar" %>
 <div class="main-container">
-  <section class="text-center">
-    <div class="container">
-      <div class="row">
+  <section class="hero _has-bg ackground text-center">
+    <%= image_tag("index/bg.png", class: "background") %>
+    <div class="container hero__container">
+      <%= image_tag("index/particles-left.png", class: "particles_left") %>
+      <%= image_tag("index/particles-right.png", class: "particles_right") %>
+      <div class="row hero__main-block">
         <div class="col-sm-10 col-sm-offset-1 col-md-9 col-md-offset-3">
-          <h1 class="title-home section__title">Growth Recipes for SaaS</h1>
-          <p class="lead section__desc">
-          Growth Recipes <strong>=</strong> Tools Implementation <strong>+</strong> Growth Process
+          <h1 class="title-home hero__title">On-Demand Growth Team for SaaS</h1>
+          <p class="hero__subtitle">Grow Revenue, not just MQLs 🚀</p>
+          <p class="lead hero__desc">
+            We have built growth recipes for Acquisition, Conversion, Engagement,<br>
+            Revenue and Virality that we offer as a service to SaaS companies.
           </p>
-          <button type="submit" class="btn section__btn _color_grad-blue type--uppercase js--open-popover col-md-5 col-sm-7 col-xs-12">Explore Growth Recipes</button>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-11 section__popover _shadow_light js--home-popover">
-        <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
-        <h3>Coming Soon</h3>
-          <div class="form-group ck_control_group ck_email_field_group">
+          <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+            <div class="form-group ck_control_group ck_email_field_group hero__form">
               <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
-              <input placeholder="Enter your email to be notified..." name="email" class="form-control ck_email_address" id="ck_emailField" type="email" required="" />
-          </div>
-
-          <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
-            <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
-          </div>
-
-          <div>
-            <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn section__btn _color_grad-blue type--uppercase" type="submit" name="submit" value="Let Me Know" data-drip-attribute="sign-up-button" />
-          </div>
-          <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
-        </form>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="row center logo-row js--row-1">
-          </div>
-          <div class="row logo-row js--row-2">
-          </div>
+              <input placeholder="Enter your business email" name="email" class="form-control hero__email-field ck_email_address" id="ck_emailField" type="email" required="" />
+              <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn hero__btn _color_blue type--uppercase" type="submit" name="submit" value="Request a call" data-drip-attribute="sign-up-button" />
+            </div>
+            <p class="hero__input-subtitle">20min call to ask all your questions about Croissant</p>
+            <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+              <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+            </div>
+            <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
+          </form>
         </div>
       </div>
     </div>
   </section>
-</div>
-<% content_for :js do %>
-<%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script", "random-order"  %>
-<script type="text/javascript">
-  function Subscribed() {
-  	analytics.track('Subscribed');
-  	window.optimizely.push(["trackEvent", "Subscribed"]);
-  }
-
-  analytics.page('Home', {
-    path: "/"
-  });
-
-  openPopover()
-</script>
-<% end %>
+  <section class="hero-lower">
+    <div class="container hero-lower__container">
+      <p class="hero-lower__text _color_blue">© 2018 Croissant - Made with ❤️ in Paris, France</p>
+      </div>
+    </section>
+  </div>
+  <% content_for :js do %>
+    <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"%>
+    <script type="text/javascript">
+      function Subscribed() {
+      	analytics.track('Subscribed');
+      	window.optimizely.push(["trackEvent", "Subscribed"]);
+      }
+      
+      analytics.page('Home', {
+        path: "/"
+      });
+    </script>
+  <% end %>

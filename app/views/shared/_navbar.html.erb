@@ -1,37 +1,36 @@
 <% content_for :css do %>
-<%= stylesheet_link_tag "models/pages"  %>
+  <%= stylesheet_link_tag "models/pages"  %>
 <% end %>
-
-			<% flash.each do |message_type, message| %>
-			<div class="notification pos-left pos-top col-sm-4 col-md-3 notification--reveal" data-animation="from-top" data-autoshow="0">
-				<div class="boxed boxed--border border--round box-shadow">
-					<div class="text-block">
-						<%= message %>
-					</div>
-				</div>
-				<div class="notification-close-cross notification-close"></div>
-			</div>
-<div>
-  <nav class="navbar">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
-         <span class="sr-only">Toggle navigation</span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Croissant</a>
+<% flash.each do |message_type, message| %>
+  <div class="notification pos-left pos-top col-sm-4 col-md-3 notification--reveal" data-animation="from-top" data-autoshow="0">
+    <div class="boxed boxed--border border--round box-shadow">
+      <div class="text-block">
+        <%= message %>
       </div>
-    <div class="collapse navbar-collapse" id="nav-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="<%= newsletter_path %>">Newsletter</a></li>
-        <li><a href="<%= blog_path %>">Blog</a></li>
-          <li><a href="<%= about_path %>">About</a></li>
-          <li><a href="<%= search_path %>">Search</a></li>
-          <li><a href="<%= contact_path %>">Contact</a></li>
-      </ul>
     </div>
-    </div>
-  </nav>
-</div>
+    <div class="notification-close-cross notification-close"></div>
+  </div>
+  <div>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Croissant</a>
+        </div>
+        <div class="collapse navbar-collapse" id="nav-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="<%= newsletter_path %>">Newsletter</a></li>
+            <li><a href="<%= blog_path %>">Blog</a></li>
+            <li><a href="<%= about_path %>">About</a></li>
+            <li><a href="<%= search_path %>">Search</a></li>
+            <li><a href="<%= contact_path %>">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>

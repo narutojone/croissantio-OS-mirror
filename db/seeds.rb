@@ -5,6 +5,18 @@
 #
 
 require 'csv'
+
+Category.create(name: "Growth")
+Category.create(name: "Growth Process")
+Category.create(name: "Growth Team")
+Category.create(name: "Growth Model")
+Category.create(name: "Marketing")
+Category.create(name: "Retention")
+Category.create(name: "Analytics")
+Category.create(name: "Engagement")
+Category.create(name: "Experimentation")
+Category.create(name: "Growth Career")
+
 csv = CSV.read(Rails.root.join('db', 'file.csv'), headers: true, header_converters: :symbol)
 
 csv.each do |row|
