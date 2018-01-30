@@ -78,6 +78,21 @@ function trackFieldChanges() {
   })
 }
 
+function setInputFocus() {
+  $('.js--activate-input').on('click', function() {
+    $('.js--email-input').focus();
+    $('html, body').animate({
+      scrollTop: $(".js--email-input").offset().top
+    }, 500);
+  })
+}
+
+function showMessage() {
+  $('#ck_subscribe_form').submit(function(event) {
+    setTimeout(function() {$('.form__success').show()}, 1000)
+  })
+}
+
 function submitMessageForm() {
   $('.js--open-modal').on('click', function() {
     if ($('#send-message-input').val()) {

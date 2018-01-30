@@ -12,21 +12,20 @@
 <div class="main-container">
   <section class="hero _has-bg ackground text-center">
     <%= image_tag("index/bg.png", class: "background") %>
+    <%= image_tag("index/particles-left.png", class: "particles_left hidden-xs") %>
+    <%= image_tag("index/particles-right.png", class: "particles_right hidden-xs") %>
     <div class="container hero__container">
-      <%= image_tag("index/particles-left.png", class: "particles_left hidden-xs") %>
-      <%= image_tag("index/particles-right.png", class: "particles_right hidden-xs") %>
       <div class="row hero__main-block">
         <div class="col-sm-10 col-sm-offset-1 col-md-9 col-md-offset-3">
           <h1 class="title-home hero__title">On-Demand Growth Team for SaaS</h1>
           <p class="hero__subtitle">Grow Revenue, not just MQLs 🚀</p>
           <p class="lead hero__desc">
-            We have built growth recipes for Acquisition, Conversion, Engagement,<br>
-            Revenue and Virality that we offer as a service to SaaS companies.
+            We are a team of marketers, developers, product managers and designers<br>that you can hire to grow your MRR starting at 6000$/month.
           </p>
           <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
             <div class="form-group ck_control_group ck_email_field_group hero__form">
               <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
-              <input placeholder="Enter your business email" name="email" class="form-control hero__email-field ck_email_address" id="ck_emailField" type="email" required="" />
+              <input placeholder="Enter your business email" name="email" class="form-control hero__email-field ck_email_address js--email-input" id="ck_emailField" type="email" required="" />
               <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn hero__btn _color_blue type--uppercase" type="submit" name="submit" value="Request a call" data-drip-attribute="sign-up-button" />
             </div>
             <p class="hero__input-subtitle">20min call to ask all your questions about Croissant</p>
@@ -35,6 +34,7 @@
             </div>
             <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
           </form>
+          <p class="form__success">Thanks! Will get in touch with you asap to schedule the call.</p>
         </div>
       </div>
     </div>
@@ -56,5 +56,8 @@
       analytics.page('Home', {
         path: "/"
       });
+
+      setInputFocus();
+      showMessage();
     </script>
   <% end %>

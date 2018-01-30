@@ -1,22 +1,22 @@
 .bar-1 .menu-horizontal>li>.dropdown__trigger, .bar-1 .menu-horizontal>li>.link_color_blue {
     opacity: 1;
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 5.1rem;
     font-family: 'Lato', sans-serif;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-    color: #3e396b;
+    font-weight: 500;
+    color: #3D3A67;
     border: none;
     height: 0;
     position: relative;
     height: 67px;
+    letter-spacing: 0.2px;
     &:hover {
         opacity: 0.5;
     }
     span { 
       position: absolute;
-      top: 14px;
+      top: 13px;
       right: -36px;
       width: 37px;
     }
@@ -29,7 +29,7 @@
 
 .link {
   &__arrow {
-    width: 11px;
+    width: 12px;
   }
 }
 
@@ -80,7 +80,6 @@
     font-family: 'HelveticaNeueCyr Bold';
     width: 163px;
     height: 45px;
-    padding-bottom: 6px;
     background-color: white;
     &._border_blue {
       border: 1px solid #5075DD;
@@ -92,7 +91,7 @@
   }
   &__link {
     position: absolute;
-    top: 16px;
+    top: 15px;
     left: 0;
     right: -30px;
     margin: 0 auto;

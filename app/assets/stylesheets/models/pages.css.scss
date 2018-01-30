@@ -59,6 +59,17 @@ article .article__title a
   display: none;
 }
 
+.form {
+  &__success {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    display: none;
+    color: #5075dd;
+    font-family: 'HelveticaNeueCyr Bold';
+    transform: translateY(104px);
+  }
+}
+
 .logo-row {
   margin-top: 40px
 }
@@ -83,8 +94,21 @@ article .article__title a
   margin-left: 8.33333333%;
 }
 
+.main-container {
+  overflow: hidden;
+}
+
 .hero {
-  height: 82vh;
+  height: 619px;
+  @media (min-width: 1440px) {
+    height: 751px;
+  }
+  @media (min-width: 1680px) {
+    height: 904px;
+  }
+  @media (min-width: 2560px) {
+    height: 1288px;
+  }
   &__container {
     position: relative;
     height: 100%;
@@ -112,15 +136,15 @@ article .article__title a
   .particles {
     &_left {
       position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 15%;
+      left: -9%;
+      bottom: 29px;
+      width: 31%;
     }
     &_right {
       position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 15%;
+      right: -9%;
+      bottom: 29px;
+      width: 31%;
     }
   }
   #ck_emailField {
@@ -139,15 +163,27 @@ article .article__title a
     width: 63% !important;
     margin: 0 !important;
     padding: 0 27px !important;
-    font-family: 'HelveticaNeueCyr Thin Italic';
+    font-family: 'HelveticaNeueCyr Bold';
     @media (max-width: 768px) { 
       width: 100% !important;
       float: none !important;
       display: block !important;
     } 
+    &::-webkit-input-placeholder {
+      font-family: 'HelveticaNeueCyr Thin Italic';
+    }
+    &::-moz-placeholder {
+      font-family: 'HelveticaNeueCyr Thin Italic';
+    }
+    &:-ms-input-placeholder {
+      font-family: 'HelveticaNeueCyr Thin Italic';
+    }
+    &:-moz-placeholder {
+      font-family: 'HelveticaNeueCyr Thin Italic';
+    }
   }
   &__input-subtitle {
-    font-family: 'HelveticaNeueCyr Light';
+    font-family: 'HelveticaNeueCyr  t';
     font-size: 10px;
     color: #3D3A67;
     transform: translateX(-103px);
@@ -169,7 +205,6 @@ article .article__title a
     float: right;
     font-family: 'HelveticaNeueCyr Bold';
     letter-spacing: 0.6px !important;
-    padding-bottom: 15px !important;
     &._color_blue {
       background: #5075DD;
       &:hover, &:focus {
@@ -188,8 +223,11 @@ article .article__title a
       color: #5075DD;
       text-transform: uppercase;
       text-align: center;
-      font-size: 30px;
+      font-size: 39px;
       font-family: 'Couture Bold';
+      @media (max-width: 768px) { 
+        font-size: 30px;
+      } 
   }
   &__subtitle {
     margin: 68px 0 48px 0;
@@ -219,11 +257,8 @@ article .article__title a
 }
 
 .hero-lower {
-  padding: 0 !important;
+  padding: 2em 0 !important;
   background-color: #fff;
-  &__container {
-    padding-top: 21px;
-  }
   &__text {
     text-align: center;
     color: #3D3A67;
