@@ -183,7 +183,7 @@ article .article__title a
     }
   }
   &__input-subtitle {
-    font-family: 'HelveticaNeueCyr  t';
+    font-family: 'HelveticaNeueCyr';
     font-size: 10px;
     color: #3D3A67;
     transform: translateX(-103px);
@@ -257,8 +257,12 @@ article .article__title a
 }
 
 .hero-lower {
-  padding: 2em 0 !important;
+  height: 82px;
+  padding: 0 !important;
   background-color: #fff;
+  &__container {
+    height: 100%;
+  }
   &__text {
     text-align: center;
     color: #3D3A67;
@@ -266,6 +270,7 @@ article .article__title a
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 10px;
+    line-height: 82px;
   }
 }
 
@@ -276,4 +281,16 @@ article .article__title a
 
 #search-form {
   margin-top: 50px;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+.fixed-width {
+  background: #fff;
+  @media (min-width: 1440px) {
+    width: 1440px;
+    margin: 0 auto;
+  }
 }

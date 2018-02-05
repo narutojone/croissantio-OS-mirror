@@ -156,7 +156,7 @@ var disqus_config = function () {
 <div class="col-sm-4">
 <article class="feature feature-1">
     <%= link_to articles_show_path(article) do %>
-    <%= image_tag article.image.url %>
+      <%= image_tag article.image.url %>
     <% end %>
     <div class="feature__body boxed boxed--border">
         <span><%= article.date && article.date.strftime("%B #{article.date.day.ordinalize} %Y") %></span>

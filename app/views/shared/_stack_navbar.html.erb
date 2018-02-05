@@ -10,7 +10,7 @@
           <% end %>
         </div>
         <div class="col-xs-9 col-sm-10 text-right">
-          <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+          <a href="#" class="hamburger-toggle js--open-menu">
             <i class="icon icon--sm stack-interface stack-menu"></i>
           </a>
         </div>
@@ -20,21 +20,60 @@
     <!--end of container-->
   </div>
   <!--end mob bar-->
+  <nav class="mobile-nav hidden-991-1199 hidden-md hidden-lg hidden-sm js--mobile-nav">
+    <div class="container-fluid">
+      <div class="mobile-nav__row _border_blue row">
+        <div class="mobile-nav__col col-xs-5">
+          <%= link_to root_path, class: "clearfix" do %>
+            <%= image_tag "logo.jpg", class: "mobile-nav__logo" %>
+          <% end %>
+        </div>
+        <div class="col-xs-2"></div>
+        <div class="mobile-nav__col col-xs-5 js--close-menu">
+          <div class="mobile-nav__close-btn">Menu<span><i class="fa fa-times-thin"></i></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__list-item js--open-mob-list">Resources<span><i class="fa fa-angle-down"></i></span>
+            </li>
+          </ul>
+          <ul class="mobile-nav__dropdown-list menu-horizontal text-left js--mob-list">
+            <li>
+              <%= link_to "Blog", blog_path, class: 'mobile-nav__dropdown-list-item' %>
+            </li>
+            <li>
+              <%= link_to "Newsletter", newsletter_path, class: 'mobile-nav__dropdown-list-item'  %>
+            </li>
+            <li>
+              <%= link_to "Videos", videos_path, class: 'mobile-nav__dropdown-list-item'  %>
+            </li>
+            <li>
+              <%= link_to "Search", search_path, class: 'mobile-nav__dropdown-list-item'  %>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <% if current_page?('/') %>
+            <button class="mobile-nav__btn _color_blue js--focus-input">
+              Request call
+            </button>
+          <% else %>
+            <%= link_to("Learn more", root_path, class: "mobile-nav__btn _color_blue")%>
+          <% end%>
+        </div>
+      </div>
+    </div>
+  </nav>
   <nav id="menu1" class="bar bar--sm bar-1 hidden-991-1199 hidden-xs hidden-md hidden-lg hidden-sm">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-sm-4 hidden-xs">
-          <div class="bar__module col-md-5">
-            <%= link_to image_tag("logo.jpg"), root_path%>
-          </div>
-          <!--end module-->
-        </div>
-        <div class="col-md-6 col-sm-8 text-right text-right-xs text-right-sm">
+        <div class="col-md-6">
           <div class="bar__module">
             <ul class="menu-horizontal text-left resources__links">
-              <li >
-                <%= link_to "About", about_path, class: 'link_color_blue' %>
-              </li>
               <li>
                 <%= link_to "Search", search_path, class: 'link_color_blue' %>
               </li>
@@ -69,7 +108,7 @@
                 Resources
                 <span>
                   <%= image_tag("index/arrow-down.svg", class: "link__arrow") %>
-                <span>
+                  <span>
                   </button>
                 </li>
                 <div class="res-dropdown">
@@ -83,9 +122,13 @@
             </div>
             <div class="col-sm-7 text-right text-right-xs text-right-sm">
               <div class="col-sm-12 bar__module navbar__second">
+                <% if current_page?('/') %>
                   <button class="navbar__btn-right _border_blue js--activate-input">
-                    Request a call
+                    Request call
                   </button>
+                <% else %>
+                  <%= link_to("Learn more", root_path, class: "navbar__btn-right _border_blue")%>
+                <% end%>
               </div>
             </div>
           </div>
