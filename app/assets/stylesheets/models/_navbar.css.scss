@@ -19,11 +19,18 @@
       top: 13px;
       right: -36px;
       width: 37px;
+      @media (min-width: 1280px) {
+        top: 15px;
+      }
     }
     @media (max-width: 767px) {
         right: 0;
         left: 4rem;
         line-height: 1rem;
+    }
+    @media (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 5rem;
     }
 }
 
@@ -133,6 +140,16 @@
   &._opened {
     top: 0;
   }
+  &__arrow {
+    transform: rotate(0deg);
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    &._animate {
+      transform: rotate(180deg)
+    }
+  }
   &__btn {
     margin: 10px auto;
     text-align: center;
@@ -143,6 +160,7 @@
     border-radius: 3px;
     border: none;
     &._color_blue {
+      font-family: 'Lato', sans-serif;
       background-color: #5075DD;
       color: #fff;
       text-transform: uppercase;
@@ -160,6 +178,7 @@
       border-bottom: 1px solid rgba(200, 217, 251, 0.5);
       width: 96%;
       margin: 0 auto;
+      font-family: 'Lato', sans-serif;
       span {
         font-weight: 300;
         color: #E6E6E6;
@@ -176,13 +195,14 @@
     -o-transition:height 500ms ease-in;
     transition:height 500ms ease-in;
     &._opened {
-      height: 341px;
+      height: 296px;
     }
     &-item {
+      font-family: 'Lato', sans-serif;
       font-size: 20px;
       font-weight: 500;
       color: #182359;
-      padding: 33px 50px 28px;
+      padding: 25px 50px;
       border-bottom: 1px solid rgba(200, 217, 251, 0.5);
       width: 96%;
       margin: 0 auto;
@@ -225,10 +245,11 @@
     right: 49px;
     margin: auto;
     height: 27px;
+    font-family: 'Lato', sans-serif;
     span {
       font-size: 37px;
       position: absolute;
-      top: -6px;
+      top: -7px;
       margin-left: 8px;
     }
   }
@@ -236,4 +257,13 @@
 
 .fa-times-thin:before {
 	content: '\00d7';
+}
+
+.bar {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+._no-pad {
+  padding: 0 !important;
 }

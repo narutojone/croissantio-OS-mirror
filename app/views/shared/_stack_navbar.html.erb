@@ -36,10 +36,10 @@
       <div class="row">
         <div class="col-xs-12">
           <ul class="mobile-nav__list">
-            <li class="mobile-nav__list-item js--open-mob-list">Resources<span><i class="fa fa-angle-down"></i></span>
+            <li class="mobile-nav__list-item js--open-mob-list">Resources<span><i class="mobile-nav__arrow _animate fa fa-angle-up js--arrow-animate"></i></span>
             </li>
           </ul>
-          <ul class="mobile-nav__dropdown-list menu-horizontal text-left js--mob-list">
+          <ul class="mobile-nav__dropdown-list _opened menu-horizontal text-left js--mob-list">
             <li>
               <%= link_to "Blog", blog_path, class: 'mobile-nav__dropdown-list-item' %>
             </li>
@@ -96,7 +96,7 @@
   </nav>
   <!--end mob bar-->
   <nav id="menu2" class="bar bar--sm bar-1 hidden-xs hiddem-sm ">
-    <div class="container">
+    <div class="container _no-pad">
       <div class="row">
         <div class="col-sm-5 hidden-xs">
           <div class="bar__module col-sm-5 navbar__first-col">
