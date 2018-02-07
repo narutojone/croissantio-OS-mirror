@@ -142,12 +142,12 @@
   }
   &__arrow {
     transform: rotate(0deg);
-    -moz-transition: all .3s ease;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
     &._animate {
-      transform: rotate(180deg)
+      transform: rotate(-180deg)
     }
   }
   &__btn {
@@ -195,14 +195,14 @@
     -o-transition:height 500ms ease-in;
     transition:height 500ms ease-in;
     &._opened {
-      height: 296px;
+      height: 260px;
     }
     &-item {
       font-family: 'Lato', sans-serif;
       font-size: 20px;
       font-weight: 500;
       color: #182359;
-      padding: 25px 50px;
+      padding: 20px 50px;
       border-bottom: 1px solid rgba(200, 217, 251, 0.5);
       width: 96%;
       margin: 0 auto;

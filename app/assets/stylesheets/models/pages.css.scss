@@ -300,3 +300,21 @@ body {
     display: block;
   }
 }
+
+.section {
+  &__heading {
+    font-size: 39px;
+    color: #466ad8;
+    &._font_couture {
+      font-family: 'Couture Bold';
+    }
+  }
+  &__subheading {
+    color: #3D3A67;
+    font-size: 20px;
+    &._font_lato {
+      font-family: 'Lato';
+      font-weight: 400;
+    }
+  }
+}
