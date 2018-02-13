@@ -134,7 +134,7 @@
   height: 100vh;
   background-color: #fff;
   width: 100vw;
-  z-index: 10;
+  z-index: 99999;
   -webkit-transition: .25s ease-out 0s;
   transition: .25s ease-out 0s;
   &._opened {
