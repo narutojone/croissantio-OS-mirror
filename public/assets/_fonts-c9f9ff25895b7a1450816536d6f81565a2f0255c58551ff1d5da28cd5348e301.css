@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300.300i,400");
+@font-face {
+  font-family: 'Couture Bold';
+  src: url("/fonts/couture-bld.otf") format("opentype");
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr Bold';
+  src: url("/fonts/HelveticaNeueCyr-Bold.eot");
+  src: url("/fonts/HelveticaNeueCyr-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("/fonts/HelveticaNeueCyr-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr Thin';
+  src: url("/fonts/HelveticaNeueCyr-Thin.eot");
+  src: url("/fonts/HelveticaNeueCyr-Thin.eot?#iefix") format("embedded-opentype"), url("/fonts/HelveticaNeueCyr-Thin.woff") format("woff"), url("/fonts/HelveticaNeueCyr-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+  src: url("/fonts/HelveticaNeueCyr-ThinItalic.eot");
+  src: url("/fonts/HelveticaNeueCyr-ThinItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/HelveticaNeueCyr-ThinItalic.woff") format("woff"), url("/fonts/HelveticaNeueCyr-ThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr Light';
+  src: url("/fonts/HelveticaNeueCyr-Light.eot");
+  src: url("/fonts/HelveticaNeueCyr-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("/fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
+}
