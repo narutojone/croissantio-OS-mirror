@@ -98,11 +98,137 @@ article .article__title a
   overflow: hidden;
 }
 
+.transparent  {
+  background-color: transparent !important;
+}
+
 .hero-draft {
+  margin-top: 85px;
   position: relative;
   @media (max-width: 600px) {
     padding-top: 0 !important;
     margin-top: -21px;
+  }
+  &__main-note {
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: right;
+    line-height: 53px;
+    margin-right: 29px;
+    &._white {
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+  &__upper-footer {
+    position: relative;
+    height: 267px;
+    margin-top: 134px;
+    &-input-subtitle {
+      margin-top: 0;
+      font-size: 10px;
+      color: #fff;
+      transform: translate(37px, -9px);
+      display: block;
+      letter-spacing: 0.7px;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      font-family: 'HelveticaNeueCyr Light';
+    }
+    &-btn {
+      height: 45px!important;
+      font-size: 12px !important;
+      background-color: #fff!important;
+      color: #5075DD!important;
+      border-radius: 3px!important;
+      width: 175px !important;
+      font-family: 'HelveticaNeueCyr Bold';
+      letter-spacing: 0.6px !important;
+      display: inline-block;
+      margin-top: 0 !important;
+      margin-left: 20px;
+    }
+    &-info {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 80px;
+      width: 89%;
+    }
+    &-bg {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+    }
+    &-email-field {
+      border-radius: 3px !important;
+      background-color: #5075DD !important;
+      width: 341px !important;
+      height: 45px !important;
+      display: inline-block;
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      padding: 0 20px !important;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: rgba(255, 255, 255, 0.6) !important;
+        font-family: "Lato";
+        font-weight: 300;
+        font-style: italic;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: rgba(255, 255, 255, 0.6) !important;
+        font-family: "Lato";
+        font-weight: 300;
+        font-style: italic;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: rgba(255, 255, 255, 0.6) !important;
+        font-family: "Lato";
+        font-weight: 300;
+        font-style: italic;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: rgba(255, 255, 255, 0.6) !important;
+        font-family: "Lato";
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+  }
+  &__bubble-left {
+    width: 109%;
+    position: absolute;
+    left: 0;
+    top: -58px;
+    z-index: 0;
+    max-width: initial;
+  }
+  &__bubble-right {
+    width: 109%;
+    position: absolute;
+    right: 0;
+    top: -47px;
+    z-index: 0;
+    max-width: initial;
+  }
+  &__main-info-container {
+    &._to-right {
+      padding-left: 154px;
+    }
+    
+  }
+  &__process {
+    display: block;
+    margin: 0 auto;
+    width: 69%;
   }
   &__tools-list {
     width: 77%;
@@ -130,6 +256,7 @@ article .article__title a
     display: none; 
     text-align: center;
     margin: 60px auto;
+    height: 300px;
     &._active {
       display: table;
     }
@@ -196,6 +323,14 @@ article .article__title a
     font-size: 28px;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+    z-index: 1;
+    position: relative;
+    &._bold {
+      font-weight: 700;
+    }
+    &._left {
+      text-align: left;
+    }
   }
   &__btn-broad {
     border-radius: 3px;
@@ -217,6 +352,11 @@ article .article__title a
     font-weight: 400;
     text-align: left;
     color: #464272;
+    z-index: 1;
+    position: relative;
+    &._smaller {
+      font-size: 14px;
+    }
   }
   &__main-center {
     display: block;
@@ -367,20 +507,20 @@ article .article__title a
 }
 
 .hero-draft-lower {
-  height: 82px;
+  height: 59px;
   padding: 0 !important;
-  background-color: #fff;
+  background-color: #3F589F;
   &__container {
     height: 100%;
   }
   &__text {
     text-align: center;
-    color: #3D3A67;
+    color: #fff;
     font-family: 'Lato', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.5px;
     font-size: 10px;
-    line-height: 82px;
+    line-height: 59px;
   }
 }
 
@@ -604,4 +744,8 @@ body {
       font-weight: 400;
     }
   }
+}
+
+.margin {
+  margin-top: 177px;
 }

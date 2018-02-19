@@ -8,9 +8,9 @@
   <%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/pages"  %>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
 <% end %>
-<%= render "shared/stack_navbar" %>
+<%= render "shared/draft_navbar" %>
 <div class="main-container">
-  <section class="hero-draft _has-bg ackground text-center">
+  <section class="hero-draft _has-bg background text-center">
     <%= image_tag("index/bg-big.png", class: "background") %>
     <%= image_tag("index/particles-left-draft.png", class: "particles_left hidden-xs") %>
     <%= image_tag("index/particles-right-draft.png", class: "particles_right hidden-xs") %>
@@ -22,7 +22,7 @@
           <p class="lead hero-draft__desc">
             We are a team of engineers, product managers, designers and marketers<span class="line-break"></span>that you can hire to grow your MRR starting at 8000$/month.
           </p>
-          <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+          <form id="ck_subscribe_form" class="ck_subscribe_form js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
             <div class="form-group ck_control_group ck_email_field_group hero-draft__form">
               <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
               <input placeholder="Enter your business email" name="email" class="form-control hero-draft__email-field ck_email_address js--email-input" id="ck_emailField" type="email" required="" />
@@ -163,6 +163,71 @@
       </div>
     </div>
   </section>
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6">
+          <%= image_tag("index/croissant-scheme.png", class: "hero-draft__process") %>
+        </div>
+        <div class="col-xs-6 hero-draft__main-info-container">
+          <%= image_tag("index/oval-right.png", class: "hero-draft__bubble-right") %>
+          <p class="hero-draft__main-title _bold _left">Croissant Growth Stack</p>
+          <p class="hero-draft__main-info _smaller">
+            When you hire Croissant, you hire a Growth Team to focus on growing your SaaS.<br>
+            We are a team of experienced Product Managers, Designers, Developers, Growth Marketers.
+          </p>
+          <p class="hero-draft__main-info _smaller">
+            Our expertise as been built over-time working with several SaaS companies but also<br>
+            Ecommerce and mobile. We take insights and best-practices from those industries and<br>
+            implement them directly into your business.<br>
+          </p>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="col-xs-6 hero-draft__main-info-container _to-right">
+          <%= image_tag("index/oval-left.png", class: "hero-draft__bubble-left") %>
+          <p class="hero-draft__main-title _bold _left">Build a Predicatble Growth Machine</p>
+          <p class="hero-draft__main-info _smaller">
+            We believe that you should build a growth machine to grow a SaaS.
+          </p>
+          <p class="hero-draft__main-info _smaller">
+            Croissant uses a Growth Process based on industry best-practices that we have perfected<br>
+            over-time to create meaningful and predictable growth for our customers. We won’t stop<br>
+            until we have identified the best growth levers for your company.<br>
+          </p>
+        </div>
+        <div class="col-xs-6">
+          <%= image_tag("index/croissant-conveyor.png", class: "hero-draft__process") %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero-draft__upper-footer">
+    <%= image_tag("index/rectangle-bg.png", class: "hero-draft__upper-footer-bg") %>
+    <div class="hero-draft__upper-footer-info container">
+      <div class="row">
+        <div class="col-xs-5">
+          <p class="hero-draft__main-note _white">Let’s grow your MRR together!</p>
+        </div>
+        <div class="col-xs-7">
+          <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+            <div class="form-group ck_control_group ck_email_field_group hero-draft__upper-footer-form">
+              <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
+              <input 
+              style="border: 1px solid #fff !important;"
+              placeholder="Enter your business email" name="email" class="form-control hero-draft__upper-footer-email-field ck_email_address" id="ck_emailField" type="email" required="" />
+              <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn hero-draft__upper-footer-btn _color_blue type--uppercase" type="submit" name="submit" value="Request call" data-drip-attribute="sign-up-button" />
+            </div>
+            <p class="hero-draft__upper-footer-input-subtitle">20min call to ask all your questions about Croissant</p>
+            <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+              <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+            </div>
+            <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="hero-draft-lower">
     <div class="container hero-draft-lower__container">
       <p class="hero-draft-lower__text _color_blue">© 2018 Croissant - Made with ❤️ in Paris, France</p>
@@ -172,8 +237,10 @@
   <% content_for :js do %>
     <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"%>
     <script type="text/javascript">
+      fixHeader()
       setInputFocus();
       showMessage();
       selectOption()
+      changeBtn()
     </script>
   <% end %>

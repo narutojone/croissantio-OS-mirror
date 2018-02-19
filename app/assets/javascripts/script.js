@@ -90,13 +90,35 @@ function selectOption() {
   })
 }
 
+function changeBtn() {
+  $(window).scroll(function() {
+    if ($(window).scrollTop() >= $(".js--change-point").offset().top + 60) {
+      $(".js--activate-input").addClass("_color_blue")
+    } else {
+      $(".js--activate-input").removeClass("_color_blue")
+    }
+  })
+}
+
 function setInputFocus() {
   $('.js--activate-input').on('click', function() {
     $('.js--email-input').focus();
     $('html, body').animate({
-      scrollTop: $(".js--email-input").offset().top
+      scrollTop: $(".js--email-input").offset().top - 200
     }, 500);
   })
+}
+
+
+function fixHeader() {
+  $(window).scroll(function(){
+    if ($(window).scrollTop() >= 10) {
+       $('.js--fix-header').addClass('_fixed');
+    }
+    else {
+      $('.js--fix-header').removeClass('_fixed');
+    }
+});
 }
 
 function showMessage() {
