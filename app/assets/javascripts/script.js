@@ -78,6 +78,18 @@ function trackFieldChanges() {
   })
 }
 
+function selectOption() {
+  $('.js--select').on('click', function() {
+    $('.js--tools').removeClass("_active")
+    $('.js--select').removeClass("_active")
+    $('.js--line-to-select').attr('class','hero-draft__selected-line js--line-to-select');
+    $(this).addClass("_active")
+    var classToAdd = $(this).data("id")
+    $('.js--line-to-select').addClass("_" + classToAdd)
+    $('.js--tools-' + classToAdd).addClass("_active")
+  })
+}
+
 function setInputFocus() {
   $('.js--activate-input').on('click', function() {
     $('.js--email-input').focus();

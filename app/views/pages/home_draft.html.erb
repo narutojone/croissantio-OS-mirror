@@ -1,0 +1,179 @@
+<% content_for :title, "Croissant - On-Demand Growth Team for SaaS"  %>
+<% content_for :description, "Croissant helps SaaS companies build their Growth Stack by implementing tools such as Hull, Segment, Amplitude, Hotjar, Optimizely & many more." %>
+<% content_for :ogtitle, "Croissant - On-Demand Growth Team for SaaS" %>
+<% content_for :ogdescription, "Croissant helps SaaS companies build their Growth Stack by implementing tools such as Hull, Segment, Amplitude, Hotjar, Optimizely & many more." %>
+<% content_for :ogtype, "page" %>
+<% content_for :ogimage, image_path('Croissant-OG.png') %>
+<%= content_for :css do %>
+  <%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/pages"  %>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
+<% end %>
+<%= render "shared/stack_navbar" %>
+<div class="main-container">
+  <section class="hero-draft _has-bg ackground text-center">
+    <%= image_tag("index/bg-big.png", class: "background") %>
+    <%= image_tag("index/particles-left-draft.png", class: "particles_left hidden-xs") %>
+    <%= image_tag("index/particles-right-draft.png", class: "particles_right hidden-xs") %>
+    <div class="container hero-draft__container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-9 col-md-offset-3">
+          <h1 class="title-home hero-draft__title">On-Demand Growth Team for SaaS</h1>
+          <p class="hero-draft__subtitle">Grow Revenue, not just MQLs 🚀</p>
+          <p class="lead hero-draft__desc">
+            We are a team of engineers, product managers, designers and marketers<span class="line-break"></span>that you can hire to grow your MRR starting at 8000$/month.
+          </p>
+          <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+            <div class="form-group ck_control_group ck_email_field_group hero-draft__form">
+              <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
+              <input placeholder="Enter your business email" name="email" class="form-control hero-draft__email-field ck_email_address js--email-input" id="ck_emailField" type="email" required="" />
+              <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn hero-draft__btn _color_blue type--uppercase" type="submit" name="submit" value="Request call" data-drip-attribute="sign-up-button" />
+            </div>
+            <p class="hero-draft__input-subtitle">20min call to ask all your questions about Croissant</p>
+            <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+              <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+            </div>
+            <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
+          </form>
+          <p class="form__success">Thanks! Will get in touch with you asap to schedule the call.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <%= image_tag("index/gui.png", class: "hero-draft__gui") %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p class="hero-draft__main-title">Access Our Growth Recipes</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="hero-draft__main-center">
+          <p class="hero-draft__main-info">We have researched, tested and built growth recipes to help SaaS companies grow<br>they revenue, not just MQLs.</p>
+          <p class="hero-draft__main-info">
+            Growth Recipes are a mix of Toolset, Mindset and Process that we have put together based on our experience working for SaaS companies. They focus on Acquisition,<br>Conversion, Engagement, Revenue and Virality.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="hero-draft__btn-broad" href="/">Explore Growth Recipes</a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="hero-draft__main-title">Croissant Growth Stack</p>
+          <ul class="hero-draft__tools-list">
+            <li data-id="1" class="hero-draft__tools-item js--select _active">Acquisition</li>
+            <li data-id="2" class="hero-draft__tools-item js--select">Conversion</li>
+            <li data-id="3" class="hero-draft__tools-item js--select">Engagement</li>
+            <li data-id="4" class="hero-draft__tools-item js--select">Revenue</li>
+            <li data-id="5" class="hero-draft__tools-item js--select">Virality</li>
+            <li data-id="6" class="hero-draft__tools-item js--select">Other</li> 
+          </ul>
+          <div class="hero-draft__select-line">
+            <div class="hero-draft__selected-line js--line-to-select _1"></div>
+          </div>
+          <ul class="hero-draft__tools-section js--tools js--tools-1 _active">
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/persistlQ.png", class: "hero-draft__tool-img"), "https://customer.io/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/hotjar.png", class: "hero-draft__tool-img"), "https://www.fullstory.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/semrush.png", class: "hero-draft__tool-img"), "https://amplitude.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/predictleads.png", class: "hero-draft__tool-img"), "https://customer.io/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/zapier.png", class: "hero-draft__tool-img"), "https://www.fullstory.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/wp.png", class: "hero-draft__tool-img"), "https://amplitude.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/lookback.png", class: "hero-draft__tool-img"), "https://customer.io/" %>
+            </li>
+          </ul>
+          <ul class="hero-draft__tools-section js--tools js--tools-2">
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/customer.png", class: "hero-draft__tool-img"), "https://customer.io/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/fullstory.png", class: "hero-draft__tool-img"), "https://www.fullstory.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/amplitude.png", class: "hero-draft__tool-img"), "https://amplitude.com/" %>
+            </li>
+          </ul>
+          <ul class="hero-draft__tools-section js--tools js--tools-3">
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/customer.png", class: "hero-draft__tool-img"), "https://customer.io/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/fullstory.png", class: "hero-draft__tool-img"), "https://www.fullstory.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/amplitude.png", class: "hero-draft__tool-img"), "https://amplitude.com/" %>
+            </li>
+          </ul>
+          <ul class="hero-draft__tools-section js--tools js--tools-4">
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/customer.png", class: "hero-draft__tool-img"), "https://customer.io/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/fullstory.png", class: "hero-draft__tool-img"), "https://www.fullstory.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/amplitude.png", class: "hero-draft__tool-img"), "https://amplitude.com/" %>
+            </li>
+          </ul>
+          <ul class="hero-draft__tools-section js--tools js--tools-5">
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/customer.png", class: "hero-draft__tool-img"), "https://customer.io/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/fullstory.png", class: "hero-draft__tool-img"), "https://www.fullstory.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/amplitude.png", class: "hero-draft__tool-img"), "https://amplitude.com/" %>
+            </li>
+          </ul>
+          <ul class="hero-draft__tools-section js--tools js--tools-6">
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/customer.png", class: "hero-draft__tool-img"), "https://customer.io/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/fullstory.png", class: "hero-draft__tool-img"), "https://www.fullstory.com/" %>
+            </li>
+            <li class="hero-draft__tool-picked">
+              <%= link_to image_tag("tools/amplitude.png", class: "hero-draft__tool-img"), "https://amplitude.com/" %>
+            </li>
+          </ul>
+          <div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero-draft-lower">
+    <div class="container hero-draft-lower__container">
+      <p class="hero-draft-lower__text _color_blue">© 2018 Croissant - Made with ❤️ in Paris, France</p>
+      </div>
+    </section>
+  </div>
+  <% content_for :js do %>
+    <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"%>
+    <script type="text/javascript">
+      setInputFocus();
+      showMessage();
+      selectOption()
+    </script>
+  <% end %>

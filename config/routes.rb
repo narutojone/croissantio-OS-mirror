@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/admin' => 'pages#admin'
   # Public
   root 'pages#home'
+  get '/home_draft' => 'pages#home_draft'
   get '/blog' => 'pages#blog'
   get '/services' => 'pages#services'
   get '/newsletter' => 'pages#newsletter'
