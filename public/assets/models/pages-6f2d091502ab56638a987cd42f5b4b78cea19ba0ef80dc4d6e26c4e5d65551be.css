@@ -1,0 +1,1027 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300.300i,400");
+@font-face {
+  font-family: 'Couture Bold';
+  src: url("/fonts/couture-bld.otf") format("opentype");
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr Bold';
+  src: url("/fonts/HelveticaNeueCyr-Bold.eot");
+  src: url("/fonts/HelveticaNeueCyr-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("/fonts/HelveticaNeueCyr-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr Thin';
+  src: url("/fonts/HelveticaNeueCyr-Thin.eot");
+  src: url("/fonts/HelveticaNeueCyr-Thin.eot?#iefix") format("embedded-opentype"), url("/fonts/HelveticaNeueCyr-Thin.woff") format("woff"), url("/fonts/HelveticaNeueCyr-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+  src: url("/fonts/HelveticaNeueCyr-ThinItalic.eot");
+  src: url("/fonts/HelveticaNeueCyr-ThinItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/HelveticaNeueCyr-ThinItalic.woff") format("woff"), url("/fonts/HelveticaNeueCyr-ThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr Light';
+  src: url("/fonts/HelveticaNeueCyr-Light.eot");
+  src: url("/fonts/HelveticaNeueCyr-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("/fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
+}
+/* line 3, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.admin-body .sumome-share-client-wrapper {
+  display: none;
+}
+
+/* line 11, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+article .article__title {
+  position: absolute !important;
+  z-index: 10;
+  color: white;
+  top: 12em !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+  transform: translateY(-50%);
+  padding: 0px 40px;
+}
+@media (max-width: 768px) {
+  /* line 11, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  article .article__title {
+    transform: translateY(-58%);
+  }
+}
+@media (max-width: 520px) {
+  /* line 11, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  article .article__title {
+    transform: translateY(-127%);
+  }
+  /* line 26, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  article .article__title h2 {
+    font-size: 1em;
+  }
+}
+
+/* line 32, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+article .article__title a
+, .article__title a h2 {
+  color: white;
+}
+
+/* line 38, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.description-about .about-img {
+  text-align: center;
+  margin: 20px;
+}
+
+/* line 42, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.modal-body {
+  white-space: pre;
+}
+
+/* line 46, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.search__submit {
+  margin: 0 !important;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  border-color: #ececec !important;
+}
+/* line 53, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.search__input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* line 58, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.ck_form_container {
+  display: none;
+}
+
+/* line 63, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.form__success {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  display: none;
+  color: #5075dd;
+  font-family: 'HelveticaNeueCyr Bold';
+  transform: translateY(104px);
+}
+
+/* line 73, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.logo-row {
+  margin-top: 40px;
+}
+
+/* line 77, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.img-link {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+/* line 84, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.company-img {
+  padding: 9px;
+  max-width: 100%;
+  max-height: 70px;
+}
+/* line 88, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.company-img.opt {
+  margin-top: 10px;
+}
+
+/* line 93, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.img-container:first-child {
+  margin-left: 8.33333333%;
+}
+
+/* line 97, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.main-container {
+  overflow: hidden;
+}
+
+/* line 101, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.transparent {
+  background-color: transparent !important;
+}
+
+/* line 105, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft {
+  margin-top: 85px;
+  position: relative;
+}
+@media (max-width: 600px) {
+  /* line 105, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft {
+    padding-top: 0 !important;
+    margin-top: 109px;
+  }
+}
+/* line 112, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-note {
+  font-size: 18px;
+  font-family: 'Lato';
+  text-align: right;
+  line-height: 53px;
+  margin-right: 29px;
+}
+/* line 118, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-note._white {
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  /* line 112, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__main-note {
+    text-align: center;
+    margin-right: 0;
+  }
+}
+/* line 127, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer {
+  position: relative;
+  height: 267px;
+  margin-top: 134px;
+}
+@media (max-width: 1000px) {
+  /* line 127, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__upper-footer {
+    background-color: #5075dd;
+  }
+}
+/* line 134, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-input-subtitle {
+  margin-top: 0;
+  font-size: 10px;
+  color: #fff;
+  transform: translate(37px, -9px);
+  display: block;
+  letter-spacing: 0.7px;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'HelveticaNeueCyr Light';
+}
+@media (max-width: 1126px) {
+  /* line 134, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__upper-footer-input-subtitle {
+    transform: translateX(0);
+    text-align: center;
+  }
+}
+/* line 150, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-btn {
+  height: 45px !important;
+  font-size: 12px !important;
+  background-color: #fff !important;
+  color: #5075DD !important;
+  border-radius: 3px !important;
+  width: 175px !important;
+  font-family: 'HelveticaNeueCyr Bold';
+  letter-spacing: 0.6px !important;
+  display: inline-block;
+  margin-top: 0 !important;
+  margin-left: 20px;
+}
+@media (max-width: 1163px) {
+  /* line 150, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__upper-footer-btn {
+    margin: 0 !Important;
+  }
+}
+@media (max-width: 1126px) {
+  /* line 150, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__upper-footer-btn {
+    display: block;
+    margin: 15px auto !important;
+  }
+}
+/* line 170, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 80px;
+  width: 89%;
+}
+@media (max-width: 992px) {
+  /* line 170, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__upper-footer-info {
+    height: auto;
+    width: 100%;
+  }
+}
+/* line 184, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+/* line 192, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-email-field {
+  border-radius: 3px !important;
+  background-color: #5075DD !important;
+  width: 341px !important;
+  height: 45px !important;
+  display: inline-block;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  padding: 0 20px !important;
+}
+@media (max-width: 1126px) {
+  /* line 192, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__upper-footer-email-field {
+    display: block;
+    margin: auto;
+    width: 100% !important;
+  }
+}
+/* line 207, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-email-field::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: italic;
+}
+/* line 213, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-email-field::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: italic;
+}
+/* line 219, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-email-field:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: italic;
+}
+/* line 225, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__upper-footer-email-field:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: italic;
+}
+/* line 233, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__bubble-left {
+  width: 109%;
+  position: absolute;
+  left: 0;
+  top: -58px;
+  z-index: 0;
+  max-width: initial;
+}
+/* line 241, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__bubble-right {
+  width: 109%;
+  position: absolute;
+  right: 0;
+  top: -47px;
+  z-index: 0;
+  max-width: initial;
+}
+@media (min-width: 1000px) {
+  /* line 250, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__main-info-container._to-right {
+    padding-left: 154px;
+  }
+}
+/* line 257, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__process {
+  display: block;
+  margin: 0 auto;
+  width: 69%;
+}
+@media (max-width: 767px) {
+  /* line 261, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__process:last-of-type {
+    margin-top: 100px;
+  }
+}
+/* line 267, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__tools-list {
+  width: 77%;
+  margin: auto;
+}
+@media (max-width: 992px) {
+  /* line 267, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__tools-list {
+    width: 100%;
+  }
+}
+/* line 274, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__tools-item {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #3D3A67;
+  width: 16%;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* line 288, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__tools-item._active {
+  color: #71E3B4;
+}
+@media (max-width: 552px) {
+  /* line 274, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__tools-item {
+    width: 15%;
+    font-size: 9px;
+  }
+}
+/* line 296, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__tools-section {
+  display: none;
+  text-align: center;
+  margin: 60px auto;
+  height: 300px;
+}
+/* line 301, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__tools-section._active {
+  display: table;
+}
+/* line 305, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__tool-picked {
+  display: inline-block;
+  padding: 11px;
+}
+/* line 309, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__tool-img {
+  width: 100%;
+}
+/* line 312, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__select-line {
+  height: 6px;
+  width: 79%;
+  margin: 0 auto;
+  display: block;
+  background-color: #F3F3F3;
+  border-radius: 3px;
+  position: relative;
+}
+@media (max-width: 992px) {
+  /* line 312, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__select-line {
+    width: 100%;
+  }
+}
+/* line 324, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__selected-line {
+  height: 6px;
+  left: 0;
+  width: 18%;
+  margin: 0 auto;
+  display: block;
+  background-color: #71E3B4;
+  border-radius: 3px;
+  position: absolute;
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* line 337, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__selected-line._1 {
+  left: 0;
+}
+/* line 340, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__selected-line._2 {
+  left: 16%;
+}
+/* line 343, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__selected-line._3 {
+  left: 32%;
+}
+/* line 346, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__selected-line._4 {
+  left: 48%;
+}
+/* line 349, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__selected-line._5 {
+  left: 64%;
+}
+/* line 352, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__selected-line._6 {
+  left: 82%;
+}
+/* line 356, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__container {
+  position: relative;
+  height: 100%;
+}
+/* line 360, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__gui {
+  margin: 123px auto;
+}
+/* line 363, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-title {
+  margin: 50px auto;
+  color: #5075DD;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  z-index: 1;
+  position: relative;
+  line-height: 38px;
+}
+/* line 373, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-title._bold {
+  font-weight: 700;
+}
+/* line 376, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-title._left {
+  text-align: left;
+}
+/* line 380, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__btn-broad {
+  border-radius: 3px;
+  background-color: #5075DD;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'HelveticaNeueCyr Bold';
+  padding: 17px 44px;
+  text-transform: uppercase;
+}
+/* line 389, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__btn-broad:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+/* line 394, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-info {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: #464272;
+  z-index: 1;
+  position: relative;
+}
+/* line 402, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-info._smaller {
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  /* line 394, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__main-info {
+    font-size: 11px;
+  }
+}
+/* line 409, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-center {
+  display: block;
+  margin: 50px auto;
+  width: 41%;
+}
+@media (max-width: 768px) {
+  /* line 409, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__main-center {
+    width: 60%;
+  }
+}
+@media (max-width: 668px) {
+  /* line 409, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__main-center {
+    width: 80%;
+  }
+}
+/* line 421, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft._has-bg .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 0 !important;
+}
+/* line 431, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__main-block {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+/* line 440, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft .particles_left {
+  position: absolute;
+  left: -14%;
+  top: 24%;
+  width: 40%;
+}
+/* line 446, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft .particles_right {
+  position: absolute;
+  right: -14%;
+  top: 24%;
+  width: 40%;
+}
+/* line 453, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft #ck_emailField {
+  border: 1px solid #C5C5C5 !important;
+}
+/* line 456, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft input[type] {
+  border-radius: 3px !important;
+}
+/* line 459, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft input:not([class*='col-']), .hero-draft select:not([class*='col-']), .hero-draft .input-select:not([class*='col-']), .hero-draft textarea:not([class*='col-']), .hero-draft button[type="submit"]:not([class*='col-']) {
+  height: 58px;
+}
+/* line 462, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__email-field {
+  background-color: #fff !important;
+  font-size: 12px !important;
+  float: left;
+  width: 63% !important;
+  margin: 0 !important;
+  padding: 0 27px !important;
+  font-family: 'HelveticaNeueCyr Bold';
+}
+@media (max-width: 768px) {
+  /* line 462, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__email-field {
+    width: 100% !important;
+    float: none !important;
+    display: block !important;
+  }
+}
+/* line 475, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__email-field::-webkit-input-placeholder {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+}
+/* line 478, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__email-field::-moz-placeholder {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+}
+/* line 481, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__email-field:-ms-input-placeholder {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+}
+/* line 484, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__email-field:-moz-placeholder {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+}
+/* line 488, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__input-subtitle {
+  font-size: 10px;
+  color: #3D3A67;
+  transform: translateX(-103px);
+  display: block;
+  letter-spacing: 0.7px;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 1200px) {
+  /* line 488, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__input-subtitle {
+    transform: translateX(0px);
+  }
+}
+/* line 503, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__btn {
+  float: none;
+  color: #fff;
+  width: 33% !important;
+  font-size: 12px !important;
+  margin: 0 !important;
+  float: right;
+  font-family: 'HelveticaNeueCyr Bold';
+  letter-spacing: 0.6px !important;
+}
+/* line 512, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__btn._color_blue {
+  background: #5075DD;
+}
+/* line 514, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__btn._color_blue:hover, .hero-draft__btn._color_blue:focus {
+  color: #fff !important;
+  border-color: #d3d3d3;
+}
+@media (max-width: 768px) {
+  /* line 503, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__btn {
+    width: 100% !important;
+    float: none !important;
+    display: block !important;
+    margin-top: 10px !important;
+  }
+}
+/* line 526, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__title {
+  color: #5075DD;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 39px;
+  font-family: 'Couture Bold';
+}
+@media (max-width: 768px) {
+  /* line 526, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__title {
+    font-size: 30px;
+  }
+}
+/* line 536, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__subtitle {
+  margin: 28px 0 12px 0;
+  color: #464272;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'HelveticaNeueCyr Bold';
+}
+@media (max-width: 768px) {
+  /* line 536, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__subtitle {
+    margin: 0 0 17px 0;
+  }
+}
+/* line 546, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__desc {
+  font-size: 16px;
+  color: #36315F;
+  font-family: 'Lato', sans-serif;
+  line-height: 27px;
+  font-weight: 300;
+}
+/* line 553, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft__form {
+  width: 64%;
+  display: block;
+  margin: 23px auto;
+}
+@media (max-width: 768px) {
+  /* line 553, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero-draft__form {
+    margin: 0 auto;
+  }
+}
+
+/* line 563, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft-lower {
+  height: 59px;
+  padding: 0 !important;
+  background-color: #3F589F;
+}
+/* line 567, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft-lower__container {
+  height: 100%;
+}
+/* line 570, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-draft-lower__text {
+  text-align: center;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: 10px;
+  line-height: 59px;
+}
+
+/* line 582, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero {
+  height: 619px;
+}
+@media (min-width: 1440px) {
+  /* line 582, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero {
+    height: 751px;
+  }
+}
+@media (min-width: 1680px) {
+  /* line 582, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero {
+    height: 904px;
+  }
+}
+@media (min-width: 2560px) {
+  /* line 582, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero {
+    height: 1288px;
+  }
+}
+@media (max-width: 600px) {
+  /* line 582, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero {
+    padding-top: 0 !important;
+    margin-top: -21px;
+  }
+}
+/* line 597, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__container {
+  position: relative;
+  height: 100%;
+}
+/* line 602, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero._has-bg .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 0 !important;
+}
+/* line 612, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__main-block {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 446px;
+  margin: auto;
+}
+/* line 622, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero .particles_left {
+  position: absolute;
+  left: -9%;
+  bottom: 29px;
+  width: 31%;
+}
+/* line 628, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero .particles_right {
+  position: absolute;
+  right: -9%;
+  bottom: 29px;
+  width: 31%;
+}
+/* line 635, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero #ck_emailField {
+  border: 1px solid #C5C5C5 !important;
+}
+/* line 638, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero input[type] {
+  border-radius: 3px !important;
+}
+/* line 641, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero input:not([class*='col-']), .hero select:not([class*='col-']), .hero .input-select:not([class*='col-']), .hero textarea:not([class*='col-']), .hero button[type="submit"]:not([class*='col-']) {
+  height: 58px;
+}
+/* line 644, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__email-field {
+  background-color: #fff !important;
+  font-size: 12px !important;
+  float: left;
+  width: 63% !important;
+  margin: 0 !important;
+  padding: 0 27px !important;
+  font-family: 'HelveticaNeueCyr Bold';
+}
+@media (max-width: 768px) {
+  /* line 644, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero__email-field {
+    width: 100% !important;
+    float: none !important;
+    display: block !important;
+  }
+}
+/* line 657, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__email-field::-webkit-input-placeholder {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+}
+/* line 660, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__email-field::-moz-placeholder {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+}
+/* line 663, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__email-field:-ms-input-placeholder {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+}
+/* line 666, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__email-field:-moz-placeholder {
+  font-family: 'HelveticaNeueCyr Thin Italic';
+}
+/* line 670, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__input-subtitle {
+  font-size: 10px;
+  color: #3D3A67;
+  transform: translateX(-103px);
+  display: block;
+  letter-spacing: 0.7px;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 1200px) {
+  /* line 670, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero__input-subtitle {
+    transform: translateX(0px);
+  }
+}
+/* line 685, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__btn {
+  float: none;
+  color: #fff;
+  width: 33% !important;
+  font-size: 12px !important;
+  margin: 0 !important;
+  float: right;
+  font-family: 'HelveticaNeueCyr Bold';
+  letter-spacing: 0.6px !important;
+}
+/* line 694, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__btn._color_blue {
+  background: #5075DD;
+}
+/* line 696, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__btn._color_blue:hover, .hero__btn._color_blue:focus {
+  color: #fff !important;
+  border-color: #d3d3d3;
+}
+@media (max-width: 768px) {
+  /* line 685, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero__btn {
+    width: 100% !important;
+    float: none !important;
+    display: block !important;
+    margin-top: 10px !important;
+  }
+}
+/* line 708, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__title {
+  color: #5075DD;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 39px;
+  font-family: 'Couture Bold';
+}
+@media (max-width: 768px) {
+  /* line 708, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero__title {
+    font-size: 30px;
+  }
+}
+/* line 718, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__subtitle {
+  margin: 68px 0 48px 0;
+  color: #464272;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'HelveticaNeueCyr Bold';
+}
+@media (max-width: 768px) {
+  /* line 718, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero__subtitle {
+    margin: 0 0 17px 0;
+  }
+}
+/* line 728, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__desc {
+  font-size: 16px;
+  color: #36315F;
+  font-family: 'Lato', sans-serif;
+  line-height: 27px;
+  font-weight: 300;
+}
+/* line 735, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero__form {
+  width: 64%;
+  display: block;
+  margin: 80px auto;
+}
+@media (max-width: 768px) {
+  /* line 735, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .hero__form {
+    margin: 0 auto;
+  }
+}
+
+/* line 745, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-lower {
+  height: 82px;
+  padding: 0 !important;
+  background-color: #fff;
+}
+/* line 749, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-lower__container {
+  height: 100%;
+}
+/* line 752, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.hero-lower__text {
+  text-align: center;
+  color: #3D3A67;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 10px;
+  line-height: 82px;
+}
+
+/* line 763, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+#search-form {
+  margin-top: 50px;
+}
+
+/* line 767, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+body {
+  background: #f0f0f0;
+}
+
+/* line 771, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.fixed-width {
+  background: #fff;
+}
+@media (min-width: 1440px) {
+  /* line 771, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .fixed-width {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 700px) {
+  /* line 779, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+  .line-break {
+    display: block;
+  }
+}
+
+/* line 786, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.section__heading {
+  font-size: 39px;
+  color: #466ad8;
+}
+/* line 789, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.section__heading._font_couture {
+  font-family: 'Couture Bold';
+}
+/* line 793, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.section__subheading {
+  color: #3D3A67;
+  font-size: 20px;
+}
+/* line 796, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.section__subheading._font_lato {
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+/* line 803, /mnt/c/growthbakery/app/assets/stylesheets/models/pages.css.scss */
+.margin {
+  margin-top: 177px;
+}
