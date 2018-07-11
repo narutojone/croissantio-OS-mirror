@@ -109,6 +109,38 @@ article .article__title a
     padding-top: 0 !important;
     margin-top: 109px;
   }
+  &__quote {
+    width: 55%;
+    position: relative;
+    margin: 100px auto -25px;
+    &-img {
+      display: inline-block;
+      max-width: 100%;
+      position: absolute;
+      left: 6px;
+      top: 10px;
+    }
+    &-content {
+      display: inline-block;
+      text-align: left;
+      &-quote {
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        font-size: 16px;
+        color: #3d3a67;
+        line-height: 27px;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      &-author {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        color: #3d3a67;
+        line-height: 27px;
+        font-weight: 700;
+      }
+    }
+  }
   &__main-note {
     font-size: 18px;
     font-family: 'Lato';
@@ -366,7 +398,7 @@ article .article__title a
     text-align: center;
     font-size: 28px;
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     z-index: 1;
     position: relative;
     line-height: 38px;
@@ -391,16 +423,66 @@ article .article__title a
       opacity: 0.9
     }
   }
+  &__symbol-left {
+    width: 20px;
+    line-height: 20px;
+    background-color: #d4e2fc;
+    margin-right: 14px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #3d3a67;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  &__info-box {
+    border-radius: 8px;
+    background-color: #f4f8fe;
+    padding: 14px 19px;
+    width: 97%;
+    &-container {
+      width: 50%;
+      display: block;
+      margin: auto;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
   &__main-info {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    line-height: 27px;
+    font-weight: 300;
     text-align: left;
-    color: #464272;
+    color: #3d3a67;
     z-index: 1;
     position: relative;
     &._smaller {
       font-size: 14px;
+    }
+    &--font {
+      &_smaller {
+        font-size: 14px;
+      }
+    }
+    &--inline {
+      display: inline-block;
+    }
+    &--align {
+      &_center {
+        text-align: center;
+      }
+    }
+    &.mar-up {
+      margin-top: 35px;
+    }
+    &.mar-bottom-less {
+      margin-bottom: 8px;
+    }
+    &.mar-less {
+      margin: 8px 0;
     }
     @media (max-width: 768px) {
       font-size: 11px;
@@ -457,13 +539,13 @@ article .article__title a
     border-radius: 3px !important;
   }
   input:not([class*='col-']), select:not([class*='col-']), .input-select:not([class*='col-']), textarea:not([class*='col-']), button[type="submit"]:not([class*='col-']) {
-    height: 58px;
+    height: 48px;
   }
   &__email-field {
     background-color: #fff !important;
     font-size: 12px !important;
     float: left;
-    width: 63% !important;
+    width: 63.88% !important;
     margin: 0 !important;
     padding: 0 27px !important;
     font-family: 'HelveticaNeueCyr Bold';
@@ -487,15 +569,14 @@ article .article__title a
   }
   &__input-subtitle {
     font-size: 10px;
-    color: #3D3A67;
+    color: #3d3a67;
     transform: translateX(-103px);
     display: block;
     letter-spacing: 0.7px;
     height: 0;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
+    font-family: 'HelveticaNeueCyr Light';
     @media (max-width: 1200px) {
       transform: translateX(0px);
     }
@@ -527,14 +608,14 @@ article .article__title a
       color: #5075DD;
       text-transform: uppercase;
       text-align: center;
-      font-size: 39px;
+      font-size: 33px;
       font-family: 'Couture Bold';
       @media (max-width: 768px) { 
-        font-size: 30px;
+        font-size: 24px;
       } 
   }
   &__subtitle {
-    margin: 28px 0 12px 0;
+    margin: 25px 0 19px 0;
     color: #464272;
     text-align: center;
     font-size: 16px;
@@ -551,7 +632,7 @@ article .article__title a
     font-weight: 300;
   }
   &__form {
-    width: 64%;
+    width: 72%;
     display: block;
     margin: 23px auto;
     @media (max-width: 768px) { 

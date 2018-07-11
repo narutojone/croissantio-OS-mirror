@@ -36,6 +36,9 @@ class PagesController < ApplicationController
     @newsletters = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true)
   end
 
+  def swapfile
+  end
+
   def videos
     @videos = Article.includes(:topics).where(topics: { name: 'video' }, posted: true)
   end

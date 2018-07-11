@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/thanks-30-min-call' => 'pages#thanks_call'
   get '/search' => 'pages#search'
   get '/contact' => 'pages#contact'
+  get '/swapfile' => 'pages#swapfile'
   get '/instant-message' => 'facebook_links#instant_message', as: 'instant_message'
   post '/send-instant-message' => 'facebook_links#send_instant_message', as: 'send_instant_message'
   post '/calendar/add-token', to: 'calendar#add_token', as: 'add_token'
