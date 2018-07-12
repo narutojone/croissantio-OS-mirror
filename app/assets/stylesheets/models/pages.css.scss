@@ -519,6 +519,10 @@ article .article__title a
       line-height: 27px;
       text-align: center;
     }
+    &-img {
+      display: block;
+      margin: 0 auto;
+    }
   }
   &__main-title {
     color: #5075DD;
