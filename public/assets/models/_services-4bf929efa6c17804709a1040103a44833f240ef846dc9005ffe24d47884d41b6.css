@@ -1,0 +1,71 @@
+/* line 2, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+.title_thin_white {
+  font-weight: 400;
+  color: white;
+  padding: 0.4rem;
+}
+
+/* line 9, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+.table_border_white_bg_transparent {
+  display: block;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+/* line 13, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+.table_border_white_bg_transparent th, .table_border_white_bg_transparent td {
+  border-right: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+/* line 20, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+.table_border_white_bg_transparent td {
+  text-align: left;
+  padding: 1rem 4rem 3rem 4rem;
+  border-top: none;
+}
+@media (min-width: 769px) {
+  /* line 25, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+  .table_border_white_bg_transparent._screen_mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  /* line 30, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+  .table_border_white_bg_transparent._screen_normal {
+    display: none;
+  }
+}
+/* line 36, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+.table__cell-equal {
+  width: 33.3333333333%;
+  font-size: 1.4rem;
+}
+/* line 40, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+.table__main-head {
+  border-bottom: 2px solid #fff;
+  font-size: 1.8rem;
+}
+
+/* line 45, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+._no-pad {
+  padding: 0 !important;
+}
+
+/* line 48, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+.btn--light-green {
+  background-color: #24BD24;
+  line-height: 1;
+  border: none;
+}
+@media (min-width: 1200px) {
+  /* line 48, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+  .btn--light-green {
+    font-size: 1.3rem !important;
+  }
+}
+/* line 55, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_services.css.scss */
+.btn--light-green._pad {
+  padding: 0.5rem;
+}
