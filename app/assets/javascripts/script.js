@@ -78,6 +78,19 @@ function trackFieldChanges() {
   })
 }
 
+$.fn.toggleText = function(t1, t2){
+  if (this.html() == t1) this.html(t2);
+  else                   this.html(t1);
+  return this;
+};
+
+function toggleBoxes() {
+  $('.js--option').on('click', function() {
+    $(this).children('.js--symbol').toggleText('+', "&minus;")
+    $(this).next().toggleClass('active')
+  })
+}
+
 function selectOption() {
   $('.js--select').on('click', function() {
     $('.js--tools').removeClass("_active")
