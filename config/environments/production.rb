@@ -29,7 +29,7 @@ Rails.application.configure do
     config.middleware.use Rack::Deflater
 
   config.serve_static_assets = true
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs.
   config.assets.digest = true
