@@ -1,0 +1,347 @@
+/* line 1, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.draft-nav-container {
+  -moz-transition: all 3s ease;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  height: 85px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 9999;
+  display: block;
+  background: transparent;
+}
+/* line 15, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.draft-nav-container._fixed {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04), 0 -2px 6px 0 rgba(0, 0, 0, 0.21);
+}
+
+/* line 22, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger, .bar-1 .menu-horizontal > li > .link_color_blue {
+  opacity: 1;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 5.1rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  color: #3D3A67;
+  border: none;
+  height: 0;
+  position: relative;
+  height: 67px;
+  letter-spacing: 0.2px;
+}
+/* line 35, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger:hover, .bar-1 .menu-horizontal > li > .link_color_blue:hover {
+  opacity: 0.5;
+}
+/* line 38, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.bar-1 .menu-horizontal > li > .dropdown__trigger span, .bar-1 .menu-horizontal > li > .link_color_blue span {
+  position: absolute;
+  top: 13px;
+  right: -36px;
+  width: 37px;
+}
+@media (min-width: 1280px) {
+  /* line 38, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .bar-1 .menu-horizontal > li > .dropdown__trigger span, .bar-1 .menu-horizontal > li > .link_color_blue span {
+    top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 22, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .bar-1 .menu-horizontal > li > .dropdown__trigger, .bar-1 .menu-horizontal > li > .link_color_blue {
+    right: 0;
+    left: 4rem;
+    line-height: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 22, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .bar-1 .menu-horizontal > li > .dropdown__trigger, .bar-1 .menu-horizontal > li > .link_color_blue {
+    font-size: 16px;
+    line-height: 5rem;
+  }
+}
+
+/* line 59, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.link__arrow {
+  width: 12px;
+}
+
+/* line 64, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.res-dropdown {
+  z-index: 100;
+  display: none;
+  background-color: white;
+  width: 11rem;
+  position: absolute;
+  top: 55px;
+  left: -27px;
+  right: 0;
+  box-shadow: 0 16px 32px 0 rgba(62, 57, 107, 0.2), 0 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0.3rem;
+}
+/* line 75, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.res-dropdown a {
+  color: #7E7AA1;
+  display: block;
+  padding: 10px 20px 10px 16px;
+  border-bottom: solid 1px #eee;
+}
+/* line 80, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.res-dropdown a:hover {
+  color: #3e396b;
+  background-color: #f9f9f9;
+}
+@media (max-width: 989px) {
+  /* line 64, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .res-dropdown {
+    left: 13rem;
+  }
+}
+@media (max-width: 767px) {
+  /* line 64, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .res-dropdown {
+    left: 8rem;
+    top: 2rem;
+  }
+}
+
+/* line 93, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.hamburger-toggle {
+  position: relative;
+  bottom: -32px;
+  font-size: 24px;
+}
+
+/* line 100, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.navbar__first-col, .navbar__second {
+  position: relative;
+}
+/* line 103, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.navbar__btn-right {
+  position: absolute;
+  right: 0;
+  top: 19px;
+  font-size: 12px;
+  font-family: 'HelveticaNeueCyr Bold';
+  width: 163px;
+  text-align: center;
+  line-height: 45px;
+  height: 45px;
+  background-color: white;
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* line 118, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.navbar__btn-right._border_blue {
+  border: 1px solid #5075DD;
+  border-radius: 3px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #5075DD;
+}
+/* line 125, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.navbar__btn-right._color_blue {
+  background-color: #5075DD !important;
+  color: #fff !important;
+}
+/* line 130, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.navbar__link {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: -30px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media (min-width: 990px) and (max-width: 992px) {
+  /* line 141, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .hidden-991-1199 {
+    display: none;
+  }
+}
+@media (min-width: 1198px) and (max-width: 1200px) {
+  /* line 147, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .hidden-991-1199 {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  /* line 153, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+  .navbar__first-col {
+    display: block !important;
+    width: 173px !important;
+    transform: translateY(-1px);
+  }
+}
+/* line 160, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav {
+  position: fixed;
+  top: -100vh;
+  bottom: 0;
+  height: 100vh;
+  background-color: #fff;
+  width: 100vw;
+  z-index: 99999;
+  -webkit-transition: .25s ease-out 0s;
+  transition: .25s ease-out 0s;
+}
+/* line 170, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav._opened {
+  top: 0;
+}
+/* line 173, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__arrow {
+  transform: rotate(0deg);
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/* line 179, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__arrow._animate {
+  transform: rotate(-180deg);
+}
+/* line 183, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__btn {
+  margin: 10px auto;
+  text-align: center;
+  width: 96%;
+  line-height: 65px;
+  height: 65px;
+  display: block;
+  border-radius: 3px;
+  border: none;
+}
+/* line 192, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__btn._color_blue {
+  font-family: 'Lato', sans-serif;
+  background-color: #5075DD;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* line 201, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__list {
+  margin-bottom: 0;
+}
+/* line 203, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__list-item {
+  font-size: 20px;
+  font-weight: 600;
+  color: #182359;
+  padding: 31px 15px 38px;
+  border-bottom: 1px solid rgba(200, 217, 251, 0.5);
+  width: 96%;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+}
+/* line 212, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__list-item span {
+  font-weight: 300;
+  color: #E6E6E6;
+  margin-left: 13px;
+}
+/* line 219, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__dropdown-list {
+  margin-bottom: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 500ms ease-in;
+  -moz-transition: height 500ms ease-in;
+  -o-transition: height 500ms ease-in;
+  transition: height 500ms ease-in;
+}
+/* line 227, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__dropdown-list._opened {
+  height: 260px;
+}
+/* line 230, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__dropdown-list-item {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #182359;
+  padding: 20px 50px;
+  border-bottom: 1px solid rgba(200, 217, 251, 0.5);
+  width: 96%;
+  margin: 0 auto;
+  display: block;
+  opacity: 1 !important;
+}
+/* line 242, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__dropdown-list li:last-child a {
+  border-bottom: none;
+}
+/* line 246, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__row {
+  height: 95px;
+}
+/* line 248, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__row._border_blue {
+  border-bottom: 2px solid #236AEF;
+}
+/* line 252, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__col {
+  height: 100px;
+  position: relative;
+}
+/* line 256, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__logo {
+  margin-left: 15px;
+  position: absolute;
+  top: -3px;
+  bottom: 0;
+  right: -35px;
+  left: 0;
+  margin: auto;
+  display: block;
+  max-width: 151px;
+  margin-bottom: auto !important;
+}
+/* line 268, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__close-btn {
+  font-size: 19px;
+  font-weight: 600;
+  position: absolute;
+  color: #236AEF;
+  bottom: 0;
+  top: 0;
+  right: 49px;
+  margin: auto;
+  height: 27px;
+  font-family: 'Lato', sans-serif;
+}
+/* line 279, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.mobile-nav__close-btn span {
+  font-size: 37px;
+  position: absolute;
+  top: -7px;
+  margin-left: 8px;
+}
+
+/* line 288, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.fa-times-thin:before {
+  content: '\00d7';
+}
+
+/* line 292, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+.bar {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* line 297, /mnt/c/projects/growthbakery/app/assets/stylesheets/models/_navbar.css.scss */
+._no-pad {
+  padding: 0 !important;
+}
