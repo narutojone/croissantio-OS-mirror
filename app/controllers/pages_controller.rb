@@ -9,6 +9,8 @@ class PagesController < ApplicationController
 
   def home_draft; end
 
+  def home_fr; end
+
   def admin; end
 
   def about; end
