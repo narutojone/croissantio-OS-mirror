@@ -320,6 +320,7 @@ article .article__title a
     }
     &.down {
       transform: translateY(23px);
+      width: 67%;
     }
   }
   &__box {
@@ -1071,6 +1072,9 @@ article .article__title a
     }
     @media (max-width: 768px) {
       text-align: center;
+    }
+    @media (max-width: 769px) {
+      margin-top: 0;
     }
   }
   &__btn {
