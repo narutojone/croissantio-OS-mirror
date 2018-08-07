@@ -112,18 +112,34 @@ article .article__title a
       padding-top: 30px !important;
       padding-bottom: 60px !important;
     }
-    &_first {
-      padding-top: 60px !important;
-      padding-bottom: 30px !important;
+    &_hero {
+      padding-bottom: 40px;
+    }
+    &_second {
+      padding-top: 100px !important;
+      padding-bottom: 115px !important;
     }
     &_third {
-      padding-top: 100px !important;
-      padding-bottom: 140px !important;
+      padding-top: 70px !important;
+      padding-bottom: 150px !important;
     }
   }
 }
 .align-center {
   text-align: center !important;
+}
+
+.col-92pro {
+  width: 92%;
+  margin: auto;
+  display: block;
+  float: none;
+}
+.col-87pro {
+  width: 87%;
+  margin: auto;
+  display: block;
+  float: none;
 }
 .col-46pro {
   position: relative;
@@ -181,10 +197,36 @@ article .article__title a
     position: relative;
     padding: 12px 0;
     width: 265px;
-    height: 283px;
+    height: 286px;
     display: block;
     margin: 45px auto 20px;
     cursor: pointer;
+    .line-bottom {
+      width: 100%;
+      height: 12px;
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      &.active {
+        display: block;
+      }
+      &--bg {
+        &_green {
+          background-color: #D4F6E8;
+        }
+        &_yellow {
+          background-color: #FDF2DF;
+        }
+        &_red {
+          background-color: #FFEEF0;
+        }
+      }
+    }
     &-particles {
       position: absolute;
       max-width: 100%;
@@ -218,8 +260,8 @@ article .article__title a
     margin: auto;
     width: 4px;
     @media (max-width: 1199px) {
-      bottom: -90px;
-      right: -4px;
+      bottom: -110px;
+      right: -10px;
     }
     @media (max-width: 992px) {
       display: none;
@@ -239,10 +281,14 @@ article .article__title a
   }
   &__list-of-logos {
     text-align: left;
-    margin-top: 70px !important;
+    margin: 50px auto 0 !important;
+    width: 89%;
     @media (max-width: 768px) {
-      max-width: 88%;
       margin: 36px auto !important;
+      width: 88%;
+    }
+    @media (max-width: 1200px) {
+      width: 100%;
     }
   }
   &__logo {
@@ -269,10 +315,10 @@ article .article__title a
     @media (max-width: 768px) {
       margin: auto;
     }
-    .up {
-      transform: translateY(-44px);
+    &.up {
+      transform: translateY(-50px);
     }
-    .down {
+    &.down {
       transform: translateY(23px);
     }
   }
@@ -702,6 +748,9 @@ article .article__title a
     z-index: 1;
     position: relative;
     line-height: 38px;
+    &.mar-bot-30 {
+      margin-bottom: 30px;
+    }
     &--font {
       &_smaller {
         font-size: 24px;
@@ -773,16 +822,15 @@ article .article__title a
   &__info-box {
     border-radius: 4px;
     background-color: #fff;
-    padding: 44px 55px 33px 49px;
-    margin-top: 49px;
-    margin-bottom: 8px;
+    padding: 44px 78px 6px 49px;
+    margin: 49px auto 8px;
     width: 100%;
     position: relative;
     &-particles {
       position: absolute;
-      right: 35px;
+      right: 15px;
       z-index: 50;
-      bottom: 25px;
+      bottom: 15px;
       max-width: 100%;
     }
     &-number {
@@ -799,20 +847,28 @@ article .article__title a
       width: 98%;
       margin: auto;
       display: none;
-      .line-left {
-        z-index: 50;
+      .line-top {
+        width: 100%;
+        height: 12px;
+        display: block;
         position: absolute;
-        width: 12px;
-        height: 81%;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
         border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-        background-color: #D4F6E8;
-        @media (max-width: 1200px) {
-          display: none;
+        border-top-right-radius: 4px;
+        &--bg {
+          &_green {
+            background-color: #D4F6E8;
+          }
+          &_yellow {
+            background-color: #FDF2DF;
+          }
+          &_red {
+            background-color: #FFEEF0;
+          }
         }
-      }
-      &.second {
-        .line-left {    height: 82.4%;}
       }
       &.active {
         display: block;
@@ -865,7 +921,12 @@ article .article__title a
     z-index: 1;
     position: relative;
     a {
-      text-decoration: none;
+      text-decoration: underline;
+      font-weight: 300;
+      color: #4A90E2;
+      &:hover {
+        text-decoration: underline !important;
+      }
     }
     &._smaller {
       font-size: 14px;
@@ -971,9 +1032,9 @@ article .article__title a
     background-color: #fff !important;
     font-size: 12px !important;
     float: left;
-    width: 58% !important;
+    width: 59% !important;
     margin: 0 !important;
-    padding: 0 27px !important;
+    padding: 0 12px !important;
     font-family: 'HelveticaNeueCyr Bold';
     letter-spacing: 0.5px;
     @media (max-width: 768px) { 
@@ -997,13 +1058,14 @@ article .article__title a
   &__input-subtitle {
     font-size: 10px;
     color: #3D3A67;
-    text-align: left;
+    margin-top: 84px;
+    text-align: center;
     display: block;
     letter-spacing: 0.5px;
     height: 0;
-    margin: 0;
     padding: 0;
     font-family: 'HelveticaNeueCyr Light';
+    transform: translateX(-24px);
     @media (max-width: 1200px) {
       transform: translateX(0px);
     }
@@ -1014,7 +1076,7 @@ article .article__title a
   &__btn {
     float: none;
     color: #fff;
-    width: 38% !important;
+    width: 37% !important;
     font-size: 12px !important;
     margin: 0 !important;
     float: right;
@@ -1040,7 +1102,9 @@ article .article__title a
       text-transform: uppercase;
       text-align: left;
       font-size: 32px;
-      font-family: 'Couture Bold', sans-serif;
+      font-family: 'Couture Bold', Lucida Sans Unicode;
+      line-height: 40px;
+      font-weight: 900;
       line-height: 40px;
       @media (max-width: 768px) { 
         font-size: 24px;
@@ -1074,7 +1138,7 @@ article .article__title a
     font-weight: 300;
   }
   &__form {
-    width: 89%;
+    width: 92%;
     display: block;
     margin-top: 23px;
     @media (max-width: 767px) { 
@@ -1098,188 +1162,6 @@ article .article__title a
     letter-spacing: 0.5px;
     font-size: 10px;
     line-height: 59px;
-  }
-}
-
-
-.hero {
-  height: 619px;
-  @media (min-width: 1440px) {
-    height: 751px;
-  }
-  @media (min-width: 1680px) {
-    height: 904px;
-  }
-  @media (min-width: 2560px) {
-    height: 1288px;
-  }
-  @media (max-width: 600px) {
-    padding-top: 0 !important;
-    margin-top: -21px;
-  }
-  &__container {
-    position: relative;
-    height: 100%;
-  }
-  &._has-bg {
-    .background {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin-bottom: 0 !important;
-    }
-  }
-  &__main-block {
-    bottom: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 446px;
-    margin: auto;
-  }
-  .particles {
-    &_left {
-      position: absolute;
-      left: -9%;
-      bottom: 29px;
-      width: 31%;
-    }
-    &_right {
-      position: absolute;
-      right: -9%;
-      bottom: 29px;
-      width: 31%;
-    }
-  }
-  #ck_emailField {
-    border: 1px solid #C5C5C5 !important;
-  }
-  input[type] {
-    border-radius: 3px !important;
-  }
-  input:not([class*='col-']), select:not([class*='col-']), .input-select:not([class*='col-']), textarea:not([class*='col-']), button[type="submit"]:not([class*='col-']) {
-    height: 58px;
-  }
-  &__email-field {
-    background-color: #fff !important;
-    font-size: 12px !important;
-    float: left;
-    width: 63% !important;
-    margin: 0 !important;
-    padding: 0 27px !important;
-    font-family: 'HelveticaNeueCyr Bold';
-    @media (max-width: 768px) { 
-      width: 100% !important;
-      float: none !important;
-      display: block !important;
-    } 
-    &::-webkit-input-placeholder {
-      font-family: 'HelveticaNeueCyr Thin Italic';
-    }
-    &::-moz-placeholder {
-      font-family: 'HelveticaNeueCyr Thin Italic';
-    }
-    &:-ms-input-placeholder {
-      font-family: 'HelveticaNeueCyr Thin Italic';
-    }
-    &:-moz-placeholder {
-      font-family: 'HelveticaNeueCyr Thin Italic';
-    }
-  }
-  &__input-subtitle {
-    font-size: 10px;
-    color: #3D3A67;
-    transform: translateX(-103px);
-    display: block;
-    letter-spacing: 0.7px;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    @media (max-width: 1200px) {
-      transform: translateX(0px);
-    }
-  }
-  &__btn {
-    float: none;
-    color: #fff;
-    width: 33% !important;
-    font-size: 12px !important;
-    margin: 0 !important;
-    float: right;
-    font-family: 'HelveticaNeueCyr Bold';
-    letter-spacing: 0.6px !important;
-    &._color_blue {
-      background: #5075DD;
-      &:hover, &:focus {
-        color: #fff !important;
-        border-color: #d3d3d3;
-      }
-    }
-    @media (max-width: 768px) { 
-      width: 100% !important;
-      float: none !important;
-      display: block !important;
-      margin-top: 10px !important;
-    } 
-  }
-  &__title {
-      color: #5075DD;
-      text-transform: uppercase;
-      text-align: center;
-      font-size: 39px;
-      font-family: 'Couture Bold';
-      @media (max-width: 768px) { 
-        font-size: 30px;
-      } 
-  }
-  &__subtitle {
-    margin: 68px 0 48px 0;
-    color: #464272;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'HelveticaNeueCyr Bold';
-    @media (max-width: 768px) { 
-      margin: 0 0 17px 0;
-    } 
-  }
-  &__desc {
-    font-size: 16px;
-    color: #36315F;
-    font-family: 'Lato', sans-serif;
-    line-height: 27px;
-    font-weight: 300;
-  }
-  &__form {
-    width: 64%;
-    display: block;
-    margin: 80px auto;
-    @media (max-width: 768px) { 
-      margin: 0 auto;
-    } 
-  }
-}
-
-.hero-lower {
-  height: 82px;
-  padding: 0 !important;
-  background-color: #fff;
-  &__container {
-    height: 100%;
-  }
-  &__text {
-    text-align: center;
-    color: #3D3A67;
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    font-size: 10px;
-    line-height: 82px;
   }
 }
 

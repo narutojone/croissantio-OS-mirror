@@ -10,7 +10,7 @@
 <% end %>
 <%= render "shared/draft_navbar" %>
 <div class="main-container">
-  <section class="hero-draft _has-bg background text-center">
+  <section class="hero-draft _has-bg background text-center section--pad_hero">
     <div class="container hero-draft__container">
       <div class="row">
         <div class="col-xs-12 col-sm-6">
@@ -19,8 +19,8 @@
             for SaaS & Marketplaces
           </h1>
           <p class="hero-draft__subtitle">
-            We are a team of engineers, designers and marketers that you can <span class="line-break" />
-            hire to grow your MRR for a mounthly retainer. 
+            We are a team of engineers, designers, data analysts and marketers that <span class="line-break" />
+            you can hire to grow your Monthly Recurring Revenue.
           </p>
           <form id="ck_subscribe_form" class="ck_subscribe_form js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
             <div class="form-group ck_control_group ck_email_field_group hero-draft__form">
@@ -48,7 +48,7 @@
     </div>
   </section>
 
-  <section class="section--pad_third section--bg_medium-blue">
+  <section class="section--pad_second section--bg_medium-blue">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -56,8 +56,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="hidden-xs col-lg-1"></div>
-        <div class="col-xs-12 col-lg-10">
+        <div class="col-92pro">
           <div class="col-xs-12 col-md-4 fix-col-left">
             <div data-target="1" class="hero-draft__feature-box js--option">
               <%= image_tag("index/particles/particles-1.png", class: "hero-draft__feature-box-particles left", alt: "Particles") %>
@@ -69,6 +68,7 @@
               </div>
               <span class="hero-draft__symbol-left js--symbol">&minus;</span>
               <%= image_tag("index/particles/particles-2.png", class: "hero-draft__feature-box-particles right", alt: "Particles") %>
+              <span class="line-bottom line-bottom--bg_green js--active-line active"></span>
             </div>
           </div>
           <div class="col-xs-12 col-md-4">
@@ -82,6 +82,7 @@
               </div>
               <span class="hero-draft__symbol-left js--symbol">+</span>
               <%= image_tag("index/particles/particles-4.png", class: "hero-draft__feature-box-particles right", alt: "Particles") %>
+              <span class="line-bottom line-bottom--bg_yellow js--active-line"></span>
             </div>
           </div>
           <div class="col-xs-12 col-md-4 fix-col-right">
@@ -95,17 +96,16 @@
               </div>
               <span class="hero-draft__symbol-left js--symbol">+</span>
               <%= image_tag("index/particles/particles-6.png", class: "hero-draft__feature-box-particles right", alt: "Particles") %>
+              <span class="line-bottom line-bottom--bg_red js--active-line"></span>
             </div>
           </div>
         </div>
-        <div class="hidden-xs col-lg-1"></div>
       </div>
       <div class="row">
-        <div class="hidden-xs col-md-1"></div>
-        <div class="col-xs-12 col-md-10">
+        <div class="col-87pro">
           <div data-id="1" class="hero-draft__info-box-container active js--content">
-            <div class="line-left"></div>
             <div class="hero-draft__info-box">
+              <span class="line-top line-top--bg_green"></span>
               <p class="hero-draft__main-info hero-draft__main-info--font_smaller mar-bottom-less">
                 You are an early-stage startup and everyone is doing a bit of everything but as a CEO you are responsible for growth. 
                 You have been hacking your way into learning about acquisition, conversion, engagement and analytics but you are now hitting a plateau. <span class="line-break" />
@@ -116,13 +116,13 @@
                 <b>How Croissant can help?</b> We will run your marketing / growth for <span class="line-break" />
                 you and help you hire the right person for the job.
               </p>
+              <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
             </div>
-            <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
           </div>
 
           <div data-id="2" class="hero-draft__info-box-container second js--content">
-            <div class="line-left"></div>
             <div class="hero-draft__info-box">
+              <span class="line-top line-top--bg_yellow"></span>
               <p class="hero-draft__main-info hero-draft__main-info--font_smaller mar-bottom-less">
                 You are a CEO at a growing startup and have hired a junior marketing lead a couple months ago. 
                 She is doing ok but you can feel that something is missing and she is overwhelmed by everything that has to be done. 
@@ -134,13 +134,13 @@
                 operational resources (developers, analysts, designers and <span class="line-break" />
                 marketers) and consulting to do just that.
               </p>
+              <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
             </div>
-            <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
           </div>
 
           <div data-id="3" class="hero-draft__info-box-container js--content">
-            <div class="line-left"></div>
             <div class="hero-draft__info-box">
+              <span class="line-top line-top--bg_red"></span>
               <p class="hero-draft__main-info hero-draft__main-info--font_smaller mar-bottom-less">
                 You are a CMO at a growing startup and have built your marketing foundation. 
                 You understand who your customers are and how you can acquire them but you are now lacking resources to do everything 
@@ -151,16 +151,15 @@
                 resources (channel specialists, developers, designers) and help <span class="line-break" />
                 you do things you can't today.
               </p>
+              <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
             </div>
-            <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
           </div>
         </div>
-        <div class="hidden-xs col-md-1"></div>
       </div>
     </div>
   </section>
   
-  <section class="section--pad_normal">
+  <section class="section--pad_third">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -235,13 +234,13 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="hero-draft__main-title hero-draft__main-title--color_white mar-46-10">How it works ?</h1>
+          <h1 class="hero-draft__main-title hero-draft__main-title--color_white mar-bot-30">How it works ?</h1>
         </div>
       </div>
       <div class="hero-draft__info-container row">
         <div class="hidden-xs col-md-1">
           <span class="hero-draft__info-box-number">1</span>
-          <div class="hero-draft__dots js--dots">
+          <div data-amount="16" class="hero-draft__dots js--dots">
           </div>
         </div>
         <div class="col-xs-12 col-md-11">
@@ -276,7 +275,7 @@
       <div class="hero-draft__info-container row">
         <div class="hidden-xs col-md-1">
           <span class="hero-draft__info-box-number">2</span>
-          <div class="hero-draft__dots js--more-dots">
+          <div data-amount="20" class="hero-draft__dots js--dots">
           </div>
         </div>
         <div class="col-xs-12 col-md-11">
@@ -299,10 +298,9 @@
             </div>
 
             <div class="hero-draft__info-box-content-line">
-              <span class="hero-draft__letter-left hero-draft__letter-left--special">c</span>
+              <span class="hero-draft__letter-left">c</span>
               <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
-                We will audit your marketing / growth strategy and results. it will take 5 <span class="line-break" />
-                days after we got everything we need from you.
+                We will audit your marketing / growth strategy and results.
               </p>
             </div>
 
@@ -321,7 +319,7 @@
       <div class="hero-draft__info-container row">
         <div class="hidden-xs col-md-1">
           <span class="hero-draft__info-box-number">3</span>
-          <div class="hero-draft__dots js--dots">
+          <div data-amount="17" class="hero-draft__dots js--dots">
           </div>
         </div>
         <div class="col-xs-12 col-md-11">
@@ -340,7 +338,7 @@
               <span class="hero-draft__letter-left hero-draft__letter-left--special">b</span>
               <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
                 We send you a proposal for the 1-month paid trial with a followup 3-6 <span class="line-break" />
-                months montly retainer to be accepted at the end of the first month.
+                months monthly retainer to be accepted at the end of the first month.
               </p>
             </div>
 
@@ -357,7 +355,7 @@
       <div class="hero-draft__info-container row">
         <div class="hidden-xs col-md-1">
           <span class="hero-draft__info-box-number">4</span>
-          <div class="hero-draft__dots js--dots">
+          <div data-amount="21" class="hero-draft__dots js--dots">
           </div>
         </div>
         <div class="col-xs-12 col-md-11">
@@ -367,23 +365,25 @@
             <div class="hero-draft__info-box-content-line">
               <span class="hero-draft__letter-left hero-draft__letter-left--special">a</span>
               <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
-                We will go even deeper in our audit and create a growth roadmap for <span class="line-break" />
-                the next 6 months.
+                We will go even deeper in our Growth Audit and create a Growth <span class="line-break" />
+                Roadmap to achieve your next milestone.
               </p>
             </div>
 
             <div class="hero-draft__info-box-content-line">
-              <span class="hero-draft__letter-left">b</span>
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">b</span>
               <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
-                We will setup your analytics, SEO, CRO tools for you.
+                We will setup your analytics, SEO, CRO tools for you and make sure you <span class="line-break" />
+                have a strong growth foundation.
               </p>
             </div>
 
             <div class="hero-draft__info-box-content-line">
-              <span class="hero-draft__letter-left hero-draft__letter-left--special">c</span>
+              <span class="hero-draft__letter-left hero-draft__letter-left--special-2">c</span>
               <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
-                We will work on the high-growth opportunity area. This will help us start <span class="line-break" />
-                working together in an impactful way while we learn from each other.
+                We will work on a high-growth opportunity area. This can be [Paid + CRO] <span class="line-break" />
+                or [SEO + CRO] or [Product-Led Growth]. This will help us provide <span class="line-break" />
+                tangible value while we learn to work together.
               </p>
             </div>
           </div>
@@ -393,8 +393,6 @@
       <div class="hero-draft__info-container row">
         <div class="hidden-xs col-md-1">
           <span class="hero-draft__info-box-number">5</span>
-          <div class="hero-draft__dots js--dots">
-          </div>
         </div>
         <div class="col-xs-12 col-md-11">
           <div data-aos="fade-left" class="hero-draft__info-box-content">
@@ -403,27 +401,44 @@
             <div class="hero-draft__info-box-content-line">
               <span class="hero-draft__letter-left hero-draft__letter-left--special">a</span>
               <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
-                We will expand our scope to other high-growth opprtunity areas and <span class="line-break" />
-                update your growth roadmap.
+                We will expand our scope to other high-growth opportunities and <span class="line-break" />
+                continue to execute on your Growth Roadmap.
               </p>
             </div>
 
             <div class="hero-draft__info-box-content-line">
               <span class="hero-draft__letter-left hero-draft__letter-left--special">b</span>
               <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
-                A week before the end of each month, we will meet or call and define next <span class="line-break" />
-                month growth plan. 
+                We will have a 3-months growth focus to make sure we don’t strain ourselves <span class="line-break" />
+                and really drive revenue growth for you.
               </p>
             </div>
 
             <div class="hero-draft__info-box-content-line">
               <span class="hero-draft__letter-left hero-draft__letter-left--special-2">c</span>
               <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
-                We will then work in one or two weeks sprint to maximize speed that <span class="line-break" />
-                will each start with a growth meeting. PS - You won’t be able to add time <span class="line-break" />
-                consuming new things to these sprints.
+                Every month, we will create a Growth Planning where you will be able to <span class="line-break" />
+                see everything that will be done. This enable us to make sure we are align <span class="line-break" />
+                on what it’s most important for growth.
               </p>
             </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">d</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will then work in one or two weeks sprint depending on the growth <span class="line-break" />
+                opportunity to maximize speed.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">e</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                Every week will begin by a Growth Meeting to analyse the previous week’s <span class="line-break" />
+                experiments and plan the coming week.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
