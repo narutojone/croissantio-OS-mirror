@@ -22,3 +22,4 @@
 
 # Ignore developmeny uploads
 public/uploads/*
+.idea
