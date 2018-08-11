@@ -7,13 +7,7 @@ class PagesController < ApplicationController
 
   def home; end
 
-  def home_draft; end
-
-  def home_fr; end
-
   def admin; end
-
-  def about; end
 
   def thanks
     @newsletter = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true).last
@@ -21,10 +15,6 @@ class PagesController < ApplicationController
 
   def thanks_call
   end
-
-  def services; end
-
-  def about; end
 
   def contact
     @contactform = Contactform.new
