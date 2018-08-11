@@ -1,64 +1,528 @@
-<% content_for :title, "Croissant - On-Demand Growth Team for SaaS"  %>
-<% content_for :description, "Croissant helps SaaS companies build their Growth Stack by implementing tools such as Hull, Segment, Amplitude, Hotjar, Optimizely & many more." %>
-<% content_for :ogtitle, "Croissant - On-Demand Growth Team for SaaS" %>
-<% content_for :ogdescription, "Croissant helps SaaS companies build their Growth Stack by implementing tools such as Hull, Segment, Amplitude, Hotjar, Optimizely & many more." %>
+<% content_for :title, "On-Demand Growth Teams for SaaS & Marketplaces 🥐"  %>
+<% content_for :description, "Focus. Speed. Execution. We are a team of engineers, designers and marketers that you can hire to grow your revenue." %>
+<% content_for :ogtitle, "On-Demand Growth Teams for SaaS & Marketplaces 🥐" %>
+<% content_for :ogdescription, "Focus. Speed. Execution. We are a team of engineers, designers and marketers that you can hire to grow your revenue." %>
 <% content_for :ogtype, "page" %>
 <% content_for :ogimage, image_path('ogimage-croissant.jpg') %>
 <%= content_for :css do %>
   <%= stylesheet_link_tag  "bootstrap", "models/articles",  "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/pages"  %>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
 <% end %>
-<%= render "shared/stack_navbar" %>
+<%= render "shared/draft_navbar" %>
 <div class="main-container">
   <script type="text/javascript" src="https://load.fomo.com/api/v1/628HExXYbLeD86QLVu0C9A/load.js" async></script>
-  <section class="hero _has-bg ackground text-center">
-    <%= image_tag("index/bg.png", class: "background") %>
-    <%= image_tag("index/particles-left.png", class: "particles_left hidden-xs") %>
-    <%= image_tag("index/particles-right.png", class: "particles_right hidden-xs") %>
-    <div class="container hero__container">
-      <div class="row hero__main-block">
-        <div class="col-sm-10 col-sm-offset-1 col-md-9 col-md-offset-3">
-          <h1 class="title-home hero__title">On-Demand Growth Team for SaaS</h1>
-          <p class="hero__subtitle">Grow Revenue, not just MQLs 🚀</p>
-          <p class="lead hero__desc">
-            We are a team of engineers, product managers, designers and marketers <span class="line-break"></span>that you can hire to grow your MRR starting at 7000$/month.
+  <section class="hero-draft _has-bg background text-center section--pad_hero">
+    <div class="container hero-draft__container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h1 class="title-home hero-draft__title">
+            On-Demand Growth Teams <span class="line-break" />
+            for SaaS & Marketplaces
+          </h1>
+          <p class="hero-draft__subtitle">
+            Focus. Speed. Execution. We are a team of engineers, designers and marketers that you can hire to grow your revenue.
           </p>
-          <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
-            <div class="form-group ck_control_group ck_email_field_group hero__form">
+          <form id="ck_subscribe_form" class="ck_subscribe_form js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+            <div class="form-group ck_control_group ck_email_field_group hero-draft__form">
               <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
-              <input placeholder="Enter your business email" name="email" class="form-control hero__email-field ck_email_address js--email-input" id="ck_emailField" type="email" required="" />
-              <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn hero__btn _color_blue type--uppercase" type="submit" name="submit" value="Request call" data-drip-attribute="sign-up-button" />
+              <input placeholder="Enter your business email" name="email" class="form-control hero-draft__email-field ck_email_address js--email-input" id="ck_emailField" type="email" required="" />
+              <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn hero-draft__btn _color_blue type--uppercase" type="submit" name="submit" value="Request call" data-drip-attribute="sign-up-button" />
             </div>
-            <p class="hero__input-subtitle">20min call to ask all your questions about Croissant</p>
+            <p class="hero-draft__input-subtitle">20min call to ask all your questions about Croissant</p>
             <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
               <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
             </div>
             <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
           </form>
           <p class="form__success">Thanks! Will get in touch with you asap to schedule the call.</p>
+          <ul class="hero-draft__list-of-logos">
+            <li class="hero-draft__logo"><%= image_tag("index/companies/algolia.png", alt: "algolia icon") %></li>
+            <li class="hero-draft__logo"><%= image_tag("index/companies/reeport.png", alt: "reeport icon") %></li>
+            <li class="hero-draft__logo"><%= image_tag("index/companies/cm.png", alt: "cm icon") %></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <%= image_tag("index/illustrations/hero-img.png", class: "hero-draft__main-illustration up", alt: "Hero Illustration") %>
         </div>
       </div>
     </div>
   </section>
-  <section class="hero-lower">
-    <div class="container hero-lower__container">
-      <p class="hero-lower__text _color_blue">© 2018 Croissant - Made with ❤️ in Paris, France</p>
+
+  <section class="section--pad_second section--bg_medium-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="hero-draft__main-title hero-draft__main-title--color_white">Grow revenue, not just leads 🚀</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-92pro">
+          <div class="col-xs-12 col-md-4 fix-col-left">
+            <div data-target="1" class="hero-draft__feature-box js--option">
+              <%= image_tag("index/particles/particles-1.png", class: "hero-draft__feature-box-particles left", alt: "Particles") %>
+              <div class="hero-draft__main-info align-center">
+                I’m a SaaS startup CEO doing marketing myself
+              </div>
+              <div class="hero-draft__feature-box-image">
+                <%= image_tag("index/illustrations/startup-myself.png", alt: "Startup Doing Myself Illustration") %>
+              </div>
+              <span class="hero-draft__symbol-left js--symbol">&minus;</span>
+              <%= image_tag("index/particles/particles-2.png", class: "hero-draft__feature-box-particles right", alt: "Particles") %>
+              <span class="line-bottom line-bottom--bg_green js--active-line active"></span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div data-target="2" class="hero-draft__feature-box js--option">
+              <%= image_tag("index/particles/particles-3.png", class: "hero-draft__feature-box-particles left", alt: "Particles") %>
+              <div class="hero-draft__main-info align-center">
+                I’m a startup CEO with a junior marketing lead
+              </div>
+              <div class="hero-draft__feature-box-image">
+                <%= image_tag("index/illustrations/startup-ceo.png", alt: "Startup CEO Illustration") %>
+              </div>
+              <span class="hero-draft__symbol-left js--symbol">+</span>
+              <%= image_tag("index/particles/particles-4.png", class: "hero-draft__feature-box-particles right", alt: "Particles") %>
+              <span class="line-bottom line-bottom--bg_yellow js--active-line"></span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4 fix-col-right">
+            <div data-target="3" class="hero-draft__feature-box js--option">
+              <%= image_tag("index/particles/particles-5.png", class: "hero-draft__feature-box-particles left", alt: "Particles") %>
+              <div class="hero-draft__main-info align-center">
+                I’m a SaaS startup CMO looking for technical help
+              </div>
+              <div class="hero-draft__feature-box-image">
+                <%= image_tag("index/illustrations/startup-cmo.png", alt: "SaaS startup CMO Illustration") %>
+              </div>
+              <span class="hero-draft__symbol-left js--symbol">+</span>
+              <%= image_tag("index/particles/particles-6.png", class: "hero-draft__feature-box-particles right", alt: "Particles") %>
+              <span class="line-bottom line-bottom--bg_red js--active-line"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-87pro">
+          <div data-id="1" class="hero-draft__info-box-container active js--content">
+            <div class="hero-draft__info-box">
+              <span class="line-top line-top--bg_green"></span>
+              <p class="hero-draft__main-info hero-draft__main-info--font_smaller mar-bottom-less">
+                You are an early-stage startup and everyone is doing a bit of everything but as a CEO you are responsible for growth. 
+                You have been hacking your way into learning about acquisition, conversion, engagement and analytics but you are now hitting a plateau. <span class="line-break" />
+                You don’t have the time to do a good job at it without sacrificing other parts of your business. 
+                But you are not sure if you need to hire someone full-time just yet nor what this person should look like.
+              </p>
+              <p class="hero-draft__main-info hero-draft__main-info--font_smaller">
+                <b>How Croissant can help?</b> We will run your marketing / growth for <span class="line-break" />
+                you and help you hire the right person for the job.
+              </p>
+              <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
+            </div>
+          </div>
+
+          <div data-id="2" class="hero-draft__info-box-container second js--content">
+            <div class="hero-draft__info-box">
+              <span class="line-top line-top--bg_yellow"></span>
+              <p class="hero-draft__main-info hero-draft__main-info--font_smaller mar-bottom-less">
+                You are a CEO at a growing startup and have hired a junior marketing lead a couple months ago. 
+                She is doing ok but you can feel that something is missing and she is overwhelmed by everything that has to be done. 
+                You would like her to be more proactive in her role as a leader of your marketing.
+              </p>
+              <p class="hero-draft__main-info hero-draft__main-info--font_smaller">
+                <b>How Croissant can help?</b> We will guide you on how to run <span class="line-break" />
+                marketing properly at a fast growing startup and provide <span class="line-break" />
+                operational resources (developers, analysts, designers and <span class="line-break" />
+                marketers) and consulting to do just that.
+              </p>
+              <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
+            </div>
+          </div>
+
+          <div data-id="3" class="hero-draft__info-box-container js--content">
+            <div class="hero-draft__info-box">
+              <span class="line-top line-top--bg_red"></span>
+              <p class="hero-draft__main-info hero-draft__main-info--font_smaller mar-bottom-less">
+                You are a CMO at a growing startup and have built your marketing foundation. 
+                You understand who your customers are and how you can acquire them but you are now lacking resources to do everything 
+                you would like to achieve your objectives. Especially when it comes to technical things like SEO / CRO or Analytics.
+              </p>
+              <p class="hero-draft__main-info hero-draft__main-info--font_smaller">
+                <b>How Croissant can help?</b> We will provide you with technical <span class="line-break" />
+                resources (channel specialists, developers, designers) and help <span class="line-break" />
+                you do things you can't today.
+              </p>
+              <%= image_tag("index/particles/particles-7.png", class: "hero-draft__info-box-particles", alt: "Particles") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section--pad_third">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="hero-draft__main-title">Growth-as-a-service</h1>
+          <p class="hero-draft__main-info hero-draft__main-info--align_center mar-bottom-less">
+            We do technical marketing and product optimization for SaaS and Marketpaces
+          </p>
+        </div>
+      </div>
+      <div class="row hero-draft__boxes">
+        <div class="col-46pro">
+          <%= image_tag("index/illustrations/growth-as-a-service-img.png", class: "hero-draft__main-illustration down", alt: "Growth-as-a-service illustration") %>
+        </div>
+        <div class="col-27pro">
+          <div class="hero-draft__box">
+            <%= image_tag("index/icons/paid-acquisition-icon.png", class: "hero-draft__box-icon", alt: "Paid Acquisition Icon") %>
+            <h3 class="hero-draft__box-title hero-draft__box-title--color_blue">Paid Acquisition</h3>
+            <p class="hero-draft__main-info">We run your paid acquisition (Google, <span class="line-break" />
+            Facebook, Linkedin, Twitter) for you.</p>
+          </div>
+          <div class="hero-draft__box mar-top">
+            <%= image_tag("index/icons/conversion-rate-icon.png", class: "hero-draft__box-icon", alt: "Coversion Rate Optimization Icon") %>
+            <h3 class="hero-draft__box-title hero-draft__box-title--color_orange">Conversion Rate Optimization</h3>
+            <p class="hero-draft__main-info">
+              We optimize your landing and <span class="line-break" />
+              product pages for conversion.
+            </p>
+          </div>
+          <div class="hero-draft__box mar-top">
+            <%= image_tag("index/icons/analytics-icon.png", class: "hero-draft__box-icon", alt: "Analytics Icon") %>
+            <h3 class="hero-draft__box-title hero-draft__box-title--color_red">Analytics</h3>
+            <p class="hero-draft__main-info">
+              We create a tracking plan and <span class="line-break" />
+              integrate analytics tools for your <span class="line-break" />
+              website or product.
+            </p>
+          </div>
+        </div>
+        <div class="col-27pro">
+          <div class="hero-draft__box">
+            <%= image_tag("index/icons/seo-icon.png", class: "hero-draft__box-icon", alt: "SEO Icon") %>
+            <h3 class="hero-draft__box-title hero-draft__box-title--color_lilac">Search Engine Optimization</h3>
+            <p class="hero-draft__main-info">
+              We audit and optimize your <span class="line-break" />
+              technical SEO for you.
+            </p>
+          </div>
+          <div class="hero-draft__box mar-top">
+            <%= image_tag("index/icons/product-led-growth-icon.png", class: "hero-draft__box-icon", alt: "Product-Led Growth Icon") %>
+            <h3 class="hero-draft__box-title hero-draft__box-title--color_green">Product-Led Growth</h3>
+            <p class="hero-draft__main-info">
+              We optimize your Product for <span class="line-break" />
+              Growth.
+            </p>
+          </div>
+          <div class="hero-draft__box mar-top">
+            <%= image_tag("index/icons/operations-icon.png", class: "hero-draft__box-icon", alt: "Operations Icon") %>
+            <h3 class="hero-draft__box-title hero-draft__box-title--color_gray">Operations</h3>
+            <p class="hero-draft__main-info">
+              We connect your marketing, <span class="line-break" />
+              sales and analytics tools <span class="line-break" />
+              together so everything run <span class="line-break" />
+              smoothly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--pad_aligned section--bg_blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="hero-draft__main-title hero-draft__main-title--color_white mar-bot-30">How it works ?</h1>
+        </div>
+      </div>
+      <div class="hero-draft__info-container row">
+        <div class="hidden-xs col-md-1">
+          <span class="hero-draft__info-box-number">1</span>
+          <div data-amount="16" class="hero-draft__dots js--dots">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-11">
+          <div data-aos="fade-left" class="hero-draft__info-box-content">
+            <p class="hero-draft__info-box-title">Onboarding</p>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left">a</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                You <a href="/">request a call</a> with us
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">b</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We schedule a call and go over your situation and see how we could be <span class="line-break" />
+                helpful to you.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left">c</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                If you like what you hear and we are a good fit for you, we go forward.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-draft__info-container row">
+        <div class="hidden-xs col-md-1">
+          <span class="hero-draft__info-box-number">2</span>
+          <div data-amount="20" class="hero-draft__dots js--dots">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-11">
+          <div data-aos="fade-right" class="hero-draft__info-box-content">
+            <p class="hero-draft__info-box-title">Free Audit</p>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left">a</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                Before working together, we will make sure we can provide value to you.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">b</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will need access to your analytics tools, paid advertising tools, SEO tools <span class="line-break" />
+                and we will do interviews with your team members.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left">c</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will audit your marketing / growth strategy and results.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">d</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will schedule an appointment to go over our findings and what we <span class="line-break" />
+                think should be done.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-draft__info-container row">
+        <div class="hidden-xs col-md-1">
+          <span class="hero-draft__info-box-number">3</span>
+          <div data-amount="17" class="hero-draft__dots js--dots">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-11">
+          <div data-aos="fade-left" class="hero-draft__info-box-content">
+            <p class="hero-draft__info-box-title">Contract</p>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">a</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will define a high-growth opportunity area to focus on during the <span class="line-break" />
+                one month paid trial period (Example - Facebook Ads, CRO, SEO, etc).
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">b</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We send you a proposal for the 1-month paid trial with a followup 3-6 <span class="line-break" />
+                months monthly retainer to be accepted at the end of the first month.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left">c</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                You accept it and we sign a contract 🔥
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-draft__info-container row">
+        <div class="hidden-xs col-md-1">
+          <span class="hero-draft__info-box-number">4</span>
+          <div data-amount="21" class="hero-draft__dots js--dots">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-11">
+          <div data-aos="fade-right" class="hero-draft__info-box-content">
+            <p class="hero-draft__info-box-title">One Month</p>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">a</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will go even deeper in our Growth Audit and create a Growth <span class="line-break" />
+                Roadmap to achieve your next milestone.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">b</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will setup your analytics, SEO, CRO tools for you and make sure you <span class="line-break" />
+                have a strong growth foundation.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special-2">c</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will work on a high-growth opportunity area. This can be [Paid + CRO] <span class="line-break" />
+                or [SEO + CRO] or [Product-Led Growth]. This will help us provide <span class="line-break" />
+                tangible value while we learn to work together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-draft__info-container row">
+        <div class="hidden-xs col-md-1">
+          <span class="hero-draft__info-box-number">5</span>
+        </div>
+        <div class="col-xs-12 col-md-11">
+          <div data-aos="fade-left" class="hero-draft__info-box-content">
+            <p class="hero-draft__info-box-title">Monthly retainer</p>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">a</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will expand our scope to other high-growth opportunities and <span class="line-break" />
+                continue to execute on your Growth Roadmap.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">b</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will have a 3-months growth focus to make sure we don’t strain ourselves <span class="line-break" />
+                and really drive revenue growth for you.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special-2">c</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                Every month, we will create a Growth Planning where you will be able to <span class="line-break" />
+                see everything that will be done. This enable us to make sure we are align <span class="line-break" />
+                on what it’s most important for growth.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">d</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                We will then work in one or two weeks sprint depending on the growth <span class="line-break" />
+                opportunity to maximize speed.
+              </p>
+            </div>
+
+            <div class="hero-draft__info-box-content-line">
+              <span class="hero-draft__letter-left hero-draft__letter-left--special">e</span>
+              <p class="hero-draft__main-info hero-draft__main-info--inline mar-bottom-less">
+                Every week will begin by a Growth Meeting to analyse the previous week’s <span class="line-break" />
+                experiments and plan the coming week.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section--pad_aligned">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="hero-draft__main-title hero-draft__main-title--font_smaller recipes-spacing">
+            Team
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <p class="hero-draft__member-name">Maxime Salomon</p>
+          <p class="hero-draft__member-position">Founder & CEO</p>
+          <%= image_tag("index/team/maxime.png", class: "hero-draft__member-img", alt: "Maxime Salomon") %>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <p class="hero-draft__member-name">Valentin Damien</p>
+          <p class="hero-draft__member-position">Growth Product Designer</p>
+          <%= image_tag("index/team/valentin.png", class: "hero-draft__member-img", alt: "Valentin Damien") %>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <p class="hero-draft__member-name">Nalto</p>
+          <p class="hero-draft__member-position">Good Boy</p>
+          <%= image_tag("index/team/nalto.png", class: "hero-draft__member-img", alt: "Nalto") %>
+        </div>  
+      </div>
+      <div class="row align-center">
+        <span class="hero-draft__sign">and freelancers from all around the world 🌍</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero-draft__upper-footer">
+    <%= image_tag("index/rectangle-bg.png", class: "hero-draft__upper-footer-bg") %>
+    <div class="hero-draft__upper-footer-info container">
+      <div class="row">
+        <div class="col-sm-12 col-md-5">
+          <p class="hero-draft__main-note _white">Let’s grow your revenue together!</p>
+        </div>
+        <div class="col-sm-12 col-md-7 hero-draft__upper-footer-right">
+          <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+            <div class="form-group ck_control_group ck_email_field_group hero-draft__upper-footer-form">
+              <label class="hidden ck_label" for="ck_emailField" >Email Address</label>
+              <input 
+              style="border: 1px solid #fff !important;"
+              placeholder="Enter your business email" name="email" class="form-control hero-draft__upper-footer-email-field ck_email_address" id="ck_emailField" type="email" required="" />
+              <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields btn hero-draft__upper-footer-btn _color_blue type--uppercase" type="submit" name="submit" value="Request call" data-drip-attribute="sign-up-button" />
+            </div>
+            <p class="hero-draft__upper-footer-input-subtitle">20min call to ask all your questions about Croissant</p>
+            <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+              <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+            </div>
+            <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero-draft-lower">
+    <div class="container hero-draft-lower__container">
+      <p class="hero-draft-lower__text _color_blue">© 2018 Croissant - Made with ❤️ in Paris, France</p>
       </div>
     </section>
   </div>
   <% content_for :js do %>
     <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"%>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script type="text/javascript">
-      function Subscribed() {
-      	analytics.track('Subscribed');
-      	window.optimizely.push(["trackEvent", "Subscribed"]);
-      }
-      
-      analytics.page('Home', {
-        path: "/"
-      });
-
+      populateDots()
+      AOS.init();
+      fixHeader()
       setInputFocus();
       showMessage();
+      selectOption()
+      changeBtn()
+      toggleBoxes()
     </script>
   <% end %>
