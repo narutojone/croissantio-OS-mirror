@@ -41,10 +41,10 @@
           </ul>
           <ul class="mobile-nav__dropdown-list _opened menu-horizontal text-left js--mob-list">
             <li>
-              <%= link_to "Blog", blog_path, class: 'mobile-nav__dropdown-list-item' %>
+              <%= link_to "Newsletter", newsletter_path, class: 'mobile-nav__dropdown-list-item'  %>
             </li>
             <li>
-              <%= link_to "Newsletter", newsletter_path, class: 'mobile-nav__dropdown-list-item'  %>
+              <%= link_to "Blog", blog_path, class: 'mobile-nav__dropdown-list-item' %>
             </li>
             <li>
               <%= link_to "Videos", videos_path, class: 'mobile-nav__dropdown-list-item'  %>
@@ -75,16 +75,16 @@
           <div class="bar__module">
             <ul class="menu-horizontal text-left resources__links">
               <li>
-                <%= link_to "Search", search_path, class: 'link_color_blue' %>
+                <%= link_to "Newsletter", newsletter_path, class: 'link_color_blue'  %>
               </li>
               <li>
                 <%= link_to "Blog", blog_path, class: 'link_color_blue'  %>
               </li>
               <li>
-                <%= link_to "Newsletter", newsletter_path, class: 'link_color_blue'  %>
+                <%= link_to "Videos", videos_path, class: 'link_color_blue'  %>
               </li>
               <li>
-                <%= link_to "Videos", videos_path, class: 'link_color_blue'  %>
+                <%= link_to "Search", search_path, class: 'link_color_blue' %>
               </li>
             </ul>
           </div>
@@ -112,10 +112,10 @@
                   </button>
                 </li>
                 <div class="res-dropdown">
-                  <%= link_to "Search", search_path%>
-                  <%= link_to "Blog", blog_path %>
                   <%= link_to "Newsletter", newsletter_path %>
+                  <%= link_to "Blog", blog_path %>
                   <%= link_to "Videos", videos_path %>
+                  <%= link_to "Search", search_path%>
                 </div>
               </ul>
               <!--end module-->
