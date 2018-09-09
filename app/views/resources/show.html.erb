@@ -11,7 +11,7 @@
 <% content_for :ogdescription, @resource.description %>
 <% content_for :ogtype, "article" %>
 
-<%= render "shared/stack_navbar" %>
+<%= render "shared/navbar" %>
 <main role="main" class="main clearfix">
     <div class="js__article article__main" data-title="Finding your way from maker to manager">
         <div class="container">
@@ -51,5 +51,8 @@
 </section>
 <%= render "shared/stack_footer" %>
 <% content_for :js do %>
-<%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+<%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"  %>
+  <script>
+    fixHeader()
+  </script>
 <% end %>

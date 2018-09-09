@@ -132,14 +132,16 @@ function setInputFocus() {
 
 
 function fixHeader() {
+  if ($(window).scrollTop() >= 10) {
+    $('.js--fix-header').addClass('_fixed');
+  }
   $(window).scroll(function(){
     if ($(window).scrollTop() >= 10) {
-       $('.js--fix-header').addClass('_fixed');
-    }
-    else {
+      $('.js--fix-header').addClass('_fixed');
+    } else {
       $('.js--fix-header').removeClass('_fixed');
     }
-});
+  });
 }
 
 function showMessage() {

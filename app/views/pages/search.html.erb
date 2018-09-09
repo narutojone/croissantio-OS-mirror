@@ -9,46 +9,48 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
 <% end %>
+<%= render "shared/navbar" %>
 <!-- Content start -->
-<div class="about">
-  <%= render "shared/stack_navbar" %>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <%= form_for resources_path, method: :get, html: {id: "search-form"} do |f| %>
-          <div class="input-group col-md-10 col-md-offset-1">
-            <input type="search" class="search__input col-md-11 col-sm-11 " name="query" placeholder="Search resources by title, url or author" value=<%= @search_resource %>>
-            <%= button_tag type: 'submit', class: "input-group-btn btn btn-secondary search__submit col-md-1 col-sm-1" do %>
-              <i class="fa fa-search" aria-hidden="true"></i>
-            <% end %>
-          </div>
-          <div class="col-md-10 col-md-offset-1">
-            <div class="col-md-3 col-sm-12 select-search clearfix">
-              <p class="inline">Search</p>
-              <%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {include_blank: 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
+<div class="main-container">
+  <section class="section section--pad_hero text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= form_for resources_path, method: :get, html: {id: "search-form"} do |f| %>
+            <div class="input-group col-md-10 col-md-offset-1">
+              <input type="search" class="search__input col-md-11 col-sm-11 " name="query" placeholder="Search resources by title, url or author" value=<%= @search_resource %>>
+              <%= button_tag type: 'submit', class: "input-group-btn btn btn-secondary search__submit col-md-1 col-sm-1" do %>
+                <i class="fa fa-search" aria-hidden="true"></i>
+              <% end %>
             </div>
-            <div class="col-md-2 col-sm-12 select-search  clearfix">
-              <p class="inline">From</p>
-              <%= f.select params[:category_id], options_from_collection_for_select(Category.all, :name, :display_name, @selected_option[:category]), {include_blank: 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline", id: "category_filter"} %>
-            </div>
-            <div class="col-md-3 col-sm-12 select-search  clearfix">
-              <p class="inline">By</p>
-              <%= f.select params[:order], options_for_select([["Oldest first", "date ASC"],["Newest first", "date DESC"]], selected: @selected_option[:order]), {}, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
-            </div>
-            <div class="col-md-4 col-sm-12 select-search  clearfix">
-              <p class="inline">In</p>
-              <div id="reportrange" class="pull-right" style="width: 90%; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
-                <i class="fa fa-calendar"></i>&nbsp;
-							<span class="date-range"></span>
-                <b class="caret"></b>
+            <div class="col-md-10 col-md-offset-1">
+              <div class="col-md-3 col-sm-12 select-search clearfix">
+                <p class="inline">Search</p>
+                <%= f.select params[:resource_type], options_for_select(["Article", "Video", "Presentation", "Link"], selected: @selected_option[:resource_type]), {include_blank: 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
               </div>
-              <%= f.text_field params[:daterange], class: "col-hidden", id: "daterange" %>
+              <div class="col-md-2 col-sm-12 select-search  clearfix">
+                <p class="inline">From</p>
+                <%= f.select params[:category_id], options_from_collection_for_select(Category.all, :name, :display_name, @selected_option[:category]), {include_blank: 'All' }, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline", id: "category_filter"} %>
+              </div>
+              <div class="col-md-3 col-sm-12 select-search  clearfix">
+                <p class="inline">By</p>
+                <%= f.select params[:order], options_for_select([["Oldest first", "date ASC"],["Newest first", "date DESC"]], selected: @selected_option[:order]), {}, {class: "manual-filter form-control col-md-7 col-xs-12 form-inline" }%>
+              </div>
+              <div class="col-md-4 col-sm-12 select-search  clearfix">
+                <p class="inline">In</p>
+                <div id="reportrange" class="pull-right" style="width: 90%; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+                  <i class="fa fa-calendar"></i>&nbsp;
+                <span class="date-range"></span>
+                  <b class="caret"></b>
+                </div>
+                <%= f.text_field params[:daterange], class: "col-hidden", id: "daterange" %>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 <hr>
 <section class="category-search text-center space--xs <%= @status %>">
@@ -129,9 +131,9 @@
   <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
   <%= javascript_include_tag "moment" %>
   <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-  <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "search"  %>
+  <%= javascript_include_tag "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "search", "script" %>
   <script>
-    // <!-- The other scripts for the datepicker, submitting the form and algolia are moved into search.js. Just this one requires some ruby variables --> <!-- Initialize Datepicker.js -->
+    fixHeader()
     $(function () {
     	var start = moment(<%= @selected_option[:upper] %>)
     	var end = moment(<%= @selected_option[:lower] %>);
@@ -142,7 +144,6 @@
           $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         }
     	}
-
     	$('#reportrange').daterangepicker({
     		startDate: start,
     		endDate: end,
@@ -152,9 +153,7 @@
     			]
     		}
     	}, cb);
-
     	cb(start, end);
-
     });
 	  analytics.page('Search', {
 		  path: window.location.pathname,
