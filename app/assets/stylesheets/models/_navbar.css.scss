@@ -168,16 +168,23 @@
 
 .mobile-nav {
   position: fixed;
-  top: -100vh;
+  top: -1000px;
   bottom: 0;
   height: 100vh;
   background-color: #fff;
   width: 100vw;
   z-index: 99999;
-  -webkit-transition: .25s ease-out 0s;
-  transition: .25s ease-out 0s;
+  opacity: 0;
+  pointer-events: none;
+  -moz-transition: top .3s ease-in-out;
+  -webkit-transition: top .3s ease-in-out;
+  -o-transition: top .3s ease-in-out;
+  transition: top .3s ease-in-out;
+  overflow: scroll;
   &._opened {
     top: 0;
+    opacity: 1;
+    pointer-events: all;
   }
   &__arrow {
     transform: rotate(0deg);
@@ -240,7 +247,7 @@
     -o-transition:height 500ms ease-in;
     transition:height 500ms ease-in;
     &._opened {
-      height: 321px;
+      height: 257px;
     }
     &-item {
       font-family: 'Lato', sans-serif;
