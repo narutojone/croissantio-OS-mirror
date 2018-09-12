@@ -8,10 +8,10 @@
   <%= stylesheet_link_tag "bootstrap", "stack-interface", "socicon", "lightbox.min", "flickity", "iconsmind", "theme", "models/pages" %>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet">
 <% end %>
-<%= render "shared/stack_navbar" %>
+<%= render "shared/navbar" %>
 <script src="https://app.convertkit.com/assets/CKJS4.js?v=21"></script>
 <div class="main-container">
-  <section class="text-center">
+  <section class="section section--pad_hero text-center">
     <div class="container">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
@@ -118,12 +118,13 @@
 <%= render "shared/stack_footer" %>
 </div>
 <% content_for :js do %>
-  <%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+  <%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"  %>
+  <script type="text/javascript">
+	  analytics.page('Newsletter', {
+		  path: '/newsletter',
+      url: "https://croissant.io/newsletter"
+	  });
+    fixHeader()
+  </script>
 <% end %>
-<script type="text/javascript">
-	analytics.page('Newsletter', {
-		path: '/newsletter',
-    url: "https://croissant.io/newsletter"
-	});
-</script>
 

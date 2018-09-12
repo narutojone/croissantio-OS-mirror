@@ -12,7 +12,7 @@
 <% content_for :ogtype, "article" %>
 <% content_for :ogimage, @article.image.url %>
 
-<%= render "shared/stack_navbar" %>
+<%= render "shared/navbar" %>
 <main role="main" class="main clearfix">
     <div class="js__article article__main" data-title="Finding your way from maker to manager">
         <% if @article.image.blank? %>
@@ -176,5 +176,8 @@ var disqus_config = function () {
 
 <% content_for :js do %>
 <script id="dsq-count-scr" src="//growthbakery.disqus.com/count.js" async></script>
-<%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts"  %>
+<%= javascript_include_tag "jquery-3.1.1.min", "flickity.min", "parallax", "typed.min", "isotope.min", "ytplayer.min", "lightbox.min", "granim.min", "countdown.min", "twitterfetcher.min", "spectragram.min", "smooth-scroll.min", "scripts", "script"  %>
+<script>
+  fixHeader()
+</script>
 <% end %>
