@@ -32,5 +32,10 @@ module Growthbakery
 
     # Required for Heroku
     config.assets.initialize_on_precompile = false
+
+    config.middleware.insert(0, Rack::ReverseProxy) do
+      reverse_proxy_options replace_response_host: true, preserve_host: false
+      reverse_proxy /^\/swapfile(\/?.*)$/, ENV['SWAPFILE_URL']
+    end
   end
 end
