@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/blog' => 'pages#blog'
   get '/newsletter' => 'pages#newsletter'
+  get '/home_new' => 'pages#home_new'
   get '/videos' => 'pages#videos'
   get '/thanks' => 'pages#thanks'
   get '/thanks-30-min-call' => 'pages#thanks_call'

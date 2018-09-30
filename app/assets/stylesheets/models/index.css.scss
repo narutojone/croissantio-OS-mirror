@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700');
+
+$blue: #0014dd;
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #f0f0f0 !important;
+}
+
+.br {
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.ck_form_container {
+  display: none;
+}
+
+.fixed-width {
+  background: #fff;
+  @media (min-width: 1440px) {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.main {
+  overflow: hidden;
+  font-family: Poppins;
+  &_hero {
+    height: 100vh;
+    background-image: asset-data-url('index-new/illustration.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+
+//blocks
+
+.form {
+  width: 472px;
+  margin: auto;
+  position: relative;
+  &__desc {
+    font-size: 11px;
+    font-weight: 300;
+    color: $blue;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 0;
+  }
+  &__email {
+    width: 472px;
+    height: 65px;
+    border-radius: 33px;
+    background-color: #d4d8ff1f;
+    color: #0014dd;
+    font-weight: 300;
+    font-size: 14px;
+    border: none;
+    padding: 0 180px 0 26px;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-input-placeholder {
+      color: #0014dd;
+      font-weight: 300;
+      font-size: 14px;
+    }
+    &:-ms-input-placeholder {
+      color: #0014dd;
+      font-weight: 300;
+      font-size: 14px;
+    }
+    &::-moz-placeholder {
+      color: #0014dd;
+      font-weight: 300;
+      font-size: 14px;
+    }
+    &:-moz-placeholder {
+      color: #0014dd;
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+  &__btn {
+    width: 160px;
+    height: 50px;
+    border-radius: 25px !important;
+    background-image: linear-gradient(225deg, #002df0 0%, #0014dd 100%);
+    color: #fff;
+    position: absolute;
+    top: 8px;
+    right: 9px;
+  }
+}
+
+.cr-footer {
+  background-image: asset-data-url('index-new/footer-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  height: 102px;
+  &__logo {
+    width: 149px;
+    height: 26px;
+    margin: 38px auto 20px;
+    display: block;
+    max-width: 100%;
+  }
+  &__text {
+    color: $blue;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .container {
+    height: 100%;
+    display:-ms-flexbox;
+    -ms-flex-pack:center;
+    -ms-flex-align:center;
+    
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+    
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    
+    /* W3C */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.cr-navbar {
+  &__link {
+    color: $blue;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  &__btn {
+    width: 160px;
+    line-height: 50px;
+    border-radius: 25px;
+    color: #fff;
+    background-image: linear-gradient(225deg, #002df0 0%, #0014dd 100%);
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+  }
+  &__dropdown {
+    border: none !important;
+    background-color: transparent !important;
+    background-image: asset-data-url('index-new/dropdown-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 12px 0 10px !important;
+    left: -27px !important;
+    right: 0;
+    margin: auto !important;
+    width: 153px;
+    top: 30px !important;
+    a {
+      font-size: 12px;
+      font-weight: 300;
+      color: $blue;
+      opacity: 0.31;
+      &:hover {
+        opacity: 1;
+        color: $blue;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.content {
+  &.pad-90-0-50 {
+    padding: 90px 0 50px;
+  }
+  section {
+    position: relative;
+  }
+  &__heading {
+    color: $blue;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 65px;
+    text-align: center;
+    &.mar-top-14 {
+      margin-top: 14px;
+    }
+  }
+  &__desc {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 35px;
+    color: $blue;
+    text-align: center;
+    span {
+      font-weight: 500;
+    }
+    &.mar-top-38 {
+      margin-top: 38px;
+    }
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 35px;
+    text-align: center;
+    color: $blue;
+  }
+  &__logos-list {
+    width: 76%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    img {
+      height: 100%;
+      max-width: 100%;
+    }
+  }
+}
