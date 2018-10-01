@@ -5,15 +5,44 @@
 
 <div class="main">
   <section id="hero" class="main_hero">
-    <header>
+    <%= image_tag "index-new/navbar-oval.png", class: "cr-navbar--oval d-none d-md-block" %>
+    <%= image_tag "index-new/navbar-oval-mob.png", class: "cr-navbar--oval--mob d-block d-md-none" %>
+    <header class="cr-navbar">
       <div class="container">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-light navbar-expand-lg">
           <%= link_to root_path, class: "navbar-brand" do %>
             <%= image_tag "index-new/croissant-logo.png", class: "d-inline-block align-top" %>
           <% end %>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler2" aria-controls="navbarToggler2" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <div class="collapse mob-dropdown d-lg-none" id="navbarToggler2">
+            <%= image_tag "index-new/croissant-logo.png", class: "mob-dropdown__logo d-inline-block align-top" %>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler2" aria-controls="navbarToggler2" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon close"></span>
+            </button>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="cr-navbar__link nav-link" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">Recipes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="cr-navbar__link nav-link" href="#">
+                Resources
+                </a>
+                <div class="dropdown__res-links">
+                  <%= link_to "Newsletter", newsletter_path, class: 'dropdown-item'  %>
+                  <%= link_to "Blog", blog_path, class: 'dropdown-item' %>
+                  <%= link_to "Videos", videos_path, class: 'dropdown-item'  %>
+                  <%= link_to "Search", search_path, class: 'dropdown-item'  %>
+                </div>
+              </li>
+            </ul>
+            <button class="cr-navbar__btn">
+              Schedule Call
+            </button>
+          </div>
+
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
@@ -43,14 +72,26 @@
 
     <div class="content">
       <div class="container">
-        <h1 class="content__heading mar-top-14">
+        <h1 class="content__heading mob-mar-top-69 mar-top-14">
           Reach your next growth <span class="br"></span>
           milestone faster.
         </h1>
-        <h2 class="content__desc mar-top-38">
+        <h2 class="content__desc mar-top-38 mob-mar-top-23">
           We empower tech companies to <span>prioritize, build & analyse</span> their <span>growth experiments</span> <span class="br"></span>
           by providing them with on-demand tech, design & marketing ressources.
         </h2>
+        <form id="ck_subscribe_form" class="ck_subscribe_form d-block d-md-none js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+          <div class="form-group ck_control_group ck_email_field_group form--mob">
+            <label class="d-none ck_label" for="ck_emailField" >Email Address</label>
+            <input placeholder="Enter your email" name="email" class="form__email--mob ck_email_address js--email-input" id="ck_emailField" type="email" required="" />
+            <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields form__btn--mob" type="submit" name="submit" value="Schedule call" data-drip-attribute="sign-up-button" />
+            <p class="form__desc--mob">We’ll go over exactly what Croissant could do for you</p>
+          </div>
+          <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+            <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+          </div>
+          <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
+        </form>
       </div>
     </div>
   </section>
@@ -58,21 +99,26 @@
   <section id="members">
     <div class="container">
       <div class="content">
-        <h3 class="content__title">
+        <h3 class="content__title mob-mar-top-22">
           Our team members worked for
         </h3>
-        <div class="content__logos-list">
+        <div class="content__logos-list d-none d-md-block">
           <%= image_tag "index-new/companies/cm.png", class: "content__logo-item" %>
           <%= image_tag "index-new/companies/reeport.png", class: "content__logo-item" %>
           <%= image_tag "index-new/companies/algolia.png", class: "content__logo-item" %>
           <%= image_tag "index-new/companies/rise-up.png", class: "content__logo-item" %>
           <%= image_tag "index-new/companies/mon-banquet.png", class: "content__logo-item" %>
         </div>
+        <div class="content__logos-list--mob d-md-none d-block">
+          <%= image_tag "index-new/companies/algolia-mob.png", class: "content__logo-item" %>
+          <%= image_tag "index-new/companies/mon-banquet.png", class: "content__logo-item" %>
+          <%= image_tag "index-new/companies/reeport-mob.png", class: "content__logo-item" %>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="call">
+  <section class="d-none d-md-block" id="call">
     <div class="container">
       <div class="content pad-90-0-50">
         <form id="ck_subscribe_form" class="ck_subscribe_form js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">

@@ -11,7 +11,7 @@ body {
 }
 
 .br {
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     display: block;
   }
 }
@@ -36,10 +36,20 @@ ul {
   overflow: hidden;
   font-family: Poppins;
   &_hero {
-    height: 100vh;
+    height: auto;
+    @media (min-width: 768px) {
+      height: 100vh;
+    }
+    overflow: hidden;
+    position: relative;
     background-image: asset-data-url('index-new/illustration.png');
     background-repeat: no-repeat;
     background-position: bottom center;
+    @media (max-width: 769px) {
+      background-image: asset-data-url('index-new/mob-bg.png');
+      background-position: 19% 100%;
+      background-size: auto 84%;
+    }
   }
 }
 
@@ -49,6 +59,11 @@ ul {
   width: 472px;
   margin: auto;
   position: relative;
+  &--mob {
+    width: 100%;
+    margin: 23px auto;
+    position: relative;
+  }
   &__desc {
     font-size: 11px;
     font-weight: 300;
@@ -56,6 +71,9 @@ ul {
     text-align: center;
     margin-top: 14px;
     margin-bottom: 0;
+    &--mob {
+      display: none;
+    }
   }
   &__email {
     width: 472px;
@@ -67,6 +85,42 @@ ul {
     font-size: 14px;
     border: none;
     padding: 0 180px 0 26px;
+    &--mob {
+      display: block;
+      margin: auto;
+      width: 232px;
+      height: 50px;
+      border-radius: 33px;
+      background-color: #d4d8ff1f;
+      color: #0014dd;
+      font-weight: 300;
+      font-size: 14px;
+      border: none;
+      padding: 0 20px;
+      &:focus {
+        outline: none;
+      }
+      &::-webkit-input-placeholder {
+        color: #0014dd;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      &:-ms-input-placeholder {
+        color: #0014dd;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      &::-moz-placeholder {
+        color: #0014dd;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      &:-moz-placeholder {
+        color: #0014dd;
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
     &:focus {
       outline: none;
     }
@@ -100,6 +154,15 @@ ul {
     position: absolute;
     top: 8px;
     right: 9px;
+    &--mob {
+      display: block !important;
+      margin: auto;
+      color: #fff;
+      width: 232px;
+      height: 50px;
+      border-radius: 25px !important;
+      background-image: linear-gradient(225deg, #002df0 0%, #0014dd 100%);
+    }
   }
 }
 
@@ -144,11 +207,65 @@ ul {
   }
 }
 
+#navbarToggler2 {
+  position: absolute;
+  overflow: hidden;
+  top: 9px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 102%;
+  height: 437px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.navbar-brand {
+  @media (max-width: 321px) {
+    margin-right: 0 !important;
+  }
+}
+
+.navbar-toggler {
+  border: none !important;
+  background-size: 80% 80% !important;
+  transform: translateY(2px);
+  &:focus {
+    border: none !important;
+    outline: none !important;
+  }
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: asset-data-url('index-new/hamburger-menu.svg') !important;
+  &.close {
+    background-image: asset-data-url('index-new/close-btn.svg') !important;
+    background-size: 39% 32% !important;
+    opacity: 1 !important;
+  }
+}
+
 .cr-navbar {
+  z-index: 3;
+  position: relative;
+  &--oval {
+    position: absolute;
+    top: -89px;
+    right: -38px;
+    z-index: 1;
+    &--mob {
+      position: absolute;
+      top: -89px;
+      right: -244px;
+      z-index: 1;
+    }
+  }
   &__link {
-    color: $blue;
-    font-weight: 300;
-    font-size: 14px;
+    color: $blue !important;
+    font-weight: 300 !important;
+    font-size: 14px !important;
   }
   &__btn {
     width: 160px;
@@ -188,6 +305,8 @@ ul {
 }
 
 .content {
+  z-index: 2;
+  position: relative;
   &.pad-90-0-50 {
     padding: 90px 0 50px;
   }
@@ -203,6 +322,13 @@ ul {
     &.mar-top-14 {
       margin-top: 14px;
     }
+    @media (max-width: 769px) {
+      font-size: 27px;
+      line-height: 45px;
+      &.mob-mar-top-69 {
+        margin-top: 69px;
+      }
+    }
   }
   &__desc {
     font-size: 18px;
@@ -210,6 +336,13 @@ ul {
     line-height: 35px;
     color: $blue;
     text-align: center;
+    @media (max-width: 769px) {
+      font-size: 12px;
+      line-height: 26px;
+      &.mob-mar-top-23 {
+        margin-top: 23px !important;
+      }
+    }
     span {
       font-weight: 500;
     }
@@ -223,6 +356,12 @@ ul {
     line-height: 35px;
     text-align: center;
     color: $blue;
+    @media (max-width: 769px) {
+      font-size: 12px;
+      &.mob-mar-top-22 {
+        margin-top: 22px;
+      }
+    }
   }
   &__logos-list {
     width: 76%;
@@ -235,5 +374,51 @@ ul {
       height: 100%;
       max-width: 100%;
     }
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+    &--mob {
+      img {
+        display: block;
+        max-width: 36%;
+        margin: 30px auto;
+      }
+    }
+  }
+}
+
+.mob-dropdown {
+  &__logo {
+    max-width: 53%;
+  }
+  .cr-navbar__link {
+    color: $blue !important;
+    font-weight: 500 !important;
+    line-height: 29px;
+  }
+  .cr-navbar__btn {
+    margin: 40px auto;
+    display: block;
+    width: 232px;
+  }
+  .dropdown-item {
+    color: $blue !important;
+    font-weight: 300 !important;
+    margin-top: 7px;
+    font-size: 14px;
+  }
+  .nav-item {
+    &:first-of-type {
+      border-bottom: 1px solid $blue;
+    }
+  }
+  .navbar-nav {
+    padding: 8px;
+  }
+  .navbar-toggler {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
   }
 }
