@@ -35,20 +35,32 @@ ul {
 .main {
   overflow: hidden;
   font-family: Poppins;
+  &_bg {
+    position: absolute;
+    left: -500%;
+    right: -500%;
+    bottom: 0px;
+    margin-bottom: -79px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 769px) {
+      display: none;
+    }
+  }
   &_hero {
     height: auto;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       height: 100vh;
+      margin-bottom: 79px;
     }
-    overflow: hidden;
     position: relative;
-    background-image: asset-data-url('index-new/illustration.png');
     background-repeat: no-repeat;
     background-position: bottom center;
     @media (max-width: 769px) {
       background-image: asset-data-url('index-new/mob-bg.png');
       background-position: 19% 100%;
       background-size: auto 84%;
+      overflow: hidden;
     }
   }
 }
@@ -88,7 +100,7 @@ ul {
     &--mob {
       display: block;
       margin: auto;
-      width: 232px;
+      width: 100%;
       height: 50px;
       border-radius: 33px;
       background-color: #d4d8ff1f;
@@ -156,7 +168,7 @@ ul {
     right: 9px;
     &--mob {
       display: block !important;
-      margin: auto;
+      margin: 20px auto;
       color: #fff;
       width: 232px;
       height: 50px;
@@ -236,6 +248,9 @@ ul {
     border: none !important;
     outline: none !important;
   }
+  &.position {
+    transform: translate(20px, 2px);
+  }
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -276,6 +291,10 @@ ul {
     font-size: 14px;
     font-weight: 500;
     border: none;
+    cursor: pointer;
+    &:focus {
+      outline: none; 
+    }
   }
   &__dropdown {
     border: none !important;
@@ -291,10 +310,10 @@ ul {
     width: 153px;
     top: 30px !important;
     a {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 300;
       color: $blue;
-      opacity: 0.31;
+      opacity: 0.71;
       &:hover {
         opacity: 1;
         color: $blue;
@@ -319,8 +338,8 @@ ul {
     font-weight: 700;
     line-height: 65px;
     text-align: center;
-    &.mar-top-14 {
-      margin-top: 14px;
+    &.mar-top-40 {
+      margin-top: 40px;
     }
     @media (max-width: 769px) {
       font-size: 27px;
@@ -337,7 +356,7 @@ ul {
     color: $blue;
     text-align: center;
     @media (max-width: 769px) {
-      font-size: 12px;
+      font-size: 13px;
       line-height: 26px;
       &.mob-mar-top-23 {
         margin-top: 23px !important;
@@ -421,4 +440,8 @@ ul {
     top: 0;
     display: block;
   }
+}
+
+ul.navbar-nav li.dropdown:hover > div.dropdown-menu {
+  display: block;    
 }

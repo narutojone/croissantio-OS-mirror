@@ -8,8 +8,6 @@ class PagesController < ApplicationController
   def home; end
 
   def admin; end
-  
-  def home_new; end
 
   def thanks
     @newsletter = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true).last
