@@ -9,6 +9,8 @@ class PagesController < ApplicationController
 
   def admin; end
 
+  def recipes; end 
+  
   def thanks
     @newsletter = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true).last
   end

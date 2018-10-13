@@ -1,0 +1,288 @@
+<% content_for :title, "Recipes"  %>
+
+<%= content_for :css do %>
+  <%= stylesheet_link_tag  "models/index"  %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<% end %>
+
+<div class="main">
+  <section id="hero" class="main_hero main_hero--hauto">
+    <%= image_tag "index-new/navbar-oval.png", class: "cr-navbar--oval d-none d-md-block" %>
+    <%= image_tag "index-new/navbar-oval-mob.png", class: "cr-navbar--oval--mob d-block d-md-none" %>
+    <header class="cr-navbar">
+      <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg">
+          <%= link_to root_path, class: "navbar-brand" do %>
+            <%= image_tag "index-new/croissant-logo.png", class: "d-inline-block align-top" %>
+          <% end %>
+          <button class="navbar-toggler position" type="button" data-toggle="collapse" data-target="#navbarToggler2" aria-controls="navbarToggler2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse mob-dropdown d-lg-none" id="navbarToggler2">
+            <%= image_tag "index-new/croissant-logo.png", class: "mob-dropdown__logo d-inline-block align-top" %>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler2" aria-controls="navbarToggler2" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon close"></span>
+            </button>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="cr-navbar__link nav-link" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">Recipes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="cr-navbar__link nav-link" href="#">
+                Resources
+                </a>
+                <div class="dropdown__res-links">
+                  <%= link_to "Newsletter", newsletter_path, class: 'dropdown-item'  %>
+                  <%= link_to "Blog", blog_path, class: 'dropdown-item' %>
+                  <%= link_to "Videos", videos_path, class: 'dropdown-item'  %>
+                  <%= link_to "Search", search_path, class: 'dropdown-item'  %>
+                </div>
+              </li>
+            </ul>
+            <button class="cr-navbar__btn">
+              Schedule Call
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="cr-navbar__link nav-link" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">Recipes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="cr-navbar__link nav-link dropdown-toggle" role="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+                </a>
+                <div class="cr-navbar__dropdown dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <%= link_to "Newsletter", newsletter_path, class: 'dropdown-item'  %>
+                  <%= link_to "Blog", blog_path, class: 'dropdown-item' %>
+                  <%= link_to "Videos", videos_path, class: 'dropdown-item'  %>
+                  <%= link_to "Search", search_path, class: 'dropdown-item'  %>
+                </div>
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <button class="cr-navbar__btn js--activate-input">
+                Schedule Call
+              </button>
+            </span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="container">
+        <h1 class="content__heading mob-mar-top-69 mar-top-40">
+          Growth Recipes
+        </h1>
+        <h2 class="content__desc content__desc--fw_medium content__desc--fs_22 mar-top-38 mob-mar-top-23">
+          We manage, build and analyse your growth recipes* 
+        </h2>
+        <div class="row mar-top-93">
+          <div class="col-12 col-lg-9">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div data-id="1" class="js--recipe tile tile--bg_pink">
+                  <h3 class="tile__title">
+                    In-Product Feature Optimization
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_pink" href="">Engagement</a>
+                    <a class="tile__btn" href="">Product</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="2" class="js--recipe tile tile--bg_green">
+                  <h3 class="tile__title">
+                    In-Product Upsell Path Optimization
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_green" href="">Revenue</a>
+                    <a class="tile__btn" href="">Product</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="3" class="js--recipe tile tile--bg_orange">
+                  <h3 class="tile__title">
+                    Advocacy Process Optimization
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_orange" href="">Virality</a>
+                    <a class="tile__btn" href="">Product</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/4.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mar-top-30">
+              <div class="col-12 col-lg-4">
+                <div data-id="4" class="js--recipe tile tile--bg_pink">
+                  <h3 class="tile__title">
+                    In-Product Onboarding Optimization
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_pink" href="">Engagement</a>
+                    <a class="tile__btn" href="">Onboarding</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/4.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="5" class="js--recipe tile tile--bg_blue">
+                  <h3 class="tile__title">
+                    Side Project Marketing for Acquisition
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_blue" href="">acquisition</a>
+                    <a class="tile__btn" href="">Product</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/6.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="6" class="js--recipe tile tile--bg_gray">
+                  <h3 class="tile__title">
+                    Heap Analytics Implementation
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_gray" href="">Other</a>
+                    <a class="tile__btn" href="">Analytics</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mar-top-30">
+              <div class="col-12 col-lg-4">
+                <div data-id="7" class="js--recipe tile tile--bg_orange">
+                  <h3 class="tile__title">
+                    In-Product Virality Optimization
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_orange" href="">Virality</a>
+                    <a class="tile__btn" href="">Product</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="8" class="js--recipe tile tile--bg_green">
+                  <h3 class="tile__title">
+                    Pricing Optimization
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_green" href="">Revenue</a>
+                    <a class="tile__btn" href="">Pricing</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="9" class="js--recipe tile tile--bg_pink">
+                  <h3 class="tile__title">
+                    Email Onboarding Optimization
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_pink" href="">Engagement</a>
+                    <a class="tile__btn" href="">Email</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/7.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="recipes">
+              <h3 class="recipes__title">You’ve selected <span class="js--quantity">(0)</span> growth recipes.</h3>
+
+              <ul class="recipes__list js--list">
+
+                <p class="recipes__total">TOTAL : <span class="js--quantity">(0)</p></span>
+              </ul>
+
+              <span class="recipes__separator"></span>
+
+              <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+                <div class="form-group ck_control_group ck_email_field_group form--mob">
+                  <label class="d-none ck_label" for="ck_emailField" >Email Address</label>
+                  <input placeholder="Enter your email" name="email" class="recipes__form form__email--mob ck_email_address" id="ck_emailField" type="email" required="" />
+                  <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields js--submit recipes__submit" type="submit" name="submit" disabled value="Request" data-drip-attribute="sign-up-button" />
+                  <p class="form__desc--mob">We’ll go over exactly what Croissant could do for you</p>
+                </div>
+                <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+                  <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+                </div>
+                <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
+              </form> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<% content_for :js do %>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    $('.js--recipe').click(function() {
+      function check() {
+        var i = $('.js--list').find('li').length
+        $('.js--quantity').html('(' + i + ')')
+        $('.js--submit').prop("disabled", i ? false : true)
+      }
+      if ($(this).hasClass('selected')) {
+        $('.js--list').find('[data-id=' + $(this).data('id') + ']').remove()
+        $(this).removeClass("selected")
+        check()
+      } else {
+        $('.js--list').append('<li data-id="' + $(this).data('id') + '">' + $(this).find('h3').html() + '</li>')
+        $(this).addClass("selected")
+        check()
+      }
+    })  
+  </script>
+<% end %>
