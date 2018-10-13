@@ -26,7 +26,7 @@
             </button>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                <a class="cr-navbar__link nav-link" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">Recipes</a>
+                <%= link_to "Recipes", recipes_path, class: 'cr-navbar__link nav-link'  %>
               </li>
               <li class="nav-item dropdown">
                 <a class="cr-navbar__link nav-link" href="#">
@@ -41,14 +41,14 @@
               </li>
             </ul>
             <button class="cr-navbar__btn">
-              Schedule Call
+              +33 6 50 08 49 44
             </button>
           </div>
 
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="cr-navbar__link nav-link" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">Recipes</a>
+                <%= link_to "Recipes", recipes_path, class: 'cr-navbar__link nav-link'  %>
               </li>
               <li class="nav-item dropdown">
                 <a class="cr-navbar__link nav-link dropdown-toggle" role="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,9 +77,9 @@
         <h1 class="content__heading mob-mar-top-69 mar-top-40">
           Growth Recipes
         </h1>
-        <h2 class="content__desc content__desc--fw_medium content__desc--fs_22 mar-top-38 mob-mar-top-23">
-          We manage, build and analyse your growth recipes* 
-        </h2>
+        <p class="content__desc content__desc--fw_medium content__desc--fs_22 mar-top-0 mob-mar-top-23">
+          We manage, build and analyse your growth recipes
+        </p>
         <div class="row mar-top-93">
           <div class="col-12 col-lg-9">
             <div class="row">
@@ -231,6 +231,7 @@
           </div>
           <div class="col-12 col-lg-3">
             <div class="recipes">
+              <p class="recipes__hello">Hello 👋</p>
               <h3 class="recipes__title">You’ve selected <span class="js--quantity">(0)</span> growth recipes.</h3>
 
               <ul class="recipes__list js--list">
@@ -251,7 +252,7 @@
                   <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
                 </div>
                 <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
-              </form> 
+              </form>
             </div>
           </div>
         </div>
@@ -283,6 +284,6 @@
         $(this).addClass("selected")
         check()
       }
-    })  
+    })
   </script>
 <% end %>

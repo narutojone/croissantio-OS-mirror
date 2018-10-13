@@ -30,7 +30,7 @@
             </button>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                <a class="cr-navbar__link nav-link" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">Recipes</a>
+                <%= link_to "Recipes", recipes_path, class: 'cr-navbar__link nav-link'  %>
               </li>
               <li class="nav-item dropdown">
                 <a class="cr-navbar__link nav-link" href="#">
@@ -45,14 +45,14 @@
               </li>
             </ul>
             <button class="cr-navbar__btn">
-              Schedule Call
+              +33 6 50 08 49 44
             </button>
           </div>
 
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="cr-navbar__link nav-link" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">Recipes</a>
+                <%= link_to "Recipes", recipes_path, class: 'cr-navbar__link nav-link'  %>
               </li>
               <li class="nav-item dropdown">
                 <a class="cr-navbar__link nav-link dropdown-toggle" role="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,7 +68,7 @@
             </ul>
             <span class="navbar-text">
               <button class="cr-navbar__btn js--activate-input">
-                Schedule Call
+                +33 6 50 08 49 44
               </button>
             </span>
           </div>
@@ -79,25 +79,12 @@
     <div class="content">
       <div class="container">
         <h1 class="content__heading mob-mar-top-69 mar-top-40">
-          Reach your next growth <span class="br"></span>
-          milestone faster.
+          Launch better growth experiments faster<span class="br"></span>
+
         </h1>
         <h2 class="content__desc mar-top-38 mob-mar-top-23">
-          We empower tech companies to <span>prioritize, build & analyse</span> their <span>growth experiments</span> <span class="br"></span>
-          by providing them with on-demand tech, design & marketing ressources.
+          We are an on demand growth-team. We have built <span>growth recipes</span> - aka growth experiments template<span class="br"></span> that we will <span>manage, build and analyse</span> for you.
         </h2>
-        <form id="ck_subscribe_form" class="ck_subscribe_form d-block d-md-none js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
-          <div class="form-group ck_control_group ck_email_field_group form--mob">
-            <label class="d-none ck_label" for="ck_emailField" >Email Address</label>
-            <input placeholder="Enter your email" name="email" class="form__email--mob ck_email_address" id="ck_emailField" type="email" required="" />
-            <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields form__btn--mob" type="submit" name="submit" value="Schedule call" data-drip-attribute="sign-up-button" />
-            <p class="form__desc--mob">We’ll go over exactly what Croissant could do for you</p>
-          </div>
-          <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
-            <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
-          </div>
-          <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
-        </form>
       </div>
     </div>
     <%= image_tag "index-new/illustration.png", class: "main_bg" %>
@@ -124,27 +111,25 @@
       </div>
     </div>
   </section>
-
   <section class="d-none d-md-block" id="call">
-    <div class="container">
-      <div class="content pad-90-0-50">
-        <form id="ck_subscribe_form" class="ck_subscribe_form js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
-          <div class="form-group ck_control_group ck_email_field_group form js--form">
-            <label class="d-none ck_label" for="ck_emailField">Email Address</label>
-            <input placeholder="Enter your email" name="email" class="form__email ck_email_address js--email-input" id="ck_emailField" type="email" required="" />
-            <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields form__btn" type="submit" name="submit" value="Schedule call" data-drip-attribute="sign-up-button" />
-            <p class="form__desc">We’ll go over exactly what Croissant could do for you</p>
-          </div>
-          <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
-            <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
-          </div>
-          <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
-        </form>
-        <p class="d-none form__success">Thanks! Will get in touch with you asap to schedule the call.</p>
+      <div class="container">
+        <div class="content pad-90-0-50">
+          <form id="ck_subscribe_form" class="ck_subscribe_form js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+            <div class="form-group ck_control_group ck_email_field_group form js--form">
+              <label class="d-none ck_label" for="ck_emailField">Email Address</label>
+              <input placeholder="Enter your email" name="email" class="form__email ck_email_address js--email-input" id="ck_emailField" type="email" required="" />
+              <input id="ck_subscribe_button" class="subscribe_button ck_subscribe_button btn fields form__btn" type="submit" name="submit" value="Schedule call" data-drip-attribute="sign-up-button" />
+              <p class="form__desc">We’ll go over exactly what Croissant could do for you</p>
+            </div>
+            <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+              <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+            </div>
+            <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
+          </form>
+          <p class="d-none form__success">Thanks! Will get in touch with you asap to schedule the call.</p>
+        </div>
       </div>
-    </div>
-  </section>
-
+    </section>
   <footer id="footer" class="cr-footer">
     <div class="container">
       <div class="content">
@@ -154,7 +139,6 @@
     </div>
   </footer>
 </div>
-
 <% content_for :js do %>
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"

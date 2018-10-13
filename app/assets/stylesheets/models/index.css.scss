@@ -74,6 +74,15 @@ ul {
 .recipes {
   margin-top: 32px;
   padding: 18px;
+  &__hello {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    color: $blue;
+    span {
+      font-weight: 700;
+    }
+  }
   &__title {
     font-family: Poppins;
     font-weight: 400;
@@ -256,7 +265,7 @@ ul {
       }
     }
   }
-  
+
 }
 
 .row {
@@ -402,17 +411,17 @@ ul {
     display:-ms-flexbox;
     -ms-flex-pack:center;
     -ms-flex-align:center;
-    
+
     /* Firefox */
     display:-moz-box;
     -moz-box-pack:center;
     -moz-box-align:center;
-    
+
     /* Safari, Opera, and Chrome */
     display:-webkit-box;
     -webkit-box-pack:center;
     -webkit-box-align:center;
-    
+
     /* W3C */
     display: flex;
     align-items: center;
@@ -494,7 +503,7 @@ ul {
     border: none;
     cursor: pointer;
     &:focus {
-      outline: none; 
+      outline: none;
     }
   }
   &__dropdown {
@@ -654,5 +663,5 @@ ul {
 }
 
 ul.navbar-nav li.dropdown:hover > div.dropdown-menu {
-  display: block;    
+  display: block;
 }
