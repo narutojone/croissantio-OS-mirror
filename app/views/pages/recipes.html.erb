@@ -63,8 +63,8 @@
               </li>
             </ul>
             <span class="navbar-text">
-              <button class="cr-navbar__btn js--activate-input">
-                Schedule Call
+              <button class="cr-navbar__btn">
+                +33 6 50 08 49 44
               </button>
             </span>
           </div>
@@ -279,7 +279,7 @@
         $(this).removeClass("selected")
         check()
       } else {
-        $('.js--list').append('<li data-id="' + $(this).data('id') + '">' + $(this).find('h3').html() + '</li>')
+        $('.js--list').prepend('<li data-id="' + $(this).data('id') + '">' + $(this).find('h3').html() + '</li>')
         $(this).addClass("selected")
         check()
       }
