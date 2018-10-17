@@ -37,9 +37,7 @@
         <div class="col-xs-12">
           <ul class="mobile-nav__list">
             <li class="mobile-nav__list-item">
-              <a target="_blank" hreflang="en" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">
-                Recipes
-              </a>
+              <%= link_to "Experiments", experiments_path  %>
             </li>
             <li class="mobile-nav__list-item js--open-mob-list">Resources<span><i class="mobile-nav__arrow _animate fa fa-angle-down js--arrow-animate"></i></span>
             </li>
@@ -83,9 +81,7 @@
           </div>
           <ul class="menu-horizontal text-left resources__links">
             <li>
-              <a target="_blank" class="link_color_blue" hreflang="en" href="https://trello.com/b/RlRatyrn/croissant-growth-recipes">
-                Recipes
-              </a>
+              <%= link_to "Experiments", experiments_path, class: "link_color_blue"  %>
             </li>
             <li>
               <button class="js--res-dropdown link_color_blue">

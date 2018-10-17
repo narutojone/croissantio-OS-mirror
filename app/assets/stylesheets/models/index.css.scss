@@ -47,6 +47,9 @@ ul {
     @media (max-width: 769px) {
       display: none;
     }
+    &--light-pink {
+      background-image: linear-gradient(180deg, rgba(250, 239, 255, 0) 0%, rgba(243, 218, 255, 0.21) 100%), linear-gradient(to top, rgba(249, 238, 255, 0) 0%, rgba(250, 238, 255, 0.21) 100%);
+    }
   }
   &_hero {
     height: auto;
@@ -72,8 +75,49 @@ ul {
 //blocks
 
 .recipes {
-  margin-top: 32px;
-  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  padding: 32px 18px 0;
+  @media (max-width: 992px) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 85vh;
+    width: 335px; 
+    .letter {
+      width: 100%;
+    }   
+    .recipes__chevron {
+      display: block;
+      transform: rotate(180deg);
+      &._down {
+        transform: none
+      }
+    }
+    &._opened {
+      bottom: 0;
+      top: auto;
+    }
+  }
+  &__success {
+    text-align: center;
+    color: $blue;
+    display: none;
+  }
+  &__chevron {
+    display: none;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    height: 21px;
+    color: #0014dd;
+    font-size: 20px;
+  }
   &__hello {
     font-family: Poppins;
     font-weight: 400;
@@ -82,6 +126,15 @@ ul {
     span {
       font-weight: 700;
     }
+  }
+  .letter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
   }
   &__title {
     font-family: Poppins;
@@ -157,9 +210,13 @@ ul {
   transition: all .2s ease;
   cursor: pointer;
   @media (max-width: 992px) {
-    margin-top: 30px;
+    width: 270px;
+    margin: 30px auto;
   }
   &--bg {
+    &_red {
+      background-image: asset-data-url('recipes/red.png');
+    }
     &_pink {
       background-image: asset-data-url('recipes/pink.png');
     }
@@ -181,7 +238,14 @@ ul {
       opacity: 1;
       background-image: asset-data-url('recipes/icons/checkmark.png');
     }
-    outline-color: #60c675;;
+    outline-color: #60c675;
+    &:hover {
+      &::before {
+        opacity: 1;
+        background-image: asset-data-url('recipes/icons/cross.png');
+      }
+      outline-color: #d0021b;
+    }
   }
   &::before {
     content: '';
@@ -210,9 +274,6 @@ ul {
     font-size: 26px;
     font-weight: 600;
     line-height: 36px;
-    @media (max-width: 1201px) {
-      font-size: 18px;
-    }
   }
   &__icons {
     position: absolute;
@@ -220,8 +281,18 @@ ul {
     right: 9px;
   }
   &__group {
-    margin-top: 28px;
-    width: 83%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 24px;
+    width: 74%;
+    @media (max-width: 1201px) and (min-width: 992px) {
+      width: 87%;
+    }
+    @media (max-width: 768px) {
+      width: 69%;
+    }
   }
   &__btn {
     width: 88px;
@@ -237,12 +308,11 @@ ul {
     letter-spacing: 0.89px;
     font-family: 'Roboto', sans-serif;
     float: right;
-    @media (max-width: 1201px) {
-      display: block;
-      float: none !important;
-      margin-top: 10px;
-    }
     &--bgc {
+      &_red {
+        background-color: #fdd8dd;
+        float: left;
+      }
       &_pink {
         background-color: #f3daff;
         float: left;
@@ -496,8 +566,8 @@ ul {
     width: 160px;
     line-height: 50px;
     border-radius: 25px;
-    color: #fff;
-    background-image: linear-gradient(225deg, #002df0 0%, #0014dd 100%);
+    background-color: #fff;
+    color: $blue;
     font-size: 14px;
     font-weight: 500;
     border: none;
@@ -542,6 +612,26 @@ ul {
   section {
     position: relative;
   }
+  &__main-btn {
+    width: 232px;
+    display: block;
+    margin: 38px auto;
+    line-height: 50px;
+    border-radius: 25px;
+    background-image: linear-gradient(258deg, #002df0, #0014dd);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    &:hover {
+      color: #fff;
+      opacity: 0.8;
+      text-decoration: none;
+    }
+    @media (max-width: 992px) {
+      margin: 38px auto 75px;
+    }
+  }
   &__heading {
     color: $blue;
     font-size: 42px;
@@ -566,10 +656,11 @@ ul {
     color: $blue;
     text-align: center;
     @media (max-width: 769px) {
-      font-size: 13px;
-      line-height: 26px;
+      font-size: 12px !important;
+      line-height: 2.17;
+      font-weight: 300 !important;
       &.mob-mar-top-23 {
-        margin-top: 23px !important;
+        margin-top: 0 !important;
       }
     }
     span {
@@ -577,6 +668,9 @@ ul {
     }
     &.mar-top-38 {
       margin-top: 38px;
+    }
+    &.mar-top-16 {
+      margin-top: 16px;
     }
     &--fw {
       &_medium {
@@ -609,6 +703,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     margin-top: 35px;
+    margin-bottom: 102px;
     img {
       height: 100%;
       max-width: 100%;
@@ -617,6 +712,7 @@ ul {
       width: 100%;
     }
     &--mob {
+      margin: 35px auto 60px;
       img {
         display: block;
         max-width: 36%;
@@ -639,6 +735,8 @@ ul {
     margin: 40px auto;
     display: block;
     width: 232px;
+    color: #fff;
+    background-image: linear-gradient(225deg, #002df0 0%, #0014dd 100%);
   }
   .dropdown-item {
     color: $blue !important;

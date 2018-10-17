@@ -30,7 +30,7 @@
             </button>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                <%= link_to "Recipes", recipes_path, class: 'cr-navbar__link nav-link'  %>
+                <%= link_to "Experiments", experiments_path, class: 'cr-navbar__link nav-link'  %>
               </li>
               <li class="nav-item dropdown">
                 <a class="cr-navbar__link nav-link" href="#">
@@ -52,7 +52,7 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <%= link_to "Recipes", recipes_path, class: 'cr-navbar__link nav-link'  %>
+                <%= link_to "Experiments", experiments_path, class: 'cr-navbar__link nav-link'  %>
               </li>
               <li class="nav-item dropdown">
                 <a class="cr-navbar__link nav-link dropdown-toggle" role="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,9 +81,11 @@
         <h1 class="content__heading mob-mar-top-69 mar-top-40">
           Launch better growth experiments faster.
         </h1>
-        <h2 class="content__desc mar-top-38 mob-mar-top-23">
-          We are an on demand growth-team. We have built <span>growth recipes</span> - aka growth experiments template<span class="br"></span> that we will <span>manage, build and analyse</span> for you.
+        <h2 class="content__desc mar-top-16 mob-mar-top-23">
+          We are a team of engineers, designers & marketers managing, building and analysing <span class="br"></span>
+          growth experiments for SaaS, Marketplace and Ecommerce.
         </h2>
+        <%= link_to "Explore experiments", experiments_path, class: 'content__main-btn'  %>
       </div>
     </div>
     <%= image_tag "index-new/illustration.png", class: "main_bg" %>
@@ -110,7 +112,7 @@
       </div>
     </div>
   </section>
-  <section class="d-none d-md-block" id="call">
+  <section class="d-none" id="call">
       <div class="container">
         <div class="content pad-90-0-50">
           <form id="ck_subscribe_form" class="ck_subscribe_form js--change-point" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">

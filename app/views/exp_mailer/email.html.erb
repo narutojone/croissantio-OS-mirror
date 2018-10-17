@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      <b><%= @body.email %></b> have selected (<%= @body.quantity %>) growth experiments :
+    </p>
+    <ul>
+      <% @body.experiments.each do |e| %>
+        <li><%= e %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>

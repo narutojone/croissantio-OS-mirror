@@ -1,11 +1,11 @@
-<% content_for :title, "Recipes"  %>
+<% content_for :title, "Experiments"  %>
 
 <%= content_for :css do %>
   <%= stylesheet_link_tag  "models/index"  %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <% end %>
 
-<div class="main">
+<div class="main main_bg--light-pink">
   <section id="hero" class="main_hero main_hero--hauto">
     <%= image_tag "index-new/navbar-oval.png", class: "cr-navbar--oval d-none d-md-block" %>
     <%= image_tag "index-new/navbar-oval-mob.png", class: "cr-navbar--oval--mob d-block d-md-none" %>
@@ -26,7 +26,7 @@
             </button>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                <%= link_to "Recipes", recipes_path, class: 'cr-navbar__link nav-link'  %>
+                <%= link_to "Experiments", experiments_path, class: 'cr-navbar__link nav-link'  %>
               </li>
               <li class="nav-item dropdown">
                 <a class="cr-navbar__link nav-link" href="#">
@@ -48,7 +48,7 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <%= link_to "Recipes", recipes_path, class: 'cr-navbar__link nav-link'  %>
+                <%= link_to "Experiments", experiments_path, class: 'cr-navbar__link nav-link'  %>
               </li>
               <li class="nav-item dropdown">
                 <a class="cr-navbar__link nav-link dropdown-toggle" role="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -75,10 +75,10 @@
     <div class="content">
       <div class="container">
         <h1 class="content__heading mob-mar-top-69 mar-top-40">
-          Growth Recipes
+          Growth experiments
         </h1>
         <p class="content__desc content__desc--fw_medium content__desc--fs_22 mar-top-0 mob-mar-top-23">
-          We manage, build and analyse your growth recipes
+          We manage, build and analyse your growth experiments
         </p>
         <div class="row mar-top-93">
           <div class="col-12 col-lg-9">
@@ -228,11 +228,226 @@
                 </div>
               </div>
             </div>
+            <div class="row mar-top-30">
+              <div class="col-12 col-lg-4">
+                <div data-id="10" class="js--recipe tile tile--bg_gray">
+                  <h3 class="tile__title">
+                    Drip <br> Implementation
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_gray" href="">Other</a>
+                  <a class="tile__btn" href="">Marketing</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/8.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="11" class="js--recipe tile tile--bg_gray">
+                  <h3 class="tile__title">
+                    Intercom <br> Implementation
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_gray" href="">Other</a>
+                  <a class="tile__btn" href="">Marketing</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/7.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="12" class="js--recipe tile tile--bg_gray">
+                  <h3 class="tile__title">
+                    Segment <br> Implementation
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_gray" href="">Other</a>
+                  <a class="tile__btn" href="">Analytics</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/10.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mar-top-30">
+              <div class="col-12 col-lg-4">
+                <div data-id="13" class="js--recipe tile tile--bg_red">
+                  <h3 class="tile__title">
+                    Signup Page Design for CRO
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_red" href="">Conversion</a>
+                    <a class="tile__btn" href="">Website</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/11.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="14" class="js--recipe tile tile--bg_red">
+                  <h3 class="tile__title">
+                    Pricing Page Design for CRO
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_red" href="">Conversion</a>
+                    <a class="tile__btn" href="">Website</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/7.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="15" class="js--recipe tile tile--bg_gray">
+                  <h3 class="tile__title">
+                    Google Analytics Implementation
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_gray" href="">Other</a>
+                    <a class="tile__btn" href="">Analytics</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/12.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mar-top-30">
+              <div class="col-12 col-lg-4">
+                <div data-id="16" class="js--recipe tile tile--bg_red">
+                  <h3 class="tile__title">
+                    Landing Page Design for CRO
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_red" href="">Conversion</a>
+                    <a class="tile__btn" href="">Website</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="17" class="js--recipe tile tile--bg_red">
+                  <h3 class="tile__title">
+                    Home Page Design for CRO
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_red" href="">Conversion</a>
+                    <a class="tile__btn" href="">Website</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="18" class="js--recipe tile tile--bg_blue">
+                  <h3 class="tile__title">
+                    Website Page for SEO
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_blue" href="">acquisition</a>
+                    <a class="tile__btn" href="">insert tag</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/13.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/14.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/15.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/12.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mar-top-30">
+              <div class="col-12 col-lg-4">
+                <div data-id="19" class="js--recipe tile tile--bg_red">
+                  <h3 class="tile__title">
+                    Blog Article Design for CRO
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_red" href="">Conversion</a>
+                    <a class="tile__btn" href="">Website</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/3.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/2.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/1.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="20" class="js--recipe tile tile--bg_blue">
+                  <h3 class="tile__title">
+                    Facebook Ads Content Promotion
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_blue" href="">Conversion</a>
+                    <a class="tile__btn" href="">Blog</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/12.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/16.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div data-id="21" class="js--recipe tile tile--bg_blue">
+                  <h3 class="tile__title">
+                    Facebook Ads for Lead Generation
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_blue" href="">acquisition</a>
+                    <a class="tile__btn" href="">insert tag</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/12.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/16.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mar-top-30">
+              <div class="col-12 col-lg-4">
+                <div data-id="21" class="js--recipe tile tile--bg_blue">
+                  <h3 class="tile__title">
+                    Blog Article SEO
+                  </h3>
+                  <div class="tile__group">
+                    <a class="tile__btn tile__btn--bgc_blue" href="">acquisition</a>
+                    <a class="tile__btn" href="">insert tag</a>
+                  </div>
+                  <div class="tile__icons">
+                    <%= image_tag "recipes/icons/13.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/14.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/15.png", class: "tile__icon" %>
+                    <%= image_tag "recipes/icons/12.png", class: "tile__icon" %>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-lg-3">
-            <div class="recipes">
+            <div class="recipes js--recipes">
+              <span class="recipes__chevron js--toggle">
+                <ion-icon name="ios-arrow-down"></ion-icon>
+              </span>
               <p class="recipes__hello">Hello 👋</p>
-              <h3 class="recipes__title">You’ve selected <span class="js--quantity">(0)</span> growth recipes.</h3>
+              <h3 class="recipes__title">You’ve selected <span class="js--quantity">(0)</span> growth experiments.</h3>
 
               <ul class="recipes__list js--list">
 
@@ -241,7 +456,7 @@
 
               <span class="recipes__separator"></span>
 
-              <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://forms.convertkit.com/landing_pages/286668/subscribe" data-remote="true">
+              <form id="ck_subscribe_form" class="ck_subscribe_form" method="post">
                 <div class="form-group ck_control_group ck_email_field_group form--mob">
                   <label class="d-none ck_label" for="ck_emailField" >Email Address</label>
                   <input placeholder="Enter your email" name="email" class="recipes__form form__email--mob ck_email_address" id="ck_emailField" type="email" required="" />
@@ -251,9 +466,10 @@
                 <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
                   <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
                 </div>
-                <script async id="_ck_286668" src="https://forms.convertkit.com/286668?v=6"></script>
               </form>
+              <%= image_tag "recipes/letter.png", class: "letter" %>
             </div>
+            <p class="recipes__success js--success">Thank you ! 🥐</p>
           </div>
         </div>
       </div>
@@ -274,6 +490,7 @@
         var i = $('.js--list').find('li').length
         $('.js--quantity').html('(' + i + ')')
         $('.js--submit').prop("disabled", i ? false : true)
+        $('.letter').css("height", i<3 ? "auto" : "100%")
       }
       if ($(this).hasClass('selected')) {
         $('.js--list').find('[data-id=' + $(this).data('id') + ']').remove()
@@ -285,5 +502,24 @@
         check()
       }
     })
+    $('#ck_subscribe_form').submit(function(e) {
+      e.preventDefault()
+      var a = $('.js--list').text().replace(/ /g,'').split('\n').filter(n => n)
+      a = a.slice(0, a.length - 1)
+      $.ajax({
+        type: "POST",
+        url: "/experiments/send",
+        data: {'body': {'email': $('#ck_emailField').val(), 'quantity': $('.js--list').find('li').length, 'experiments': a }},
+        success: function() {
+          $(".js--recipes").hide()
+          $(".js--success").show('fast')
+        }
+      });
+    })
+    $('.js--toggle').click(function() {
+      $('.js--recipes').toggleClass("_opened")
+      $('.js--toggle').toggleClass("_down")
+    })
   </script>
+  <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
 <% end %>

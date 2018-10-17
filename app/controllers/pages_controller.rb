@@ -9,7 +9,14 @@ class PagesController < ApplicationController
 
   def admin; end
 
-  def recipes; end 
+  def experiments; end 
+
+  def experiments_send
+    puts params
+    @body = params["body"]
+    ExpMailer.sample_email(@body).deliver
+    render json: {}, status: 200
+  end 
   
   def thanks
     @newsletter = Article.includes(:topics).where(topics: { name: 'newsletter' }, posted: true).last
