@@ -3,6 +3,6 @@ class ExpMailer < ActionMailer::Base
 
   def sample_email(body)
     @body = body
-    mail(to: 'superbialux@d3feat.website', subject: 'Experiment Request')
+    mail(to: 'maxime@croissant.io', subject: 'Experiment Request')
   end
 end
