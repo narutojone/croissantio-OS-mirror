@@ -40,9 +40,9 @@
                 </div>
               </li>
             </ul>
-            <button class="cr-navbar__btn">
+            <a href="tel:+33650084944" class="cr-navbar__btn">
               +33 6 50 08 49 44
-            </button>
+            </a>
           </div>
 
           <div class="collapse navbar-collapse" id="navbarText">
@@ -63,9 +63,9 @@
               </li>
             </ul>
             <span class="navbar-text">
-              <button class="cr-navbar__btn">
+              <a href="tel:+33650084944" class="cr-navbar__btn">
                 +33 6 50 08 49 44
-              </button>
+              </a>
             </span>
           </div>
         </nav>
@@ -451,11 +451,11 @@
 
               <ul class="recipes__list js--list">
 
-                <p class="recipes__total">TOTAL : <span class="js--quantity">(0)</p></span>
+                
               </ul>
-
+              <p class="recipes__total">TOTAL : <span class="js--quantity">(0)</p></span>
               <span class="recipes__separator"></span>
-
+              <p class="recipes__success js--success">Thank you ! 🥐</p>
               <form id="ck_subscribe_form" class="ck_subscribe_form" method="post">
                 <div class="form-group ck_control_group ck_email_field_group form--mob">
                   <label class="d-none ck_label" for="ck_emailField" >Email Address</label>
@@ -469,7 +469,6 @@
               </form>
               <%= image_tag "recipes/letter.png", class: "letter" %>
             </div>
-            <p class="recipes__success js--success">Thank you ! 🥐</p>
           </div>
         </div>
       </div>
@@ -491,6 +490,7 @@
         $('.js--quantity').html('(' + i + ')')
         $('.js--submit').prop("disabled", i ? false : true)
         $('.letter').css("height", i<3 ? "auto" : "100%")
+        $('.js--list').attr("class", i<3 ? "recipes__list js--list" : "recipes__list js--list add-scroll");
       }
       if ($(this).hasClass('selected')) {
         $('.js--list').find('[data-id=' + $(this).data('id') + ']').remove()
@@ -511,7 +511,7 @@
         url: "/experiments/send",
         data: {'body': {'email': $('#ck_emailField').val(), 'quantity': $('.js--list').find('li').length, 'experiments': a }},
         success: function() {
-          $(".js--recipes").hide()
+          $("#ck_subscribe_form").hide()
           $(".js--success").show('fast')
         }
       });
@@ -519,6 +519,14 @@
     $('.js--toggle').click(function() {
       $('.js--recipes').toggleClass("_opened")
       $('.js--toggle').toggleClass("_down")
+    })
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() >= $(".js--recipe[data-id=1]").offset().top) {
+        $(".js--recipes").addClass('fixed')
+      } else {
+        $(".js--recipes").removeClass('fixed')
+      }
     })
   </script>
   <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
