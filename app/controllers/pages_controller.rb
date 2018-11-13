@@ -9,7 +9,9 @@ class PagesController < ApplicationController
 
   def admin; end
 
-  def experiments; end 
+  def experiments; end
+
+  def request_access; end
 
   def experiments_send
     puts params

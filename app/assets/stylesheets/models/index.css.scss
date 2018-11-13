@@ -683,9 +683,111 @@ ul {
   section {
     position: relative;
   }
-  &__main-btn {
+  &__request-access {
+    background: rgba(151, 151, 151, 0.2);
+    border-radius: 50px;
+    width: 630px;
+    height: 57px;
+    margin: 38px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .text-section {
+      display: flex;
+      width: calc(100% - 232px);
+
+      .text-field {
+        width: calc(100% - 40px);
+        margin-left: 30px;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 300;
+        background: transparent;
+        border: none;
+        outline: none;
+        z-index: 4;
+
+        ::placeholder {
+          color: #9b9b9b;
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      margin: 38px auto 75px;
+    }
+    @media (max-width: 768px) {
+      width: 480px;
+    }
+    @media (max-width: 544px) {
+      display: none;
+    }
+  }
+  &__request-access-sm {
+    display: none;
+    width: 232px;
+    height: 116px;
+    margin: 38px auto;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .text-section-sm {
+      display: flex;
+      width: 100%;
+      height: 48px;
+      border-radius: 50px;
+      background: rgba(151, 151, 151, 0.2);
+      z-index: 4;
+
+      .text-field-sm {
+        width: calc(100% - 40px);
+        margin: auto;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 300;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        ::placeholder {
+          color: #9b9b9b;
+        }
+      }
+    }
+    @media (max-width: 544px) {
+      display: flex;
+    }
+  }
+  &__request-btn {
     width: 232px;
     display: block;
+    line-height: 50px;
+    border-radius: 25px;
+    background-image: linear-gradient(258deg, #002df0, #0014dd);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-box-shadow: 0 7px 14px transparent, 0 3px 6px transparent;
+    box-shadow: 0 7px 14px transparent, 0 3px 6px transparent;
+    -webkit-transition: -webkit-box-shadow 0.15s ease, -webkit-transform 0.15s ease;
+    transition: -webkit-box-shadow 0.15s ease, -webkit-transform 0.15s ease;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, -webkit-box-shadow 0.15s ease, -webkit-transform 0.15s ease;
+    &:hover {
+      color: #fff;
+      opacity: 1;
+      text-decoration: none;
+      -webkit-transform: translateY(-1px);
+      transform: translateY(-1px);
+      -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+      box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    }
+  }
+  &__main-btn {
+    width: 232px;
+    // display: block;
+    display: none;
     margin: 38px auto;
     line-height: 50px;
     border-radius: 25px;
@@ -721,6 +823,11 @@ ul {
     text-align: center;
     &.mar-top-40 {
       margin-top: 40px;
+    }
+    &--fs {
+      &_38 {
+        font-size: 38px;
+      }
     }
     @media (max-width: 769px) {
       font-size: 27px;
@@ -759,6 +866,9 @@ ul {
       }
     }
     &--fs {
+      &_14 {
+        font-size: 14px;
+      }
       &_22 {
         font-size: 22px;
       }
@@ -845,4 +955,145 @@ ul {
 
 ul.navbar-nav li.dropdown:hover > div.dropdown-menu {
   display: block;
+}
+
+.form {
+  width: 500px;
+  height: 597px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  margin: auto;
+  display: flex;
+  &__confirm {
+    width: 100%;
+    margin-top: 40px;
+    &-input {
+      margin: auto;
+    }
+    &-btn {
+      width: 100%;
+      height: 112px;
+      border-radius: 10px;
+      background-color: rgba(236, 187, 255, 0.45);
+      display: flex;
+      .button-content {
+        width: 180px;
+        height: 48px;
+        border-radius: 25px;
+        background-image: linear-gradient(to top, #002df0, #0014dd);
+        margin: auto;
+        .confirm-btn {
+          width: 100%;
+          height: 100%;
+          text-transform: uppercase;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          text-align: center;
+          color: white;
+          background-image: linear-gradient(to top, #002df0, #0014dd);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50px;
+          .icon-field {
+            display: flex;
+            width: 28px;
+            height: 24px;
+            &-svg {
+              width: 20px;
+              fill: white;
+              margin: auto;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__success {
+    width: 100%;
+    height: 100%;
+    background-position-x: -10px;
+    background-position-y: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: asset-data-url('index-new/background-logo-fill.png') no-repeat;
+    background-position: center center;
+    &__content {
+      width: 365px;
+      height: 206px;
+      font-family: Poppins;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      color: #0014dd;
+      &-first-text {
+        height: 70px;
+        margin-bottom: 70px;
+      }
+      &-second-text {
+        height: 65px;
+        font-size: 22px;
+        font-weight: normal;
+      }
+    }
+  }
+  @media (max-width: 580px){
+    width: 343px;
+
+  }
+}
+
+.input-item {
+  width: 384px;
+  height: 49px;
+  border-radius: 5px;
+  border: solid 0.5px #979797;
+  margin: auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .icon-field {
+    display: flex;
+    width: 60px;
+    height: 24px;
+    &-svg {
+      width: 20px;
+      fill: #0014dd;
+      margin: auto;
+      margin-left: 16px;
+    }
+  }
+  .input-field {
+    display: flex;
+    width: calc(100% - 60px);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-right: 25px;
+
+    ::placeholder {
+      color: #9b9b9b;
+    }
+  }
+  @media (max-width: 580px){
+    width: 262px;
+  }
+}
+
+.request_back {
+  position: absolute;
+  z-index: 1;
+  &-pos-bottom {
+    bottom: -80px;
+  }
 }

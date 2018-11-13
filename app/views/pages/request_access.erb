@@ -1,0 +1,212 @@
+<% content_for :title, "Experiments"  %>
+
+<%= content_for :css do %>
+  <%= stylesheet_link_tag  "models/index"  %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<% end %>
+
+<div class="main main_bg--light-pink">
+  <section id="hero" class="main_hero main_hero--hauto">
+    <%= image_tag "index-new/requestaccess-background.png", class: "request_back" %>
+    <%= image_tag "index-new/requestaccess-oval.png", class: "request_back request_back-pos-bottom" %>
+    <header class="cr-navbar">
+      <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg">
+          <%= link_to root_path, class: "navbar-brand" do %>
+            <%= image_tag "index-new/croissant-logo.png", class: "d-inline-block align-top" %>
+          <% end %>
+          <button class="navbar-toggler position" type="button" data-toggle="collapse" data-target="#navbarToggler2" aria-controls="navbarToggler2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse mob-dropdown d-lg-none" id="navbarToggler2">
+            <%= image_tag "index-new/croissant-logo.png", class: "mob-dropdown__logo d-inline-block align-top" %>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler2" aria-controls="navbarToggler2" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon close"></span>
+            </button>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <%= link_to "Experiments", experiments_path, class: 'cr-navbar__link nav-link'  %>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="cr-navbar__link nav-link" href="#">
+                Resources
+                </a>
+                <div class="dropdown__res-links">
+                  <%= link_to "Newsletter", newsletter_path, class: 'dropdown-item'  %>
+                  <%= link_to "Blog", blog_path, class: 'dropdown-item' %>
+                  <%= link_to "Videos", videos_path, class: 'dropdown-item'  %>
+                  <%= link_to "Search", search_path, class: 'dropdown-item'  %>
+                </div>
+              </li>
+            </ul>
+            <a href="tel:+33650084944" class="cr-navbar__btn">
+              +33 6 50 08 49 44
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <%= link_to "Experiments", experiments_path, class: 'cr-navbar__link nav-link'  %>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="cr-navbar__link nav-link dropdown-toggle" role="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+                </a>
+                <div class="cr-navbar__dropdown dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <%= link_to "Newsletter", newsletter_path, class: 'dropdown-item'  %>
+                  <%= link_to "Blog", blog_path, class: 'dropdown-item' %>
+                  <%= link_to "Videos", videos_path, class: 'dropdown-item'  %>
+                  <%= link_to "Search", search_path, class: 'dropdown-item'  %>
+                </div>
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <a href="tel:+33650084944" class="cr-navbar__btn">
+                +33 6 50 08 49 44
+              </a>
+            </span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="container">
+        <h1 class="content__heading content__heading--fs_38 mob-mar-top-69 mar-top-40">
+          Request access
+        </h1>
+        <p class="content__desc content__desc--fs_14 mar-top-0 mob-mar-top-23">
+          Wed like to know more about you
+        </p>
+        <div class="form">
+          <form id="access_form" class="form__confirm" method="post">
+            <div class="form-confirm-input">
+              <div class="input-item">
+                <div class="icon-field">
+                  <%= embedded_svg "index-new/person.svg", class: "icon-field-svg" %>
+                </div>
+                <input
+                  type="text"
+                  id="rc_name"
+                  class="input-field"
+                  name="name"
+                  placeholder="Name"
+                  autoFocus 
+                  required >
+                </input>
+              </div>
+              <div class="input-item">
+                <div class="icon-field">
+                  <%= embedded_svg "index-new/mail.svg", class: "icon-field-svg" %>
+                </div>
+                <input
+                  type="email"
+                  id="rc_email"
+                  class="input-field"
+                  name="email"
+                  placeholder="Email" 
+                  required >
+                </input>
+              </div>
+              <div class="input-item">
+                <div class="icon-field">
+                  <%= embedded_svg "index-new/briefcase.svg", class: "icon-field-svg" %>
+                </div>
+                <input
+                  type="text"
+                  id="rc_role"
+                  class="input-field"
+                  name="role"
+                  placeholder="Role" 
+                  required >
+                </input>
+              </div>
+              <div class="input-item">
+                <div class="icon-field">
+                  <%= embedded_svg "index-new/briefcase.svg", class: "icon-field-svg" %>
+                </div>
+                <input
+                  type="text"
+                  id="rc_website"
+                  class="input-field"
+                  name="website"
+                  placeholder="Business website" 
+                  required >
+                </input>
+              </div>
+              <div class="input-item">
+                <div class="icon-field">
+                  <%= embedded_svg "index-new/briefcase.svg", class: "icon-field-svg" %>
+                </div>
+                <select
+                  label="Business type"
+                  name="biztype"
+                  id="rc_biztype"
+                  class="input-field"
+                >
+                  <option value="saas">SaaS</option>
+                  <option value="marketplace">Marketplace</option>
+                  <option value="ecommerce">Ecommerce</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__confirm-btn">
+              <div class="button-content">
+                <button type="submit" name="confirm-btn" id="confirm_btn" class="confirm-btn">
+                  Confirm
+                  <div class="icon-field">
+                    <%= embedded_svg "index-new/arrow-round-forward.svg", class: "icon-field-svg" %>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="form__success">
+            <div class="form__success__content">
+              <div class="form__success__content-first-text">
+                Thanks for requesting an access to Croissant ! 🥐
+              </div>
+              <div class="form__success__content-second-text">
+                We will get back to you tomorrow!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<% content_for :js do %>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    $(".form__confirm").show();
+    $(".form__success").hide();
+
+    $('#access_form').submit(function(e) {
+      alert($('#rc_biztype').val());
+      e.preventDefault();
+      
+      $(".form__confirm").hide();
+      $(".form__success").show();
+      
+      $.ajax({
+        type: "POST",
+        url: "",
+        data: {'name': $('#rc_name').val(), 'email': $('#rc_email').val(), 'role': $('#rc_role').val(), 'business_website': $('#rc_website').val(), 'business_type': $('#rc_biztype').val()},
+        success: function() {
+          $(".form_confirm").hide()
+          $(".form_success").show();
+        }
+      });
+    })
+  </script>
+  <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+<% end %>

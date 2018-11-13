@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/instant-message' => 'facebook_links#instant_message', as: 'instant_message'
   post '/send-instant-message' => 'facebook_links#send_instant_message', as: 'send_instant_message'
   post '/calendar/add-token', to: 'calendar#add_token', as: 'add_token'
+  post '/request_access' => 'pages#request_access'
 
   # Redirect the errors
   %w[ 404 422 500 503 ].each do |code|

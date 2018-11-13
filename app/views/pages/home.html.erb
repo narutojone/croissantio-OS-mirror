@@ -86,6 +86,40 @@
           growth experiments for SaaS, Marketplace and Ecommerce.
         </h2>
         <%= link_to "Explore experiments", experiments_path, class: 'content__main-btn'  %>
+        <form action="/request_access" class="content__request-access" method="post">
+          <div class="text-section">
+            <input
+              type="email"
+              id="request_email"
+              class="text-field"
+              name="request_email"
+              placeholder="Enter your email" 
+              required >
+            </input>
+          </div>
+          <input
+            type="submit"
+            class="content__request-btn"
+            value="REQUEST ACCESS" >
+          </input>
+        </form>
+        <form action="/request_access" class="content__request-access-sm" method="post">
+          <div class="text-section-sm">
+            <input
+              type="email"
+              id="request_email"
+              class="text-field-sm"
+              name="request_email"
+              placeholder="Enter your email" 
+              required >
+            </input>
+          </div>
+          <input
+            type="submit"
+            class="content__request-btn"
+            value="REQUEST ACCESS" >
+          </input>
+        </form>
       </div>
     </div>
     <%= image_tag "index-new/illustration.png", class: "main_bg" %>
